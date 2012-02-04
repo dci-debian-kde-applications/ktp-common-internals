@@ -1,0 +1,36 @@
+Source: ktp-common-internals
+Priority: optional
+Maintainer: George Kiagiadakis <kiagiadakis.george@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), cmake, libtelepathy-qt4-dev (>= 0.9.0), pkg-kde-tools, kdelibs5-dev
+Standards-Version: 3.9.2
+Section: libs
+Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
+
+Package: libktpcommoninternalsprivate-dev
+Section: libdevel
+Architecture: any
+Depends: libktpcommoninternalsprivate0 (= ${binary:Version}), ${misc:Depends}
+Description: KDE Telepathy internal library - development headers
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+ .
+ This package contains development headers for
+ the ktp-common-internals library.
+
+Package: libktpcommoninternalsprivate0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal library
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+
+Package: libktpcommoninternalsprivate-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libktpcommoninternalsprivate0 (= ${binary:Version}), ${misc:Depends}
+Description: KDE Telepathy internal library - debug symbols
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+ .
+ This package contains debugging symbols for the ktp-common-internals library.
