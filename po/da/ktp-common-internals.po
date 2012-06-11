@@ -1,0 +1,673 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-31 04:09+0200\n"
+"PO-Revision-Date: 2012-05-22 20:36+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: KTp/Models/groups-model-item.cpp:75
+msgid "Ungrouped"
+msgstr "Ikke-grupperet"
+
+#: KTp/presence.cpp:95
+msgctxt "IM presence: a person is available"
+msgid "Available"
+msgstr "Tilgængelig"
+
+#: KTp/presence.cpp:97
+msgctxt "IM presence: a person is busy"
+msgid "Busy"
+msgstr "Optaget"
+
+#: KTp/presence.cpp:99
+msgctxt "IM presence: a person is away"
+msgid "Away"
+msgstr "Borte"
+
+#: KTp/presence.cpp:101
+msgctxt "IM presence: a person is not available"
+msgid "Not Available"
+msgstr "Ikke tilgængelig"
+
+#: KTp/presence.cpp:103
+msgctxt "IM presence: a person is invisible"
+msgid "Invisible"
+msgstr "Usynlig"
+
+#: KTp/presence.cpp:105
+msgctxt "IM presence: a person is offline"
+msgid "Offline"
+msgstr "Offline"
+
+#: KTp/error-dictionary.cpp:37
+msgctxt "Verbose user visible error string"
+msgid ""
+"Looks like you are already connected from other location and the server does "
+"not allow multiple connections"
+msgstr ""
+"Det ser ud til at du allerede er forbundet fra et andet sted og at serveren "
+"ikke tillader flere forbindelser"
+
+#: KTp/error-dictionary.cpp:39
+msgctxt "Verbose user visible error string"
+msgid "Authentication of your account failed (is your password correct?)"
+msgstr "Autentificering af din konto mislykkedes (er din adgangskode rigtig?)"
+
+#: KTp/error-dictionary.cpp:41
+msgctxt "Verbose user visible error string"
+msgid ""
+"The channel is too busy now to process your request. Try again in a few "
+"minutes"
+msgstr ""
+"Kanalen er for optaget nu til at behandle din anmodning. Prøv igen om nogle "
+"minutter"
+
+#: KTp/error-dictionary.cpp:43
+msgctxt "Verbose user visible error string"
+msgid "The connection was canceled on your request"
+msgstr "Forbindelsen blev annulleret på din foranledning"
+
+#: KTp/error-dictionary.cpp:45
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server is expired"
+msgstr "SSL/TLS-certifikatet der blev modtaget fra serveren er udløbet"
+
+#: KTp/error-dictionary.cpp:47
+msgctxt "Verbose user visible error string"
+msgid ""
+"The SSL/TLS certificate received from server has different fingerprint than "
+"expected"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren har et andet "
+"fingeraftryk end forventet"
+
+#: KTp/error-dictionary.cpp:49
+msgctxt "Verbose user visible error string"
+msgid ""
+"The SSL/TLS certificate received from server has different hostname than "
+"expected"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren har et andet værtsnavn "
+"end forventet"
+
+#: KTp/error-dictionary.cpp:51
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server uses too weak encryption"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren bruger for svag "
+"kryptering"
+
+#: KTp/error-dictionary.cpp:53
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server is invalid"
+msgstr "SSL/TLS-certifikatet der blev modtaget fra serveren er ugyldigt"
+
+#: KTp/error-dictionary.cpp:55
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server has exceeded length limit"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren har overskredet "
+"længdegrænsen"
+
+#: KTp/error-dictionary.cpp:57
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server has not been activated yet"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren er ikke blevet aktiveret "
+"endnu"
+
+#: KTp/error-dictionary.cpp:59
+msgctxt "Verbose user visible error string"
+msgid "The server did not provide any SSL/TLS certificate"
+msgstr "Serveren leverede ikke noget SSL/TLS-certifikat"
+
+#: KTp/error-dictionary.cpp:61
+msgctxt "Verbose user visible error string"
+msgid "The SSL/TLS certificate received from server has been revoked"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren er blevet tilbagekaldt"
+
+#: KTp/error-dictionary.cpp:63
+msgctxt "Verbose user visible error string"
+msgid ""
+"The SSL/TLS certificate received from server was self-signed by the server "
+"and is untrusted"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren var selvsigneret af "
+"serveren og betroes ikke"
+
+#: KTp/error-dictionary.cpp:65
+msgctxt "Verbose user visible error string"
+msgid ""
+"The SSL/TLS certificate received from server was not signed by a trusted "
+"certificate authority"
+msgstr ""
+"SSL/TLS-certifikatet der blev modtaget fra serveren var ikke signeret af en "
+"betroet certifikatautoritet"
+
+#: KTp/error-dictionary.cpp:67
+msgctxt "Verbose user visible error string"
+msgid "You have been banned from the channel"
+msgstr "Du er blevet bandlyst fra kanalen"
+
+#: KTp/error-dictionary.cpp:69
+msgctxt "Verbose user visible error string"
+msgid "The channel is full"
+msgstr "Kanalen er fuld"
+
+#: KTp/error-dictionary.cpp:71
+msgctxt "Verbose user visible error string"
+msgid "The channel is invite-only"
+msgstr "Kanalen kræver invitation"
+
+#: KTp/error-dictionary.cpp:73
+msgctxt "Verbose user visible error string"
+msgid "You have been kicked from the channel"
+msgstr "Du er blevet sparket ud af kanalen"
+
+#: KTp/error-dictionary.cpp:75
+msgctxt "Verbose user visible error string"
+msgid "Congratulate yourself - you just reached an impossible situation"
+msgstr "Klap dig selv på skulderen - du har netop opnået en umulig situation"
+
+#: KTp/error-dictionary.cpp:77
+msgctxt "Verbose user visible error string"
+msgid "Could not establish connection"
+msgstr "Kunne ikke etablere forbindelse"
+
+#: KTp/error-dictionary.cpp:79
+msgctxt "Verbose user visible error string"
+msgid "Connection to server was lost"
+msgstr "Forbindelsen til serveren gik tabt"
+
+#: KTp/error-dictionary.cpp:81
+msgctxt "Verbose user visible error string"
+msgid "Server refused your connection"
+msgstr "Serveren afviste din forbindelse"
+
+#: KTp/error-dictionary.cpp:83
+msgctxt "Verbose user visible error string"
+msgid ""
+"Somewhere there is another client connecting with your account and your "
+"current connection is lost"
+msgstr ""
+"Et eller andet sted er der en anden klient der forbinder med din konto og "
+"din aktuelle forbindelse er blevet tabt"
+
+#: KTp/error-dictionary.cpp:85
+msgctxt "Verbose user visible error string"
+msgid "You have been disconnected"
+msgstr "Din forbindelse er blevet afbrudt"
+
+#: KTp/error-dictionary.cpp:87
+msgctxt "Verbose user visible error string"
+msgid "You apparently do not exist"
+msgstr "Det lader til at du ikke findes"
+
+#: KTp/error-dictionary.cpp:89
+msgctxt "Verbose user visible error string"
+msgid "Sorry, emergency calls are not supported"
+msgstr "Beklager, nødopkald er ikke understøttet"
+
+#: KTp/error-dictionary.cpp:91
+msgctxt "Verbose user visible error string"
+msgid "An encryption error has occurred"
+msgstr "En krypteringsfejl opstod"
+
+#: KTp/error-dictionary.cpp:93
+msgctxt "Verbose user visible error string"
+msgid "Requested encryption is not available"
+msgstr "Den anmodede kryptering er ikke tilgængelig"
+
+#: KTp/error-dictionary.cpp:95
+msgctxt "Verbose user visible error string"
+msgid "An invalid argument was provided"
+msgstr "Der blev givet et ugyldigt argument"
+
+#: KTp/error-dictionary.cpp:97
+msgctxt "Verbose user visible error string"
+msgid "The specified handle is unknown on this channel"
+msgstr "Det angivne kaldenavn er ukendt i denne kanal"
+
+#: KTp/error-dictionary.cpp:99
+msgctxt "Verbose user visible error string"
+msgid "There appears to be a problem with your network, check your connection"
+msgstr "Der lader til at være et problem med dit netværk. Tjek din forbindelse"
+
+#: KTp/error-dictionary.cpp:101
+msgctxt "Verbose user visible error string"
+msgid "You were removed from the channel because you did not respond"
+msgstr "Du blev fjernet fra kanalen fordi du ikke svarede"
+
+#: KTp/error-dictionary.cpp:103
+msgctxt "Verbose user visible error string"
+msgid "This capability is not available"
+msgstr "Denne kapabilitet er ikke tilgængelig"
+
+#: KTp/error-dictionary.cpp:105
+msgctxt "Verbose user visible error string"
+msgid "The contact does not have the requested capabilities"
+msgstr "Kontakten har ikke de ønskede kapabiliteter"
+
+#: KTp/error-dictionary.cpp:107
+msgctxt "Verbose user visible error string"
+msgid "This operation is not implemented"
+msgstr "Denne operation er ikke implementeret"
+
+#: KTp/error-dictionary.cpp:109
+msgctxt "Verbose user visible error string"
+msgid "This operation is not yet implemented"
+msgstr "Denne operation er endnu ikke implementeret"
+
+#: KTp/error-dictionary.cpp:111
+msgctxt "Verbose user visible error string"
+msgid "The requested channel is already being handled by some other process"
+msgstr "Den ønskede kanal bliver allerede håndteret af en anden proces"
+
+#: KTp/error-dictionary.cpp:113
+msgctxt "Verbose user visible error string"
+msgid "This operation is unavailable as the contact is offline"
+msgstr "Denne operation er utilgængelig da kontakten er offline"
+
+#: KTp/error-dictionary.cpp:115
+msgctxt "Verbose user visible error string"
+msgid "You are not permitted to perform this operation"
+msgstr "Du har ikke tilladelse til at udføre denne handling"
+
+#: KTp/error-dictionary.cpp:117
+msgctxt "Verbose user visible error string"
+msgid "Current call was picked up by another resource"
+msgstr "Det aktuelle opkald blev besvaret af en anden ressource"
+
+#: KTp/error-dictionary.cpp:119
+msgctxt "Verbose user visible error string"
+msgid "Account with this username already exists"
+msgstr "Der findes allerede en konto med dette brugernavn"
+
+#: KTp/error-dictionary.cpp:121
+msgctxt "Verbose user visible error string"
+msgid "The receiver rejected your call"
+msgstr "Modtageren afviste dit opkald"
+
+#: KTp/error-dictionary.cpp:123
+msgctxt "Verbose user visible error string"
+msgid ""
+"There are insufficient resources (like free memory) to finish the operation "
+"at the moment"
+msgstr ""
+"Der er utilstrækkelige ressourcer (såsom ledig hukommelse) til at gennemføre "
+"operationen i øjeblikket"
+
+#: KTp/error-dictionary.cpp:125
+msgctxt "Verbose user visible error string"
+msgid ""
+"Your request hit a busy resource somewhere along the way and the operation "
+"was unable to finish"
+msgstr ""
+"Din anmodning nåede en optaget ressource et sted på vejen og operationen "
+"kunne ikke gennemføres"
+
+#: KTp/error-dictionary.cpp:127
+msgctxt "Verbose user visible error string"
+msgid "An internal error has occurred (known as the 'Confused service error')"
+msgstr "En intern fejl er opstået (kendt som \"forvirret tjeneste\"-fejlen)"
+
+#: KTp/error-dictionary.cpp:129
+msgctxt "Verbose user visible error string"
+msgid ""
+"You are using too old software. Please try updating all Telepathy packages "
+"to a newer version"
+msgstr ""
+"Du bruger for gammel software. Prøv venligst at opdatere alle Telepathy-"
+"pakker til en nyere version"
+
+#: KTp/error-dictionary.cpp:131
+msgctxt "Verbose user visible error string"
+msgid "The channel was terminated for no apparent reason"
+msgstr "Denne kanal blev afsluttet, tilsyneladende uden grund"
+
+#: KTp/error-dictionary.cpp:133
+msgctxt "Verbose user visible error string"
+msgid ""
+"This operation can not be finished as it would break your anonymity request"
+msgstr ""
+"Denne operation kan ikke gennemføres, da den ville forpurre dit ønske om "
+"anonymitet"
+
+#: KTp/error-dictionary.cpp:135
+msgctxt "Verbose user visible error string"
+msgid "Some of the IM components are not working correctly"
+msgstr "Nogle af IM-komponenterne virker ikke korrekt"
+
+#: KTp/error-dictionary.cpp:137
+#, kde-format
+msgctxt "User visible error string"
+msgid "An unknown error was encountered (%1), please report this"
+msgstr "Stødte på en ukendt fejl (%1). Rapportér venligst dette"
+
+#: KTp/error-dictionary.cpp:144
+msgctxt "Short user visible error string"
+msgid "Connected elsewhere"
+msgstr "Forbundet et andet sted fra"
+
+#: KTp/error-dictionary.cpp:146
+msgctxt "Short user visible error string"
+msgid "Authentication failed"
+msgstr "Autentificering mislykkedes"
+
+#: KTp/error-dictionary.cpp:148
+msgctxt "Short user visible error string"
+msgid "Channel too busy"
+msgstr "Kanalen har for travlt"
+
+#: KTp/error-dictionary.cpp:150
+msgctxt "Short user visible error string"
+msgid "Cancelled by user"
+msgstr "Annulleret af brugeren"
+
+#: KTp/error-dictionary.cpp:152
+msgctxt "Short user visible error string"
+msgid "Certificate is expired"
+msgstr "Certifikatet er udløbet"
+
+#: KTp/error-dictionary.cpp:154
+msgctxt "Short user visible error string"
+msgid "Wrong certificate fingerprint"
+msgstr "Forkert fingeraftryk på certifikat"
+
+#: KTp/error-dictionary.cpp:156
+msgctxt "Short user visible error string"
+msgid "Wrong certificate hostname"
+msgstr "Forkert værtsnavn på certifikat"
+
+#: KTp/error-dictionary.cpp:158
+msgctxt "Short user visible error string"
+msgid "Too weak certificate encryption"
+msgstr "For svag certifikatkryptering"
+
+#: KTp/error-dictionary.cpp:160
+msgctxt "Short user visible error string"
+msgid "Invalid certificate"
+msgstr "Ugyldigt certifikat"
+
+#: KTp/error-dictionary.cpp:162
+msgctxt "Short user visible error string"
+msgid "Certificate length limit exceeded"
+msgstr "Grænse for certifikatlængde overskredet"
+
+#: KTp/error-dictionary.cpp:164
+msgctxt "Short user visible error string"
+msgid "Certificate not yet active"
+msgstr "Certifikat endnu ikke aktivt"
+
+#: KTp/error-dictionary.cpp:166
+msgctxt "Short user visible error string"
+msgid "No certificate from server"
+msgstr "Intet certifikat fra serveren"
+
+#: KTp/error-dictionary.cpp:168
+msgctxt "Short user visible error string"
+msgid "Certificate revoked"
+msgstr "Certifikat tilbagekaldt"
+
+#: KTp/error-dictionary.cpp:170
+msgctxt "Short user visible error string"
+msgid "Untrusted self-signed certificate"
+msgstr "Ikke-betroet selvsigneret certifikat"
+
+#: KTp/error-dictionary.cpp:172
+msgctxt "Short user visible error string"
+msgid "Untrusted certificate"
+msgstr "Ikke-betroet certifikat"
+
+#: KTp/error-dictionary.cpp:174
+msgctxt "Short user visible error string"
+msgid "Banned from channel"
+msgstr "Bandlyst fra kanalen"
+
+#: KTp/error-dictionary.cpp:176
+msgctxt "Short user visible error string"
+msgid "The channel is full"
+msgstr "Kanalen er fuld"
+
+#: KTp/error-dictionary.cpp:178
+msgctxt "Short user visible error string"
+msgid "The channel is invite-only"
+msgstr "Kanalen kræver invitation"
+
+#: KTp/error-dictionary.cpp:180
+msgctxt "Short user visible error string"
+msgid "Kicked from channel"
+msgstr "Sparket ud af kanalen"
+
+#: KTp/error-dictionary.cpp:182
+msgctxt "Short user visible error string"
+msgid "Something's seriously wrong"
+msgstr "Noget er helt galt"
+
+#: KTp/error-dictionary.cpp:184
+msgctxt "Short user visible error string"
+msgid "Connection failed"
+msgstr "Forbindelse mislykkedes"
+
+#: KTp/error-dictionary.cpp:186
+msgctxt "Short user visible error string"
+msgid "Connection lost"
+msgstr "Forbindelse mistet"
+
+#: KTp/error-dictionary.cpp:188
+msgctxt "Short user visible error string"
+msgid "Connection refused"
+msgstr "Forbindelse afvist"
+
+#: KTp/error-dictionary.cpp:190
+msgctxt "Short user visible error string"
+msgid "Connection stolen by other account"
+msgstr "Forbindelse stjålet af anden konto"
+
+#: KTp/error-dictionary.cpp:192
+msgctxt "Short user visible error string"
+msgid "Disconnected"
+msgstr "Forbindelse afbrudt"
+
+#: KTp/error-dictionary.cpp:194
+msgctxt "Short user visible error string"
+msgid "You apparently do not exist"
+msgstr "Det lader til at du ikke findes"
+
+#: KTp/error-dictionary.cpp:196
+msgctxt "Short user visible error string"
+msgid "Emergency calls unsupported"
+msgstr "Nødopkald ikke understøttet"
+
+#: KTp/error-dictionary.cpp:198
+msgctxt "Short user visible error string"
+msgid "Encryption error"
+msgstr "Krypteringsfejl"
+
+#: KTp/error-dictionary.cpp:200
+msgctxt "Short user visible error string"
+msgid "Encryption not available"
+msgstr "Kryptering er ikke tilgængelig"
+
+#: KTp/error-dictionary.cpp:202
+msgctxt "Short user visible error string"
+msgid "Invalid argument"
+msgstr "Ugyldigt argument"
+
+#: KTp/error-dictionary.cpp:204
+msgctxt "Short user visible error string"
+msgid "Unknown handle"
+msgstr "Ukendt kaldenavn"
+
+#: KTp/error-dictionary.cpp:206
+msgctxt "Short user visible error string"
+msgid "Network error"
+msgstr "Netværksfejl"
+
+#: KTp/error-dictionary.cpp:208
+msgctxt "Short user visible error string"
+msgid "Removed from channel"
+msgstr "Fjernet fra kanalen"
+
+#: KTp/error-dictionary.cpp:210
+msgctxt "Short user visible error string"
+msgid "Capability not available"
+msgstr "Kapabiliteten er ikke tilgængelig"
+
+#: KTp/error-dictionary.cpp:212
+msgctxt "Short user visible error string"
+msgid "Contact incapable"
+msgstr "Kontakten kan ikke"
+
+#: KTp/error-dictionary.cpp:214
+msgctxt "Short user visible error string"
+msgid "Operation not implemented"
+msgstr "Operationen ikke implementeret"
+
+#: KTp/error-dictionary.cpp:216
+msgctxt "Short user visible error string"
+msgid "Operation not yet implemented"
+msgstr "Operationen endnu ikke implementeret"
+
+#: KTp/error-dictionary.cpp:218
+msgctxt "Short user visible error string"
+msgid "Channel already being handled"
+msgstr "Kanalen bliver allerede håndteret"
+
+#: KTp/error-dictionary.cpp:220
+msgctxt "Short user visible error string"
+msgid "Contact is offline"
+msgstr "Kontakten er offline"
+
+#: KTp/error-dictionary.cpp:222
+msgctxt "Short user visible error string"
+msgid "Operation not permitted"
+msgstr "Operation ikke tilladt"
+
+#: KTp/error-dictionary.cpp:224
+msgctxt "Short user visible error string"
+msgid "Call picked by other resource"
+msgstr "Opkald besvaret af anden ressource"
+
+#: KTp/error-dictionary.cpp:226
+msgctxt "Short user visible error string"
+msgid "Username already taken"
+msgstr "Brugernavnet er allerede taget"
+
+#: KTp/error-dictionary.cpp:228
+msgctxt "Short user visible error string"
+msgid "Call rejected"
+msgstr "Opkald afvist"
+
+#: KTp/error-dictionary.cpp:230
+msgctxt "Short user visible error string"
+msgid "Insufficient resources"
+msgstr "Utilstrækkelige ressourcer"
+
+#: KTp/error-dictionary.cpp:232
+msgctxt "Short user visible error string"
+msgid "Service is busy"
+msgstr "Tjenesten har travlt"
+
+#: KTp/error-dictionary.cpp:234
+msgctxt "Short user visible error string"
+msgid "Internal error"
+msgstr "Intern fejl"
+
+#: KTp/error-dictionary.cpp:236
+msgctxt "Short user visible error string"
+msgid "Software upgrade required"
+msgstr "Opgradering af software påkrævet"
+
+#: KTp/error-dictionary.cpp:238
+msgctxt "Short user visible error string"
+msgid "Channel terminated"
+msgstr "Kanal afsluttet"
+
+#: KTp/error-dictionary.cpp:240
+msgctxt "Short user visible error string"
+msgid "Anonymity break possible"
+msgstr "Brud på anonymitet muligt"
+
+#: KTp/error-dictionary.cpp:242
+msgctxt "Short user visible error string"
+msgid "Internal component error"
+msgstr "Fejl i intern komponent"
+
+#: KTp/error-dictionary.cpp:246
+msgctxt "User visible error string"
+msgid "Unknown error"
+msgstr "Ukendt fejl"
+
+#: KTp/telepathy-handler-application.cpp:113
+msgid "Persistent mode (do not exit on timeout)"
+msgstr "Vedholdende tilstand (afslut ikke ved tidsudløb)"
+
+#: KTp/telepathy-handler-application.cpp:114
+msgid "Show Telepathy debugging information"
+msgstr "Vis fejlsøgningsinformation for Telepathy"
+
+#: KTp/telepathy-handler-application.cpp:115
+msgid "KDE Telepathy"
+msgstr "KDE Telepathy"
+
+#. i18n: file: KTp/Widgets/add-contact-dialog.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:3
+msgid "Account:"
+msgstr "Konto:"
+
+#. i18n: file: KTp/Widgets/add-contact-dialog.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:6
+msgid "Screen Name:"
+msgstr "Skærmnavn:"
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "You apparently do not exist "
+#~ msgstr "Det lader til at du ikke findes "
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "Your call credit is too low"
+#~ msgstr "Dit indestående til opkald er for lille"
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "You appear to not have any common codec with the other side"
+#~ msgstr "Du lader ikke til at nogen fælles codecs med den anden side"
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "A streaming error has occurred (probably not your network related)"
+#~ msgstr "En streamingfejl opstod (formentlig ikke relateret til dit netværk)"
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "The requested media stream type is not available"
+#~ msgstr "Den ønskede type af mediestream er ikke tilgængelig"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Low call credit"
+#~ msgstr "Lav opkaldskredit"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "No compatible codec"
+#~ msgstr "Ingen kompatible codecs"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Streaming error"
+#~ msgstr "Streamingfejl"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Unsupported stream type"
+#~ msgstr "Ikke understøttet streamtype"
