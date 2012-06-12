@@ -2,3 +2,6 @@
 
 %:
 	dh $@ --parallel --with kde --dbg-package=libktpcommoninternalsprivate-dbg --list-missing
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
