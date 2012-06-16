@@ -1,14 +1,15 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?view=markup&pathrev=174
-Comment: This package was developed for Ubuntu by the Kubuntu Developers
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ktp-common-internals
-Source: ftp.kde.org
+Upstream-Contact: KDE Telepathy Project <kde-telepathy@kde.org>
+Source: ftp://ftp.kde.org/pub/kde/unstable/kde-telepathy/
+License: LGPL-2.1+
 
 Files: *
 Copyright: 2011 Martin Klapetek <martin.klapetek@gmail.com>
            2010-2011 Collabora Ltd. <info@collabora.com>
            2011 David Edmundson <kde@davidedmundson.co.uk>
-           2011 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
-           2011 Dario Freddi <dario.freddi@collabora.com>
+           2011-2012 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
+           2011 Dario Freddi <drf@kde.org>
            1999 Preston Brown <pbrown@kde.org>
            2011 Przemek Czekaj <xcojack@gmail.com>
            2004 Peter Simonsson <psn@linux.se>
@@ -42,6 +43,7 @@ License: LGPL-2.1+
 
 Files: debian/*
 Copyright: 2012 Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+           2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
 License: LGPL-2.1+
 
 License: LGPL-2.1+
