@@ -1,6 +1,7 @@
 Source: ktp-common-internals
 Priority: optional
-Maintainer: George Kiagiadakis <kiagiadakis.george@gmail.com>
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: George Kiagiadakis <kiagiadakis.george@gmail.com>
 Build-Depends: debhelper (>= 9), cmake, libtelepathy-qt4-dev (>= 0.9.0), pkg-kde-tools, kdelibs5-dev
 Standards-Version: 3.9.3
 Section: libs
