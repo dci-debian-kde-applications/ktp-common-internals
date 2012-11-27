@@ -5,12 +5,12 @@ set (CMAKE_MODULE_PATH
      ${CMAKE_MODULE_PATH}
 )
 
-set (KTP_VERSION "0.4")
+set (KTP_VERSION "0.5.1")
 # Bump for every 0.x release, or whenever BC changes
-set (KTP_SONUMBER 1)
+set (KTP_SONUMBER 3)
 
 find_package (KDE4 REQUIRED)
-find_package (TelepathyQt4 0.9.0 REQUIRED)
+find_package (TelepathyQt4 0.9.2.1 REQUIRED)
 
 # set some default settings
 include (KDE4Defaults)
@@ -30,6 +30,7 @@ include_directories (${KDE4_INCLUDES}
 )
 
 add_subdirectory(KTp)
+add_subdirectory(tools)
 add_subdirectory(data)
 find_package(Msgfmt REQUIRED)
 find_package(Gettext REQUIRED)
