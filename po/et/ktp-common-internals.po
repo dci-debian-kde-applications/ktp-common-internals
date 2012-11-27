@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-31 04:09+0200\n"
-"PO-Revision-Date: 2012-05-14 15:04+0300\n"
+"POT-Creation-Date: 2012-09-20 12:42+0200\n"
+"PO-Revision-Date: 2012-06-18 18:18+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -17,41 +17,7 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: KTp/Models/groups-model-item.cpp:75
-msgid "Ungrouped"
-msgstr "Rühmitamata"
-
-#: KTp/presence.cpp:95
-msgctxt "IM presence: a person is available"
-msgid "Available"
-msgstr "Saadaval"
-
-#: KTp/presence.cpp:97
-msgctxt "IM presence: a person is busy"
-msgid "Busy"
-msgstr "Hõivatud"
-
-#: KTp/presence.cpp:99
-msgctxt "IM presence: a person is away"
-msgid "Away"
-msgstr "Eemal"
-
-#: KTp/presence.cpp:101
-msgctxt "IM presence: a person is not available"
-msgid "Not Available"
-msgstr "Pole saadaval"
-
-#: KTp/presence.cpp:103
-msgctxt "IM presence: a person is invisible"
-msgid "Invisible"
-msgstr "Nähtamatu"
-
-#: KTp/presence.cpp:105
-msgctxt "IM presence: a person is offline"
-msgid "Offline"
-msgstr "Pole võrgus"
-
-#: KTp/error-dictionary.cpp:37
+#: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
 msgid ""
 "Looks like you are already connected from other location and the server does "
@@ -60,12 +26,12 @@ msgstr ""
 "Paistab, et oled juba ühendunud mõnest muust kohast ja see server ei luba "
 "mitut ühendust"
 
-#: KTp/error-dictionary.cpp:39
+#: error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
 msgstr "Sinu konto autentimine nurjus (kas parool oli ikka õige?)"
 
-#: KTp/error-dictionary.cpp:41
+#: error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
 msgid ""
 "The channel is too busy now to process your request. Try again in a few "
@@ -74,61 +40,61 @@ msgstr ""
 "Kanal on liiga hõivatud, et sinu sooviga tegelda. Palun proovi mõne minuti "
 "pärast uuesti"
 
-#: KTp/error-dictionary.cpp:43
+#: error-dictionary.cpp:43
 msgctxt "Verbose user visible error string"
 msgid "The connection was canceled on your request"
 msgstr "Ühendus katkestati sinu soovil"
 
-#: KTp/error-dictionary.cpp:45
+#: error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is expired"
 msgstr "Serverist saadud SSL/TLS sertifikaat on aegunud"
 
-#: KTp/error-dictionary.cpp:47
+#: error-dictionary.cpp:47
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server has different fingerprint than "
 "expected"
 msgstr "Serverist saadud SSL/TLS sertifikaadil on oodatust erinev sõrmejälg"
 
-#: KTp/error-dictionary.cpp:49
+#: error-dictionary.cpp:49
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server has different hostname than "
 "expected"
 msgstr "Serverist saadud SSL/TLS sertifikaadil on oodatust erinev masinanimi"
 
-#: KTp/error-dictionary.cpp:51
+#: error-dictionary.cpp:51
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server uses too weak encryption"
 msgstr "Serverist saadud SSL/TLS sertifikaat kasutab liiga nõrka krüptimist"
 
-#: KTp/error-dictionary.cpp:53
+#: error-dictionary.cpp:53
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is invalid"
 msgstr "Serverist saadud SSL/TLS sertifikaat on kehtetu"
 
-#: KTp/error-dictionary.cpp:55
+#: error-dictionary.cpp:55
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has exceeded length limit"
 msgstr "Serverist saadud SSL/TLS sertifikaat ületab pikkusepiirangut"
 
-#: KTp/error-dictionary.cpp:57
+#: error-dictionary.cpp:57
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has not been activated yet"
 msgstr "Serverist saadud SSL/TLS sertifikaat ei ole veel aktiveeritud"
 
-#: KTp/error-dictionary.cpp:59
+#: error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
 msgstr "Server ei saatnud üldse SSL/TLS sertifikaati"
 
-#: KTp/error-dictionary.cpp:61
+#: error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has been revoked"
 msgstr "Serverist saadud SSL/TLS sertifikaat on tühistatud"
 
-#: KTp/error-dictionary.cpp:63
+#: error-dictionary.cpp:63
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server was self-signed by the server "
@@ -137,7 +103,7 @@ msgstr ""
 "Serverist saadud SSL/TLS sertifikaadi on allkirjastanud server ise ja see "
 "pole usaldusväärne"
 
-#: KTp/error-dictionary.cpp:65
+#: error-dictionary.cpp:65
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server was not signed by a trusted "
@@ -146,47 +112,50 @@ msgstr ""
 "Serverist saadud SSL/TLS sertifikaati ei ole allkirjastanud ükski "
 "usaldusväärne sertifitseerimiskeskus"
 
-#: KTp/error-dictionary.cpp:67
+#: error-dictionary.cpp:67
 msgctxt "Verbose user visible error string"
 msgid "You have been banned from the channel"
 msgstr "Sa oled kanalilt pagendatud"
 
-#: KTp/error-dictionary.cpp:69
+#: error-dictionary.cpp:69
 msgctxt "Verbose user visible error string"
 msgid "The channel is full"
 msgstr "Kanal on täis"
 
-#: KTp/error-dictionary.cpp:71
+#: error-dictionary.cpp:71
 msgctxt "Verbose user visible error string"
 msgid "The channel is invite-only"
 msgstr "Kanal on ainult kutsetega"
 
-#: KTp/error-dictionary.cpp:73
+#: error-dictionary.cpp:73
 msgctxt "Verbose user visible error string"
 msgid "You have been kicked from the channel"
 msgstr "Sa oled kanalilt välja visatud"
 
-#: KTp/error-dictionary.cpp:75
+#: error-dictionary.cpp:75
+#, fuzzy
+#| msgctxt "Verbose user visible error string"
+#| msgid "An encryption error has occurred"
 msgctxt "Verbose user visible error string"
-msgid "Congratulate yourself - you just reached an impossible situation"
-msgstr "Võid ennast õnnitleda - sattusid täiesti võimatusse olukorda"
+msgid "An unexpected error has occurred"
+msgstr "Tekkis krüptimise tõrge"
 
-#: KTp/error-dictionary.cpp:77
+#: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
 msgid "Could not establish connection"
 msgstr "Ühenduse loomine nurjus"
 
-#: KTp/error-dictionary.cpp:79
+#: error-dictionary.cpp:79
 msgctxt "Verbose user visible error string"
 msgid "Connection to server was lost"
 msgstr "Ühendus serveriga katkes"
 
-#: KTp/error-dictionary.cpp:81
+#: error-dictionary.cpp:81
 msgctxt "Verbose user visible error string"
 msgid "Server refused your connection"
 msgstr "Server keeldus ühendusest"
 
-#: KTp/error-dictionary.cpp:83
+#: error-dictionary.cpp:83
 msgctxt "Verbose user visible error string"
 msgid ""
 "Somewhere there is another client connecting with your account and your "
@@ -194,109 +163,115 @@ msgid ""
 msgstr ""
 "Kuskil ühines teine klient sinu kontoga ja sinu praegune ühendus katkes"
 
-#: KTp/error-dictionary.cpp:85
+#: error-dictionary.cpp:85
 msgctxt "Verbose user visible error string"
 msgid "You have been disconnected"
 msgstr "Ühendus katkestati"
 
-#: KTp/error-dictionary.cpp:87
+#: error-dictionary.cpp:87
 msgctxt "Verbose user visible error string"
-msgid "You apparently do not exist"
-msgstr "Paistab, et sind ei ole olemas"
+msgid "Selected user does not exist"
+msgstr ""
 
-#: KTp/error-dictionary.cpp:89
+#: error-dictionary.cpp:89
+#, fuzzy
+#| msgctxt "Verbose user visible error string"
+#| msgid "Sorry, emergency calls are not supported"
 msgctxt "Verbose user visible error string"
-msgid "Sorry, emergency calls are not supported"
+msgid "Emergency calls are not supported"
 msgstr "Vabandust, hädaabikõned ei ole toetatud"
 
-#: KTp/error-dictionary.cpp:91
+#: error-dictionary.cpp:91
 msgctxt "Verbose user visible error string"
 msgid "An encryption error has occurred"
 msgstr "Tekkis krüptimise tõrge"
 
-#: KTp/error-dictionary.cpp:93
+#: error-dictionary.cpp:93
 msgctxt "Verbose user visible error string"
 msgid "Requested encryption is not available"
 msgstr "Soovitud krüptimist pole saadaval"
 
-#: KTp/error-dictionary.cpp:95
+#: error-dictionary.cpp:95
 msgctxt "Verbose user visible error string"
 msgid "An invalid argument was provided"
 msgstr "Anti vigane argument"
 
-#: KTp/error-dictionary.cpp:97
+#: error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
 msgstr "Määratud käitleja on sel kanalil tundmatu"
 
-#: KTp/error-dictionary.cpp:99
+#: error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
 msgid "There appears to be a problem with your network, check your connection"
 msgstr "Tundub, et sinu võrguga on probleeme, palun kontrolli oma ühendust"
 
-#: KTp/error-dictionary.cpp:101
+#: error-dictionary.cpp:101
 msgctxt "Verbose user visible error string"
 msgid "You were removed from the channel because you did not respond"
 msgstr "Sa oled kanalilt eemaldatud, sest sa ei vastanud"
 
-#: KTp/error-dictionary.cpp:103
+#: error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
 msgid "This capability is not available"
 msgstr "Seda võimalust pole saadaval"
 
-#: KTp/error-dictionary.cpp:105
+#: error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
 msgid "The contact does not have the requested capabilities"
 msgstr "Kontaktil puuduvad soovitud võimalused"
 
-#: KTp/error-dictionary.cpp:107
+#: error-dictionary.cpp:107
 msgctxt "Verbose user visible error string"
 msgid "This operation is not implemented"
 msgstr "See toiming pole võimalik"
 
-#: KTp/error-dictionary.cpp:109
+#: error-dictionary.cpp:109
 msgctxt "Verbose user visible error string"
 msgid "This operation is not yet implemented"
 msgstr "See toiming pole veel võimalik"
 
-#: KTp/error-dictionary.cpp:111
+#: error-dictionary.cpp:111
 msgctxt "Verbose user visible error string"
 msgid "The requested channel is already being handled by some other process"
 msgstr "Soovitud kanalit käitleb juba mingi muu protsess"
 
-#: KTp/error-dictionary.cpp:113
+#: error-dictionary.cpp:113
+#, fuzzy
+#| msgctxt "Verbose user visible error string"
+#| msgid "This operation is unavailable as the contact is offline"
 msgctxt "Verbose user visible error string"
-msgid "This operation is unavailable as the contact is offline"
+msgid "This operation is unavailable for offline contacts"
 msgstr "See toiming pole võimalik, sest kontakt pole võrgus"
 
-#: KTp/error-dictionary.cpp:115
+#: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
 msgid "You are not permitted to perform this operation"
 msgstr "Sul ei ole õigust seda toimingut teha"
 
-#: KTp/error-dictionary.cpp:117
+#: error-dictionary.cpp:117
 msgctxt "Verbose user visible error string"
 msgid "Current call was picked up by another resource"
 msgstr "Aktiivse kõne võttis ühe teine ressurss"
 
-#: KTp/error-dictionary.cpp:119
+#: error-dictionary.cpp:119
 msgctxt "Verbose user visible error string"
 msgid "Account with this username already exists"
 msgstr "Sellise kasutajanimega konto on juba olemas"
 
-#: KTp/error-dictionary.cpp:121
+#: error-dictionary.cpp:121
 msgctxt "Verbose user visible error string"
 msgid "The receiver rejected your call"
 msgstr "Teine pool ei võtnud sinu kõnet vastu"
 
-#: KTp/error-dictionary.cpp:123
+#: error-dictionary.cpp:123
 msgctxt "Verbose user visible error string"
 msgid ""
 "There are insufficient resources (like free memory) to finish the operation "
 "at the moment"
 msgstr "Selle toimingu lõpetamiseks napib praegu ressursse (näiteks vaba mälu)"
 
-#: KTp/error-dictionary.cpp:125
+#: error-dictionary.cpp:125
 msgctxt "Verbose user visible error string"
 msgid ""
 "Your request hit a busy resource somewhere along the way and the operation "
@@ -304,318 +279,412 @@ msgid ""
 msgstr ""
 "Sinu soov tabas teel hõivatud ressurssi ja toimingut ei õnnestunud lõpetada"
 
-#: KTp/error-dictionary.cpp:127
+#: error-dictionary.cpp:127
 msgctxt "Verbose user visible error string"
 msgid "An internal error has occurred (known as the 'Confused service error')"
 msgstr "Tekkis sisemine tõrge (tuntud ka kui \"segaduse teenuse tõrge\")"
 
-#: KTp/error-dictionary.cpp:129
+#: error-dictionary.cpp:129
+#, fuzzy
+#| msgctxt "Verbose user visible error string"
+#| msgid ""
+#| "You are using too old software. Please try updating all Telepathy "
+#| "packages to a newer version"
 msgctxt "Verbose user visible error string"
 msgid ""
-"You are using too old software. Please try updating all Telepathy packages "
-"to a newer version"
+"The installed libraries are too old. Please try updating all Telepathy "
+"packages to a newer version"
 msgstr "Sa kasutad liiga vana tarkvara. Palun uuenda oma Telepathy pakette"
 
-#: KTp/error-dictionary.cpp:131
+#: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
 msgid "The channel was terminated for no apparent reason"
 msgstr "Kanali töö lõpetati ilma selge põhjuseta"
 
-#: KTp/error-dictionary.cpp:133
+#: error-dictionary.cpp:133
+#, fuzzy
+#| msgctxt "Verbose user visible error string"
+#| msgid ""
+#| "This operation can not be finished as it would break your anonymity "
+#| "request"
 msgctxt "Verbose user visible error string"
 msgid ""
-"This operation can not be finished as it would break your anonymity request"
+"This operation can not be finished as it would break your requested anonymity"
 msgstr "Toimingut ei saa lõpetada, sest see rikub sinu anonüümsusesoovi"
 
-#: KTp/error-dictionary.cpp:135
+#: error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
 msgid "Some of the IM components are not working correctly"
 msgstr "Mõned kiirsuhtluse komponendid ei tööta korralikult"
 
-#: KTp/error-dictionary.cpp:137
+#: error-dictionary.cpp:137
 #, kde-format
 msgctxt "User visible error string"
 msgid "An unknown error was encountered (%1), please report this"
 msgstr "Tekkis tundmatu tõrge (%1), palun anna sellest teada"
 
-#: KTp/error-dictionary.cpp:144
+#: error-dictionary.cpp:144
 msgctxt "Short user visible error string"
 msgid "Connected elsewhere"
 msgstr "Mujal ühendatud"
 
-#: KTp/error-dictionary.cpp:146
+#: error-dictionary.cpp:146
 msgctxt "Short user visible error string"
 msgid "Authentication failed"
 msgstr "Autentimine nurjus"
 
-#: KTp/error-dictionary.cpp:148
+#: error-dictionary.cpp:148
 msgctxt "Short user visible error string"
 msgid "Channel too busy"
 msgstr "Kanal on liiga hõivatud"
 
-#: KTp/error-dictionary.cpp:150
+#: error-dictionary.cpp:150
 msgctxt "Short user visible error string"
 msgid "Cancelled by user"
 msgstr "Kasutaja katkestatud"
 
-#: KTp/error-dictionary.cpp:152
+#: error-dictionary.cpp:152
 msgctxt "Short user visible error string"
 msgid "Certificate is expired"
 msgstr "Sertifikaat on aegunud"
 
-#: KTp/error-dictionary.cpp:154
+#: error-dictionary.cpp:154
 msgctxt "Short user visible error string"
 msgid "Wrong certificate fingerprint"
 msgstr "Vale sertifikaadi sõrmejälg"
 
-#: KTp/error-dictionary.cpp:156
+#: error-dictionary.cpp:156
 msgctxt "Short user visible error string"
 msgid "Wrong certificate hostname"
 msgstr "Vale sertifikaadi masinanimi"
 
-#: KTp/error-dictionary.cpp:158
+#: error-dictionary.cpp:158
 msgctxt "Short user visible error string"
 msgid "Too weak certificate encryption"
 msgstr "Liiga nõrk sertifikaadi krüptimine"
 
-#: KTp/error-dictionary.cpp:160
+#: error-dictionary.cpp:160
 msgctxt "Short user visible error string"
 msgid "Invalid certificate"
 msgstr "Vigane sertifikaat"
 
-#: KTp/error-dictionary.cpp:162
+#: error-dictionary.cpp:162
 msgctxt "Short user visible error string"
 msgid "Certificate length limit exceeded"
 msgstr "Sertifikaadi pikkusepiirangu ületamine"
 
-#: KTp/error-dictionary.cpp:164
+#: error-dictionary.cpp:164
 msgctxt "Short user visible error string"
 msgid "Certificate not yet active"
 msgstr "Sertifikaat pole veel aktiivne"
 
-#: KTp/error-dictionary.cpp:166
+#: error-dictionary.cpp:166
 msgctxt "Short user visible error string"
 msgid "No certificate from server"
 msgstr "Server ei saatnud sertifikaati"
 
-#: KTp/error-dictionary.cpp:168
+#: error-dictionary.cpp:168
 msgctxt "Short user visible error string"
 msgid "Certificate revoked"
 msgstr "Sertifikaat on tühistatud"
 
-#: KTp/error-dictionary.cpp:170
+#: error-dictionary.cpp:170
 msgctxt "Short user visible error string"
 msgid "Untrusted self-signed certificate"
 msgstr "Ebausaldusväärne enda allkirjastatud sertifikaat"
 
-#: KTp/error-dictionary.cpp:172
+#: error-dictionary.cpp:172
 msgctxt "Short user visible error string"
 msgid "Untrusted certificate"
 msgstr "Ebausaldusväärne sertifikaat"
 
-#: KTp/error-dictionary.cpp:174
+#: error-dictionary.cpp:174
 msgctxt "Short user visible error string"
 msgid "Banned from channel"
 msgstr "Kanalilt pagendamine"
 
-#: KTp/error-dictionary.cpp:176
+#: error-dictionary.cpp:176
 msgctxt "Short user visible error string"
 msgid "The channel is full"
 msgstr "Kanal on täis"
 
-#: KTp/error-dictionary.cpp:178
+#: error-dictionary.cpp:178
 msgctxt "Short user visible error string"
 msgid "The channel is invite-only"
 msgstr "Kanal on ainult kutsetega"
 
-#: KTp/error-dictionary.cpp:180
+#: error-dictionary.cpp:180
 msgctxt "Short user visible error string"
 msgid "Kicked from channel"
 msgstr "Kanalilt väljaviskamine"
 
-#: KTp/error-dictionary.cpp:182
+#: error-dictionary.cpp:182
 msgctxt "Short user visible error string"
 msgid "Something's seriously wrong"
 msgstr "Midagi on väga valesti"
 
-#: KTp/error-dictionary.cpp:184
+#: error-dictionary.cpp:184
 msgctxt "Short user visible error string"
 msgid "Connection failed"
 msgstr "Ühendus nurjus"
 
-#: KTp/error-dictionary.cpp:186
+#: error-dictionary.cpp:186
 msgctxt "Short user visible error string"
 msgid "Connection lost"
 msgstr "Ühendus kadus"
 
-#: KTp/error-dictionary.cpp:188
+#: error-dictionary.cpp:188
 msgctxt "Short user visible error string"
 msgid "Connection refused"
 msgstr "Ühendusest keelduti"
 
-#: KTp/error-dictionary.cpp:190
+#: error-dictionary.cpp:190
 msgctxt "Short user visible error string"
 msgid "Connection stolen by other account"
 msgstr "Ühenduse hõivas teine konto"
 
-#: KTp/error-dictionary.cpp:192
+#: error-dictionary.cpp:192
 msgctxt "Short user visible error string"
 msgid "Disconnected"
 msgstr "Lahutatud"
 
-#: KTp/error-dictionary.cpp:194
+#: error-dictionary.cpp:194
+#, fuzzy
+#| msgctxt "Short user visible error string"
+#| msgid "You apparently do not exist"
 msgctxt "Short user visible error string"
-msgid "You apparently do not exist"
+msgid "User does not exist"
 msgstr "Paistab, et sind ei ole olemas"
 
-#: KTp/error-dictionary.cpp:196
+#: error-dictionary.cpp:196
 msgctxt "Short user visible error string"
 msgid "Emergency calls unsupported"
 msgstr "Hädaabikõned on toetamata"
 
-#: KTp/error-dictionary.cpp:198
+#: error-dictionary.cpp:198
 msgctxt "Short user visible error string"
 msgid "Encryption error"
 msgstr "Krüptimise viga"
 
-#: KTp/error-dictionary.cpp:200
+#: error-dictionary.cpp:200
 msgctxt "Short user visible error string"
 msgid "Encryption not available"
 msgstr "Krüptimine pole saadaval"
 
-#: KTp/error-dictionary.cpp:202
+#: error-dictionary.cpp:202
 msgctxt "Short user visible error string"
 msgid "Invalid argument"
 msgstr "Vigane argument"
 
-#: KTp/error-dictionary.cpp:204
+#: error-dictionary.cpp:204
+#, fuzzy
+#| msgctxt "Short user visible error string"
+#| msgid "Invalid argument"
 msgctxt "Short user visible error string"
-msgid "Unknown handle"
-msgstr "Tundmatu käitleja"
+msgid "Invalid handle"
+msgstr "Vigane argument"
 
-#: KTp/error-dictionary.cpp:206
+#: error-dictionary.cpp:206
 msgctxt "Short user visible error string"
 msgid "Network error"
 msgstr "Võrgutõrge"
 
-#: KTp/error-dictionary.cpp:208
+#: error-dictionary.cpp:208
 msgctxt "Short user visible error string"
 msgid "Removed from channel"
 msgstr "Kanalilt eemaldamine"
 
-#: KTp/error-dictionary.cpp:210
+#: error-dictionary.cpp:210
 msgctxt "Short user visible error string"
 msgid "Capability not available"
 msgstr "Võimalus pole saadaval"
 
-#: KTp/error-dictionary.cpp:212
+#: error-dictionary.cpp:212
 msgctxt "Short user visible error string"
-msgid "Contact incapable"
-msgstr "Võimetu kontakt"
+msgid "Contact has no support"
+msgstr ""
 
-#: KTp/error-dictionary.cpp:214
+#: error-dictionary.cpp:214
 msgctxt "Short user visible error string"
 msgid "Operation not implemented"
 msgstr "Toiming pole võimalik"
 
-#: KTp/error-dictionary.cpp:216
+#: error-dictionary.cpp:216
 msgctxt "Short user visible error string"
 msgid "Operation not yet implemented"
 msgstr "Toiming pole veel võimalik"
 
-#: KTp/error-dictionary.cpp:218
+#: error-dictionary.cpp:218
 msgctxt "Short user visible error string"
 msgid "Channel already being handled"
 msgstr "Kanalit juba käideldakse"
 
-#: KTp/error-dictionary.cpp:220
+#: error-dictionary.cpp:220
 msgctxt "Short user visible error string"
 msgid "Contact is offline"
 msgstr "Kontakt ei ole võrgus"
 
-#: KTp/error-dictionary.cpp:222
+#: error-dictionary.cpp:222
 msgctxt "Short user visible error string"
 msgid "Operation not permitted"
 msgstr "Toiming ei ole lubatud"
 
-#: KTp/error-dictionary.cpp:224
+#: error-dictionary.cpp:224
 msgctxt "Short user visible error string"
 msgid "Call picked by other resource"
 msgstr "Kõne võttis üle teine ressurss"
 
-#: KTp/error-dictionary.cpp:226
+#: error-dictionary.cpp:226
 msgctxt "Short user visible error string"
 msgid "Username already taken"
 msgstr "Kasutajanimi on juba kasutusel"
 
-#: KTp/error-dictionary.cpp:228
+#: error-dictionary.cpp:228
 msgctxt "Short user visible error string"
 msgid "Call rejected"
 msgstr "Kõnet ei võetud vastu"
 
-#: KTp/error-dictionary.cpp:230
+#: error-dictionary.cpp:230
 msgctxt "Short user visible error string"
 msgid "Insufficient resources"
 msgstr "Ressursse napib"
 
-#: KTp/error-dictionary.cpp:232
+#: error-dictionary.cpp:232
 msgctxt "Short user visible error string"
 msgid "Service is busy"
 msgstr "Server on hõivatud"
 
-#: KTp/error-dictionary.cpp:234
+#: error-dictionary.cpp:234
 msgctxt "Short user visible error string"
 msgid "Internal error"
 msgstr "Sisemine tõrge"
 
-#: KTp/error-dictionary.cpp:236
+#: error-dictionary.cpp:236
 msgctxt "Short user visible error string"
 msgid "Software upgrade required"
 msgstr "Tarkvara tuleb uuendada"
 
-#: KTp/error-dictionary.cpp:238
+#: error-dictionary.cpp:238
 msgctxt "Short user visible error string"
 msgid "Channel terminated"
 msgstr "Kanal lõpetas töö"
 
-#: KTp/error-dictionary.cpp:240
+#: error-dictionary.cpp:240
 msgctxt "Short user visible error string"
 msgid "Anonymity break possible"
 msgstr "Võimalik anonüümsuse rikkumine"
 
-#: KTp/error-dictionary.cpp:242
+#: error-dictionary.cpp:242
 msgctxt "Short user visible error string"
 msgid "Internal component error"
 msgstr "Sisemise komponendi tõrge"
 
-#: KTp/error-dictionary.cpp:246
+#: error-dictionary.cpp:246
 msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Tundmatu tõrge"
 
-#: KTp/telepathy-handler-application.cpp:113
+#: Models/groups-model-item.cpp:73
+msgid "Ungrouped"
+msgstr "Rühmitamata"
+
+#: presence.cpp:95
+msgctxt "IM presence: a person is available"
+msgid "Available"
+msgstr "Saadaval"
+
+#: presence.cpp:97
+msgctxt "IM presence: a person is busy"
+msgid "Busy"
+msgstr "Hõivatud"
+
+#: presence.cpp:99
+msgctxt "IM presence: a person is away"
+msgid "Away"
+msgstr "Eemal"
+
+#: presence.cpp:101
+msgctxt "IM presence: a person is not available"
+msgid "Not Available"
+msgstr "Pole saadaval"
+
+#: presence.cpp:103
+msgctxt "IM presence: a person is invisible"
+msgid "Invisible"
+msgstr "Nähtamatu"
+
+#: presence.cpp:105
+msgctxt "IM presence: a person is offline"
+msgid "Offline"
+msgstr "Pole võrgus"
+
+#: telepathy-handler-application.cpp:113
 msgid "Persistent mode (do not exit on timeout)"
 msgstr "Püsiv režiim (ajaületuse korral ei väljuta)"
 
-#: KTp/telepathy-handler-application.cpp:114
+#: telepathy-handler-application.cpp:114
 msgid "Show Telepathy debugging information"
 msgstr "Telepathy silumisteabe näitamine"
 
-#: KTp/telepathy-handler-application.cpp:115
+#: telepathy-handler-application.cpp:115
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#. i18n: file: KTp/Widgets/add-contact-dialog.ui:17
+#: Widgets/add-contact-dialog.cpp:92
+msgid "Add new contact"
+msgstr ""
+
+#: Widgets/add-contact-dialog.cpp:122
+msgid "No account selected."
+msgstr ""
+
+#: Widgets/add-contact-dialog.cpp:124
+msgid ""
+"The requested account has been disconnected and so the contact could not be "
+"added."
+msgstr ""
+
+#: Widgets/add-contact-dialog.cpp:127
+msgid "You did not specify the name of the contact to add."
+msgstr ""
+
+#: Widgets/add-contact-dialog.cpp:153
+msgid "Failed to create new contact."
+msgstr ""
+
+#: Widgets/add-contact-dialog.cpp:170
+msgid "Failed to request presence subscription from the requested contact."
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:3
+#: Widgets/add-contact-dialog.ui:17
 msgid "Account:"
 msgstr "Konto:"
 
-#. i18n: file: KTp/Widgets/add-contact-dialog.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:6
+#: Widgets/add-contact-dialog.ui:27
 msgid "Screen Name:"
 msgstr "Näidatav nimi:"
+
+#: Widgets/contact-grid-dialog.cpp:139
+msgid "Search in Contacts..."
+msgstr ""
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "Congratulate yourself - you just reached an impossible situation"
+#~ msgstr "Võid ennast õnnitleda - sattusid täiesti võimatusse olukorda"
+
+#~ msgctxt "Verbose user visible error string"
+#~ msgid "You apparently do not exist"
+#~ msgstr "Paistab, et sind ei ole olemas"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Unknown handle"
+#~ msgstr "Tundmatu käitleja"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Contact incapable"
+#~ msgstr "Võimetu kontakt"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "You apparently do not exist "
