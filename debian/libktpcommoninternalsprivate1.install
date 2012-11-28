@@ -1,6 +1,6 @@
-usr/lib/libktpcommoninternalsprivate.so.0.4*
-usr/lib/libktpcommoninternalsprivate.so.1
-usr/lib/libktpmodelsprivate.so.0.4*
-usr/lib/libktpmodelsprivate.so.1
-usr/lib/libktpwidgetsprivate.so.0.4*
-usr/lib/libktpwidgetsprivate.so.1
+usr/lib/libktpcommoninternalsprivate.so.0.5*
+usr/lib/libktpcommoninternalsprivate.so.3
+usr/lib/libktpmodelsprivate.so.0.5*
+usr/lib/libktpmodelsprivate.so.3
+usr/lib/libktpwidgetsprivate.so.0.5*
+usr/lib/libktpwidgetsprivate.so.3
