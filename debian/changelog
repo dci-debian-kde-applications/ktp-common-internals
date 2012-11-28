@@ -1,3 +1,9 @@
+ktp-common-internals (0.5.1-1) UNRELEASED; urgency=low
+
+  * [02e74e7] Imported Upstream version 0.5.1
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 28 Nov 2012 14:44:24 +0530
+
 ktp-common-internals (0.4.0-1) unstable; urgency=low
 
   * Initial release.
