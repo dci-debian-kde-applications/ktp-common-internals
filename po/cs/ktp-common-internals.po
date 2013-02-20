@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2012.
-# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013.
+# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-09-10 11:15+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2013-02-06 11:25+0100\n"
+"Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: error-dictionary.cpp:37
@@ -30,7 +30,7 @@ msgstr ""
 #: error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
-msgstr "Ověření Vašeho účtu selhalo (zadali jste správné heslo?)"
+msgstr "Ověření vašeho účtu selhalo (zadali jste správné heslo?)"
 
 #: error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
@@ -38,13 +38,13 @@ msgid ""
 "The channel is too busy now to process your request. Try again in a few "
 "minutes"
 msgstr ""
-"Kanál je příliš zaneprázdněný a nemohl zpracovat Váš požadavek. Zkuste to "
+"Kanál je příliš zaneprázdněný a nemohl zpracovat váš požadavek. Zkuste to "
 "znovu za pár minut"
 
 #: error-dictionary.cpp:43
 msgctxt "Verbose user visible error string"
 msgid "The connection was canceled on your request"
-msgstr "Spojení bylo přerušeno na Vaši žádost"
+msgstr "Spojení bylo přerušeno na vaši žádost"
 
 #: error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
@@ -117,7 +117,7 @@ msgstr ""
 #: error-dictionary.cpp:67
 msgctxt "Verbose user visible error string"
 msgid "You have been banned from the channel"
-msgstr "Byl Vám zablokován přístup na kanál"
+msgstr "Byl vám zablokován přístup na kanál"
 
 #: error-dictionary.cpp:69
 msgctxt "Verbose user visible error string"
@@ -152,7 +152,7 @@ msgstr "Spojení se serverem bylo ztraceno"
 #: error-dictionary.cpp:81
 msgctxt "Verbose user visible error string"
 msgid "Server refused your connection"
-msgstr "Server odmítl Vaše spojení"
+msgstr "Server odmítl vaše spojení"
 
 #: error-dictionary.cpp:83
 msgctxt "Verbose user visible error string"
@@ -160,7 +160,7 @@ msgid ""
 "Somewhere there is another client connecting with your account and your "
 "current connection is lost"
 msgstr ""
-"Připojuje se další klient s Vaším účtem a tedy Vaše současné spojení je "
+"Připojuje se další klient s vaším účtem a tedy vaše současné spojení je "
 "ztraceno"
 
 #: error-dictionary.cpp:85
@@ -202,7 +202,7 @@ msgstr ""
 msgctxt "Verbose user visible error string"
 msgid "There appears to be a problem with your network, check your connection"
 msgstr ""
-"Vypadá to, že máte problém se sítí, zkontrolujte stav Vašeho síťového spojení"
+"Vypadá to, že máte problém se sítí, zkontrolujte stav vašeho síťového spojení"
 
 #: error-dictionary.cpp:101
 msgctxt "Verbose user visible error string"
@@ -217,7 +217,7 @@ msgstr ""
 #: error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
 msgid "The contact does not have the requested capabilities"
-msgstr ""
+msgstr "Kontakt nemá požadované schopnosti"
 
 #: error-dictionary.cpp:107
 msgctxt "Verbose user visible error string"
@@ -247,7 +247,7 @@ msgstr "Nemáte oprávnění provést tuto operaci"
 #: error-dictionary.cpp:117
 msgctxt "Verbose user visible error string"
 msgid "Current call was picked up by another resource"
-msgstr ""
+msgstr "Aktuální hovor byl přijat jiným zdrojem"
 
 #: error-dictionary.cpp:119
 msgctxt "Verbose user visible error string"
@@ -257,7 +257,7 @@ msgstr "Účet s tímto uživatelským jménem již existuje"
 #: error-dictionary.cpp:121
 msgctxt "Verbose user visible error string"
 msgid "The receiver rejected your call"
-msgstr "Příjemce odmítl Váš hovor"
+msgstr "Příjemce odmítl váš hovor"
 
 #: error-dictionary.cpp:123
 msgctxt "Verbose user visible error string"
@@ -298,7 +298,7 @@ msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
 msgstr ""
-"Operace nemohla být dokončena, protože by porušila Váš požadavek na anonymitu"
+"Operace nemohla být dokončena, protože by porušila váš požadavek na anonymitu"
 
 #: error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
@@ -359,12 +359,12 @@ msgstr "Neplatný certifikát"
 #: error-dictionary.cpp:162
 msgctxt "Short user visible error string"
 msgid "Certificate length limit exceeded"
-msgstr ""
+msgstr "Překročena maximální dálka certifikátu"
 
 #: error-dictionary.cpp:164
 msgctxt "Short user visible error string"
 msgid "Certificate not yet active"
-msgstr ""
+msgstr "Certifikát ještě není aktivní"
 
 #: error-dictionary.cpp:166
 msgctxt "Short user visible error string"

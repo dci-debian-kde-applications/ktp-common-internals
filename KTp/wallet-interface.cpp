@@ -25,13 +25,22 @@
 #include <KGlobal>
 
 
-class KTp::WalletInterfacePrivate
+class KTp::WalletInterfacePrivate : public QObject
 {
+    Q_OBJECT
+
 public:
     WalletInterfacePrivate();
+    void ensureWalletIsReady();
+
     QScopedPointer<KWallet::Wallet> wallet;
     static const QLatin1String folderName;
     static const QLatin1String mapsPrefix;
+
+    bool isOpening;
+
+private Q_SLOTS:
+    void onWalletOpened(bool success);
 };
 
 using KTp::WalletInterface;
@@ -40,21 +49,49 @@ using KTp::WalletInterfacePrivate;
 const QLatin1String WalletInterfacePrivate::folderName = QLatin1String("telepathy-kde");
 const QLatin1String WalletInterfacePrivate::mapsPrefix = QLatin1String("maps/");
 
+void WalletInterfacePrivate::ensureWalletIsReady()
+{
+    // If wallet was force-closed since last WalletInterface::openWallet(),
+    // try to reopen it.
+    if (!wallet || !wallet->isOpen()) {
+        // If the wallet is not already being opened, we try to open it
+        if (!isOpening) {
+            isOpening = true;
+            wallet.reset(KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0, KWallet::Wallet::Asynchronous));
+            connect(wallet.data(), SIGNAL(walletOpened(bool)), SLOT(onWalletOpened(bool)));
+        }
+    }
+}
+
 
 WalletInterfacePrivate::WalletInterfacePrivate() :
-    wallet(KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0, KWallet::Wallet::Asynchronous))
+    wallet(NULL),
+    isOpening(false)
 {
+    ensureWalletIsReady();
 }
 
 KTp::PendingWallet* WalletInterface::openWallet()
 {
     K_GLOBAL_STATIC(KTp::WalletInterface, s_instance);
+
+    s_instance->d->ensureWalletIsReady();
     return new PendingWallet(s_instance);
+}
+
+void WalletInterfacePrivate::onWalletOpened(bool success)
+{
+    if (!success) {
+        kWarning() << "Couldn't open wallet";
+    }
+
+    disconnect(wallet.data(), SIGNAL(walletOpened(bool)), this, SLOT(onWalletOpened(bool)));
+    isOpening = false;
 }
 
 
 WalletInterface::WalletInterface():
-    d (new WalletInterfacePrivate)
+    d(new WalletInterfacePrivate)
 {
 }
 
@@ -255,4 +292,4 @@ KWallet::Wallet *WalletInterface::wallet() const
     return d->wallet.data();
 }
 
-
+#include "wallet-interface.moc"

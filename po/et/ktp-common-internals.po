@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-06-18 18:18+0300\n"
+"PO-Revision-Date: 2012-10-08 20:37+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: error-dictionary.cpp:37
@@ -133,12 +133,9 @@ msgid "You have been kicked from the channel"
 msgstr "Sa oled kanalilt välja visatud"
 
 #: error-dictionary.cpp:75
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "An encryption error has occurred"
 msgctxt "Verbose user visible error string"
 msgid "An unexpected error has occurred"
-msgstr "Tekkis krüptimise tõrge"
+msgstr "Tekkis ootamatu tõrge"
 
 #: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
@@ -171,15 +168,12 @@ msgstr "Ühendus katkestati"
 #: error-dictionary.cpp:87
 msgctxt "Verbose user visible error string"
 msgid "Selected user does not exist"
-msgstr ""
+msgstr "Valitud kasutajat ei ole olemas"
 
 #: error-dictionary.cpp:89
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "Sorry, emergency calls are not supported"
 msgctxt "Verbose user visible error string"
 msgid "Emergency calls are not supported"
-msgstr "Vabandust, hädaabikõned ei ole toetatud"
+msgstr "Hädaabikõned ei ole toetatud"
 
 #: error-dictionary.cpp:91
 msgctxt "Verbose user visible error string"
@@ -237,12 +231,9 @@ msgid "The requested channel is already being handled by some other process"
 msgstr "Soovitud kanalit käitleb juba mingi muu protsess"
 
 #: error-dictionary.cpp:113
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "This operation is unavailable as the contact is offline"
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr "See toiming pole võimalik, sest kontakt pole võrgus"
+msgstr "See toiming pole võimalik, kui kontakt pole võrgus"
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
@@ -285,16 +276,12 @@ msgid "An internal error has occurred (known as the 'Confused service error')"
 msgstr "Tekkis sisemine tõrge (tuntud ka kui \"segaduse teenuse tõrge\")"
 
 #: error-dictionary.cpp:129
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid ""
-#| "You are using too old software. Please try updating all Telepathy "
-#| "packages to a newer version"
 msgctxt "Verbose user visible error string"
 msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
-msgstr "Sa kasutad liiga vana tarkvara. Palun uuenda oma Telepathy pakette"
+msgstr ""
+"Paigaldatud teegid on liiga vanad. Palun uuenda kõiki oma Telepathy pakette"
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
@@ -302,11 +289,6 @@ msgid "The channel was terminated for no apparent reason"
 msgstr "Kanali töö lõpetati ilma selge põhjuseta"
 
 #: error-dictionary.cpp:133
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid ""
-#| "This operation can not be finished as it would break your anonymity "
-#| "request"
 msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
@@ -449,12 +431,9 @@ msgid "Disconnected"
 msgstr "Lahutatud"
 
 #: error-dictionary.cpp:194
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "You apparently do not exist"
 msgctxt "Short user visible error string"
 msgid "User does not exist"
-msgstr "Paistab, et sind ei ole olemas"
+msgstr "Kasutajat ei ole olemas"
 
 #: error-dictionary.cpp:196
 msgctxt "Short user visible error string"
@@ -477,12 +456,9 @@ msgid "Invalid argument"
 msgstr "Vigane argument"
 
 #: error-dictionary.cpp:204
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Invalid argument"
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
-msgstr "Vigane argument"
+msgstr "Vigane käsitlus"
 
 #: error-dictionary.cpp:206
 msgctxt "Short user visible error string"
@@ -502,7 +478,7 @@ msgstr "Võimalus pole saadaval"
 #: error-dictionary.cpp:212
 msgctxt "Short user visible error string"
 msgid "Contact has no support"
-msgstr ""
+msgstr "Kontakt ei ole toetatud"
 
 #: error-dictionary.cpp:214
 msgctxt "Short user visible error string"
@@ -632,29 +608,29 @@ msgstr "KDE Telepathy"
 
 #: Widgets/add-contact-dialog.cpp:92
 msgid "Add new contact"
-msgstr ""
+msgstr "Uue kontakti lisamine"
 
 #: Widgets/add-contact-dialog.cpp:122
 msgid "No account selected."
-msgstr ""
+msgstr "Kontot pole valitud."
 
 #: Widgets/add-contact-dialog.cpp:124
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
-msgstr ""
+msgstr "Soovitud konto ei ole ühendatud, mistõttu kontakti ei saa lisada."
 
 #: Widgets/add-contact-dialog.cpp:127
 msgid "You did not specify the name of the contact to add."
-msgstr ""
+msgstr "Sa ei ole määranud lisatava kontakti nime."
 
 #: Widgets/add-contact-dialog.cpp:153
 msgid "Failed to create new contact."
-msgstr ""
+msgstr "Uue kontakti loomine nurjus."
 
 #: Widgets/add-contact-dialog.cpp:170
 msgid "Failed to request presence subscription from the requested contact."
-msgstr ""
+msgstr "Oleku tellimise nõudmine soovitud kontaktilt nurjus."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
@@ -668,7 +644,7 @@ msgstr "Näidatav nimi:"
 
 #: Widgets/contact-grid-dialog.cpp:139
 msgid "Search in Contacts..."
-msgstr ""
+msgstr "Otsi kontaktides..."
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Congratulate yourself - you just reached an impossible situation"
