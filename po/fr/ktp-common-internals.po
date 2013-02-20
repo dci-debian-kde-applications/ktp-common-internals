@@ -1,22 +1,22 @@
+# translation of ktp-common-internals.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Joëlle Cornavin <jcorn@free.fr>, 2012, 2013.
 #
-# Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
-# Balázs Úr <urbalazs@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-11-03 09:14+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
-"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
-"Language: hu\n"
+"PO-Revision-Date: 2013-02-09 20:37+0100\n"
+"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -24,13 +24,15 @@ msgid ""
 "Looks like you are already connected from other location and the server does "
 "not allow multiple connections"
 msgstr ""
-"Úgy tűnik már kapcsolódott egy másik helyről, a kiszolgáló azonban nem tesz "
-"lehetővé többszörös bejelentkezést"
+"Donne l'impression que vous êtes déjà connecté(e) depuis un autre "
+"emplacement et le serveur n'autorise pas des connexions multiples"
 
 #: error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
-msgstr "Az azonosító hitelesítése meghiúsult, talán nem jó a jelszava"
+msgstr ""
+"L'authentification de votre compte a échoué. Votre mot de passe est-il "
+"correct ?"
 
 #: error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
@@ -38,18 +40,18 @@ msgid ""
 "The channel is too busy now to process your request. Try again in a few "
 "minutes"
 msgstr ""
-"A csatorna túlságosan elfoglalt a kérése feldolgozásához. Próbálja meg újra "
-"néhány perc múlva"
+"Le canal est trop occupé en ce moment pour traiter votre requête. Essayez à "
+"nouveau dans quelques minutes"
 
 #: error-dictionary.cpp:43
 msgctxt "Verbose user visible error string"
 msgid "The connection was canceled on your request"
-msgstr "A kapcsolat az Ön kérésére meg lett szakítva"
+msgstr "La connexion a été annulée sur votre demande"
 
 #: error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is expired"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány lejárt"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur a expiré"
 
 #: error-dictionary.cpp:47
 msgctxt "Verbose user visible error string"
@@ -57,52 +59,61 @@ msgid ""
 "The SSL/TLS certificate received from server has different fingerprint than "
 "expected"
 msgstr ""
-"A kiszolgálótól kapott SSL/TLS-tanúsítvány ujjlenyomata eltér a várttól"
+"Le certificat SSL / TLS reçu depuis le serveur présente une empreinte "
+"différente de celle qui était attendue"
 
 #: error-dictionary.cpp:49
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server has different hostname than "
 "expected"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány gépneve eltér a várttól"
+msgstr ""
+"Le certificat SSL / TLS reçu depuis le serveur présente un nom d'hôte "
+"différent de celui qui était attendu"
 
 #: error-dictionary.cpp:51
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server uses too weak encryption"
 msgstr ""
-"A kiszolgálótól kapott SSL/TLS-tanúsítvány túl gyenge titkosítást használ"
+"Le certificat SSL / TLS reçu depuis le serveur utilise un chiffrement trop "
+"faible"
 
 #: error-dictionary.cpp:53
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is invalid"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány érvénytelen"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur n'est pas valable"
 
 #: error-dictionary.cpp:55
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has exceeded length limit"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány túllépte a hosszkorlátot"
+msgstr ""
+"Le certificat SSL / TLS reçu depuis le serveur a dépassé la limite de "
+"longueur"
 
 #: error-dictionary.cpp:57
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has not been activated yet"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítványt még nem aktiválták"
+msgstr ""
+"Le certificat SSL / TLS reçu depuis le serveur n'a pas encore été activé"
 
 #: error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
-msgstr "A kiszolgáló nem küldött semmilyen SSL/TLS-tanúsítványt"
+msgstr "Le serveur n'a fourni aucun certificat SSL / TLS"
 
 #: error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has been revoked"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítványt visszavonták"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur a été révoqué"
 
 #: error-dictionary.cpp:63
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server was self-signed by the server "
 "and is untrusted"
-msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány önaláírt és nem megbízható"
+msgstr ""
+"Le certificat SSL / TLS reçu depuis le serveur a été auto-signé par le "
+"serveur n'est pas digne de confiance"
 
 #: error-dictionary.cpp:65
 msgctxt "Verbose user visible error string"
@@ -110,48 +121,48 @@ msgid ""
 "The SSL/TLS certificate received from server was not signed by a trusted "
 "certificate authority"
 msgstr ""
-"A kiszolgálótól kapott SSL/TSL-tanúsítványt nem egy érvényes "
-"hitelesítésszolgáltató írta alá"
+"Le certificat SSL / TLS reçu depuis le serveur n'a pas été signé par une "
+"autorité de certification de confiance"
 
 #: error-dictionary.cpp:67
 msgctxt "Verbose user visible error string"
 msgid "You have been banned from the channel"
-msgstr "Kitiltották a csatornáról"
+msgstr "Vous avez été banni(e) du canal"
 
 #: error-dictionary.cpp:69
 msgctxt "Verbose user visible error string"
 msgid "The channel is full"
-msgstr "A csatorna megtelt"
+msgstr "Le canal est plein"
 
 #: error-dictionary.cpp:71
 msgctxt "Verbose user visible error string"
 msgid "The channel is invite-only"
-msgstr "A csatornára csak meghívóval lehet belépni"
+msgstr "Le canal fonctionne sur invitation seulement"
 
 #: error-dictionary.cpp:73
 msgctxt "Verbose user visible error string"
 msgid "You have been kicked from the channel"
-msgstr "Kidobták a csatornáról"
+msgstr "Vous avez été expulsé(e) du canal"
 
 #: error-dictionary.cpp:75
 msgctxt "Verbose user visible error string"
 msgid "An unexpected error has occurred"
-msgstr "Váratlan hiba történt"
+msgstr "Une erreur inattendue est survenue"
 
 #: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
 msgid "Could not establish connection"
-msgstr "Nem sikerült létrehozni a kapcsolatot"
+msgstr "Impossible d'établir la connexion"
 
 #: error-dictionary.cpp:79
 msgctxt "Verbose user visible error string"
 msgid "Connection to server was lost"
-msgstr "A kapcsolat megszakadt a kiszolgálóval"
+msgstr "La connexion avec le serveur a été perdue"
 
 #: error-dictionary.cpp:81
 msgctxt "Verbose user visible error string"
 msgid "Server refused your connection"
-msgstr "A kiszolgáló elutasította a kapcsolatot"
+msgstr "Le serveur a refusé votre connexion"
 
 #: error-dictionary.cpp:83
 msgctxt "Verbose user visible error string"
@@ -159,103 +170,106 @@ msgid ""
 "Somewhere there is another client connecting with your account and your "
 "current connection is lost"
 msgstr ""
-"Valahol egy másik kliens kapcsolódott az Ön azonosítójával, és a jelenlegi "
-"kapcsolata elveszett"
+"Quelque part il y a un autre client se connectant en ce moment avec votre "
+"compte et votre connexion actuelle est perdue"
 
 #: error-dictionary.cpp:85
 msgctxt "Verbose user visible error string"
 msgid "You have been disconnected"
-msgstr "A kapcsolat megszakadt"
+msgstr "Vous avez été déconnecté(e)"
 
 #: error-dictionary.cpp:87
 msgctxt "Verbose user visible error string"
 msgid "Selected user does not exist"
-msgstr "A kijelölt felhasználó nem létezik"
+msgstr "L'utilisateur sélectionné n'existe pas"
 
 #: error-dictionary.cpp:89
 msgctxt "Verbose user visible error string"
 msgid "Emergency calls are not supported"
-msgstr "A  segélyhívások nem támogatottak"
+msgstr "Les appels d'urgence ne sont pas pris en charge"
 
 #: error-dictionary.cpp:91
 msgctxt "Verbose user visible error string"
 msgid "An encryption error has occurred"
-msgstr "Titkosítási hiba történt"
+msgstr "Une erreur de chiffrement est survenue"
 
 #: error-dictionary.cpp:93
 msgctxt "Verbose user visible error string"
 msgid "Requested encryption is not available"
-msgstr "A kért titkosítás nem érhető el"
+msgstr "Le chiffrement demandé n'est pas disponible"
 
 #: error-dictionary.cpp:95
 msgctxt "Verbose user visible error string"
 msgid "An invalid argument was provided"
-msgstr "Érvénytelen argumentum került megadásra"
+msgstr "Un argument non valable a été fourni"
 
 #: error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
-msgstr "A megadott handle ismeretlen ezen a csatornán"
+msgstr "Le descripteur spécifié est inconnu sur ce canal"
 
 #: error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
 msgid "There appears to be a problem with your network, check your connection"
-msgstr "Úgy tűnik, hogy probléma van a hálózatával, ellenőrizze a kapcsolatot"
+msgstr ""
+"Il semble qu'il existe un problème avec votre réseau. Vérifiez votre "
+"connexion"
 
 #: error-dictionary.cpp:101
 msgctxt "Verbose user visible error string"
 msgid "You were removed from the channel because you did not respond"
-msgstr "Eltávolították a csatornáról, mert nem válaszolt"
+msgstr "Vous avez été supprimé du canal car vous n'avez pas répondu"
 
 #: error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
 msgid "This capability is not available"
-msgstr "Ez a képesség nem érhető el"
+msgstr "Cette fonction n'est pas disponible"
 
 #: error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
 msgid "The contact does not have the requested capabilities"
-msgstr "A partner nem rendelkezik a kért képességekkel"
+msgstr "Le contact ne comporte pas les fonctions demandées"
 
 #: error-dictionary.cpp:107
 msgctxt "Verbose user visible error string"
 msgid "This operation is not implemented"
-msgstr "A művelet nincs implementálva"
+msgstr "Cette opération n'est pas mise en œuvre"
 
 #: error-dictionary.cpp:109
 msgctxt "Verbose user visible error string"
 msgid "This operation is not yet implemented"
-msgstr "A művelet még nincs implementálva"
+msgstr "Cette opération n'est pas encore mise en œuvre"
 
 #: error-dictionary.cpp:111
 msgctxt "Verbose user visible error string"
 msgid "The requested channel is already being handled by some other process"
-msgstr "A kért csatornát már egy másik folyamat kezeli"
+msgstr ""
+"Le canal demandé est déjà en cours de traitement par un autre processus"
 
 #: error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr "A művelet nem érhető el offline partnereknél"
+msgstr "Cette opération est indisponible pour les contacts non connectés"
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
 msgid "You are not permitted to perform this operation"
-msgstr "Nincs engedélye a művelet végrehajtásához"
+msgstr "Vous n'êtes pas autorisé(e) à effectuer cette opération"
 
 #: error-dictionary.cpp:117
 msgctxt "Verbose user visible error string"
 msgid "Current call was picked up by another resource"
-msgstr "Az aktuális hívást egy másik erőforrás vette fel"
+msgstr "L'appel actuel a été pris par une autre ressource"
 
 #: error-dictionary.cpp:119
 msgctxt "Verbose user visible error string"
 msgid "Account with this username already exists"
-msgstr "Már létezik azonosító ezzel a felhasználónévvel"
+msgstr "Un compte comportant ce nom d'utilisateur existe déjà"
 
 #: error-dictionary.cpp:121
 msgctxt "Verbose user visible error string"
 msgid "The receiver rejected your call"
-msgstr "A címzett elutasította a hívását"
+msgstr "Le destinataire a rejeté votre appel"
 
 #: error-dictionary.cpp:123
 msgctxt "Verbose user visible error string"
@@ -263,8 +277,8 @@ msgid ""
 "There are insufficient resources (like free memory) to finish the operation "
 "at the moment"
 msgstr ""
-"Pillanatnyilag kevés az erőforrás (például a szabad memória) a művelet "
-"befejezéséhez"
+"Il n'existe pas suffisamment de ressources (comme la mémoire libre) pour "
+"finaliser l'opération pour le moment"
 
 #: error-dictionary.cpp:125
 msgctxt "Verbose user visible error string"
@@ -272,13 +286,15 @@ msgid ""
 "Your request hit a busy resource somewhere along the way and the operation "
 "was unable to finish"
 msgstr ""
-"Egy foglalt erőforrást kért menet közben, ezért a művelet nem tudott "
-"befejeződni"
+"Votre requête a indiqué une ressource occupée quelque part en permanence et "
+"il a été impossible de finaliser l'opération "
 
 #: error-dictionary.cpp:127
 msgctxt "Verbose user visible error string"
 msgid "An internal error has occurred (known as the 'Confused service error')"
-msgstr "Egy belső hiba történt („Kusza szolgáltatáshiba” néven ismert)"
+msgstr ""
+"Une erreur interne est survenue (connue sous le nom de « erreur de service "
+"confus »)"
 
 #: error-dictionary.cpp:129
 msgctxt "Verbose user visible error string"
@@ -286,389 +302,373 @@ msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
 msgstr ""
-"A telepített programkönyvtár túl régi. Frissítse az összes Telepathy "
-"csomagot egy újabb verzióra"
+"Les bibliothèques installées sont trop anciennes. Veuillez essayer de mettre "
+"à jour tous les paquetages de Telepathy vers une version plus récente"
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
 msgid "The channel was terminated for no apparent reason"
-msgstr "A csatorna nyilvánvaló ok nélkül megszakadt"
+msgstr "Le canal s'est fermé sans raison apparente"
 
 #: error-dictionary.cpp:133
 msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
-msgstr "A művelet nem fejezhető be, mivel megtörné a kért névtelenséget"
+msgstr ""
+"Il est impossible de finaliser cette opération car elle pourrait interrompre "
+"votre demande d'anonymat"
 
 #: error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
 msgid "Some of the IM components are not working correctly"
-msgstr "Az azonnali üzenetküldő komponensek egy része nem működik megfelelően"
+msgstr "Certains des composants de la MI ne fonctionnent pas correctement"
 
 #: error-dictionary.cpp:137
 #, kde-format
 msgctxt "User visible error string"
 msgid "An unknown error was encountered (%1), please report this"
-msgstr "Ismeretlen hiba történt (%1), kérjük jelentse"
+msgstr "Une erreur inconnue a été rencontrée (%1), veuillez le signaler"
 
 #: error-dictionary.cpp:144
 msgctxt "Short user visible error string"
 msgid "Connected elsewhere"
-msgstr "Kapcsolódva máshonnan"
+msgstr "Connecté(e) ailleurs"
 
 #: error-dictionary.cpp:146
 msgctxt "Short user visible error string"
 msgid "Authentication failed"
-msgstr "Sikertelen hitelesítés"
+msgstr "L'authentification a échoué"
 
 #: error-dictionary.cpp:148
 msgctxt "Short user visible error string"
 msgid "Channel too busy"
-msgstr "A csatorna túl elfoglalt"
+msgstr "Canal trop occupé"
 
 #: error-dictionary.cpp:150
 msgctxt "Short user visible error string"
 msgid "Cancelled by user"
-msgstr "Felhasználói megszakítás"
+msgstr "Annulé par l'utilisateur"
 
 #: error-dictionary.cpp:152
 msgctxt "Short user visible error string"
 msgid "Certificate is expired"
-msgstr "A tanúsítvány lejárt"
+msgstr "Le certificat a expiré"
 
 #: error-dictionary.cpp:154
 msgctxt "Short user visible error string"
 msgid "Wrong certificate fingerprint"
-msgstr "A tanúsítvány ujjlenyomata rossz"
+msgstr "Empreinte du certificat incorrecte"
 
 #: error-dictionary.cpp:156
 msgctxt "Short user visible error string"
 msgid "Wrong certificate hostname"
-msgstr "A tanúsítvány gépneve rossz"
+msgstr "Nom d'hôte du certificat incorrect"
 
 #: error-dictionary.cpp:158
 msgctxt "Short user visible error string"
 msgid "Too weak certificate encryption"
-msgstr "A tanúsítvány titkosítása túl gyenge"
+msgstr "Chiffrement du certificat trop faible"
 
 #: error-dictionary.cpp:160
 msgctxt "Short user visible error string"
 msgid "Invalid certificate"
-msgstr "Érvénytelen tanúsítvány"
+msgstr "Certificat non valable"
 
 #: error-dictionary.cpp:162
 msgctxt "Short user visible error string"
 msgid "Certificate length limit exceeded"
-msgstr "A tanúsítvány túl hosszú"
+msgstr "Limite de longueur du certificat dépassée"
 
 #: error-dictionary.cpp:164
 msgctxt "Short user visible error string"
 msgid "Certificate not yet active"
-msgstr "A tanúsítvány még nem aktív"
+msgstr "Certificat pas encore actif"
 
 #: error-dictionary.cpp:166
 msgctxt "Short user visible error string"
 msgid "No certificate from server"
-msgstr "Nincs tanúsítvány a kiszolgálótól"
+msgstr "Pas de certificat provenant du serveur"
 
 #: error-dictionary.cpp:168
 msgctxt "Short user visible error string"
 msgid "Certificate revoked"
-msgstr "Visszavont tanúsítvány"
+msgstr "Certificat révoqué"
 
 #: error-dictionary.cpp:170
 msgctxt "Short user visible error string"
 msgid "Untrusted self-signed certificate"
-msgstr "Nem megbízható, önaláírt tanúsítvány"
+msgstr "Certificat auto-signé non digne de confiance"
 
 #: error-dictionary.cpp:172
 msgctxt "Short user visible error string"
 msgid "Untrusted certificate"
-msgstr "Nem megbízható tanúsítvány"
+msgstr "Certificat non digne de confiance"
 
 #: error-dictionary.cpp:174
 msgctxt "Short user visible error string"
 msgid "Banned from channel"
-msgstr "Kitiltva a csatornáról"
+msgstr "Banni(e) du canal"
 
 #: error-dictionary.cpp:176
 msgctxt "Short user visible error string"
 msgid "The channel is full"
-msgstr "A csatorna megtelt"
+msgstr "Le canal est plein"
 
 #: error-dictionary.cpp:178
 msgctxt "Short user visible error string"
 msgid "The channel is invite-only"
-msgstr "A csatornára csak meghívóval lehet belépni"
+msgstr "Le canal fonctionne sur invitation seulement"
 
 #: error-dictionary.cpp:180
 msgctxt "Short user visible error string"
 msgid "Kicked from channel"
-msgstr "Kirúgva a csatornáról"
+msgstr "Expulsé(e) du canal"
 
 #: error-dictionary.cpp:182
 msgctxt "Short user visible error string"
 msgid "Something's seriously wrong"
-msgstr "Valami nagyon rossz történt"
+msgstr "Un problème sérieux"
 
 #: error-dictionary.cpp:184
 msgctxt "Short user visible error string"
 msgid "Connection failed"
-msgstr "Kapcsolódás meghiúsult"
+msgstr "La connexion a échoué"
 
 #: error-dictionary.cpp:186
 msgctxt "Short user visible error string"
 msgid "Connection lost"
-msgstr "A kapcsolat megszakadt"
+msgstr "Connexion perdue"
 
 #: error-dictionary.cpp:188
 msgctxt "Short user visible error string"
 msgid "Connection refused"
-msgstr "Kapcsolat visszautasítva"
+msgstr "Connexion refusée"
 
 #: error-dictionary.cpp:190
 msgctxt "Short user visible error string"
 msgid "Connection stolen by other account"
-msgstr "A kapcsolatot egy másik azonosító ellopta"
+msgstr "Connexion volée par un autre compte"
 
 #: error-dictionary.cpp:192
 msgctxt "Short user visible error string"
 msgid "Disconnected"
-msgstr "Kapcsolat bontva"
+msgstr "Déconnecté(e)"
 
 #: error-dictionary.cpp:194
 msgctxt "Short user visible error string"
 msgid "User does not exist"
-msgstr "A felhasználó nem létezik"
+msgstr "L'utilisateur n'existe pas"
 
 #: error-dictionary.cpp:196
 msgctxt "Short user visible error string"
 msgid "Emergency calls unsupported"
-msgstr "A segélyhívás nem támogatott"
+msgstr "Appels d'urgence non pris en charge"
 
 #: error-dictionary.cpp:198
 msgctxt "Short user visible error string"
 msgid "Encryption error"
-msgstr "Titkosítási hiba"
+msgstr "Erreur de chiffrement"
 
 #: error-dictionary.cpp:200
 msgctxt "Short user visible error string"
 msgid "Encryption not available"
-msgstr "Nem érhető el titkosítás"
+msgstr "Chiffrement non disponible"
 
 #: error-dictionary.cpp:202
 msgctxt "Short user visible error string"
 msgid "Invalid argument"
-msgstr "Érvénytelen argumentum"
+msgstr "Argument non valable"
 
 #: error-dictionary.cpp:204
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
-msgstr "Érvénytelen kezelés"
+msgstr "Descripteur non valable"
 
 #: error-dictionary.cpp:206
 msgctxt "Short user visible error string"
 msgid "Network error"
-msgstr "Hálózati hiba"
+msgstr "Erreur de réseau"
 
 #: error-dictionary.cpp:208
 msgctxt "Short user visible error string"
 msgid "Removed from channel"
-msgstr "Eltávolítva a csatornáról"
+msgstr "Supprimé(e) du canal"
 
 #: error-dictionary.cpp:210
 msgctxt "Short user visible error string"
 msgid "Capability not available"
-msgstr "A képesség nem érhető el"
+msgstr "Fonction non disponible"
 
 #: error-dictionary.cpp:212
 msgctxt "Short user visible error string"
 msgid "Contact has no support"
-msgstr "A partner nem támogatja"
+msgstr "Le contact ne dispose pas d'une prise en charge"
 
 #: error-dictionary.cpp:214
 msgctxt "Short user visible error string"
 msgid "Operation not implemented"
-msgstr "A művelet nincs implementálva"
+msgstr "Opération pas encore mise en œuvre"
 
 #: error-dictionary.cpp:216
 msgctxt "Short user visible error string"
 msgid "Operation not yet implemented"
-msgstr "A művelet még nincs implementálva"
+msgstr "Opération pas encore mise en œuvre"
 
 #: error-dictionary.cpp:218
 msgctxt "Short user visible error string"
 msgid "Channel already being handled"
-msgstr "A csatorna már kezelt"
+msgstr "Le canal est déjà en cours de traitement"
 
 #: error-dictionary.cpp:220
 msgctxt "Short user visible error string"
 msgid "Contact is offline"
-msgstr "A partner kilépett"
+msgstr "Le contact est déconnecté"
 
 #: error-dictionary.cpp:222
 msgctxt "Short user visible error string"
 msgid "Operation not permitted"
-msgstr "A művelet nem engedélyezett"
+msgstr "Opération non permise"
 
 #: error-dictionary.cpp:224
 msgctxt "Short user visible error string"
 msgid "Call picked by other resource"
-msgstr "A hívást egy másik erőforrás vette fel"
+msgstr "Appel pris par une autre ressource"
 
 #: error-dictionary.cpp:226
 msgctxt "Short user visible error string"
 msgid "Username already taken"
-msgstr "A felhasználónév már foglalt"
+msgstr "Nom d'utilisateur déjà pris"
 
 #: error-dictionary.cpp:228
 msgctxt "Short user visible error string"
 msgid "Call rejected"
-msgstr "Hívás elutasítva"
+msgstr "Appel rejeté"
 
 #: error-dictionary.cpp:230
 msgctxt "Short user visible error string"
 msgid "Insufficient resources"
-msgstr "Kevés erőforrás"
+msgstr "Ressources insuffisantes"
 
 #: error-dictionary.cpp:232
 msgctxt "Short user visible error string"
 msgid "Service is busy"
-msgstr "A szolgáltatás foglalt"
+msgstr "Le service est occupé"
 
 #: error-dictionary.cpp:234
 msgctxt "Short user visible error string"
 msgid "Internal error"
-msgstr "Belső hiba"
+msgstr "Erreur interne"
 
 #: error-dictionary.cpp:236
 msgctxt "Short user visible error string"
 msgid "Software upgrade required"
-msgstr "Szoftverfrissítés szükséges"
+msgstr "Mise à niveau du logiciel requise"
 
 #: error-dictionary.cpp:238
 msgctxt "Short user visible error string"
 msgid "Channel terminated"
-msgstr "A csatorna megszakadt"
+msgstr "Le canal a été arrêté"
 
 #: error-dictionary.cpp:240
 msgctxt "Short user visible error string"
 msgid "Anonymity break possible"
-msgstr "A névtelenség megtörése lehetséges"
+msgstr "Interruption possible de l'anonymat"
 
 #: error-dictionary.cpp:242
 msgctxt "Short user visible error string"
 msgid "Internal component error"
-msgstr "Belső komponenshiba"
+msgstr "Problème de composant inconnu"
 
 #: error-dictionary.cpp:246
 msgctxt "User visible error string"
 msgid "Unknown error"
-msgstr "Ismeretlen hiba"
+msgstr "Erreur inconnue"
 
 #: Models/groups-model-item.cpp:73
 msgid "Ungrouped"
-msgstr "Csoportosítatlan"
+msgstr "Non groupé"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
 msgid "Available"
-msgstr "Elérhető"
+msgstr "Disponible"
 
 #: presence.cpp:97
 msgctxt "IM presence: a person is busy"
 msgid "Busy"
-msgstr "Elfoglalt"
+msgstr "Occupé(e)"
 
 #: presence.cpp:99
 msgctxt "IM presence: a person is away"
 msgid "Away"
-msgstr "Távollét"
+msgstr "Absent(e)"
 
 #: presence.cpp:101
 msgctxt "IM presence: a person is not available"
 msgid "Not Available"
-msgstr "Nem érhető el"
+msgstr "Non disponible"
 
 #: presence.cpp:103
 msgctxt "IM presence: a person is invisible"
 msgid "Invisible"
-msgstr "Láthatatlan"
+msgstr "Invisible"
 
 #: presence.cpp:105
 msgctxt "IM presence: a person is offline"
 msgid "Offline"
-msgstr "Kilépett"
+msgstr "Hors  ligne"
 
 #: telepathy-handler-application.cpp:113
 msgid "Persistent mode (do not exit on timeout)"
-msgstr "Folyamatos mód (nem lép ki időtúllépésnél)"
+msgstr "Mode persistant (ne se ferme pas après un délai imparti)"
 
 #: telepathy-handler-application.cpp:114
 msgid "Show Telepathy debugging information"
-msgstr "A Telepathy hibakövetési információinak megjelenítése"
+msgstr "Afficher les informations de débogage de Telepathy"
 
 #: telepathy-handler-application.cpp:115
 msgid "KDE Telepathy"
-msgstr "KDE Telepathy"
+msgstr "Telepathy pour KDE"
 
 #: Widgets/add-contact-dialog.cpp:92
 msgid "Add new contact"
-msgstr "Új partner hozzáadása"
+msgstr "Ajouter un nouveau contact"
 
 #: Widgets/add-contact-dialog.cpp:122
 msgid "No account selected."
-msgstr "Nincs kijelölve felhasználói fiók."
+msgstr "Aucun contact sélectionné."
 
 #: Widgets/add-contact-dialog.cpp:124
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
-"A kért felhasználói fiók nem kapcsolódott, ezért a partner nem adható hozzá."
+"Le compte demandé a été déconnecté et il est donc impossible d'ajouter le "
+"contact."
 
 #: Widgets/add-contact-dialog.cpp:127
 msgid "You did not specify the name of the contact to add."
-msgstr "Nem adta meg a partner nevét."
+msgstr "Vous n'avez pas spécifié le nom du contact à ajouter."
 
 #: Widgets/add-contact-dialog.cpp:153
 msgid "Failed to create new contact."
-msgstr "Nem sikerült létrehozni az új névjegyet."
+msgstr "Impossible de créer un nouveau contact."
 
 #: Widgets/add-contact-dialog.cpp:170
 msgid "Failed to request presence subscription from the requested contact."
-msgstr "Nem sikerült lekérdezni a partner állapotát."
+msgstr ""
+"Impossible de demander un abonnement de présence à partir du contact demandé."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
 msgid "Account:"
-msgstr "Felhasználói fiók:"
+msgstr "Compte :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: Widgets/add-contact-dialog.ui:27
 msgid "Screen Name:"
-msgstr "Megjelenített név:"
+msgstr "Nom d'écran :"
 
 #: Widgets/contact-grid-dialog.cpp:139
 msgid "Search in Contacts..."
-msgstr "Keresés a partnerekben…"
-
-#~ msgctxt "Verbose user visible error string"
-#~ msgid "Congratulate yourself - you just reached an impossible situation"
-#~ msgstr "Gratuláljon magának - épp most ért el egy lehetetlen állapotot"
-
-#~ msgctxt "Verbose user visible error string"
-#~ msgid "You apparently do not exist"
-#~ msgstr "Ön nyilvánvalóan nem létezik"
-
-#~ msgctxt "Short user visible error string"
-#~ msgid "Unknown handle"
-#~ msgstr "Ismeretlen handle"
-
-#~ msgctxt "Short user visible error string"
-#~ msgid "Contact incapable"
-#~ msgstr "A partner elérhetetlen"
-
-#~ msgctxt "Verbose user visible error string"
-#~ msgid "You apparently do not exist "
-#~ msgstr "Úgy tűnik Ön nem létezik "
+msgstr "Chercher dans les contacts..."
