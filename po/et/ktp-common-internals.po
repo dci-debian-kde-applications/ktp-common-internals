@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <bald@smail.ee>, 2012.
+# Marek Laane <bald@smail.ee>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-10-08 20:37+0300\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-01-14 20:16+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -16,6 +16,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bald@smail.ee"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr ""
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr ""
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr ""
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr ""
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr ""
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr ""
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr ""
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr ""
+
+#: contact-info-dialog.cpp:157
+#, fuzzy
+msgid "Clear Avatar"
+msgstr "Puhasta nimekiri"
+
+#: contact-info-dialog.cpp:237
+#, fuzzy
+msgid "Failed to load the new avatar image"
+msgstr "Uue kontakti loomine nurjus."
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr ""
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr ""
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr ""
+
+#: contact-info-dialog.cpp:395
+#, fuzzy
+msgid "Contact is blocked:"
+msgstr "Kontakt ei ole võrgus"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -233,7 +300,7 @@ msgstr "Soovitud kanalit käitleb juba mingi muu protsess"
 #: error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr "See toiming pole võimalik, kui kontakt pole võrgus"
+msgstr "See toiming pole võimalik, sest kontakt pole võrgus"
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
@@ -280,8 +347,7 @@ msgctxt "Verbose user visible error string"
 msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
-msgstr ""
-"Paigaldatud teegid on liiga vanad. Palun uuenda kõiki oma Telepathy pakette"
+msgstr "Sa kasutad liiga vana tarkvara. Palun uuenda oma Telepathy pakette"
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
@@ -560,9 +626,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Tundmatu tõrge"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Rühmitamata"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Ühtegi Kopete logi ei leitud"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Vigane Kopete logi vorming"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Ühendumine"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Ühendus katkestatud"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Teadmata"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Keelatud"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr ""
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Parool on nõutav"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Parooli ei nõuta"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Liikmete arv"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Nimi"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Kirjeldus"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -606,29 +722,29 @@ msgstr "Telepathy silumisteabe näitamine"
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Uue kontakti lisamine"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Kontot pole valitud."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr "Soovitud konto ei ole ühendatud, mistõttu kontakti ei saa lisada."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Sa ei ole määranud lisatava kontakti nime."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Uue kontakti loomine nurjus."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Oleku tellimise nõudmine soovitud kontaktilt nurjus."
 
@@ -638,13 +754,115 @@ msgid "Account:"
 msgstr "Konto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Näidatav nimi:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Otsi kontaktides..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "See tuba on juba sinu lemmikute seas."
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Jututoa lisamine"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Nimi"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Jututoaga liitumine"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Liitumine jututoaga:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Lemmikud"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Lisa jututuba"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Eemalda jututuba"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Viimati kasutatud"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Eemalda"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Puhasta nimekiri"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Päring"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Server, millele päring esitada:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Jäta tühjaks valitud konto vaikeserveri kasutamiseks"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Peata"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Otsi jututuba"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "%1 märguannete seadistamine"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Märguannete seadistamine"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Kõik kasutajad"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Märguannete seadistamine kõigile kasutajatele"
+
+#~ msgid "Me"
+#~ msgstr "Mina"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Rühmitamata"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Congratulate yourself - you just reached an impossible situation"

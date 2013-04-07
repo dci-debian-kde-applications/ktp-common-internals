@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Pino Toscano <toscano.pino@tiscali.it>, 2011, 2012.
+# Pino Toscano <toscano.pino@tiscali.it>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-08-05 16:24+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-01-28 09:01+0100\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,6 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pino Toscano"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toscano.pino@tiscali.it"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Nome completo:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Nick:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "Posta elettronica:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Telefono:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Pagina web:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Compleanno:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Organizzazione:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Cambia avatar"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Cancella avatar"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Non è stato possibile caricare il nuovo avatar"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Salva"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Il contatto può vedere quando sei in linea:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Puoi vedere quando il contatto è in linea:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Il contatto è bloccato:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -579,9 +643,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Errore sconosciuto"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Senza gruppo"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Nessun registro di Kopete trovato"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Formato non valido di registro di Kopete"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Connessione"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Disconnesso"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Disabilitato"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Non ordinati"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Password richiesta"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Nessuna password richiesta"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Numero di partecipanti"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Nome"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Descrizione"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -625,15 +739,15 @@ msgstr "Mostra le informazioni di debug di Telepathy"
 msgid "KDE Telepathy"
 msgstr "Telepathy KDE"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Aggiungi nuovo contatto"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Nessun account selezionato."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
@@ -641,15 +755,15 @@ msgstr ""
 "L'account richiesto è stato disconnesso e per questo non è stato possibile "
 "aggiungere il contatto."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Non hai specificato il nome del contatto da aggiungere."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Non è stato possibile creare un nuovo contatto."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr ""
 "Non è stato possibile richiedere la sottoscrizione della presenza dal "
@@ -661,13 +775,115 @@ msgid "Account:"
 msgstr "Account:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Nome pubblico:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Cerca nei contatti..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Questa stanza è già tra quelle preferite."
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Aggiungi stanza"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Nome"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Entra in una stanza di chat"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Entra nella stanza di chat:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Preferite"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Aggiungi stanza"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Rimuovi stanza"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Recenti"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Rimuovi"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Pulisci lista"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Interroga"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Server da interrogare:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Lascia vuoto per usare il server predefinito dell'account selezionato"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Ferma"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Cerca stanze"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Configura le notifiche per %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Configura le notifiche per"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Tutti gli utenti"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Configura le notifiche per tutti gli utenti"
+
+#~ msgid "Me"
+#~ msgstr "Io"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Senza gruppo"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Your call credit is too low"

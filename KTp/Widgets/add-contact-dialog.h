@@ -31,7 +31,6 @@
 namespace Tp {
     class PendingOperation;
 }
-class AccountsModel;
 
 namespace KTp
 {
@@ -40,7 +39,7 @@ class KTP_EXPORT AddContactDialog : public KDialog
     Q_OBJECT
 
 public:
-    explicit AddContactDialog(AccountsModel* accountModel, QWidget *parent = 0);
+    explicit AddContactDialog(const Tp::AccountManagerPtr &accountManager, QWidget *parent = 0);
     virtual ~AddContactDialog();
 
     virtual void accept();

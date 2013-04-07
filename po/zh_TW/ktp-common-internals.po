@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2012.
-# Franklin Weng <franklin@goodhorse.idv.tw>, 2012.
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-09-20 08:35+0800\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-01-30 13:20+0800\n"
+"Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frank Weng (a.k.a. Franklin)"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "franklin at goodhorse dot idv dot tw"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "全名："
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "暱稱："
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "電子郵件："
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "電話："
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "首頁："
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "生日："
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "組織："
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "變更頭像"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "清除頭像"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "載入新頭像失敗"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "儲存"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "聯絡人是否可以看見您上線："
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "您是否可以看到聯絡人上線："
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "聯絡人被封鎖："
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -550,9 +614,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "未知的錯誤"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "未分組"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "沒找到 Kopete 的紀錄"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "不合法的 Kopete 紀錄格式"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "連線中"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "已斷線"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "未知"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "已關閉"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "未排序"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "需要密碼"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "不需要密碼"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "成員數"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "名稱"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "描述"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -572,7 +686,7 @@ msgstr "離開"
 #: presence.cpp:101
 msgctxt "IM presence: a person is not available"
 msgid "Not Available"
-msgstr "無法使用"
+msgstr "沒空"
 
 #: presence.cpp:103
 msgctxt "IM presence: a person is invisible"
@@ -596,29 +710,29 @@ msgstr "顯示 Telepathy 除錯資訊"
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "新增聯絡人"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "未選取任何帳號。"
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr "請求的帳號已離線，因此無法新增聯絡人。"
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "您並未指定要加入的聯絡人姓名。"
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "建立新聯絡人失敗。"
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "向聯絡人請求上線通知失敗。"
 
@@ -628,13 +742,115 @@ msgid "Account:"
 msgstr "帳號："
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "螢幕名稱："
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "搜尋聯絡人..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "此聊天室已在您的最愛中了。"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "新增聊天室"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "名稱"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "加入聊天室"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "進入聊天室："
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "我的最愛"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "新增聊天室"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "移除聊天室"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "最近的"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "移除"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "清除清單"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "查詢"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "要查詢的伺服器："
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "選取帳號的預設伺服器留空"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "停止"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "搜尋聊天室"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "設定 %1 的通知"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "設定通知"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "所有使用者"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "設定所有使用者的通知"
+
+#~ msgid "Me"
+#~ msgstr "我"
+
+#~ msgid "Ungrouped"
+#~ msgstr "未分組"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Congratulate yourself - you just reached an impossible situation"

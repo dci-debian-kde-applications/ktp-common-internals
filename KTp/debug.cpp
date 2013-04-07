@@ -27,14 +27,16 @@ namespace KTp
 
 namespace {
 int s_tpqtDebugArea;
+QString libraryString;
 
 static void tpDebugCallback(const QString &libraryName,
                             const QString &libraryVersion,
                             QtMsgType type,
                             const QString &msg)
 {
-    Q_UNUSED(libraryName)
-    Q_UNUSED(libraryVersion)
+    if (Q_UNLIKELY(libraryString.isEmpty())) {
+        libraryString = QString::fromLatin1("%1 %2").arg(libraryName, libraryVersion);
+    }
     kDebugStream(type, s_tpqtDebugArea, __FILE__, __LINE__, 0) << qPrintable(msg);
 }
 } // namespace

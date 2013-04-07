@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-09-02 08:03+0200\n"
-"Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-10 21:42+0200\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stelios"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sstavra@gmail.com"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Ονοματεπώνυμο:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Ψευδώνυμο:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "Διευθυνση αλληλογραφίας:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Τηλέφωνο:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Ιστοσελίδα:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Ημερομηνία γέννησης:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Οργανισμός:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Αλλαγή avatar"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Καθαρισμός avatar"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Αποτυχία φόρτωσης της νέας εικόνας του avatar"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Η επαφή μπορεί να δει πότε είστε σε σύνδεση:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Μπορείτε να δείτε πότε η επαφή είναι σε σύνδεση:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Η επαφή είναι σε φραγή:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -583,9 +647,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Άγνωστο σφάλμα"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Διαχωρισμένα"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Δεν βρέθηκαν ημερολόγια του kopete"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Μη έγκυρος τύπος ημερολογίου καταγραφών του kopete"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Συνδέεται"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Αποσυνδεδεμένο"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Άγνωστη"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Ανενεργός"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Αταξινόμητα"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Απαιτείται κωδικός πρόσβασης"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Δεν απαιτείται κωδικός πρόσβασης"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Καταμέτρηση μελών"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Όνομα"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Περιγραφή"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -629,15 +743,15 @@ msgstr "Εμφάνιση πληροφοριών διόρθωσης σφαλμά�
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Προσθήκη νέας επαφής"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Δεν επελέγη λογαριασμός."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
@@ -645,15 +759,15 @@ msgstr ""
 "Ο λογαριασμός που ζητήθηκε έχει αποσυνδεθεί και έτσι η επαφή δεν μπορεί να "
 "προστεθεί."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Δεν ορίσατε το όνομα της επαφής που θα προσθέσετε."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Αποτυχία δημιουργίας νέας επαφής."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Αποτυχία αιτήματος δήλωσης παρουσίας από την ζητηθείσα επαφή."
 
@@ -663,13 +777,117 @@ msgid "Account:"
 msgstr "Λογαριασμός:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Όνομα στην οθόνη:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Αναζήτηση στις επαφές..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Αυτή η αίθουσα είναι ήδη στις αγαπημένες σας."
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Προσθήκη αίθουσας"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Όνομα"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Συμμετοχή στην αίθουσα συνομιλίας"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Είσοδος στην αίθουσα συνομιλίας:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Αγαπημένα"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Προσθήκη αίθουσας"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Αφαίρεση αίθουσας"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Πρόσφατο"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Καθαρισμός λίστας"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Ερώτηση"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Εξυπηρετητής που θα ερωτηθεί:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr ""
+"Να παραμείνει κενό για τον προκαθορισμένο εξυπηρετητή του επιλεγμένου "
+"λογαριασμού"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Διακοπή"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Αναζήτηση αιθουσών"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Διαμόρφωση ειδοποιήσεων για %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Διαμόρφωση ειδοποιήσεων για"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Όλους τους χρήστες"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Διαμόρφωση ειδοποιήσεων για όλους τους χρήστες"
+
+#~ msgid "Me"
+#~ msgstr "Εγώ"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Διαχωρισμένα"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Congratulate yourself - you just reached an impossible situation"
@@ -677,9 +895,6 @@ msgstr "Αναζήτηση στις επαφές..."
 #~ "Δώστε συγχαρητήρια στον εαυτό σας - έχετε μόλις φθάσει σε μια απίθανη "
 #~ "κατάσταση"
 
-#, fuzzy
-#~| msgctxt "Short user visible error string"
-#~| msgid "You apparently do not exist"
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "You apparently do not exist"
 #~ msgstr "Προφανώς δεν υπάρχετε"
