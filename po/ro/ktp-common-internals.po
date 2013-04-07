@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2013-01-10 17:46+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-16 12:17+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,6 +17,70 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@ase.md"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Nume complet:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Poreclă:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "Email:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Pagină web:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Zi de naștere:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Organizație:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Schimbă avatarul"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Curăță avatarul"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Încărcarea imaginii pentru noul avatar a eșuat"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Salvează"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Contactul poate vedea cînd sînteți conectat:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Puteți vedea cînd contactul este conectat:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Contactul este blocat:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -572,9 +636,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Eroare necunoscută"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Negrupat"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Nu au fost găsite jurnale Kopete"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Format nevalid de jurnale Kopete"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Se conectează"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Deconectat"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Nesortat"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Este necesară parola"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Nu este necesară parola"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Număr membri"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Denumire"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Descriere"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -618,30 +732,30 @@ msgstr "Arată informații de depanare Telepathy"
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Adaugă contact nou"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Niciun cont ales."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
 "Contul cerut a fost deconectat și de aceea contactul nu a putut fi adăugat."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Nu ați specificat numele contactului de adăugat."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Crearea noului contact a eșuat."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "A eșuat cererea de abonare la prezență adresată contactului cerut."
 
@@ -651,27 +765,109 @@ msgid "Account:"
 msgstr "Cont:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Nume afișat:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Căutare în contacte..."
 
-#~ msgid "Password required"
-#~ msgstr "Este necesară parola"
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Această cameră este deja în favoritele dumneavoastră."
 
-#~ msgid "No password required"
-#~ msgstr "Nu este necesară parola"
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Adaugă cameră"
 
-#~ msgid "Member count"
-#~ msgstr "Număr membri"
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Denumire"
 
-#~ msgctxt "Chatrooms name"
-#~ msgid "Name"
-#~ msgstr "Denumire"
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Alăturare la cameră de discuții"
 
-#~ msgctxt "Chatrooms description"
-#~ msgid "Description"
-#~ msgstr "Descriere"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Introduceți camera de discuții:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Favorite"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Adaugă cameră"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Elimină camera"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Recent"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Elimină"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Curăță lista"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Interogare"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Server de interogat:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Lăsați gol pentru serverul implicit al contului ales"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Oprește"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Caută camere"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Configurează notificările pentru %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Configurează notificările pentru"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Toți utilizatorii"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Configurează notificările pentru toți utilizatorii"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Negrupat"

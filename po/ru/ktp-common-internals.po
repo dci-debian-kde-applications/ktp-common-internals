@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Yuri Efremov <yur.arh@gmail.com>, 2012.
+# Yuri Efremov <yur.arh@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-08-05 11:15+0400\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-17 22:18+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -21,17 +21,83 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрий Ефремов"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yur.arh@gmail.com"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Полное имя:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Псевдоним:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "Электронная почта:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Телефон:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Веб-сайт:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "День рождения:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Организация:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Изменить аватор"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Убрать аватор"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Не удалось загрузить новое изображение аватора"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Сохранить"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Контакт может видеть, когда вы в сети:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Вы сможете видеть, когда контакт в сети:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Контакт заблокирован:"
+
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
 msgid ""
 "Looks like you are already connected from other location and the server does "
 "not allow multiple connections"
 msgstr ""
+"Похоже, уже установлено соединение из другого места, а сервер не "
+"поддерживает одновременного установления нескольких соединений"
 
 #: error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
-msgstr ""
+msgstr "Ошибка аутентификации (проверьте пароль)"
 
 #: error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
@@ -39,16 +105,18 @@ msgid ""
 "The channel is too busy now to process your request. Try again in a few "
 "minutes"
 msgstr ""
+"Канал занят и не может обработать ваш запрос. Повторите запрос через "
+"несколько минут."
 
 #: error-dictionary.cpp:43
 msgctxt "Verbose user visible error string"
 msgid "The connection was canceled on your request"
-msgstr ""
+msgstr "Соединение было разорвано по вашему запросу"
 
 #: error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is expired"
-msgstr ""
+msgstr "Сертификат SSL/TLS, полученный от сервера, истёк"
 
 #: error-dictionary.cpp:47
 msgctxt "Verbose user visible error string"
@@ -56,6 +124,8 @@ msgid ""
 "The SSL/TLS certificate received from server has different fingerprint than "
 "expected"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, имеет отпечаток пальцев, который "
+"не ожидался"
 
 #: error-dictionary.cpp:49
 msgctxt "Verbose user visible error string"
@@ -63,36 +133,42 @@ msgid ""
 "The SSL/TLS certificate received from server has different hostname than "
 "expected"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, имеет имя хоста, которое не "
+"ожидалось"
 
 #: error-dictionary.cpp:51
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server uses too weak encryption"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, использует слишком слабое "
+"шифрование"
 
 #: error-dictionary.cpp:53
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is invalid"
-msgstr ""
+msgstr "Сертификат SSL/TLS, полученный от сервера, недействителен"
 
 #: error-dictionary.cpp:55
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has exceeded length limit"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, имеет превышенную максимальную "
+"длину"
 
 #: error-dictionary.cpp:57
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has not been activated yet"
-msgstr ""
+msgstr "Сертификат SSL/TLS, полученный от сервера, ещё не активирован"
 
 #: error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
-msgstr ""
+msgstr "Сервер не предоставил ни одного сертификата SSL/TLS"
 
 #: error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has been revoked"
-msgstr ""
+msgstr "Сертификат SSL/TLS, полученный от сервера, был отозван"
 
 #: error-dictionary.cpp:63
 msgctxt "Verbose user visible error string"
@@ -100,6 +176,8 @@ msgid ""
 "The SSL/TLS certificate received from server was self-signed by the server "
 "and is untrusted"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, является самозаверенным и поэтому "
+"ненадёжен"
 
 #: error-dictionary.cpp:65
 msgctxt "Verbose user visible error string"
@@ -107,46 +185,48 @@ msgid ""
 "The SSL/TLS certificate received from server was not signed by a trusted "
 "certificate authority"
 msgstr ""
+"Сертификат SSL/TLS, полученный от сервера, не был подписан надежной службой "
+"сертификации"
 
 #: error-dictionary.cpp:67
 msgctxt "Verbose user visible error string"
 msgid "You have been banned from the channel"
-msgstr ""
+msgstr "Доступ на канал для вас закрыт"
 
 #: error-dictionary.cpp:69
 msgctxt "Verbose user visible error string"
 msgid "The channel is full"
-msgstr ""
+msgstr "Канал переполнен"
 
 #: error-dictionary.cpp:71
 msgctxt "Verbose user visible error string"
 msgid "The channel is invite-only"
-msgstr ""
+msgstr "Вход на канал только по приглашению"
 
 #: error-dictionary.cpp:73
 msgctxt "Verbose user visible error string"
 msgid "You have been kicked from the channel"
-msgstr ""
+msgstr "Выкинули вас с канала"
 
 #: error-dictionary.cpp:75
 msgctxt "Verbose user visible error string"
 msgid "An unexpected error has occurred"
-msgstr ""
+msgstr "Произошла непредвиденная ошибка"
 
 #: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
 msgid "Could not establish connection"
-msgstr ""
+msgstr "Не удалось установить соединение"
 
 #: error-dictionary.cpp:79
 msgctxt "Verbose user visible error string"
 msgid "Connection to server was lost"
-msgstr ""
+msgstr "Соединение с сервером разорвано"
 
 #: error-dictionary.cpp:81
 msgctxt "Verbose user visible error string"
 msgid "Server refused your connection"
-msgstr ""
+msgstr "Соединение отклонено сервером"
 
 #: error-dictionary.cpp:83
 msgctxt "Verbose user visible error string"
@@ -154,101 +234,103 @@ msgid ""
 "Somewhere there is another client connecting with your account and your "
 "current connection is lost"
 msgstr ""
+"К вашей учётной записи подключена другая клиентская программа, ваше "
+"соединение будет разорвано"
 
 #: error-dictionary.cpp:85
 msgctxt "Verbose user visible error string"
 msgid "You have been disconnected"
-msgstr ""
+msgstr "Вы отключены от системы"
 
 #: error-dictionary.cpp:87
 msgctxt "Verbose user visible error string"
 msgid "Selected user does not exist"
-msgstr ""
+msgstr "Выбранные пользователи не существует"
 
 #: error-dictionary.cpp:89
 msgctxt "Verbose user visible error string"
 msgid "Emergency calls are not supported"
-msgstr ""
+msgstr "Экстренные вызовы не поддерживаются"
 
 #: error-dictionary.cpp:91
 msgctxt "Verbose user visible error string"
 msgid "An encryption error has occurred"
-msgstr ""
+msgstr "Произошла ошибка шифрования"
 
 #: error-dictionary.cpp:93
 msgctxt "Verbose user visible error string"
 msgid "Requested encryption is not available"
-msgstr ""
+msgstr "Указанный способ шифрования недоступен"
 
 #: error-dictionary.cpp:95
 msgctxt "Verbose user visible error string"
 msgid "An invalid argument was provided"
-msgstr ""
+msgstr "Указан недопустимый аргумент"
 
 #: error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
-msgstr ""
+msgstr "Указанный способ обработки неизвестен на этом канале"
 
 #: error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
 msgid "There appears to be a problem with your network, check your connection"
-msgstr ""
+msgstr "Возникла проблема с сетью, проверьте подключение"
 
 #: error-dictionary.cpp:101
 msgctxt "Verbose user visible error string"
 msgid "You were removed from the channel because you did not respond"
-msgstr ""
+msgstr "Вы были удалены из канала, потому что вы не ответили на запрос"
 
 #: error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
 msgid "This capability is not available"
-msgstr ""
+msgstr "Эта возможность недоступна"
 
 #: error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
 msgid "The contact does not have the requested capabilities"
-msgstr ""
+msgstr "Собеседник не может воспользоваться требуемой возможностью"
 
 #: error-dictionary.cpp:107
 msgctxt "Verbose user visible error string"
 msgid "This operation is not implemented"
-msgstr ""
+msgstr "Эта операция не выполнена."
 
 #: error-dictionary.cpp:109
 msgctxt "Verbose user visible error string"
 msgid "This operation is not yet implemented"
-msgstr ""
+msgstr "Эта операция ещё не выполнена."
 
 #: error-dictionary.cpp:111
 msgctxt "Verbose user visible error string"
 msgid "The requested channel is already being handled by some other process"
-msgstr ""
+msgstr "Требуемый канал уже обрабатывается другим процессом"
 
 #: error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr ""
+msgstr "Эта операция недоступна для контактов, которые не в сети."
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
 msgid "You are not permitted to perform this operation"
-msgstr ""
+msgstr "У вас нет прав доступа для выполнения этого действия"
 
 #: error-dictionary.cpp:117
 msgctxt "Verbose user visible error string"
 msgid "Current call was picked up by another resource"
-msgstr ""
+msgstr "Текущий вызов был перехвачен другим ресурсом"
 
 #: error-dictionary.cpp:119
 msgctxt "Verbose user visible error string"
 msgid "Account with this username already exists"
-msgstr ""
+msgstr "Учётная запись с таким именем уже существует"
 
 #: error-dictionary.cpp:121
 msgctxt "Verbose user visible error string"
 msgid "The receiver rejected your call"
-msgstr ""
+msgstr "Собеседник отклонил ваш вызов"
 
 #: error-dictionary.cpp:123
 msgctxt "Verbose user visible error string"
@@ -256,6 +338,8 @@ msgid ""
 "There are insufficient resources (like free memory) to finish the operation "
 "at the moment"
 msgstr ""
+"Недостаточно системных ресурсов (например, оперативной памяти) для "
+"завершения текущей операции"
 
 #: error-dictionary.cpp:125
 msgctxt "Verbose user visible error string"
@@ -263,11 +347,13 @@ msgid ""
 "Your request hit a busy resource somewhere along the way and the operation "
 "was unable to finish"
 msgstr ""
+"При выполнении запроса оказались заняты системные ресурсы, поэтому "
+"выполнение операции не удалось завершить"
 
 #: error-dictionary.cpp:127
 msgctxt "Verbose user visible error string"
 msgid "An internal error has occurred (known as the 'Confused service error')"
-msgstr ""
+msgstr "Произошла внутренняя ошибка (конфликт службы)"
 
 #: error-dictionary.cpp:129
 msgctxt "Verbose user visible error string"
@@ -275,43 +361,48 @@ msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
 msgstr ""
+"Установленные библиотеки устарели. Обновите все пакеты Telepathy на более "
+"новую версию."
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
 msgid "The channel was terminated for no apparent reason"
-msgstr ""
+msgstr "Работа канала прекращена без причин"
 
 #: error-dictionary.cpp:133
 msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
 msgstr ""
+"Эта операция не может быть завершена, поскольку это нарушит требования "
+"анонимности."
 
 #: error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
 msgid "Some of the IM components are not working correctly"
 msgstr ""
+"Некоторые из компонентов системы обмена сообщениями работают неправильно"
 
 #: error-dictionary.cpp:137
 #, kde-format
 msgctxt "User visible error string"
 msgid "An unknown error was encountered (%1), please report this"
-msgstr ""
+msgstr "Произошла неизвестная ошибка (%1), пожалуйста, сообщите о ней"
 
 #: error-dictionary.cpp:144
 msgctxt "Short user visible error string"
 msgid "Connected elsewhere"
-msgstr ""
+msgstr "Повторное соединение"
 
 #: error-dictionary.cpp:146
 msgctxt "Short user visible error string"
 msgid "Authentication failed"
-msgstr ""
+msgstr "Ошибка аутентификации"
 
 #: error-dictionary.cpp:148
 msgctxt "Short user visible error string"
 msgid "Channel too busy"
-msgstr ""
+msgstr "Канал занят"
 
 #: error-dictionary.cpp:150
 msgctxt "Short user visible error string"
@@ -326,77 +417,77 @@ msgstr "Сертификат просрочен"
 #: error-dictionary.cpp:154
 msgctxt "Short user visible error string"
 msgid "Wrong certificate fingerprint"
-msgstr ""
+msgstr "Неверный отпечаток пальцев сертификата"
 
 #: error-dictionary.cpp:156
 msgctxt "Short user visible error string"
 msgid "Wrong certificate hostname"
-msgstr ""
+msgstr "Неверное имя хоста сертификата"
 
 #: error-dictionary.cpp:158
 msgctxt "Short user visible error string"
 msgid "Too weak certificate encryption"
-msgstr ""
+msgstr "Слишком слабое шифрование сертификата"
 
 #: error-dictionary.cpp:160
 msgctxt "Short user visible error string"
 msgid "Invalid certificate"
-msgstr "Недопустимый сертификат"
+msgstr "Недействительный сертификат"
 
 #: error-dictionary.cpp:162
 msgctxt "Short user visible error string"
 msgid "Certificate length limit exceeded"
-msgstr ""
+msgstr "Превышена максимальная длина сертификата"
 
 #: error-dictionary.cpp:164
 msgctxt "Short user visible error string"
 msgid "Certificate not yet active"
-msgstr ""
+msgstr "Сертификат ещё не активирован"
 
 #: error-dictionary.cpp:166
 msgctxt "Short user visible error string"
 msgid "No certificate from server"
-msgstr ""
+msgstr "Нет сертификата сервера"
 
 #: error-dictionary.cpp:168
 msgctxt "Short user visible error string"
 msgid "Certificate revoked"
-msgstr ""
+msgstr "Сертификат отозван"
 
 #: error-dictionary.cpp:170
 msgctxt "Short user visible error string"
 msgid "Untrusted self-signed certificate"
-msgstr ""
+msgstr "Ненадёжный самозаверенный сертификат"
 
 #: error-dictionary.cpp:172
 msgctxt "Short user visible error string"
 msgid "Untrusted certificate"
-msgstr ""
+msgstr "Ненадёжный сертификат"
 
 #: error-dictionary.cpp:174
 msgctxt "Short user visible error string"
 msgid "Banned from channel"
-msgstr ""
+msgstr "Доступ на канал закрыт"
 
 #: error-dictionary.cpp:176
 msgctxt "Short user visible error string"
 msgid "The channel is full"
-msgstr ""
+msgstr "Канал переполнен"
 
 #: error-dictionary.cpp:178
 msgctxt "Short user visible error string"
 msgid "The channel is invite-only"
-msgstr ""
+msgstr "Вход на канал только по приглашению"
 
 #: error-dictionary.cpp:180
 msgctxt "Short user visible error string"
 msgid "Kicked from channel"
-msgstr ""
+msgstr "Выкинули с канала"
 
 #: error-dictionary.cpp:182
 msgctxt "Short user visible error string"
 msgid "Something's seriously wrong"
-msgstr ""
+msgstr "Произошла критическая ошибка"
 
 #: error-dictionary.cpp:184
 msgctxt "Short user visible error string"
@@ -416,7 +507,7 @@ msgstr "Соединение отклонено"
 #: error-dictionary.cpp:190
 msgctxt "Short user visible error string"
 msgid "Connection stolen by other account"
-msgstr ""
+msgstr "Соединение с сервером перехвачено другой учётной записью"
 
 #: error-dictionary.cpp:192
 msgctxt "Short user visible error string"
@@ -431,7 +522,7 @@ msgstr "Пользователь не существует"
 #: error-dictionary.cpp:196
 msgctxt "Short user visible error string"
 msgid "Emergency calls unsupported"
-msgstr ""
+msgstr "Экстренные вызовы не поддерживаются"
 
 #: error-dictionary.cpp:198
 msgctxt "Short user visible error string"
@@ -461,101 +552,151 @@ msgstr "Ошибка сети"
 #: error-dictionary.cpp:208
 msgctxt "Short user visible error string"
 msgid "Removed from channel"
-msgstr ""
+msgstr "Удалено из канала"
 
 #: error-dictionary.cpp:210
 msgctxt "Short user visible error string"
 msgid "Capability not available"
-msgstr ""
+msgstr "Возможность недоступна"
 
 #: error-dictionary.cpp:212
 msgctxt "Short user visible error string"
 msgid "Contact has no support"
-msgstr ""
+msgstr "Не поддерживается контактом"
 
 #: error-dictionary.cpp:214
 msgctxt "Short user visible error string"
 msgid "Operation not implemented"
-msgstr ""
+msgstr "Операция не выполнена."
 
 #: error-dictionary.cpp:216
 msgctxt "Short user visible error string"
 msgid "Operation not yet implemented"
-msgstr ""
+msgstr "Операция ещё не выполнена."
 
 #: error-dictionary.cpp:218
 msgctxt "Short user visible error string"
 msgid "Channel already being handled"
-msgstr ""
+msgstr "Канал уже обрабатывается"
 
 #: error-dictionary.cpp:220
 msgctxt "Short user visible error string"
 msgid "Contact is offline"
-msgstr ""
+msgstr "Контакт вышел из сети"
 
 #: error-dictionary.cpp:222
 msgctxt "Short user visible error string"
 msgid "Operation not permitted"
-msgstr ""
+msgstr "Операция запрещена"
 
 #: error-dictionary.cpp:224
 msgctxt "Short user visible error string"
 msgid "Call picked by other resource"
-msgstr ""
+msgstr "Вызов перехвачен другим ресурсом"
 
 #: error-dictionary.cpp:226
 msgctxt "Short user visible error string"
 msgid "Username already taken"
-msgstr ""
+msgstr "Имя пользователя уже использовано"
 
 #: error-dictionary.cpp:228
 msgctxt "Short user visible error string"
 msgid "Call rejected"
-msgstr ""
+msgstr "Вызов отклонён"
 
 #: error-dictionary.cpp:230
 msgctxt "Short user visible error string"
 msgid "Insufficient resources"
-msgstr ""
+msgstr "Недостаточно ресурсов"
 
 #: error-dictionary.cpp:232
 msgctxt "Short user visible error string"
 msgid "Service is busy"
-msgstr ""
+msgstr "Служба занята"
 
 #: error-dictionary.cpp:234
 msgctxt "Short user visible error string"
 msgid "Internal error"
-msgstr ""
+msgstr "Внутренняя ошибка"
 
 #: error-dictionary.cpp:236
 msgctxt "Short user visible error string"
 msgid "Software upgrade required"
-msgstr ""
+msgstr "Требуется обновление программного обеспечения"
 
 #: error-dictionary.cpp:238
 msgctxt "Short user visible error string"
 msgid "Channel terminated"
-msgstr ""
+msgstr "Работа канала прекращена"
 
 #: error-dictionary.cpp:240
 msgctxt "Short user visible error string"
 msgid "Anonymity break possible"
-msgstr ""
+msgstr "Возможно нарушение анонимности"
 
 #: error-dictionary.cpp:242
 msgctxt "Short user visible error string"
 msgid "Internal component error"
-msgstr ""
+msgstr "Ошибка внутреннего компонента"
 
 #: error-dictionary.cpp:246
 msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Без группы"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Не найдено журнала Kopete"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Неверный формат журнала Kopete"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Соединение"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Соединение разорвано"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Отключено"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Без сортировки"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Требуется пароль"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Не требуется пароль"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Количество участников"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Имя"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Описание"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -589,41 +730,42 @@ msgstr "Не в сети"
 
 #: telepathy-handler-application.cpp:113
 msgid "Persistent mode (do not exit on timeout)"
-msgstr ""
+msgstr "Устойчивый режим (не выходить в случае превышения времени ожидания)"
 
 #: telepathy-handler-application.cpp:114
 msgid "Show Telepathy debugging information"
-msgstr ""
+msgstr "Показать подробности отладки Telepathy"
 
 #: telepathy-handler-application.cpp:115
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Добавить новый контакт"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
-msgstr ""
+msgstr "Не выбрано учётной записи."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
+"Требуемая учётная запись отключена, и поэтому контакт не может быть добавлен."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
-msgstr ""
+msgstr "Не указано имя добавляемого контакта."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
-msgstr ""
+msgstr "Ошибка добавления контакта."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
-msgstr ""
+msgstr "Не удалось подписаться на запрос статуса требуемого контакта."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
@@ -631,31 +773,109 @@ msgid "Account:"
 msgstr "Учётная запись:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Показываемое имя:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Поиск в контактах..."
 
-#, fuzzy
-#~| msgctxt "Short user visible error string"
-#~| msgid "Connection lost"
-#~ msgctxt "This is a connection state"
-#~ msgid "Connecting"
-#~ msgstr "Соединение разорвано"
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Эта комната уже в избранном."
 
-#, fuzzy
-#~| msgctxt "Short user visible error string"
-#~| msgid "Disconnected"
-#~ msgctxt "This is a connection state"
-#~ msgid "Disconnected"
-#~ msgstr "Отключено"
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Добавить комнату"
 
-#, fuzzy
-#~| msgctxt "User visible error string"
-#~| msgid "Unknown error"
-#~ msgctxt "This is an unknown connection state"
-#~ msgid "Unknown"
-#~ msgstr "Неизвестная ошибка"
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Имя"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Присоединение к чату"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Введите чат:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Избранные"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Добавить чат"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Удалить чат"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Последние"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Удалить"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Очистить список"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Запрос"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Сервер для запросов:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Оставьте пустым для сервера по умолчанию выбранной учётной записи"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Остановить"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Поиск чата"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Настроить уведомления для %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Настроить уведомления для"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Все пользователи"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Настроить уведомления для всех пользователей"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Без группы"

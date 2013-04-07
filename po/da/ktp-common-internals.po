@@ -1,21 +1,85 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Martin Schlander <mschlander@opensuse.org>, 2011, 2012.
+# Martin Schlander <mschlander@opensuse.org>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-09-12 19:52+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-06 19:59+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Martin Schlander"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mschlander@opensuse.org"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Fuldt navn:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Kaldenavn:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "E-mail:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Hjemmeside:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Fødselsdag:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Organisation:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Skift avatar"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Ryd avatar"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Kunne ikke indlæse det ny avatarbillede"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Gem"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Kontakten kan se når du er online:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Du kan se når kontakten er online:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Kontakten er blokeret:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -245,7 +309,7 @@ msgstr "Den ønskede kanal bliver allerede håndteret af en anden proces"
 #: error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr "Denne operation er utilgængelig for offlline-kontakter"
+msgstr "Denne operation er utilgængelig for kontakter der er offline"
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
@@ -296,8 +360,8 @@ msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
 msgstr ""
-"De installerede biblioteker er for gamle. Prøv venligst at opdatere alle "
-"Telepathy-pakker til en nyere version"
+"De installerede biblioteker er for gamle. Prøv at opdatere alle Telepathy-"
+"pakker til en nyere version"
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
@@ -578,9 +642,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Ukendt fejl"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Ikke-grupperet"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Ingen Kopete-log fundet"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Ugyldigt format af Kopete-log"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Forbinder"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Forbindelse afbrudt"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Deaktiveret"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Usorteret"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Adgangskode påkrævet"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Ingen adgangskode påkrævet"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Medlemsantal"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Navn"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Beskrivelse"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -624,34 +738,34 @@ msgstr "Vis fejlsøgningsinformation for Telepathy"
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Tilføj ny kontakt"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Ingen konto valgt."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
-"Den ønskede konto har fået afbrudt forbindelsen og derfor kunne kontakten "
-"ikke tilføjes."
+"Den ønskede konto har fået afbrudt forbindelsen og derfor kan kontakten ikke "
+"tilføjes."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
-msgstr "Du angav ikke navnet på den kontakt der skulle tilføjes."
+msgstr "Du angav ikke navnet på kontakten der skulle tilføjes."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Kunne ikke oprette ny kontakt."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr ""
-"Kunne ikke anmode om tilstedeværelsesabonnement fra den ønskede kontakt."
+"Kunne ikke anmode om at abonnere på tilstedeværelsen fra den ønskede kontakt."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
@@ -659,13 +773,115 @@ msgid "Account:"
 msgstr "Konto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Skærmnavn:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Søg i kontakter..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Dette rum er allerede i dine favoritter."
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Tilføj rum"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Navn"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Gå med i chatrum"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Gå til chatrum:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Favoritter"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Tilføj rum"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Fjern rum"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Nylige"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Fjern"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Ryd liste"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Forespørgsel"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Serveren der skal forespørges:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Lad stå tomt for at bruge standardserveren for den valgte konto"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Stop"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Søg efter rum"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Indstil bekendtgørelser for %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Indstil bekendtgørelser for"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Alle brugere"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Indstil bekendtgørelser for alle brugere"
+
+#~ msgid "Me"
+#~ msgstr "Mig"
+
+#~ msgid "Ungrouped"
+#~ msgstr "Ikke-grupperet"
 
 #~ msgctxt "Verbose user visible error string"
 #~ msgid "Congratulate yourself - you just reached an impossible situation"

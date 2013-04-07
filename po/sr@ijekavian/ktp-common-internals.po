@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-08-17 21:54+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-03 14:26+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -18,6 +18,71 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Пуно име:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Надимак:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "Е‑пошта:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Телефон:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Домаћа страница:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Рођендан:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Организација:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Промени аватар"
+
+# rewrite-msgid: /Clear/Remove/
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Уклони аватар"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Не могу да учитам нову слику аватара."
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Сачувај"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Контакт види кад сте на вези:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Ви видите кад је контакт на вези:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Контакт је блокиран:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -573,10 +638,69 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Непозната грешка"
 
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Нема Копетеових дневника"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Лош формат Копетеовог дневника"
+
 # >> @item
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "негруписани"
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "повезује се"
+
+# >> @item
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "неповезано"
+
+# >> @item
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "непознато"
+
+# >> @item
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "деактивирано"
+
+# >> @item
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "непоређани"
+
+# >> @item
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "лозинка неопходна"
+
+# >> @item
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "лозинка није неопходна"
+
+# >> @item
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "број чланова"
+
+# >> @item
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "име"
+
+# >> @item
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "опис"
 
 # >> @item
 #: presence.cpp:95
@@ -627,30 +751,30 @@ msgid "KDE Telepathy"
 msgstr "КДЕ Телепатија"
 
 # >> @title:window
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Додавање новог контакта"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Није изабран ниједан налог."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
 "Затраженом налогу је прекинута веза, и зато контакт не може да се дода."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Нисте задали име контакта који треба додати."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Не могу да направим нови контакт."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Не могу да затражим претплату на присутност од траженог контакта."
 
@@ -660,10 +784,110 @@ msgid "Account:"
 msgstr "Налог:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Екранско име:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Потражи у контактима..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Ово соба је већ међу вашим омиљеним."
+
+# >> @title:window
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Додавање собе"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Име"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Придруживање соби за ћаскање"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Унесите собу за ћаскање:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Омиљене"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Додај собу"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Уклони собу"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Недавне"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Уклони"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Очисти списак"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Упит"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Сервер за упит:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Оставите празно за подразумевани сервер изабраног налога."
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Заустави"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Потражи собе"
+
+# >> @title:window %1 contact alias
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Подешавање обавештења за %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Подеси обавештења за"
+
+# >> @item:inlistbox Configure notifications for
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "све кориснике"
+
+# >> @title:window
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Подешавање обавештења за све кориснике"

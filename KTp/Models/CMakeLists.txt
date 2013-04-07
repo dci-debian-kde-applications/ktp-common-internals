@@ -4,28 +4,27 @@ include_directories (${CMAKE_CURRENT_BINARY_DIR}
 )
 
 set (ktp_models_private_SRCS
-    accounts-filter-model.cpp
-    accounts-model-item.cpp
-    accounts-model.cpp
-    capabilities-hack-private.cpp
-    contact-model-item.cpp
-    groups-model-item.cpp
-    groups-model.cpp
-    proxy-tree-node.cpp
-    tree-node.cpp
-    flat-model-proxy.cpp
+    abstract-grouping-proxy-model.cpp
+    accounts-list-model.cpp
+    accounts-tree-proxy-model.cpp
+    contacts-filter-model.cpp
+    contacts-list-model.cpp
+    contacts-model.cpp
+    groups-tree-proxy-model.cpp
+    text-channel-watcher-proxy-model.cpp
+    rooms-model.cpp
 )
 
 set (ktp_models_private_HDRS
-    accounts-filter-model.h
-    accounts-model-item.h
-    accounts-model.h
-    contact-model-item.h
-    groups-model-item.h
-    groups-model.h
-    proxy-tree-node.h
-    tree-node.h
-    flat-model-proxy.h
+    abstract-grouping-proxy-model.h
+    accounts-list-model.h
+    accounts-tree-proxy-model.h
+    contacts-filter-model.h
+    contacts-list-model.h
+    contacts-model.h
+    groups-tree-proxy-model.h
+    text-channel-watcher-proxy-model.h
+    rooms-model.h
 )
 
 kde4_add_library (ktpmodelsprivate SHARED

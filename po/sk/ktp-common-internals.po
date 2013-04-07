@@ -1,11 +1,11 @@
 # translation of ktp-common-internals.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2012.
+# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-20 12:42+0200\n"
-"PO-Revision-Date: 2012-08-29 23:00+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-01 16:10+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -14,6 +14,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: contact-info-dialog.cpp:67
+msgid "Full name:"
+msgstr "Celé meno:"
+
+#: contact-info-dialog.cpp:68
+msgid "Nickname:"
+msgstr "Prezývka:"
+
+#: contact-info-dialog.cpp:69
+msgid "Email:"
+msgstr "E-mail:"
+
+#: contact-info-dialog.cpp:70
+msgid "Phone:"
+msgstr "Telefón:"
+
+#: contact-info-dialog.cpp:71
+msgid "Homepage:"
+msgstr "Domovská stránka:"
+
+#: contact-info-dialog.cpp:72
+msgid "Birthday:"
+msgstr "Narodeniny:"
+
+#: contact-info-dialog.cpp:73
+msgid "Organization:"
+msgstr "Organizácia:"
+
+#: contact-info-dialog.cpp:152
+msgid "Change Avatar"
+msgstr "Zmeniť avatar"
+
+#: contact-info-dialog.cpp:157
+msgid "Clear Avatar"
+msgstr "Vymazať avatar"
+
+#: contact-info-dialog.cpp:237
+msgid "Failed to load the new avatar image"
+msgstr "Zlyhalo načítanie nového obrázku avatara"
+
+#: contact-info-dialog.cpp:353
+msgid "Save"
+msgstr "Uložiť"
+
+#: contact-info-dialog.cpp:393
+msgid "Contact can see when you are online:"
+msgstr "Kontakt môže vidieť, kedy ste pripojený:"
+
+#: contact-info-dialog.cpp:394
+msgid "You can see when the contact is online:"
+msgstr "Môžete vidieť kedy je kontakt pripojený:"
+
+#: contact-info-dialog.cpp:395
+msgid "Contact is blocked:"
+msgstr "Kontakt je blokovaný"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -566,9 +630,59 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: Models/groups-model-item.cpp:73
-msgid "Ungrouped"
-msgstr "Nezoskupené"
+#: logs-importer-private.cpp:52
+msgid "No Kopete logs found"
+msgstr "Nenašli sa záznamy Kopete"
+
+#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+msgid "Invalid Kopete log format"
+msgstr "Nesprávny formát záznamu Kopete"
+
+#: Models/accounts-list-model.cpp:250
+msgctxt "This is a connection state"
+msgid "Connecting"
+msgstr "Pripájam"
+
+#: Models/accounts-list-model.cpp:252
+msgctxt "This is a connection state"
+msgid "Disconnected"
+msgstr "Odpojený"
+
+#: Models/accounts-list-model.cpp:254
+msgctxt "This is an unknown connection state"
+msgid "Unknown"
+msgstr "Neznámy"
+
+#: Models/accounts-list-model.cpp:257
+msgctxt "This is a disabled account"
+msgid "Disabled"
+msgstr "Vypnuté"
+
+#: Models/groups-tree-proxy-model.cpp:61
+msgid "Unsorted"
+msgstr "Netriedené"
+
+#: Models/rooms-model.cpp:72
+msgid "Password required"
+msgstr "Vyžaduje sa heslo"
+
+#: Models/rooms-model.cpp:74
+msgid "No password required"
+msgstr "Heslo sa nevyžaduje"
+
+#: Models/rooms-model.cpp:94
+msgid "Member count"
+msgstr "Počet členov"
+
+#: Models/rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Názov"
+
+#: Models/rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Popis"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -612,29 +726,29 @@ msgstr "Zobraziť ladiace informácie Tepelathy"
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:92
+#: Widgets/add-contact-dialog.cpp:86
 msgid "Add new contact"
 msgstr "Pridať nový kontakt"
 
-#: Widgets/add-contact-dialog.cpp:122
+#: Widgets/add-contact-dialog.cpp:112
 msgid "No account selected."
 msgstr "Nie je vybrané žiadne konto."
 
-#: Widgets/add-contact-dialog.cpp:124
+#: Widgets/add-contact-dialog.cpp:114
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr "Požadovaný účet bol odpojený a teda kontakt nemohol byť pridaný."
 
-#: Widgets/add-contact-dialog.cpp:127
+#: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
 msgstr "Nezadali ste názov kontaktu na pridanie."
 
-#: Widgets/add-contact-dialog.cpp:153
+#: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
 msgstr "Zlyhalo vytvorenie nového kontaktu."
 
-#: Widgets/add-contact-dialog.cpp:170
+#: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Zlyhalo vyžiadanie o prítomnosti pre požadovaný kontakt."
 
@@ -644,10 +758,106 @@ msgid "Account:"
 msgstr "Účet:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:27
+#: Widgets/add-contact-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Zobrazené meno:"
 
-#: Widgets/contact-grid-dialog.cpp:139
+#: Widgets/contact-grid-dialog.cpp:140
 msgid "Search in Contacts..."
 msgstr "Hľadať v kontaktoch..."
+
+#: Widgets/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Táto miestnosť je už vo vašich obľúbených."
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Pridať miestnosť"
+
+#: Widgets/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Názov"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: Widgets/join-chat-room-dialog.ui:20
+msgid "Join Chatroom"
+msgstr "Vstúpiť do miestnosti"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Widgets/join-chat-room-dialog.ui:29
+msgid "Enter chat room:"
+msgstr "Vstúpiť do miestnosti:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: Widgets/join-chat-room-dialog.ui:47
+msgid "Favorites"
+msgstr "Obľúbené"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:63
+msgid "Add Room"
+msgstr "Pridať miestnosť"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: Widgets/join-chat-room-dialog.ui:73
+msgid "Remove Room"
+msgstr "Odstrániť miestnosť"
+
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: Widgets/join-chat-room-dialog.ui:98
+msgid "Recent"
+msgstr "Nedávne"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:112
+msgid "Remove"
+msgstr "Odstrániť"
+
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: Widgets/join-chat-room-dialog.ui:122
+msgid "Clear list"
+msgstr "Vyčistiť zoznam"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+msgid "Query"
+msgstr "Otázka"
+
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: Widgets/join-chat-room-dialog.ui:151
+msgid "Server to be queried:"
+msgstr "Server na dotazovanie:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: Widgets/join-chat-room-dialog.ui:163
+msgid "Leave blank for the selected account's default server"
+msgstr "Nechajte prázdne pre predvolený server vybraného účtu"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: Widgets/join-chat-room-dialog.ui:186
+msgid "Stop"
+msgstr "Zastaviť"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: Widgets/join-chat-room-dialog.ui:217
+msgid "Search rooms"
+msgstr "Hľadať miestnosti"
+
+#: Widgets/notificationconfigdialog.cpp:43
+#: Widgets/notificationconfigdialog.cpp:93
+#, kde-format
+msgid "Configure notifications for %1"
+msgstr "Nastaviť upozornenia pre %1"
+
+#: Widgets/notificationconfigdialog.cpp:51
+msgid "Configure notifications for"
+msgstr "Nastaviť upozornenia pre"
+
+#: Widgets/notificationconfigdialog.cpp:56
+msgid "All users"
+msgstr "Všetci používatelia"
+
+#: Widgets/notificationconfigdialog.cpp:96
+msgid "Configure notifications for all users"
+msgstr "Nastaviť upozornenie pre všetkých používateľov"
