@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-12-24 11:31+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"PO-Revision-Date: 2013-04-01 08:26+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: Polish <kdei18n-pl-uwagi>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,64 +26,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
-msgstr ""
+msgstr "Imię i nazwisko:"
+
+#: contact-info-dialog.cpp:67
+msgid "Nickname:"
+msgstr "Pseudonim:"
 
 #: contact-info-dialog.cpp:68
-msgid "Nickname:"
-msgstr ""
+msgid "Email:"
+msgstr "E-mail:"
 
 #: contact-info-dialog.cpp:69
-msgid "Email:"
-msgstr ""
+msgid "Phone:"
+msgstr "Numer telefonu:"
 
 #: contact-info-dialog.cpp:70
-msgid "Phone:"
-msgstr ""
+msgid "Homepage:"
+msgstr "Strona domowa:"
 
 #: contact-info-dialog.cpp:71
-msgid "Homepage:"
-msgstr ""
+msgid "Birthday:"
+msgstr "Urodziny:"
 
 #: contact-info-dialog.cpp:72
-msgid "Birthday:"
-msgstr ""
-
-#: contact-info-dialog.cpp:73
 msgid "Organization:"
-msgstr ""
+msgstr "Organizacja:"
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr ""
+msgstr "Zmień awatara"
 
-#: contact-info-dialog.cpp:157
-#, fuzzy
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
-msgstr "Wyczyść listę"
+msgstr "Wyczyść awatara"
 
-#: contact-info-dialog.cpp:237
-#, fuzzy
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr "Nieudane utworzenie nowego kontaktu."
+msgstr "Nieudane wczytanie nowego obrazu awatara"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "Kontakt może zobaczyć, gdy jesteś dostępny"
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "Ty możesz zobaczyć, gdy kontakt jest dostępny:"
 
-#: contact-info-dialog.cpp:395
-#, fuzzy
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
-msgstr "Kontakt jest rozłączony"
+msgstr "Kontakt jest zablokowany:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -674,7 +671,7 @@ msgstr "Wyłączone"
 
 #: Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
-msgstr ""
+msgstr "Nieposortowane"
 
 #: Models/rooms-model.cpp:72
 msgid "Password required"
@@ -860,7 +857,7 @@ msgid "Search rooms"
 msgstr "Znajdź pokoje"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Konfiguruj powiadomienia dla %1"
@@ -873,7 +870,7 @@ msgstr "Konfiguruj powiadomienia dla"
 msgid "All users"
 msgstr "Wszyscy użytkownicy"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Konfiguruj powiadomienia dla wszystkich użytkowników"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
 "PO-Revision-Date: 2013-03-14 13:32+0100\n"
 "Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
@@ -25,59 +25,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
 msgstr "Nomine complete:"
 
-#: contact-info-dialog.cpp:68
+#: contact-info-dialog.cpp:67
 msgid "Nickname:"
 msgstr "Pseudonymo:"
 
-#: contact-info-dialog.cpp:69
+#: contact-info-dialog.cpp:68
 msgid "Email:"
 msgstr "E-posta:"
 
-#: contact-info-dialog.cpp:70
+#: contact-info-dialog.cpp:69
 msgid "Phone:"
 msgstr "Telephono:"
 
-#: contact-info-dialog.cpp:71
+#: contact-info-dialog.cpp:70
 msgid "Homepage:"
 msgstr "Pagina Domo o Principal:"
 
-#: contact-info-dialog.cpp:72
+#: contact-info-dialog.cpp:71
 msgid "Birthday:"
 msgstr "Anniversario de nativitate:"
 
-#: contact-info-dialog.cpp:73
+#: contact-info-dialog.cpp:72
 msgid "Organization:"
 msgstr "Organization:"
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
 msgstr "Cambia Avatar"
 
-#: contact-info-dialog.cpp:157
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
 msgstr "Netta Avatar"
 
-#: contact-info-dialog.cpp:237
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
 msgstr "Il falleva cargar le nove image de avatar"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
 msgstr "Salveguarda"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
 msgstr "Contacto pote vider quando tu es in linea."
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
 msgstr "Tu pote vider quando le contacto es in linea:"
 
-#: contact-info-dialog.cpp:395
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
 msgstr "Contacto es blocate:"
 
@@ -859,7 +859,7 @@ msgid "Search rooms"
 msgstr "Cerca salas"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Configura notificationes pro %1"
@@ -872,6 +872,6 @@ msgstr "Configura notificationes pro"
 msgid "All users"
 msgstr "Omne usatores"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Configura notificationes pro omne usatores"

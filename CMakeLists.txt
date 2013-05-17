@@ -8,7 +8,7 @@ set (CMAKE_MODULE_PATH
 )
 cmake_policy(SET CMP0002 OLD)
 
-set (KTP_VERSION "0.6.0")
+set (KTP_VERSION "0.6.1")
 # Bump for every 0.x release, or whenever BC changes
 set (KTP_SONUMBER 5)
 set (KTP_MESSAGE_FILTER_FRAMEWORK_VERSION "4")
@@ -37,6 +37,8 @@ include_directories (${KDE4_INCLUDES}
 )
 
 configure_file(version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h @ONLY)
+
+set(KTP_GLOBAL_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/global.cpp)
 
 add_subdirectory(KTp)
 add_subdirectory(tools)

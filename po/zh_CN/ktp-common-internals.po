@@ -2,15 +2,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2012, 2013.
 # Wang Jiajun <amesists@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-12-30 22:26+0800\n"
-"Last-Translator: Wang Jiajun <amesists@gmail.com>\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"PO-Revision-Date: 2013-04-06 16:09-0400\n"
+"Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -27,64 +27,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
-msgstr ""
+msgstr "全名："
+
+#: contact-info-dialog.cpp:67
+msgid "Nickname:"
+msgstr "昵称："
 
 #: contact-info-dialog.cpp:68
-msgid "Nickname:"
-msgstr ""
+msgid "Email:"
+msgstr "电子邮件："
 
 #: contact-info-dialog.cpp:69
-msgid "Email:"
-msgstr ""
+msgid "Phone:"
+msgstr "电话："
 
 #: contact-info-dialog.cpp:70
-msgid "Phone:"
-msgstr ""
+msgid "Homepage:"
+msgstr "主页："
 
 #: contact-info-dialog.cpp:71
-msgid "Homepage:"
-msgstr ""
+msgid "Birthday:"
+msgstr "生日："
 
 #: contact-info-dialog.cpp:72
-msgid "Birthday:"
-msgstr ""
-
-#: contact-info-dialog.cpp:73
 msgid "Organization:"
-msgstr ""
+msgstr "组织："
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr ""
+msgstr "修改头像"
 
-#: contact-info-dialog.cpp:157
-#, fuzzy
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
-msgstr "清除列表"
+msgstr "清除头像"
 
-#: contact-info-dialog.cpp:237
-#, fuzzy
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr "创建新联系人失败。"
+msgstr "加载新头像失败"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "联系人是否能看见您在线状态："
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "您是否可以看见该联系人在线状态："
 
-#: contact-info-dialog.cpp:395
-#, fuzzy
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
-msgstr "联系人离线"
+msgstr "联系人已屏蔽："
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -648,7 +645,7 @@ msgstr "已禁用"
 
 #: Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
-msgstr ""
+msgstr "未排序"
 
 #: Models/rooms-model.cpp:72
 msgid "Password required"
@@ -833,7 +830,7 @@ msgid "Search rooms"
 msgstr "搜索聊天室"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "为 %1 配置通知"
@@ -846,7 +843,7 @@ msgstr "配置通知"
 msgid "All users"
 msgstr "全部用户"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "配置全部用户的通知"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
 "PO-Revision-Date: 2013-02-06 19:59+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -25,59 +25,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
 msgstr "Fuldt navn:"
 
-#: contact-info-dialog.cpp:68
+#: contact-info-dialog.cpp:67
 msgid "Nickname:"
 msgstr "Kaldenavn:"
 
-#: contact-info-dialog.cpp:69
+#: contact-info-dialog.cpp:68
 msgid "Email:"
 msgstr "E-mail:"
 
-#: contact-info-dialog.cpp:70
+#: contact-info-dialog.cpp:69
 msgid "Phone:"
 msgstr "Telefon:"
 
-#: contact-info-dialog.cpp:71
+#: contact-info-dialog.cpp:70
 msgid "Homepage:"
 msgstr "Hjemmeside:"
 
-#: contact-info-dialog.cpp:72
+#: contact-info-dialog.cpp:71
 msgid "Birthday:"
 msgstr "Fødselsdag:"
 
-#: contact-info-dialog.cpp:73
+#: contact-info-dialog.cpp:72
 msgid "Organization:"
 msgstr "Organisation:"
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
 msgstr "Skift avatar"
 
-#: contact-info-dialog.cpp:157
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
 msgstr "Ryd avatar"
 
-#: contact-info-dialog.cpp:237
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
 msgstr "Kunne ikke indlæse det ny avatarbillede"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
 msgstr "Gem"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
 msgstr "Kontakten kan se når du er online:"
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
 msgstr "Du kan se når kontakten er online:"
 
-#: contact-info-dialog.cpp:395
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
 msgstr "Kontakten er blokeret:"
 
@@ -860,7 +860,7 @@ msgid "Search rooms"
 msgstr "Søg efter rum"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Indstil bekendtgørelser for %1"
@@ -873,7 +873,7 @@ msgstr "Indstil bekendtgørelser for"
 msgid "All users"
 msgstr "Alle brugere"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Indstil bekendtgørelser for alle brugere"
 
