@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-07 02:59+0100\n"
+"POT-Creation-Date: 2013-04-12 10:44+0200\n"
 "PO-Revision-Date: 2012-11-22 19:14+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -27,59 +27,59 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
 msgstr ""
 
-#: contact-info-dialog.cpp:68
+#: contact-info-dialog.cpp:67
 msgid "Nickname:"
 msgstr ""
 
-#: contact-info-dialog.cpp:69
+#: contact-info-dialog.cpp:68
 msgid "Email:"
 msgstr "E-post:"
 
-#: contact-info-dialog.cpp:70
+#: contact-info-dialog.cpp:69
 msgid "Phone:"
 msgstr ""
 
-#: contact-info-dialog.cpp:71
+#: contact-info-dialog.cpp:70
 msgid "Homepage:"
 msgstr ""
 
-#: contact-info-dialog.cpp:72
+#: contact-info-dialog.cpp:71
 msgid "Birthday:"
 msgstr ""
 
-#: contact-info-dialog.cpp:73
+#: contact-info-dialog.cpp:72
 msgid "Organization:"
 msgstr ""
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
 msgstr ""
 
-#: contact-info-dialog.cpp:157
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
 msgstr "Tøm avatar"
 
-#: contact-info-dialog.cpp:237
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
 msgstr ""
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:326
 msgid "Save"
 msgstr "Lagre"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:361
 msgid "Contact can see when you are online:"
 msgstr "Kontakten kan se når du er tilkoblet:"
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:362
 msgid "You can see when the contact is online:"
 msgstr "Du kan se når kontakten er tilkoblet:"
 
-#: contact-info-dialog.cpp:395
+#: contact-info-dialog.cpp:363
 msgid "Contact is blocked:"
 msgstr "Kontakten er blokkert:"
 
@@ -860,7 +860,7 @@ msgid "Search rooms"
 msgstr "Søk rom"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Sett opp varslinger for %1"
@@ -873,6 +873,6 @@ msgstr "Sett opp varslinger for"
 msgid "All users"
 msgstr "Alle brukere"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Sett opp varslinger for alle brukere"

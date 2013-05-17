@@ -3,87 +3,86 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep Ma. Ferrer <txemaq@gmail.com>, 2012.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-07-08 20:04+0200\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"PO-Revision-Date: 2013-04-05 21:15+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Josep Ma. Ferrer"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "txemaq@gmail.com"
+
+#: contact-info-dialog.cpp:66
+msgid "Full name:"
+msgstr "Nom complet:"
 
 #: contact-info-dialog.cpp:67
-msgid "Full name:"
-msgstr ""
+msgid "Nickname:"
+msgstr "Sobrenom:"
 
 #: contact-info-dialog.cpp:68
-msgid "Nickname:"
-msgstr ""
+msgid "Email:"
+msgstr "Correu electrònic:"
 
 #: contact-info-dialog.cpp:69
-msgid "Email:"
-msgstr ""
+msgid "Phone:"
+msgstr "Telèfon:"
 
 #: contact-info-dialog.cpp:70
-msgid "Phone:"
-msgstr ""
+msgid "Homepage:"
+msgstr "Pàgina personal:"
 
 #: contact-info-dialog.cpp:71
-msgid "Homepage:"
-msgstr ""
+msgid "Birthday:"
+msgstr "Data de naixement:"
 
 #: contact-info-dialog.cpp:72
-msgid "Birthday:"
-msgstr ""
-
-#: contact-info-dialog.cpp:73
 msgid "Organization:"
-msgstr ""
+msgstr "Organització:"
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr ""
+msgstr "Canvia l'avatar"
 
-#: contact-info-dialog.cpp:157
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
-msgstr ""
+msgstr "Neteja l'avatar"
 
-#: contact-info-dialog.cpp:237
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr ""
+msgstr "Ha fallat en carregar la nova imatge d'avatar"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
-msgstr ""
+msgstr "Desa"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "El contacte pot veure quan esteu connectat:"
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "Podeu veure quan el contacte està connectat:"
 
-#: contact-info-dialog.cpp:395
-#, fuzzy
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
-msgstr "El contacte està desconnectat"
+msgstr "El contacte està bloquejat:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -208,10 +207,9 @@ msgid "You have been kicked from the channel"
 msgstr "Heu estat expulsat del canal"
 
 #: error-dictionary.cpp:75
-#, fuzzy
 msgctxt "Verbose user visible error string"
 msgid "An unexpected error has occurred"
-msgstr "Hi ha hagut un error d'encriptatge"
+msgstr "Hi ha hagut un error inesperat"
 
 #: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
@@ -248,7 +246,6 @@ msgid "Selected user does not exist"
 msgstr "L'usuari seleccionat no existeix"
 
 #: error-dictionary.cpp:89
-#, fuzzy
 msgctxt "Verbose user visible error string"
 msgid "Emergency calls are not supported"
 msgstr "No es permeten les trucades d'emergències"
@@ -310,10 +307,9 @@ msgid "The requested channel is already being handled by some other process"
 msgstr "El canal sol·licitat ja està gestionat per un altre procés"
 
 #: error-dictionary.cpp:113
-#, fuzzy
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
-msgstr "Aquesta operació no és disponible ja que el contacte està desconnectat"
+msgstr "Aquesta operació no és disponible pels contactes desconnectats"
 
 #: error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
@@ -361,14 +357,13 @@ msgstr ""
 "servei»)"
 
 #: error-dictionary.cpp:129
-#, fuzzy
 msgctxt "Verbose user visible error string"
 msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
 "packages to a newer version"
 msgstr ""
-"Esteu utilitzant un programari massa antic. Intenteu actualitzar tots els "
-"paquets del Telepathy a una versió més nova."
+"Les biblioteques instal·lades són massa antigues. Intenteu actualitzar tots "
+"els paquets del Telepathy a una versió més nova."
 
 #: error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
@@ -376,7 +371,6 @@ msgid "The channel was terminated for no apparent reason"
 msgstr "El canal ha finalitzat sense cap motiu aparent"
 
 #: error-dictionary.cpp:133
-#, fuzzy
 msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
@@ -521,10 +515,9 @@ msgid "Disconnected"
 msgstr "Desconnectada"
 
 #: error-dictionary.cpp:194
-#, fuzzy
 msgctxt "Short user visible error string"
 msgid "User does not exist"
-msgstr "Aparentment no existiu"
+msgstr "L'usuari no existeix"
 
 #: error-dictionary.cpp:196
 msgctxt "Short user visible error string"
@@ -547,10 +540,9 @@ msgid "Invalid argument"
 msgstr "Argument no vàlid"
 
 #: error-dictionary.cpp:204
-#, fuzzy
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
-msgstr "Argument no vàlid"
+msgstr "Gestor no vàlid"
 
 #: error-dictionary.cpp:206
 msgctxt "Short user visible error string"
@@ -654,61 +646,57 @@ msgstr "Error desconegut"
 
 #: logs-importer-private.cpp:52
 msgid "No Kopete logs found"
-msgstr ""
+msgstr "No s'ha trobat cap registre del Kopete"
 
 #: logs-importer-private.cpp:328 logs-importer-private.cpp:335
 msgid "Invalid Kopete log format"
-msgstr ""
+msgstr "Format no vàlid del registre del Kopete"
 
 #: Models/accounts-list-model.cpp:250
-#, fuzzy
 msgctxt "This is a connection state"
 msgid "Connecting"
-msgstr "S'ha perdut la connexió"
+msgstr "Connectant"
 
 #: Models/accounts-list-model.cpp:252
-#, fuzzy
 msgctxt "This is a connection state"
 msgid "Disconnected"
-msgstr "Desconnectada"
+msgstr "Desconnectat"
 
 #: Models/accounts-list-model.cpp:254
-#, fuzzy
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
-msgstr "Error desconegut"
+msgstr "Desconegut"
 
 #: Models/accounts-list-model.cpp:257
 msgctxt "This is a disabled account"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivada"
 
 #: Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
-msgstr ""
+msgstr "Sense ordenar"
 
 #: Models/rooms-model.cpp:72
 msgid "Password required"
-msgstr ""
+msgstr "Es necessita la contrasenya"
 
 #: Models/rooms-model.cpp:74
-#, fuzzy
 msgid "No password required"
-msgstr "Es requereix una actualització de programari"
+msgstr "No es necessita la contrasenya"
 
 #: Models/rooms-model.cpp:94
 msgid "Member count"
-msgstr ""
+msgstr "Nombre de membres"
 
 #: Models/rooms-model.cpp:114
 msgctxt "Chatrooms name"
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: Models/rooms-model.cpp:116
 msgctxt "Chatrooms description"
 msgid "Description"
-msgstr ""
+msgstr "Descripció"
 
 #: presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -796,99 +784,99 @@ msgstr "Cerca en els contactes..."
 
 #: Widgets/join-chat-room-dialog.cpp:197
 msgid "This room is already in your favorites."
-msgstr ""
+msgstr "Aquesta sala ja està en els preferits."
 
 #: Widgets/join-chat-room-dialog.cpp:199
 msgid "Add room"
-msgstr ""
+msgstr "Afegeix una sala"
 
 #: Widgets/join-chat-room-dialog.cpp:199
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: Widgets/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
-msgstr ""
+msgstr "Entra a la sala de xat"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/join-chat-room-dialog.ui:29
 msgid "Enter chat room:"
-msgstr ""
+msgstr "Entra a la sala de xat:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
 #: Widgets/join-chat-room-dialog.ui:47
 msgid "Favorites"
-msgstr ""
+msgstr "Preferits"
 
 #. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
 #: Widgets/join-chat-room-dialog.ui:63
 msgid "Add Room"
-msgstr ""
+msgstr "Afegeix una sala"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
 #: Widgets/join-chat-room-dialog.ui:73
 msgid "Remove Room"
-msgstr ""
+msgstr "Elimina la sala"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
 #: Widgets/join-chat-room-dialog.ui:98
 msgid "Recent"
-msgstr ""
+msgstr "Recent"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
 #: Widgets/join-chat-room-dialog.ui:112
 msgid "Remove"
-msgstr ""
+msgstr "Elimina"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
 #: Widgets/join-chat-room-dialog.ui:122
 msgid "Clear list"
-msgstr ""
+msgstr "Neteja la llista"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
 #: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
-msgstr ""
+msgstr "Consulta"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
 #: Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
-msgstr ""
+msgstr "Servidor al que consultar:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
 #: Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
-msgstr ""
+msgstr "Deixeu-ho en blanc per al servidor per defecte del compte"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
 #: Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
-msgstr ""
+msgstr "Atura"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
 #: Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
-msgstr ""
+msgstr "Cerca sales"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
-msgstr ""
+msgstr "Configura les notificacions per %1"
 
 #: Widgets/notificationconfigdialog.cpp:51
 msgid "Configure notifications for"
-msgstr ""
+msgstr "Configura les notificacions per"
 
 #: Widgets/notificationconfigdialog.cpp:56
 msgid "All users"
-msgstr ""
+msgstr "Tots els usuaris"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
-msgstr ""
+msgstr "Configura les notificacions per tots els usuaris"
 
 #~ msgid "Ungrouped"
 #~ msgstr "Sense grup"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the l package.
 #
 # Automatically generated, 2012.
-# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-10-28 15:16+0200\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"PO-Revision-Date: 2013-04-12 11:18+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -28,63 +28,61 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "liudas@akmc.lt"
 
-#: contact-info-dialog.cpp:67
+#: contact-info-dialog.cpp:66
 msgid "Full name:"
-msgstr ""
+msgstr "Pilnas vardas:"
+
+#: contact-info-dialog.cpp:67
+msgid "Nickname:"
+msgstr "Slapyvardis:"
 
 #: contact-info-dialog.cpp:68
-msgid "Nickname:"
-msgstr ""
+msgid "Email:"
+msgstr "El. paštas:"
 
 #: contact-info-dialog.cpp:69
-msgid "Email:"
-msgstr ""
+msgid "Phone:"
+msgstr "Telefonas:"
 
 #: contact-info-dialog.cpp:70
-msgid "Phone:"
-msgstr ""
+msgid "Homepage:"
+msgstr "Svetainė:"
 
 #: contact-info-dialog.cpp:71
-msgid "Homepage:"
-msgstr ""
+msgid "Birthday:"
+msgstr "Gimimo data:"
 
 #: contact-info-dialog.cpp:72
-msgid "Birthday:"
-msgstr ""
-
-#: contact-info-dialog.cpp:73
 msgid "Organization:"
-msgstr ""
+msgstr "Organizacija:"
 
-#: contact-info-dialog.cpp:152
+#: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr ""
+msgstr "Keisti pseudoportretą"
 
-#: contact-info-dialog.cpp:157
-#, fuzzy
+#: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
-msgstr "Išvalyti sąrašą"
+msgstr "Išvalyti pseudoportretą"
 
-#: contact-info-dialog.cpp:237
-#, fuzzy
+#: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr "Nepavyko sukurti naujo kontakto."
+msgstr "Nepavyko įkelti naujo pseudoportreto"
 
-#: contact-info-dialog.cpp:353
+#: contact-info-dialog.cpp:328
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
-#: contact-info-dialog.cpp:393
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "Kontaktas gali matyti kada esate prisijungę:"
 
-#: contact-info-dialog.cpp:394
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "Jūs galite matyti kada kontaktas yra prisijungęs:"
 
-#: contact-info-dialog.cpp:395
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
-msgstr ""
+msgstr "Kontaktas užblokuotas:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -92,11 +90,13 @@ msgid ""
 "Looks like you are already connected from other location and the server does "
 "not allow multiple connections"
 msgstr ""
+"Panašu, kad esate jau prisijungę iš kitos vietos, o serveris neleidžia kelių "
+"prisijungimų vienu metu"
 
 #: error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
-msgstr ""
+msgstr "Tapatybės patvirtinimas nepavyko (ar Jūsų slaptažodis teisingas?)"
 
 #: error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
@@ -637,10 +637,9 @@ msgid "Disconnected"
 msgstr ""
 
 #: Models/accounts-list-model.cpp:254
-#, fuzzy
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
-msgstr "Nežinoma klaida"
+msgstr "Nežinomas"
 
 #: Models/accounts-list-model.cpp:257
 msgctxt "This is a disabled account"
@@ -744,7 +743,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
 msgid "Account:"
-msgstr ""
+msgstr "Paskyra:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: Widgets/add-contact-dialog.ui:24
@@ -834,7 +833,7 @@ msgid "Search rooms"
 msgstr "Ieškoti kambariuose"
 
 #: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:93
+#: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Konfigūruoti pranešimus dėl %1"
@@ -847,7 +846,7 @@ msgstr "Konfigūruoti pranešimus dėl"
 msgid "All users"
 msgstr "Visi naudotojai"
 
-#: Widgets/notificationconfigdialog.cpp:96
+#: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Konfigūruoti pranešimus visiems naudotojams"
 
