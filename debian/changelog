@@ -1,7 +1,8 @@
-ktp-common-internals (0.5.3-1) UNRELEASED; urgency=low
+ktp-common-internals (0.6.1-1) UNRELEASED; urgency=low
 
   * [02e74e7] Imported Upstream version 0.5.1
   * [d0481a0] Imported Upstream version 0.5.3
+  * [39f7726] Imported Upstream version 0.6.1
   * [81fd483] Bump version for build-dependency
   * [369f60c] update sonames
 
