@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-03-05 23:56+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"PO-Revision-Date: 2013-04-25 07:21+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -76,16 +76,15 @@ msgstr "Tallenna"
 
 #: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "Käyttäjä voi nähdä, milloin olet paikalla:"
 
 #: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "Voit nähdä, kun tämä käyttäjä on paikalla:"
 
 #: contact-info-dialog.cpp:365
-#, fuzzy
 msgid "Contact is blocked:"
-msgstr "Yhteystieto ei ole verkossa"
+msgstr "Käyttäjä on estetty:"
 
 #: error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -643,7 +642,7 @@ msgstr "Tuntematon virhe"
 msgid "No Kopete logs found"
 msgstr "Kopete-lokeja ei löydy"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Virheellinen Kopete-lokin muoto"
 
@@ -665,11 +664,11 @@ msgstr "Tuntematon"
 #: Models/accounts-list-model.cpp:257
 msgctxt "This is a disabled account"
 msgid "Disabled"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
-msgstr ""
+msgstr "Lajittelematon"
 
 #: Models/rooms-model.cpp:72
 msgid "Password required"
@@ -748,6 +747,8 @@ msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
+"Pyydetty tili on poistunut verkosta eikä käyttäjän lisääminen siksi "
+"onnistunut."
 
 #: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."
@@ -759,7 +760,7 @@ msgstr "Uuden yhteystiedon luonti epäonnistui."
 
 #: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
-msgstr ""
+msgstr "Läsnäolon tilauksen pyytäminen käyttäjältä epäonnistui."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
@@ -831,37 +832,37 @@ msgstr "Tyhjennä luettelo"
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
 #: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
-msgstr ""
+msgstr "Hae"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
 #: Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
-msgstr ""
+msgstr "Palvelin, jolta haetaan:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
 #: Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
-msgstr ""
+msgstr "Jos tyhjä, käytetään valitun tilin oletuspalvelinta"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
 #: Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
-msgstr ""
+msgstr "Pysäytä"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
 #: Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
-msgstr ""
+msgstr "Hae huoneita"
 
 #: Widgets/notificationconfigdialog.cpp:43
 #: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
-msgstr ""
+msgstr "Käyttäjän %1 ilmoitusten asetukset"
 
 #: Widgets/notificationconfigdialog.cpp:51
 msgid "Configure notifications for"
-msgstr ""
+msgstr "Käyttäjä, jonka ilmoitusasetuksia muutetaan:"
 
 #: Widgets/notificationconfigdialog.cpp:56
 msgid "All users"
@@ -869,7 +870,7 @@ msgstr "Kaikki käyttäjät"
 
 #: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
-msgstr ""
+msgstr "Kaikkien käyttäjien ilmoitusten asetukset"
 
 #~ msgid "Ungrouped"
 #~ msgstr "Ryhmittelemätön"

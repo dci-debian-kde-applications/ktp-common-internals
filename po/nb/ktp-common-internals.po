@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-12 10:44+0200\n"
+"POT-Creation-Date: 2013-04-16 19:05+0200\n"
 "PO-Revision-Date: 2012-11-22 19:14+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -67,19 +67,19 @@ msgstr "Tøm avatar"
 msgid "Failed to load the new avatar image"
 msgstr ""
 
-#: contact-info-dialog.cpp:326
+#: contact-info-dialog.cpp:328
 msgid "Save"
 msgstr "Lagre"
 
-#: contact-info-dialog.cpp:361
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
 msgstr "Kontakten kan se når du er tilkoblet:"
 
-#: contact-info-dialog.cpp:362
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
 msgstr "Du kan se når kontakten er tilkoblet:"
 
-#: contact-info-dialog.cpp:363
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
 msgstr "Kontakten er blokkert:"
 
@@ -645,7 +645,7 @@ msgstr "Ukjent feil"
 msgid "No Kopete logs found"
 msgstr "Fant ingen Kopete-logger"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:329 logs-importer-private.cpp:336
 msgid "Invalid Kopete log format"
 msgstr "Ugyldig format i Kopete-logg"
 

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-02-06 11:25+0100\n"
-"Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"PO-Revision-Date: 2013-05-03 15:07+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -260,7 +260,7 @@ msgstr "Byl zadán neplatný argument"
 #: error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
-msgstr ""
+msgstr "Zadané id není na tomto kanále známé"
 
 #: error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
@@ -276,7 +276,7 @@ msgstr "Byli jste odebráni z kanálu, protože jste nereagovali"
 #: error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
 msgid "This capability is not available"
-msgstr ""
+msgstr "Kapacita není dostupná"
 
 #: error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -296,7 +296,7 @@ msgstr "Tato operace není implementována"
 #: error-dictionary.cpp:111
 msgctxt "Verbose user visible error string"
 msgid "The requested channel is already being handled by some other process"
-msgstr ""
+msgstr "Požadovaný kanál je již zpracováván nějakým jiným procesem"
 
 #: error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
@@ -337,6 +337,8 @@ msgid ""
 "Your request hit a busy resource somewhere along the way and the operation "
 "was unable to finish"
 msgstr ""
+"Váš požadavek někde narazil na zaneprázdněný zdroj a operaci pak nešlo "
+"dokončit"
 
 #: error-dictionary.cpp:127
 msgctxt "Verbose user visible error string"
@@ -528,7 +530,7 @@ msgstr "Neplatný argument"
 #: error-dictionary.cpp:204
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
-msgstr ""
+msgstr "Neplatné id"
 
 #: error-dictionary.cpp:206
 msgctxt "Short user visible error string"
@@ -563,7 +565,7 @@ msgstr "Operace není implementována"
 #: error-dictionary.cpp:218
 msgctxt "Short user visible error string"
 msgid "Channel already being handled"
-msgstr ""
+msgstr "Kanál je již zpracováván"
 
 #: error-dictionary.cpp:220
 msgctxt "Short user visible error string"
@@ -634,7 +636,7 @@ msgstr "Neznámá chyba"
 msgid "No Kopete logs found"
 msgstr "Nenalezeny žádné záznamy Kopete"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Neplatný formát záznamu Kopete"
 
@@ -750,7 +752,7 @@ msgstr "Selhalo vytvoření nového kontaktu."
 
 #: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
-msgstr ""
+msgstr "Selhalo vyžádání prav na zjištění stavu kontaktu."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
