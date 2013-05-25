@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-01-28 11:15+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -649,7 +649,7 @@ msgstr "Onbekende fout"
 msgid "No Kopete logs found"
 msgstr "Geen logs van Kopete gevonden"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Ongeldig logformaat van Kopete"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-02-17 22:18+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -648,7 +648,7 @@ msgstr "Неизвестная ошибка"
 msgid "No Kopete logs found"
 msgstr "Не найдено журнала Kopete"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Неверный формат журнала Kopete"
 

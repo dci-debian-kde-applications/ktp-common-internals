@@ -1,12 +1,16 @@
-ktp-common-internals (0.6.1-1) UNRELEASED; urgency=low
+ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
 
+  [ Ritesh Raj Sarraf ]
   * [02e74e7] Imported Upstream version 0.5.1
   * [d0481a0] Imported Upstream version 0.5.3
   * [39f7726] Imported Upstream version 0.6.1
   * [81fd483] Bump version for build-dependency
   * [369f60c] update sonames
 
- -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 20 Feb 2013 14:06:24 +0530
+  [ Diane Trout ]
+  * Imported Upstream version 0.6.2
+
+ -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 21:17:36 -0700
 
 ktp-common-internals (0.4.0-1) unstable; urgency=low
 

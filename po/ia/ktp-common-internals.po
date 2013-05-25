@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-03-14 13:32+0100\n"
 "Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
@@ -645,7 +645,7 @@ msgstr "Error Incognite"
 msgid "No Kopete logs found"
 msgstr "Il non trovava ulle registros de Kopete"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Formato de registro de Kopete invalide"
 

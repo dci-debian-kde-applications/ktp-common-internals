@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-03-29 15:06+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -617,7 +617,7 @@ msgstr "अपरिचीत त्रुटी"
 msgid "No Kopete logs found"
 msgstr ""
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr ""
 

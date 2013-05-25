@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-12 10:44+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-02-03 14:26+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Časlav Ilić"
+msgstr "Časlav Ilić,Mladen Pejaković"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,pejakm@gmail.com"
 
 #: contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -57,7 +57,7 @@ msgstr "Organizacija:"
 
 #: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr "Promeni avatar"
+msgstr "Promijeni avatar"
 
 # rewrite-msgid: /Clear/Remove/
 #: contact-info-dialog.cpp:145
@@ -68,19 +68,19 @@ msgstr "Ukloni avatar"
 msgid "Failed to load the new avatar image"
 msgstr "Ne mogu da učitam novu sliku avatara."
 
-#: contact-info-dialog.cpp:326
+#: contact-info-dialog.cpp:328
 msgid "Save"
 msgstr "Sačuvaj"
 
-#: contact-info-dialog.cpp:361
+#: contact-info-dialog.cpp:363
 msgid "Contact can see when you are online:"
 msgstr "Kontakt vidi kad ste na vezi:"
 
-#: contact-info-dialog.cpp:362
+#: contact-info-dialog.cpp:364
 msgid "You can see when the contact is online:"
 msgstr "Vi vidite kad je kontakt na vezi:"
 
-#: contact-info-dialog.cpp:363
+#: contact-info-dialog.cpp:365
 msgid "Contact is blocked:"
 msgstr "Kontakt je blokiran:"
 
@@ -371,7 +371,7 @@ msgid ""
 "This operation can not be finished as it would break your requested anonymity"
 msgstr ""
 "Ova radnja ne može biti završena jer bi narušila anonimnost koju ste "
-"zahtevali"
+"zahtijevali"
 
 #: error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
@@ -644,7 +644,7 @@ msgstr "Nepoznata greška"
 msgid "No Kopete logs found"
 msgstr "Nema Kopeteovih dnevnika"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Loš format Kopeteovog dnevnika"
 
@@ -861,7 +861,7 @@ msgstr "Server za upit:"
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
 #: Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
-msgstr "Ostavite prazno za podrazumevani server izabranog naloga."
+msgstr "Ostavite prazno za podrazumijevani server izabranog naloga."
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
 #: Widgets/join-chat-room-dialog.ui:186
@@ -878,11 +878,11 @@ msgstr "Potraži sobe"
 #: Widgets/notificationconfigdialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
-msgstr "Podešavanje obaveštenja za %1"
+msgstr "Podešavanje obavještenja za %1"
 
 #: Widgets/notificationconfigdialog.cpp:51
 msgid "Configure notifications for"
-msgstr "Podesi obaveštenja za"
+msgstr "Podesi obavještenja za"
 
 # >> @item:inlistbox Configure notifications for
 #: Widgets/notificationconfigdialog.cpp:56
@@ -892,4 +892,4 @@ msgstr "sve korisnike"
 # >> @title:window
 #: Widgets/notificationconfigdialog.cpp:98
 msgid "Configure notifications for all users"
-msgstr "Podešavanje obaveštenja za sve korisnike"
+msgstr "Podešavanje obavještenja za sve korisnike"

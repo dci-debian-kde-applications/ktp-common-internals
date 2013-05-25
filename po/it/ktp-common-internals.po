@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-05-14 19:08+0200\n"
 "PO-Revision-Date: 2013-01-28 09:01+0100\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -647,7 +647,7 @@ msgstr "Errore sconosciuto"
 msgid "No Kopete logs found"
 msgstr "Nessun registro di Kopete trovato"
 
-#: logs-importer-private.cpp:328 logs-importer-private.cpp:335
+#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Formato non valido di registro di Kopete"
 
