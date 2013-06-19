@@ -48,3 +48,11 @@ Description: KDE Telepathy internal library - debug symbols
  parts across KDE Telepathy.
  .
  This package contains debugging symbols for the ktp-common-internals library.
+
+Package: kde-telepathy-debugger
+Architecture: any
+Priority: extra
+Depends: ${shlibs:Depends}, ${misc:Depends} 
+Description: Debugging tool for KDE Telepathy
+ This package contains a GUI debugging tool which can be used to debug
+ issues in Telepathy.
