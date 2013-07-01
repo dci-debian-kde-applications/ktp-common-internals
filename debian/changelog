@@ -13,6 +13,7 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   * Add kde-telepathy-debugger package (Thanks: Ubuntu)
   * Update libktpcommoninteralsprivate soversion to 5
   * Install qml components
+  * Require libtelepathy-logger-qt4-dev >= 0.6.0
 
  -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 21:17:36 -0700
 
