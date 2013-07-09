@@ -1,12 +1,5 @@
 ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
 
-  [ Ritesh Raj Sarraf ]
-  * [02e74e7] Imported Upstream version 0.5.1
-  * [d0481a0] Imported Upstream version 0.5.3
-  * [39f7726] Imported Upstream version 0.6.1
-  * [81fd483] Bump version for build-dependency
-  * [369f60c] update sonames
-
   [ Diane Trout ]
   * Imported Upstream version 0.6.2
   * Set Uploaders to Diane Trout and Michał Zając
