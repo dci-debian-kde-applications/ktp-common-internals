@@ -8,6 +8,7 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   * Install qml components
   * Require libtelepathy-logger-qt4-dev >= 0.6.0
   * Updated to Standards-Version 3.9.4. No changes needed.
+  * Add symbols file for libktpcommoninternalsprivate5
 
  -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 21:17:36 -0700
 
