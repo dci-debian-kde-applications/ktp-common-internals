@@ -37,6 +37,8 @@ Package: kde-telepathy-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
+ KDE telepathy shared data.
+ .
  This package contains various data files that are used by nearly all
  the different KDE Telepathy components.
 
