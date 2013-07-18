@@ -27,8 +27,6 @@ Description: KDE Telepathy internal library - Development headers
 Package: libktpcommoninternalsprivate5
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: libktpcommoninternalsprivate1
-Breaks: libktpcommoninternalsprivate1
 Description: KDE Telepathy internal library
  Internal library which consits of the most reused
  parts across KDE Telepathy.

@@ -9,6 +9,7 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   * Require libtelepathy-logger-qt4-dev >= 0.6.0
   * Updated to Standards-Version 3.9.4. No changes needed.
   * Add symbols file for libktpcommoninternalsprivate5
+  * Remove breaks/replaces on libktpcommoninternalsprivate5
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Improve a little kde-telepathy-data's long description.
