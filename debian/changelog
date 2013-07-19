@@ -6,9 +6,12 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   * Add kde-telepathy-debugger package (Thanks: Ubuntu)
   * Update libktpcommoninteralsprivate soversion to 5
   * Build kde-telepathy-declarative package for QML components
+  * Require libtelepathy-qt4 >= 0.9.3
   * Require libtelepathy-logger-qt4-dev >= 0.6.0
   * Updated to Standards-Version 3.9.4. No changes needed.
   * Add symbols file for libktpcommoninternalsprivate5
+  * Remove dh_makeshlibs debian/rules target.
+  * Update watch file as kde-telepathy is in kde/stable.
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Improve a little kde-telepathy-data's long description.
