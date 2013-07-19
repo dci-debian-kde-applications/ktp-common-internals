@@ -651,7 +651,7 @@ libktpmodelsprivate.so.5 libktpcommoninternalsprivate5 #MINVER#
  _ZNK3KTp26AbstractGroupingProxyModel10metaObjectEv@Base 0.6.2
  _ZNK3KTp28TextChannelWatcherProxyModel10metaObjectEv@Base 0.6.2
  _ZNK3KTp28TextChannelWatcherProxyModel4dataERK11QModelIndexi@Base 0.6.2
- (c++|optional=gccinternal)"Tp::AbstractClientObserver-in-KTp::TextChannelWatcherProxyModel"@Base 0.6.2
+ (optional=g++internal)_ZTCN3KTp28TextChannelWatcherProxyModelE16_N2Tp22AbstractClientObserverE@Base 0.6.2
  _ZTIN3KTp10RoomsModelE@Base 0.6.2
  _ZTIN3KTp13ContactsModelE@Base 0.6.2
  _ZTIN3KTp17AccountsListModelE@Base 0.6.2
