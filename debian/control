@@ -62,10 +62,10 @@ Description: KDE Telepathy internal library - debug symbols
 Package: kde-telepathy-debugger
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}, ${misc:Depends} 
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Debugging tool for KDE Telepathy
  This package contains a GUI debugging tool which can be used to debug
  issues in Telepathy.
  .
- It will show the debugging messages from the various telepathy 
+ It will show the debugging messages from the various telepathy
  components.
