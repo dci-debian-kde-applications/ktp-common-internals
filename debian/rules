@@ -1,4 +1,4 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --parallel --with kde --buildsystem kde --dbg-package=libktpcommoninternalsprivate-dbg --list-missing
+	dh $@ --parallel --with kde --dbg-package=libktpcommoninternalsprivate-dbg --list-missing
