@@ -1,4 +1,3 @@
-usr/lib/kde4/imports/org/kde/telepathy/qmldir
 usr/share/icons/hicolor/*
 usr/share/kde4/apps/ktelepathy/*
 usr/share/locale/*

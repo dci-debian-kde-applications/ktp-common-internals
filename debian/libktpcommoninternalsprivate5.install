@@ -4,4 +4,3 @@ usr/lib/libktpmodelsprivate.so.0.6*
 usr/lib/libktpmodelsprivate.so.5
 usr/lib/libktpwidgetsprivate.so.0.6*
 usr/lib/libktpwidgetsprivate.so.5
-usr/lib/kde4/imports/org/kde/telepathy/libktpqmlplugin.so

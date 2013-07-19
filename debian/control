@@ -31,6 +31,14 @@ Description: KDE Telepathy internal library
  Internal library which consits of the most reused
  parts across KDE Telepathy.
 
+Package: kde-telepathy-declarative
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: kde-telepathy QtDeclarative QML support.
+ Contains a plugin for QtDeclarative that provides
+ support for using KDE-Telepathy to components written
+ in QML.
+
 Package: kde-telepathy-data
 Architecture: all
 Depends: ${misc:Depends}
