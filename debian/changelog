@@ -11,7 +11,7 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   * Updated to Standards-Version 3.9.4. No changes needed.
   * Add symbols file for libktpcommoninternalsprivate5
   * Remove dh_makeshlibs debian/rules target.
-  * Update watch file as kde-telepathy is in kde/stable.
+  * Update watch file as KDE-Telepathy is now in KDE stable.
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Improve a little kde-telepathy-data's long description.
