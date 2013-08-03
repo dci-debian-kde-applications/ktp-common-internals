@@ -1,7 +1,7 @@
 Source: ktp-common-internals
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>
+Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
 Build-Depends: debhelper (>= 9), cmake, libtelepathy-qt4-dev (>= 0.9.3), libtelepathy-logger-qt4-dev (>= 0.6.0), libtelepathy-logger-dev, pkg-kde-tools, kdelibs5-dev
 Standards-Version: 3.9.4
 Section: libs

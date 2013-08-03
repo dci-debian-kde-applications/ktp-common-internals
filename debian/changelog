@@ -1,4 +1,4 @@
-ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
+ktp-common-internals (0.6.2-1) unstable; urgency=low
 
   [ Diane Trout ]
   * Imported Upstream version 0.6.2
@@ -16,7 +16,10 @@ ktp-common-internals (0.6.2-1) UNRELEASED; urgency=low
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Improve a little kde-telepathy-data's long description.
 
- -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 21:17:36 -0700
+  [ Mark Purcell ]
+  * Add myself to Uploaders 
+
+ -- Mark Purcell <msp@debian.org>  Sat, 03 Aug 2013 13:49:22 +1000
 
 ktp-common-internals (0.4.0-1) unstable; urgency=low
 
