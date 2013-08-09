@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"POT-Creation-Date: 2013-06-05 06:08+0000\n"
 "PO-Revision-Date: 2013-02-09 20:37+0100\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -17,6 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.4\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -656,22 +659,22 @@ msgstr "Aucun journal de Kopete n'a été trouvé"
 msgid "Invalid Kopete log format"
 msgstr "Format de journal Kopete non valable"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Connexion en cours"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Déconnecté(e)"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Désactivé"
