@@ -1,8 +1,8 @@
-ktp-common-internals (0.6.3-1) UNRELEASED; urgency=low
+ktp-common-internals (0.6.3-1) unstable; urgency=low
 
-  * Imported Upstream version 0.6.3 
+  * Imported Upstream version 0.6.3  
 
- -- Mark Purcell <msp@debian.org>  Sat, 10 Aug 2013 09:10:05 +1000
+ -- Mark Purcell <msp@debian.org>  Sat, 10 Aug 2013 09:19:39 +1000
 
 ktp-common-internals (0.6.2-1) unstable; urgency=low
 
