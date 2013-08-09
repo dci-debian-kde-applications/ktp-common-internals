@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"POT-Creation-Date: 2013-06-05 06:08+0000\n"
 "PO-Revision-Date: 2013-01-14 20:16+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -634,22 +634,22 @@ msgstr "Ühtegi Kopete logi ei leitud"
 msgid "Invalid Kopete log format"
 msgstr "Vigane Kopete logi vorming"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Ühendumine"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Ühendus katkestatud"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Teadmata"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Keelatud"

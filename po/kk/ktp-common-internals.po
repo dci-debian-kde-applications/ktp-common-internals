@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"POT-Creation-Date: 2013-06-05 06:08+0000\n"
 "PO-Revision-Date: 2013-04-02 02:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -631,22 +631,22 @@ msgstr "Kopete журналы табылған жоқ"
 msgid "Invalid Kopete log format"
 msgstr "Kopete журналы жарамсыз пішімде"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Байланысу"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Ажыратылған"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Беймәлім"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Бұғатталған"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"POT-Creation-Date: 2013-06-05 06:08+0000\n"
 "PO-Revision-Date: 2013-03-14 13:32+0100\n"
 "Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
@@ -649,22 +649,22 @@ msgstr "Il non trovava ulle registros de Kopete"
 msgid "Invalid Kopete log format"
 msgstr "Formato de registro de Kopete invalide"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Il es connectente"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Disconnectite"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Incognite"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Dishabilitate"

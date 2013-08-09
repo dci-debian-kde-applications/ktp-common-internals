@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
+"POT-Creation-Date: 2013-06-05 06:08+0000\n"
 "PO-Revision-Date: 2013-04-25 07:21+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -646,22 +646,22 @@ msgstr "Kopete-lokeja ei löydy"
 msgid "Invalid Kopete log format"
 msgstr "Virheellinen Kopete-lokin muoto"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Yhdistetään"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Ei yhteyttä"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Ei käytössä"
