@@ -1,0 +1,71 @@
+Source: ktp-common-internals
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
+Build-Depends: debhelper (>= 9), cmake, libtelepathy-qt4-dev (>= 0.9.3), libtelepathy-logger-qt4-dev (>= 0.6.0), libtelepathy-logger-dev, pkg-kde-tools, kdelibs5-dev
+Standards-Version: 3.9.4
+Section: libs
+Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-common-internals.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-common-internals.git
+
+Package: libktpcommoninternalsprivate-dev
+Section: libdevel
+Architecture: any
+Depends: libktpcommoninternalsprivate5 (= ${binary:Version}), ${misc:Depends}
+Description: KDE Telepathy internal library - Development headers
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+ .
+ This package contains development headers for
+ the ktp-common-internals library.
+ .
+ You should not use this library for developing applications
+ outside of the KDE Telepathy project umbrella. This package
+ is only provided for compiling the rest of the components.
+
+Package: libktpcommoninternalsprivate5
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal library
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+
+Package: kde-telepathy-declarative
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: kde-telepathy QtDeclarative QML support.
+ Contains a plugin for QtDeclarative that provides
+ support for using KDE-Telepathy to components written
+ in QML.
+
+Package: kde-telepathy-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Shared data for all the KDE Telepathy components
+ KDE telepathy shared data.
+ .
+ This package contains various data files that are used by nearly all
+ the different KDE Telepathy components.
+
+Package: libktpcommoninternalsprivate-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libktpcommoninternalsprivate5 (= ${binary:Version}), ${misc:Depends}
+Description: KDE Telepathy internal library - debug symbols
+ Internal library which consits of the most reused
+ parts across KDE Telepathy.
+ .
+ This package contains debugging symbols for the ktp-common-internals library.
+
+Package: kde-telepathy-debugger
+Architecture: any
+Priority: extra
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Debugging tool for KDE Telepathy
+ This package contains a GUI debugging tool which can be used to debug
+ issues in Telepathy.
+ .
+ It will show the debugging messages from the various telepathy
+ components.
