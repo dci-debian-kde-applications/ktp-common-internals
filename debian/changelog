@@ -1,6 +1,8 @@
 ktp-common-internals (0.6.3-1) unstable; urgency=low
 
   * Imported Upstream version 0.6.3  
+  * Drop marginally useful libktpcommoninternalsprivate5.symbols
+    - Fixes "FTBFS: symbols differ from expectations" (Closes: #719048)
 
  -- Mark Purcell <msp@debian.org>  Sat, 10 Aug 2013 09:19:39 +1000
 
