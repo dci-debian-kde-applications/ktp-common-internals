@@ -326,7 +326,7 @@ bool ContactsFilterModel::Private::filterAcceptsContact(const QModelIndex &index
 
     //check account
     if (accountFilter) {
-        if(index.data(KTp::AccountRole).value<Tp::AccountPtr>() != accountFilter) {
+        if(index.data(KTp::AccountRole).value<Tp::AccountPtr>()->uniqueIdentifier() != accountFilter->uniqueIdentifier()) {
             return false;
         }
     }
@@ -346,7 +346,7 @@ bool ContactsFilterModel::Private::filterAcceptsGroup(const QModelIndex &index)
 
         // Don't accept groups with no online contacts
         if (m_onlineContactsCounts.value(groupName) == 0) {
-//             return false;
+            return false;
         }
     }
     else {
@@ -357,7 +357,7 @@ bool ContactsFilterModel::Private::filterAcceptsGroup(const QModelIndex &index)
 
         // Don't accept groups with no total contacts
         if (m_totalContactsCounts.value(groupName) == 0) {
-//             return false;
+            return false;
         }
     }
     return true;
@@ -405,10 +405,15 @@ void ContactsFilterModel::Private::countContacts(const QModelIndex &sourceParent
 
 void ContactsFilterModel::Private::sourceModelParentIndexChanged(const QModelIndex &sourceIndex)
 {
-    if (sourceIndex.isValid()) {
+    //if parent is a group heading
+    if (sourceIndex.isValid() &&
+        (sourceIndex.data(KTp::RowTypeRole).toInt() == KTp::GroupRowType ||
+        sourceIndex.data(KTp::RowTypeRole).toInt() == KTp::AccountRowType)) {
         countContacts(sourceIndex);
-        const QModelIndex mappedIndex = q->mapFromSource(sourceIndex);
-        Q_EMIT q->dataChanged(mappedIndex, mappedIndex);
+
+        //emit that the source parent changed, this way it will go through "filterAcceptsRow" again
+        //and filter empty groups
+        QMetaObject::invokeMethod(q->sourceModel(), "dataChanged", Q_ARG(QModelIndex, sourceIndex), Q_ARG(QModelIndex, sourceIndex));
     }
 }
 
@@ -914,7 +919,22 @@ QModelIndexList ContactsFilterModel::match(const QModelIndex &start, int role,
     } else { // QString based matching
         if (text.isEmpty()) // lazy conversion
             text = value.toString();
-        QString t = v.toString();
+        QString t;
+
+        // If we're being case-insensitve then we should also be "foreign character insensitive"
+        if (cs == Qt::CaseInsensitive) {
+            const QString normalized = v.toString().normalized(QString::NormalizationForm_D);
+            Q_FOREACH (const QChar &c, normalized) {
+                if (c.category() != QChar::Mark_NonSpacing
+                    && c.category() != QChar::Mark_SpacingCombining
+                    && c.category() != QChar::Mark_Enclosing) {
+                    t.append(c);
+                }
+            }
+        } else {
+            t = v.toString();
+        }
+
         switch (matchType) {
         case Qt::MatchRegExp:
             if (QRegExp(text, cs).exactMatch(t))
@@ -952,14 +972,14 @@ QModelIndexList ContactsFilterModel::match(const QModelIndex &start, int role,
 
 void ContactsFilterModel::setSortRoleString(const QString &role)
 {
-    Q_ASSERT(!roleNames().keys(role.toUtf8()).isEmpty());
     setSortRole(roleNames().key(role.toUtf8()));
 }
 
 QString ContactsFilterModel::sortRoleString() const
 {
-    Q_ASSERT(roleNames().contains(sortRole()));
-    return QString::fromUtf8(roleNames().value(sortRole()));
+//    Q_ASSERT(roleNames().contains(sortRole()));
+//    return QString::fromUtf8(roleNames().value(sortRole()));
+    return QString();
 }
 
 #include "contacts-filter-model.moc"

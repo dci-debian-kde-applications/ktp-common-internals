@@ -25,10 +25,7 @@
 #include <TelepathyQt/Types>
 #include <TelepathyQt/ReceivedMessage>
 
-#include "conversation-queue-manager.h"
-
-
-class MessagesModel : public QAbstractListModel, public Queueable
+class MessagesModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_ENUMS(MessageType)
@@ -41,10 +38,12 @@ class MessagesModel : public QAbstractListModel, public Queueable
     virtual ~MessagesModel();
 
     enum Roles {
-        UserRole = Qt::UserRole,
-        TextRole,
-        TypeRole,
-        TimeRole
+        TextRole = Qt::UserRole, //String
+        TypeRole, //MessagesModel::MessageType (for now!)
+        TimeRole, //QDateTime
+        SenderIdRole, //string
+        SenderAliasRole, //string
+        SenderAvatarRole //pixmap
     };
 
     enum MessageType {
@@ -58,7 +57,7 @@ class MessagesModel : public QAbstractListModel, public Queueable
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
     Tp::TextChannelPtr textChannel() const;
-    void setTextChannel(Tp::TextChannelPtr channel);
+    void setTextChannel(const Tp::TextChannelPtr &channel);
 
     bool isVisibleToUser() const;
     void setVisibleToUser(bool visible);
@@ -70,9 +69,7 @@ class MessagesModel : public QAbstractListModel, public Queueable
 
   Q_SIGNALS:
     void visibleToUserChanged(bool visible);
-
     void unreadCountChanged(int unreadMesssagesCount);
-    void popoutRequested();
 
   public Q_SLOTS:
     void sendNewMessage(const QString &message);
@@ -86,7 +83,6 @@ class MessagesModel : public QAbstractListModel, public Queueable
   private:
     void setupChannelSignals(const Tp::TextChannelPtr &channel);
     void removeChannelSignals(const Tp::TextChannelPtr &channel);
-    virtual void selfDequeued();
 
     class MessagesModelPrivate;
     MessagesModelPrivate *d;

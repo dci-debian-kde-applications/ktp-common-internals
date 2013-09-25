@@ -4,10 +4,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-14 19:08+0200\n"
-"PO-Revision-Date: 2013-03-17 21:46+0100\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
+"PO-Revision-Date: 2013-09-11 08:36+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
-"Language-Team: de <kde-i18n-de@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -643,30 +643,30 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Keine Kopete-Protokolle gefunden"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Ungültiges Kopete-Protokollformat"
 
-#: Models/accounts-list-model.cpp:250
+#: Models/accounts-list-model.cpp:251
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Verbindung wird hergestellt"
 
-#: Models/accounts-list-model.cpp:252
+#: Models/accounts-list-model.cpp:253
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Getrennt"
 
-#: Models/accounts-list-model.cpp:254
+#: Models/accounts-list-model.cpp:255
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: Models/accounts-list-model.cpp:257
+#: Models/accounts-list-model.cpp:258
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Deaktiviert"
@@ -752,6 +752,8 @@ msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr ""
+"Die Verbindung zum angefragten Zugang wurde getrennt, daher kann der Kontakt "
+"nicht hinzugefügt werden."
 
 #: Widgets/add-contact-dialog.cpp:117
 msgid "You did not specify the name of the contact to add."

@@ -26,7 +26,6 @@
 
 #include <KIcon>
 
-#include "conversation-queue-manager.h"
 #include "conversation-target.h"
 #include "messages-model.h"
 
@@ -40,28 +39,33 @@ class Conversation : public QObject
     Q_PROPERTY(MessagesModel *messages READ messages CONSTANT)
     Q_PROPERTY(bool valid READ isValid NOTIFY validityChanged)
 
-  public:
+public:
     Conversation(const Tp::TextChannelPtr &channel, const Tp::AccountPtr &account, QObject *parent = 0);
     Conversation(QObject *parent = 0);
     virtual ~Conversation();
+
+    void setTextChannel(const Tp::TextChannelPtr &channel);
+    Tp::TextChannelPtr textChannel() const;
 
     MessagesModel* messages() const;
     ConversationTarget* target() const;
 
     bool isValid();
 
-  Q_SIGNALS:
+Q_SIGNALS:
     void validityChanged(bool isValid);
-    void conversationDelegated();
+    void conversationCloseRequested();
 
-  public Q_SLOTS:
+public Q_SLOTS:
     void delegateToProperClient();
     void requestClose();
 
-  private Q_SLOTS:
+private Q_SLOTS:
     void onChannelInvalidated(Tp::DBusProxy *proxy, const QString &errorName, const QString &errorMessage);
+    void onAccountConnectionChanged(const Tp::ConnectionPtr &connection);
+    void onCreateChannelFinished(Tp::PendingOperation *op);
 
-  private:
+private:
     class ConversationPrivate;
     ConversationPrivate *d;
 };

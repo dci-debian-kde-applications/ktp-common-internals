@@ -21,6 +21,10 @@
 #include "messages-model.h"
 
 #include <TelepathyQt/TextChannel>
+#include <TelepathyQt/Account>
+#include <TelepathyQt/PendingChannelRequest>
+#include <TelepathyQt/PendingChannel>
+
 #include <KDebug>
 #include "conversation-target.h"
 
@@ -47,23 +51,36 @@ Conversation::Conversation(const Tp::TextChannelPtr &channel,
     kDebug();
 
     d->account = account;
+    connect(d->account.data(), SIGNAL(connectionChanged(Tp::ConnectionPtr)), SLOT(onAccountConnectionChanged(Tp::ConnectionPtr)));
 
     d->messages = new MessagesModel(account, this);
-    d->messages->setTextChannel(channel);
-
+    setTextChannel(channel);
     d->target = new ConversationTarget(account, KTp::ContactPtr::qObjectCast(channel->targetContact()), this);
 
-    d->valid = channel->isValid();
     d->delegated = false;
 
-    connect(channel.data(), SIGNAL(invalidated(Tp::DBusProxy*,QString,QString)),
-            SLOT(onChannelInvalidated(Tp::DBusProxy*,QString,QString)));
 }
 
 Conversation::Conversation(QObject *parent) : QObject(parent)
 {
     kError() << "Conversation should not be created directly. Use ConversationWatcher instead.";
     Q_ASSERT(false);
+}
+
+void Conversation::setTextChannel(const Tp::TextChannelPtr& channel)
+{
+    if (d->messages->textChannel() != channel) {
+        d->messages->setTextChannel(channel);
+        d->valid = channel->isValid();
+        connect(channel.data(), SIGNAL(invalidated(Tp::DBusProxy*,QString,QString)),
+                SLOT(onChannelInvalidated(Tp::DBusProxy*,QString,QString)));
+        Q_EMIT validityChanged(d->valid);
+    }
+}
+
+Tp::TextChannelPtr Conversation::textChannel() const
+{
+    return d->messages->textChannel();
 }
 
 MessagesModel* Conversation::messages() const
@@ -90,25 +107,53 @@ void Conversation::onChannelInvalidated(Tp::DBusProxy *proxy, const QString &err
     Q_EMIT validityChanged(d->valid);
 }
 
+void Conversation::onAccountConnectionChanged(const Tp::ConnectionPtr& connection)
+{
+    //if we have reconnected and we were handling the channel
+    if (connection && ! d->delegated) {
+
+        //general convention is to never use ensureAndHandle when we already have a client registrar
+        //ensureAndHandle will implicity create a new temporary client registrar which is a waste
+        //it's also more code to get the new channel
+
+        //However, we cannot use use ensureChannel as normal because without being able to pass a preferredHandler
+        //we need a preferredHandler so that this handler is the one that ends up with the channel if multi handlers are active
+        //we do not know the name that this handler is currently registered with
+        Tp::PendingChannel *pendingChannel = d->account->ensureAndHandleTextChat(textChannel()->targetId());
+        connect(pendingChannel, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onCreateChannelFinished(Tp::PendingOperation*)));
+    }
+}
+
+void Conversation::onCreateChannelFinished(Tp::PendingOperation* op)
+{
+    Tp::PendingChannel *pendingChannelOp = qobject_cast<Tp::PendingChannel*>(op);
+    Tp::TextChannelPtr textChannel = Tp::TextChannelPtr::dynamicCast(pendingChannelOp->channel());
+    if (textChannel) {
+        setTextChannel(textChannel);
+    }
+}
+
 void Conversation::delegateToProperClient()
 {
     ChannelDelegator::delegateChannel(d->account, d->messages->textChannel());
     d->delegated = true;
-    Q_EMIT conversationDelegated();
+    Q_EMIT conversationCloseRequested();
 }
 
 void Conversation::requestClose()
+{
+    kDebug();
+
+    //removing from the model will delete this object closing the channel
+    Q_EMIT conversationCloseRequested();
+}
+
+Conversation::~Conversation()
 {
     kDebug();
     //if we are not handling the channel do nothing.
     if (!d->delegated) {
         d->messages->textChannel()->requestClose();
     }
-}
-
-Conversation::~Conversation()
-{
-    kDebug();
-    requestClose();
     delete d;
 }

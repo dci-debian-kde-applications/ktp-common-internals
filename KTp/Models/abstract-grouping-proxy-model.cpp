@@ -206,8 +206,15 @@ void KTp::AbstractGroupingProxyModel::onRowsInserted(const QModelIndex &sourcePa
     }
 }
 
+#include <KTp/types.h>
+
 void KTp::AbstractGroupingProxyModel::addProxyNode(const QModelIndex &sourceIndex, QStandardItem *parent)
 {
+    Q_ASSERT(sourceIndex.isValid());
+    if (!sourceIndex.isValid()) {
+        return;
+    }
+
     ProxyNode *proxyNode = new ProxyNode(sourceIndex);
     d->proxyMap.insertMulti(sourceIndex, proxyNode);
     parent->appendRow(proxyNode);
@@ -223,6 +230,13 @@ void KTp::AbstractGroupingProxyModel::removeProxyNodes(const QModelIndex &source
 {
     Q_FOREACH(ProxyNode *proxy, removedItems) {
         QStandardItem *parentItem = proxy->parent();
+
+        //also remove child items of this proxy node from the proxy map
+        for (int i = 0 ; i < d->source->rowCount(sourceIndex) ; i++) {
+            //we always remove child(0) because we're deleting the first child each time
+            removeProxyNodes(sourceIndex.child(i,0), QList<ProxyNode*>() << dynamic_cast<ProxyNode*>(proxy->child(0)));
+        }
+
         parentItem->removeRow(proxy->row());
         d->proxyMap.remove(sourceIndex, proxy);
 
@@ -269,7 +283,10 @@ void KTp::AbstractGroupingProxyModel::onRowsRemoved(const QModelIndex &sourcePar
 void KTp::AbstractGroupingProxyModel::onDataChanged(const QModelIndex &sourceTopLeft, const QModelIndex &sourceBottomRight)
 {
     for (int i = sourceTopLeft.row(); i <= sourceBottomRight.row(); i++) {
-        QPersistentModelIndex index = d->source->index(i, 0, sourceTopLeft.parent());
+        QPersistentModelIndex index = sourceTopLeft.sibling(i,0);
+        if (!index.isValid()) {
+            continue;
+        }
 
         //if top level item
         if (!sourceTopLeft.parent().isValid()) {

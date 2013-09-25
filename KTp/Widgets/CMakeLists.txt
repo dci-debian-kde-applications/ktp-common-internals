@@ -8,8 +8,9 @@ set (ktp_widgets_private_SRCS
     contact-grid-dialog.cpp
     add-contact-dialog.cpp
     join-chat-room-dialog.cpp
-    notificationconfigdialog.cpp
+    notification-config-dialog.cpp
     accounts-combo-box.cpp
+    start-chat-dialog.cpp
 )
 
 set (ktp_widgets_private_HDRS
@@ -17,13 +18,15 @@ set (ktp_widgets_private_HDRS
      contact-grid-dialog.h
      add-contact-dialog.h
      join-chat-room-dialog.h
-     notificationconfigdialog.h
+     notification-config-dialog.h
      accounts-combo-box.h
+     start-chat-dialog.h
 )
 
 kde4_add_ui_files (ktp_widgets_private_SRCS
                    add-contact-dialog.ui
                    join-chat-room-dialog.ui
+                   start-chat-dialog.ui
 )
 
 kde4_add_library (ktpwidgetsprivate SHARED

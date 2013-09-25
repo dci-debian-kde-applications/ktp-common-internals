@@ -52,7 +52,7 @@ public:
         GroupGrouping
     };
 
-    ContactsModel(QObject *parent);
+    ContactsModel(QObject *parent=0);
 
     virtual ~ContactsModel();
 
@@ -79,6 +79,7 @@ protected:
     virtual void setSourceModel(QAbstractItemModel *sourceModel);
 
 Q_SIGNALS:
+    void modelInitialized();
     void groupModeChanged();
     void trackUnreadMessagesChanged();
 

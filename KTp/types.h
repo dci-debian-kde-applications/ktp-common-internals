@@ -23,6 +23,9 @@
 
 #include "contact.h"
 
+#include "core.h"
+
+#include <TelepathyQt/TextChannel>
 #include <TelepathyQt/Account>
 #include <TelepathyQt/AccountManager>
 
@@ -43,6 +46,7 @@ namespace KTp
         // general roles
         RowTypeRole = Qt::UserRole, //returns one of KTp::ContactRowType, KTp::PersonRowType, KTp::GroupRowType, KTp::AccountRowType
         IdRole, //returns Contact ID, Account UID, or group ID (group name or "_ungrouped")
+        NepomukUriRole, ///< url of the corresponding contact/person resource in Nepomuk
 
         //telepathy roles
         ContactRole = Qt::UserRole + 1000,  ///<return Tp::ContactPtr
@@ -65,6 +69,8 @@ namespace KTp
 
         ContactHasTextChannelRole, ///< bool, returns true if a text channel is active for this contact
         ContactUnreadMessageCountRole, ///< int. the number of unread messages in active channels with this contact
+        ContactLastMessageRole, ///string, the last message to/from this contact in an active chat
+        ContactLastMessageDirectionRole, //enum KTp::Message::MessageDirection direction of last message
 
         ContactCanTextChatRole, ///< bool. You and contact can both text chat
         ContactCanFileTransferRole, ///< bool. You and contact can both file transfer
@@ -83,6 +89,8 @@ namespace KTp
 Q_DECLARE_METATYPE(Tp::AccountPtr)
 Q_DECLARE_METATYPE(KTp::ContactPtr)
 Q_DECLARE_METATYPE(Tp::AccountManagerPtr);
+Q_DECLARE_METATYPE(Tp::ConnectionPtr);
+Q_DECLARE_METATYPE(Tp::TextChannelPtr);
 
 
 #endif // KTP_TYPES_H
