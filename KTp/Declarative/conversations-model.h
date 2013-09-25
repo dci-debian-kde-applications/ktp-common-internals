@@ -33,7 +33,7 @@ class ConversationsModel : public QAbstractListModel, public Tp::AbstractClientH
     Q_PROPERTY(int totalUnreadCount READ totalUnreadCount NOTIFY totalUnreadCountChanged)
 
   public:
-    explicit ConversationsModel(QObject *parent);
+    explicit ConversationsModel(QObject *parent=0);
     virtual ~ConversationsModel();
 
     virtual QVariant data ( const QModelIndex &index, int role = Qt::DisplayRole ) const;
@@ -56,7 +56,6 @@ class ConversationsModel : public QAbstractListModel, public Tp::AbstractClientH
     bool bypassApproval() const;
 
   public Q_SLOTS:
-    void startChat(const Tp::AccountPtr &account, const KTp::ContactPtr &contact);
     int nextActiveConversation(int first);
 
   private:
@@ -66,8 +65,7 @@ class ConversationsModel : public QAbstractListModel, public Tp::AbstractClientH
     ConversationsModelPrivate *d;
 
   private Q_SLOTS:
-    void handleValidityChange(bool);
-    void conversationDelegated();
+    void onConversationCloseRequested();
 
   Q_SIGNALS:
       void totalUnreadCountChanged();

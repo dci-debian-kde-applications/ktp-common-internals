@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
 "PO-Revision-Date: 2013-02-14 20:16+0100\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -641,11 +641,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Neznana napaka"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Ni bilo najdenih dnevnikov programa Kopete"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Neveljavna oblika dnevnikov programa Kopete"
 

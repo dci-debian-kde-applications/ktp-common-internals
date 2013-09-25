@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
 "PO-Revision-Date: 2013-04-02 02:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -623,11 +623,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Беймәлім қате"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Kopete журналы табылған жоқ"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Kopete журналы жарамсыз пішімде"
 

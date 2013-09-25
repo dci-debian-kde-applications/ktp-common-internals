@@ -25,7 +25,18 @@
 #include "groups-tree-proxy-model.h"
 #include "text-channel-watcher-proxy-model.h"
 
+#include "core.h"
+
 #include <TelepathyQt/ClientRegistrar>
+
+#ifdef HAVE_KPEOPLE
+#include <KPeople/PersonsModel>
+#include <kpeople/personsmodelfeature.h>
+#include "kpeopletranslationproxy.h"
+#endif
+
+#include <KDebug>
+
 
 namespace KTp
 {
@@ -35,7 +46,7 @@ public:
     GroupMode groupMode;
     bool trackUnread;
     QWeakPointer<KTp::AbstractGroupingProxyModel> proxy;
-    KTp::ContactsListModel *source;
+    QAbstractItemModel *source;
     Tp::AccountManagerPtr accountManager;
     Tp::ClientRegistrarPtr clientRegistrar;
     Tp::SharedPtr<KTp::TextChannelWatcherProxyModel> channelWatcherProxy;
@@ -49,7 +60,39 @@ KTp::ContactsModel::ContactsModel(QObject *parent)
 {
     d->groupMode = NoGrouping;
     d->trackUnread = false;
-    d->source = new KTp::ContactsListModel(this);
+    if (KTp::kpeopleEnabled()) {
+        #ifdef HAVE_KPEOPLE
+        kDebug() << "Nepomuk is enabled, using kpeople model";
+        KPeople::PersonsModel *personsModel = new KPeople::PersonsModel(this);
+
+        KPeople::PersonsModelFeature accountFeature;
+        QHash<QString, int> bindingMap;
+        bindingMap[QLatin1String("account")] = KPeople::PersonsModel::UserRole;
+        accountFeature.setBindingsMap(bindingMap);
+        accountFeature.setOptional(false);
+        accountFeature.setQueryPart(QLatin1String("?uri nco:hasIMAccount ?imAccount . ?imAccount nco:isAccessedBy ?accessedBy . ?accessedBy telepathy:accountIdentifier ?account . "));
+
+        personsModel->startQuery(QList<KPeople::PersonsModelFeature>() << KPeople::PersonsModelFeature::imModelFeature(KPeople::PersonsModelFeature::Mandatory)
+                                                            << accountFeature
+                                                            << KPeople::PersonsModelFeature::avatarModelFeature()
+                                                            << KPeople::PersonsModelFeature::groupsModelFeature()
+                                                            << KPeople::PersonsModelFeature::fullNameModelFeature()
+                                                            << KPeople::PersonsModelFeature::nicknameModelFeature());
+        connect(personsModel, SIGNAL(modelInitialized()),
+                this, SIGNAL(modelInitialized()));
+
+        d->source = new KPeopleTranslationProxy(this);
+        qobject_cast<KPeopleTranslationProxy*>(d->source)->setSourceModel(personsModel);
+        #endif
+    }
+    else
+    {
+        kDebug() << "Nepomuk is disabled, using normal model";
+        d->source = new KTp::ContactsListModel(this);
+        connect(d->source, SIGNAL(modelInitialized()),
+                this, SIGNAL(modelInitialized()));
+    }
+
 }
 
 KTp::ContactsModel::~ContactsModel()
@@ -65,7 +108,9 @@ void KTp::ContactsModel::setAccountManager(const Tp::AccountManagerPtr &accountM
     updateGroupProxyModels();
 
     //set the account manager after we've reloaded the groups so that we don't send a list to the view, only to replace it with a grouped tree
-    d->source->setAccountManager(accountManager);
+    if (qobject_cast<ContactsListModel*>(d->source)) {
+        qobject_cast<ContactsListModel*>(d->source)->setAccountManager(accountManager);
+    }
 }
 
 Tp::AccountManagerPtr KTp::ContactsModel::accountManager() const
@@ -147,6 +192,11 @@ void KTp::ContactsModel::updateGroupProxyModels()
 
     switch (d->groupMode) {
     case NoGrouping:
+        //This is a workaround to a Qt assert which gets confused when we switch from a source model that was
+        //part of the proxy chain, and is now used in the view directly
+        //
+        //do not disable until you have tested on Qt in debug mode
+        setSourceModel(0);
         setSourceModel(modelToGroup);
         break;
     case AccountGrouping:
@@ -163,4 +213,39 @@ void KTp::ContactsModel::updateGroupProxyModels()
 void KTp::ContactsModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
     KTp::ContactsFilterModel::setSourceModel(sourceModel);
+
+    //Qt automatically updates the role names to use that of the source model
+    //this causes problems when we have multiple source models that we change between
+    //instead we update here just after we set a source model
+
+    //in Qt5.0 override the virtual roleNames() method and do it there.
+
+    QHash<int, QByteArray> roles = roleNames();
+    roles[KTp::RowTypeRole]= "type";
+    roles[KTp::IdRole]= "id";
+
+    roles[KTp::ContactRole]= "contact";
+    roles[KTp::AccountRole]= "account";
+
+    roles[KTp::ContactClientTypesRole]= "clientTypes";
+    roles[KTp::ContactAvatarPathRole]= "avatar";
+    roles[KTp::ContactAvatarPixmapRole]="avatarPixmap";
+    roles[KTp::ContactGroupsRole]= "groups";
+    roles[KTp::ContactPresenceNameRole]= "presenceName";
+    roles[KTp::ContactPresenceMessageRole]= "presenceMessage";
+    roles[KTp::ContactPresenceTypeRole]= "presenceType";
+    roles[KTp::ContactPresenceIconRole]= "presenceIcon";
+    roles[KTp::ContactSubscriptionStateRole]= "subscriptionState";
+    roles[KTp::ContactPublishStateRole]= "publishState";
+    roles[KTp::ContactIsBlockedRole]= "blocked";
+    roles[KTp::ContactHasTextChannelRole]= "hasTextChannel";
+    roles[KTp::ContactUnreadMessageCountRole]= "unreadMessageCount";
+    roles[KTp::ContactLastMessageRole]= "lastMessage";
+    roles[KTp::ContactLastMessageDirectionRole]= "lastMessageDirection";
+    roles[KTp::ContactCanTextChatRole]= "textChat";
+    roles[KTp::ContactCanFileTransferRole]= "fileTransfer";
+    roles[KTp::ContactCanAudioCallRole]= "audioCall";
+    roles[KTp::ContactCanVideoCallRole]= "videoCall";
+    roles[KTp::ContactTubesRole]= "tubes";
+    setRoleNames(roles);
 }

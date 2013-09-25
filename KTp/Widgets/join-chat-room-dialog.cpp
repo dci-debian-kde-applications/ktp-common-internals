@@ -80,20 +80,8 @@ KTp::JoinChatRoomDialog::JoinChatRoomDialog(Tp::AccountManagerPtr accountManager
     ui->removeRecentPushButton->setIcon(KIcon(QLatin1String("list-remove")));
     ui->clearRecentPushButton->setIcon(KIcon(QLatin1String("edit-clear-list")));
 
-    Tp::AccountPropertyFilterPtr isOnlineFilter = Tp::AccountPropertyFilter::create();
-    isOnlineFilter->addProperty(QLatin1String("online"), true);
-
-    Tp::AccountCapabilityFilterPtr capabilityFilter = Tp::AccountCapabilityFilter::create(
-                Tp::RequestableChannelClassSpecList() << Tp::RequestableChannelClassSpec::textChatroom());
-
-    Tp::AccountFilterPtr filter = Tp::AndFilter<Tp::Account>::create((QList<Tp::AccountFilterConstPtr>() <<
-                                             isOnlineFilter <<
-                                             capabilityFilter));
-
-    ui->comboBox->setAccountSet(accountManager->filterAccounts(filter));
-
-    // apply the filter after populating
-    onAccountSelectionChanged(ui->comboBox->currentIndex());
+    connect(accountManager->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)),
+            this, SLOT(onAccountManagerReady(Tp::PendingOperation*)));
 
     // favoritesTab
     m_favoritesProxyModel->setSourceModel(m_favoritesModel);
@@ -129,18 +117,41 @@ KTp::JoinChatRoomDialog::JoinChatRoomDialog(Tp::AccountManagerPtr accountManager
     // connects
     connect(ui->lineEdit, SIGNAL(textChanged(QString)), this, SLOT(onTextChanged(QString)));
     connect(ui->listView, SIGNAL(clicked(QModelIndex)), this, SLOT(onFavoriteRoomClicked(QModelIndex)));
+    connect(ui->listView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(accept()));
     connect(ui->addFavoritePushButton, SIGNAL(clicked(bool)), this, SLOT(addFavorite()));
     connect(ui->removeFavoritePushButton, SIGNAL(clicked(bool)), this, SLOT(removeFavorite()));
     connect(ui->recentListWidget, SIGNAL(currentTextChanged(QString)), ui->lineEdit, SLOT(setText(QString)));
     connect(ui->recentListWidget, SIGNAL(currentTextChanged(QString)), this, SLOT(onRecentRoomClicked()));
+    connect(ui->recentListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(accept()));
     connect(ui->removeRecentPushButton, SIGNAL(clicked(bool)), this , SLOT(removeRecentRoom()));
     connect(ui->clearRecentPushButton, SIGNAL(clicked(bool)), this, SLOT(clearRecentRooms()));
     connect(ui->queryPushButton, SIGNAL(clicked(bool)), this, SLOT(getRoomList()));
     connect(ui->stopPushButton, SIGNAL(clicked(bool)), this, SLOT(stopListing()));
     connect(ui->treeView, SIGNAL(clicked(QModelIndex)), this, SLOT(onRoomClicked(QModelIndex)));
+    connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(accept()));
     connect(ui->filterBar, SIGNAL(textChanged(QString)), proxyModel, SLOT(setFilterFixedString(QString)));
     connect(ui->comboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(onAccountSelectionChanged(int)));
     connect(button(Ok), SIGNAL(clicked(bool)), this, SLOT(addRecentRoom()));
+}
+
+void KTp::JoinChatRoomDialog::onAccountManagerReady(Tp::PendingOperation* operation)
+{
+    Tp::AccountManagerPtr accountManager = Tp::AccountManagerPtr::qObjectCast(
+        qobject_cast<Tp::PendingReady*>(operation)->proxy()
+    );
+    Tp::AccountPropertyFilterPtr isOnlineFilter = Tp::AccountPropertyFilter::create();
+    isOnlineFilter->addProperty(QLatin1String("online"), true);
+
+    Tp::AccountCapabilityFilterPtr capabilityFilter = Tp::AccountCapabilityFilter::create(
+                Tp::RequestableChannelClassSpecList() << Tp::RequestableChannelClassSpec::textChatroom());
+    Tp::AccountFilterPtr filter = Tp::AndFilter<Tp::Account>::create((QList<Tp::AccountFilterConstPtr>() <<
+                                             isOnlineFilter <<
+                                             capabilityFilter));
+
+    ui->comboBox->setAccountSet(accountManager->filterAccounts(filter));
+
+    // apply the filter after populating
+    onAccountSelectionChanged(ui->comboBox->currentIndex());
 }
 
 KTp::JoinChatRoomDialog::~JoinChatRoomDialog()
@@ -428,7 +439,7 @@ void KTp::JoinChatRoomDialog::onRecentRoomClicked()
     ui->removeRecentPushButton->setEnabled(true);
 }
 
-void KTp::JoinChatRoomDialog::onRoomClicked(const QModelIndex& index)
+void KTp::JoinChatRoomDialog::onRoomClicked(const QModelIndex &index)
 {
     ui->lineEdit->setText(index.data(RoomsModel::HandleNameRole).toString());
 }

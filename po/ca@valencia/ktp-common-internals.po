@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
 "PO-Revision-Date: 2012-07-08 20:04+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -672,11 +672,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Error desconegut"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr ""
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr ""
 

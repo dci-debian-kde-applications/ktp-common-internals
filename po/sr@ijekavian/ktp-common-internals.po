@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
 "PO-Revision-Date: 2013-02-03 14:26+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -639,11 +639,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Непозната грешка"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Нема Копетеових дневника"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Лош формат Копетеовог дневника"
 

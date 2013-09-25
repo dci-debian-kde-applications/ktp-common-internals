@@ -1,19 +1,19 @@
 # Translation of ktp-common-internals to Norwegian Bokmål
 #
-# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
-"PO-Revision-Date: 2012-11-22 19:14+0100\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
+"PO-Revision-Date: 2013-09-18 12:49+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -29,11 +29,11 @@ msgstr "bjornst@skogkatt.homelinux.org"
 
 #: contact-info-dialog.cpp:66
 msgid "Full name:"
-msgstr ""
+msgstr "Fullt navn:"
 
 #: contact-info-dialog.cpp:67
 msgid "Nickname:"
-msgstr ""
+msgstr "Kallenavn:"
 
 #: contact-info-dialog.cpp:68
 msgid "Email:"
@@ -41,23 +41,23 @@ msgstr "E-post:"
 
 #: contact-info-dialog.cpp:69
 msgid "Phone:"
-msgstr ""
+msgstr "Telefon:"
 
 #: contact-info-dialog.cpp:70
 msgid "Homepage:"
-msgstr ""
+msgstr "Hjemmeside:"
 
 #: contact-info-dialog.cpp:71
 msgid "Birthday:"
-msgstr ""
+msgstr "Fødselsdag:"
 
 #: contact-info-dialog.cpp:72
 msgid "Organization:"
-msgstr ""
+msgstr "Organisasjon:"
 
 #: contact-info-dialog.cpp:140
 msgid "Change Avatar"
-msgstr ""
+msgstr "Endre avatar"
 
 #: contact-info-dialog.cpp:145
 msgid "Clear Avatar"
@@ -65,7 +65,7 @@ msgstr "Tøm avatar"
 
 #: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr ""
+msgstr "Klarte ikke å laste inn det nye avatar-bildet"
 
 #: contact-info-dialog.cpp:328
 msgid "Save"
@@ -159,7 +159,7 @@ msgstr "SSL/TLS-sertifikatet mottatt fra tjeneren er ikke aktivert ennå"
 #: error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
-msgstr "Tjeneren ga ikke ut noe SSL/TLS-sertifilkat"
+msgstr "Tjeneren ga ikke ut noe SSL/TLS-sertifikat"
 
 #: error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
@@ -444,7 +444,7 @@ msgstr "Sertifikatet er ikke aktivt ennå"
 #: error-dictionary.cpp:166
 msgctxt "Short user visible error string"
 msgid "No certificate from server"
-msgstr "Ikke noe sertifilkat fra tjeneren"
+msgstr "Ikke noe sertifikat fra tjeneren"
 
 #: error-dictionary.cpp:168
 msgctxt "Short user visible error string"
@@ -641,11 +641,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Fant ingen Kopete-logger"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Ugyldig format i Kopete-logg"
 

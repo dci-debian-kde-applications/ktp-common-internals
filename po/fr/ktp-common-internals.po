@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-05 06:08+0000\n"
-"PO-Revision-Date: 2013-02-09 20:37+0100\n"
+"POT-Creation-Date: 2013-08-23 05:05+0000\n"
+"PO-Revision-Date: 2013-09-11 19:18+0200\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -67,7 +67,7 @@ msgstr "Effacer un avatar"
 
 #: contact-info-dialog.cpp:210
 msgid "Failed to load the new avatar image"
-msgstr "Impossible de charger la nouvelle image d'avatar"
+msgstr "Il est impossible de charger la nouvelle image d'avatar"
 
 #: contact-info-dialog.cpp:328
 msgid "Save"
@@ -219,7 +219,7 @@ msgstr "Une erreur inattendue est survenue"
 #: error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
 msgid "Could not establish connection"
-msgstr "Impossible d'établir la connexion"
+msgstr "Il est impossible d'établir la connexion"
 
 #: error-dictionary.cpp:79
 msgctxt "Verbose user visible error string"
@@ -651,11 +651,11 @@ msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Erreur inconnue"
 
-#: logs-importer-private.cpp:52
+#: logs-importer-private.cpp:57
 msgid "No Kopete logs found"
 msgstr "Aucun journal de Kopete n'a été trouvé"
 
-#: logs-importer-private.cpp:333 logs-importer-private.cpp:340
+#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
 msgid "Invalid Kopete log format"
 msgstr "Format de journal Kopete non valable"
 
@@ -769,12 +769,13 @@ msgstr "Vous n'avez pas spécifié le nom du contact à ajouter."
 
 #: Widgets/add-contact-dialog.cpp:143
 msgid "Failed to create new contact."
-msgstr "Impossible de créer un nouveau contact."
+msgstr "Il est impossible de créer un nouveau contact."
 
 #: Widgets/add-contact-dialog.cpp:160
 msgid "Failed to request presence subscription from the requested contact."
 msgstr ""
-"Impossible de demander un abonnement de présence à partir du contact demandé."
+"Il est impossible de demander un abonnement de présence à partir du contact "
+"demandé."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: Widgets/add-contact-dialog.ui:17
