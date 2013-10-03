@@ -1,3 +1,12 @@
 usr/share/icons/hicolor/*
 usr/share/kde4/apps/ktelepathy/*
+usr/share/kde4/apps/katepart/syntax/ktpdebugoutput.xml
+usr/share/kde4/services/imdetailswidgetplugin.desktop
+usr/share/kde4/services/im_persons_data_source_plugin.desktop
+usr/share/kde4/services/ktp_kpeople_plugin.desktop
+usr/share/kde4/services/ktploggerplugin_tplogger.desktop
+usr/share/kde4/services/nepomuktelepathyservice.desktop
+usr/share/kde4/servicetypes/ktp_logger_plugin.desktop
+usr/share/ontology/telepathy/telepathy.ontology
+usr/share/ontology/telepathy/telepathy.trig
 usr/share/locale/*
