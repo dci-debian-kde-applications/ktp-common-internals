@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-08-23 05:05+0000\n"
-"PO-Revision-Date: 2013-03-31 09:44+0200\n"
+"POT-Creation-Date: 2013-09-25 05:36+0000\n"
+"PO-Revision-Date: 2013-10-06 11:33+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -26,63 +26,96 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "urbalazs@gmail.com"
 
-#: contact-info-dialog.cpp:66
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#, kde-format
+msgid "Start Chat Using %1..."
+msgstr "Csevegés indítása %1 használatával…"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#, kde-format
+msgid "Start Audio Call Using %1..."
+msgstr "Hanghívás indítása %1 használatával…"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#, kde-format
+msgid "Start Video Call Using %1..."
+msgstr "Videohívás indítása %1 használatával…"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#, kde-format
+msgid "Send a File Using %1..."
+msgstr "Fájl küldése %1 használatával…"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#, kde-format
+msgid "Collaboratively edit a document Using %1..."
+msgstr "Egy dokumentum együttműködő szerkesztése %1 használatával…"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
+msgid "Open Log Viewer..."
+msgstr "Naplómegjelenítő megnyitása…"
+
+#: kpeople/uiplugins/imdetailswidget.cpp:44
+msgid "Instant Messaging Accounts"
+msgstr "Azonnali üzenetküldő fiókok"
+
+#: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
 msgstr "Teljes név:"
 
-#: contact-info-dialog.cpp:67
+#: KTp/contact-info-dialog.cpp:67
 msgid "Nickname:"
 msgstr "Becenév:"
 
-#: contact-info-dialog.cpp:68
+#: KTp/contact-info-dialog.cpp:68
 msgid "Email:"
 msgstr "E-mail:"
 
-#: contact-info-dialog.cpp:69
+#: KTp/contact-info-dialog.cpp:69
 msgid "Phone:"
 msgstr "Telefon:"
 
-#: contact-info-dialog.cpp:70
+#: KTp/contact-info-dialog.cpp:70
 msgid "Homepage:"
 msgstr "Honlap:"
 
-#: contact-info-dialog.cpp:71
+#: KTp/contact-info-dialog.cpp:71
 msgid "Birthday:"
 msgstr "Születésnap:"
 
-#: contact-info-dialog.cpp:72
+#: KTp/contact-info-dialog.cpp:72
 msgid "Organization:"
 msgstr "Szervezet:"
 
-#: contact-info-dialog.cpp:140
+#: KTp/contact-info-dialog.cpp:144
 msgid "Change Avatar"
 msgstr "Avatar módosítása"
 
-#: contact-info-dialog.cpp:145
+#: KTp/contact-info-dialog.cpp:149
 msgid "Clear Avatar"
 msgstr "Avatar törlése"
 
-#: contact-info-dialog.cpp:210
+#: KTp/contact-info-dialog.cpp:214
 msgid "Failed to load the new avatar image"
 msgstr "Nem sikerült betölteni az új avatar képet"
 
-#: contact-info-dialog.cpp:328
+#: KTp/contact-info-dialog.cpp:332
 msgid "Save"
 msgstr "Mentés"
 
-#: contact-info-dialog.cpp:363
+#: KTp/contact-info-dialog.cpp:367
 msgid "Contact can see when you are online:"
 msgstr "A partner láthatja, amikor ön elérhető:"
 
-#: contact-info-dialog.cpp:364
+#: KTp/contact-info-dialog.cpp:368
 msgid "You can see when the contact is online:"
 msgstr "Ön láthatja, amikor a partner elérhető:"
 
-#: contact-info-dialog.cpp:365
+#: KTp/contact-info-dialog.cpp:369
 msgid "Contact is blocked:"
 msgstr "A partner blokkolt:"
 
-#: error-dictionary.cpp:37
+#: KTp/error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
 msgid ""
 "Looks like you are already connected from other location and the server does "
@@ -91,12 +124,12 @@ msgstr ""
 "Úgy tűnik már kapcsolódott egy másik helyről, a kiszolgáló azonban nem tesz "
 "lehetővé többszörös bejelentkezést"
 
-#: error-dictionary.cpp:39
+#: KTp/error-dictionary.cpp:39
 msgctxt "Verbose user visible error string"
 msgid "Authentication of your account failed (is your password correct?)"
 msgstr "Az azonosító hitelesítése meghiúsult, talán nem jó a jelszava"
 
-#: error-dictionary.cpp:41
+#: KTp/error-dictionary.cpp:41
 msgctxt "Verbose user visible error string"
 msgid ""
 "The channel is too busy now to process your request. Try again in a few "
@@ -105,17 +138,17 @@ msgstr ""
 "A csatorna túlságosan elfoglalt a kérése feldolgozásához. Próbálja meg újra "
 "néhány perc múlva"
 
-#: error-dictionary.cpp:43
+#: KTp/error-dictionary.cpp:43
 msgctxt "Verbose user visible error string"
 msgid "The connection was canceled on your request"
 msgstr "A kapcsolat az Ön kérésére meg lett szakítva"
 
-#: error-dictionary.cpp:45
+#: KTp/error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is expired"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány lejárt"
 
-#: error-dictionary.cpp:47
+#: KTp/error-dictionary.cpp:47
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server has different fingerprint than "
@@ -123,52 +156,52 @@ msgid ""
 msgstr ""
 "A kiszolgálótól kapott SSL/TLS-tanúsítvány ujjlenyomata eltér a várttól"
 
-#: error-dictionary.cpp:49
+#: KTp/error-dictionary.cpp:49
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server has different hostname than "
 "expected"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány gépneve eltér a várttól"
 
-#: error-dictionary.cpp:51
+#: KTp/error-dictionary.cpp:51
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server uses too weak encryption"
 msgstr ""
 "A kiszolgálótól kapott SSL/TLS-tanúsítvány túl gyenge titkosítást használ"
 
-#: error-dictionary.cpp:53
+#: KTp/error-dictionary.cpp:53
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is invalid"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány érvénytelen"
 
-#: error-dictionary.cpp:55
+#: KTp/error-dictionary.cpp:55
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has exceeded length limit"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány túllépte a hosszkorlátot"
 
-#: error-dictionary.cpp:57
+#: KTp/error-dictionary.cpp:57
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has not been activated yet"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítványt még nem aktiválták"
 
-#: error-dictionary.cpp:59
+#: KTp/error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
 msgstr "A kiszolgáló nem küldött semmilyen SSL/TLS-tanúsítványt"
 
-#: error-dictionary.cpp:61
+#: KTp/error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has been revoked"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítványt visszavonták"
 
-#: error-dictionary.cpp:63
+#: KTp/error-dictionary.cpp:63
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server was self-signed by the server "
 "and is untrusted"
 msgstr "A kiszolgálótól kapott SSL/TLS-tanúsítvány önaláírt és nem megbízható"
 
-#: error-dictionary.cpp:65
+#: KTp/error-dictionary.cpp:65
 msgctxt "Verbose user visible error string"
 msgid ""
 "The SSL/TLS certificate received from server was not signed by a trusted "
@@ -177,47 +210,47 @@ msgstr ""
 "A kiszolgálótól kapott SSL/TSL-tanúsítványt nem egy érvényes "
 "hitelesítésszolgáltató írta alá"
 
-#: error-dictionary.cpp:67
+#: KTp/error-dictionary.cpp:67
 msgctxt "Verbose user visible error string"
 msgid "You have been banned from the channel"
 msgstr "Kitiltották a csatornáról"
 
-#: error-dictionary.cpp:69
+#: KTp/error-dictionary.cpp:69
 msgctxt "Verbose user visible error string"
 msgid "The channel is full"
 msgstr "A csatorna megtelt"
 
-#: error-dictionary.cpp:71
+#: KTp/error-dictionary.cpp:71
 msgctxt "Verbose user visible error string"
 msgid "The channel is invite-only"
 msgstr "A csatornára csak meghívóval lehet belépni"
 
-#: error-dictionary.cpp:73
+#: KTp/error-dictionary.cpp:73
 msgctxt "Verbose user visible error string"
 msgid "You have been kicked from the channel"
 msgstr "Kidobták a csatornáról"
 
-#: error-dictionary.cpp:75
+#: KTp/error-dictionary.cpp:75
 msgctxt "Verbose user visible error string"
 msgid "An unexpected error has occurred"
 msgstr "Váratlan hiba történt"
 
-#: error-dictionary.cpp:77
+#: KTp/error-dictionary.cpp:77
 msgctxt "Verbose user visible error string"
 msgid "Could not establish connection"
 msgstr "Nem sikerült létrehozni a kapcsolatot"
 
-#: error-dictionary.cpp:79
+#: KTp/error-dictionary.cpp:79
 msgctxt "Verbose user visible error string"
 msgid "Connection to server was lost"
 msgstr "A kapcsolat megszakadt a kiszolgálóval"
 
-#: error-dictionary.cpp:81
+#: KTp/error-dictionary.cpp:81
 msgctxt "Verbose user visible error string"
 msgid "Server refused your connection"
 msgstr "A kiszolgáló elutasította a kapcsolatot"
 
-#: error-dictionary.cpp:83
+#: KTp/error-dictionary.cpp:83
 msgctxt "Verbose user visible error string"
 msgid ""
 "Somewhere there is another client connecting with your account and your "
@@ -226,102 +259,102 @@ msgstr ""
 "Valahol egy másik kliens kapcsolódott az Ön azonosítójával, és a jelenlegi "
 "kapcsolata elveszett"
 
-#: error-dictionary.cpp:85
+#: KTp/error-dictionary.cpp:85
 msgctxt "Verbose user visible error string"
 msgid "You have been disconnected"
 msgstr "A kapcsolat megszakadt"
 
-#: error-dictionary.cpp:87
+#: KTp/error-dictionary.cpp:87
 msgctxt "Verbose user visible error string"
 msgid "Selected user does not exist"
 msgstr "A kijelölt felhasználó nem létezik"
 
-#: error-dictionary.cpp:89
+#: KTp/error-dictionary.cpp:89
 msgctxt "Verbose user visible error string"
 msgid "Emergency calls are not supported"
 msgstr "A  segélyhívások nem támogatottak"
 
-#: error-dictionary.cpp:91
+#: KTp/error-dictionary.cpp:91
 msgctxt "Verbose user visible error string"
 msgid "An encryption error has occurred"
 msgstr "Titkosítási hiba történt"
 
-#: error-dictionary.cpp:93
+#: KTp/error-dictionary.cpp:93
 msgctxt "Verbose user visible error string"
 msgid "Requested encryption is not available"
 msgstr "A kért titkosítás nem érhető el"
 
-#: error-dictionary.cpp:95
+#: KTp/error-dictionary.cpp:95
 msgctxt "Verbose user visible error string"
 msgid "An invalid argument was provided"
 msgstr "Érvénytelen argumentum került megadásra"
 
-#: error-dictionary.cpp:97
+#: KTp/error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
 msgstr "A megadott handle ismeretlen ezen a csatornán"
 
-#: error-dictionary.cpp:99
+#: KTp/error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
 msgid "There appears to be a problem with your network, check your connection"
 msgstr "Úgy tűnik, hogy probléma van a hálózatával, ellenőrizze a kapcsolatot"
 
-#: error-dictionary.cpp:101
+#: KTp/error-dictionary.cpp:101
 msgctxt "Verbose user visible error string"
 msgid "You were removed from the channel because you did not respond"
 msgstr "Eltávolították a csatornáról, mert nem válaszolt"
 
-#: error-dictionary.cpp:103
+#: KTp/error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
-msgid "This capability is not available"
-msgstr "Ez a képesség nem érhető el"
+msgid "The service is not available"
+msgstr "A szolgáltatás nem érhető el"
 
-#: error-dictionary.cpp:105
+#: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
 msgid "The contact does not have the requested capabilities"
 msgstr "A partner nem rendelkezik a kért képességekkel"
 
-#: error-dictionary.cpp:107
+#: KTp/error-dictionary.cpp:107
 msgctxt "Verbose user visible error string"
 msgid "This operation is not implemented"
 msgstr "A művelet nincs implementálva"
 
-#: error-dictionary.cpp:109
+#: KTp/error-dictionary.cpp:109
 msgctxt "Verbose user visible error string"
 msgid "This operation is not yet implemented"
 msgstr "A művelet még nincs implementálva"
 
-#: error-dictionary.cpp:111
+#: KTp/error-dictionary.cpp:111
 msgctxt "Verbose user visible error string"
 msgid "The requested channel is already being handled by some other process"
 msgstr "A kért csatornát már egy másik folyamat kezeli"
 
-#: error-dictionary.cpp:113
+#: KTp/error-dictionary.cpp:113
 msgctxt "Verbose user visible error string"
 msgid "This operation is unavailable for offline contacts"
 msgstr "A művelet nem érhető el offline partnereknél"
 
-#: error-dictionary.cpp:115
+#: KTp/error-dictionary.cpp:115
 msgctxt "Verbose user visible error string"
 msgid "You are not permitted to perform this operation"
 msgstr "Nincs engedélye a művelet végrehajtásához"
 
-#: error-dictionary.cpp:117
+#: KTp/error-dictionary.cpp:117
 msgctxt "Verbose user visible error string"
 msgid "Current call was picked up by another resource"
 msgstr "Az aktuális hívást egy másik erőforrás vette fel"
 
-#: error-dictionary.cpp:119
+#: KTp/error-dictionary.cpp:119
 msgctxt "Verbose user visible error string"
 msgid "Account with this username already exists"
 msgstr "Már létezik azonosító ezzel a felhasználónévvel"
 
-#: error-dictionary.cpp:121
+#: KTp/error-dictionary.cpp:121
 msgctxt "Verbose user visible error string"
 msgid "The receiver rejected your call"
 msgstr "A címzett elutasította a hívását"
 
-#: error-dictionary.cpp:123
+#: KTp/error-dictionary.cpp:123
 msgctxt "Verbose user visible error string"
 msgid ""
 "There are insufficient resources (like free memory) to finish the operation "
@@ -330,7 +363,7 @@ msgstr ""
 "Pillanatnyilag kevés az erőforrás (például a szabad memória) a művelet "
 "befejezéséhez"
 
-#: error-dictionary.cpp:125
+#: KTp/error-dictionary.cpp:125
 msgctxt "Verbose user visible error string"
 msgid ""
 "Your request hit a busy resource somewhere along the way and the operation "
@@ -339,12 +372,12 @@ msgstr ""
 "Egy foglalt erőforrást kért menet közben, ezért a művelet nem tudott "
 "befejeződni"
 
-#: error-dictionary.cpp:127
+#: KTp/error-dictionary.cpp:127
 msgctxt "Verbose user visible error string"
 msgid "An internal error has occurred (known as the 'Confused service error')"
 msgstr "Egy belső hiba történt („Kusza szolgáltatáshiba” néven ismert)"
 
-#: error-dictionary.cpp:129
+#: KTp/error-dictionary.cpp:129
 msgctxt "Verbose user visible error string"
 msgid ""
 "The installed libraries are too old. Please try updating all Telepathy "
@@ -353,517 +386,545 @@ msgstr ""
 "A telepített programkönyvtár túl régi. Frissítse az összes Telepathy "
 "csomagot egy újabb verzióra"
 
-#: error-dictionary.cpp:131
+#: KTp/error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
 msgid "The channel was terminated for no apparent reason"
 msgstr "A csatorna nyilvánvaló ok nélkül megszakadt"
 
-#: error-dictionary.cpp:133
+#: KTp/error-dictionary.cpp:133
 msgctxt "Verbose user visible error string"
 msgid ""
 "This operation can not be finished as it would break your requested anonymity"
 msgstr "A művelet nem fejezhető be, mivel megtörné a kért névtelenséget"
 
-#: error-dictionary.cpp:135
+#: KTp/error-dictionary.cpp:135
 msgctxt "Verbose user visible error string"
 msgid "Some of the IM components are not working correctly"
 msgstr "Az azonnali üzenetküldő komponensek egy része nem működik megfelelően"
 
-#: error-dictionary.cpp:137
+#: KTp/error-dictionary.cpp:137
 #, kde-format
 msgctxt "User visible error string"
 msgid "An unknown error was encountered (%1), please report this"
 msgstr "Ismeretlen hiba történt (%1), kérjük jelentse"
 
-#: error-dictionary.cpp:144
+#: KTp/error-dictionary.cpp:144
 msgctxt "Short user visible error string"
 msgid "Connected elsewhere"
 msgstr "Kapcsolódva máshonnan"
 
-#: error-dictionary.cpp:146
+#: KTp/error-dictionary.cpp:146
 msgctxt "Short user visible error string"
 msgid "Authentication failed"
 msgstr "Sikertelen hitelesítés"
 
-#: error-dictionary.cpp:148
+#: KTp/error-dictionary.cpp:148
 msgctxt "Short user visible error string"
 msgid "Channel too busy"
 msgstr "A csatorna túl elfoglalt"
 
-#: error-dictionary.cpp:150
+#: KTp/error-dictionary.cpp:150
 msgctxt "Short user visible error string"
 msgid "Cancelled by user"
 msgstr "Felhasználói megszakítás"
 
-#: error-dictionary.cpp:152
+#: KTp/error-dictionary.cpp:152
 msgctxt "Short user visible error string"
 msgid "Certificate is expired"
 msgstr "A tanúsítvány lejárt"
 
-#: error-dictionary.cpp:154
+#: KTp/error-dictionary.cpp:154
 msgctxt "Short user visible error string"
 msgid "Wrong certificate fingerprint"
 msgstr "A tanúsítvány ujjlenyomata rossz"
 
-#: error-dictionary.cpp:156
+#: KTp/error-dictionary.cpp:156
 msgctxt "Short user visible error string"
 msgid "Wrong certificate hostname"
 msgstr "A tanúsítvány gépneve rossz"
 
-#: error-dictionary.cpp:158
+#: KTp/error-dictionary.cpp:158
 msgctxt "Short user visible error string"
 msgid "Too weak certificate encryption"
 msgstr "A tanúsítvány titkosítása túl gyenge"
 
-#: error-dictionary.cpp:160
+#: KTp/error-dictionary.cpp:160
 msgctxt "Short user visible error string"
 msgid "Invalid certificate"
 msgstr "Érvénytelen tanúsítvány"
 
-#: error-dictionary.cpp:162
+#: KTp/error-dictionary.cpp:162
 msgctxt "Short user visible error string"
 msgid "Certificate length limit exceeded"
 msgstr "A tanúsítvány túl hosszú"
 
-#: error-dictionary.cpp:164
+#: KTp/error-dictionary.cpp:164
 msgctxt "Short user visible error string"
 msgid "Certificate not yet active"
 msgstr "A tanúsítvány még nem aktív"
 
-#: error-dictionary.cpp:166
+#: KTp/error-dictionary.cpp:166
 msgctxt "Short user visible error string"
 msgid "No certificate from server"
 msgstr "Nincs tanúsítvány a kiszolgálótól"
 
-#: error-dictionary.cpp:168
+#: KTp/error-dictionary.cpp:168
 msgctxt "Short user visible error string"
 msgid "Certificate revoked"
 msgstr "Visszavont tanúsítvány"
 
-#: error-dictionary.cpp:170
+#: KTp/error-dictionary.cpp:170
 msgctxt "Short user visible error string"
 msgid "Untrusted self-signed certificate"
 msgstr "Nem megbízható, önaláírt tanúsítvány"
 
-#: error-dictionary.cpp:172
+#: KTp/error-dictionary.cpp:172
 msgctxt "Short user visible error string"
 msgid "Untrusted certificate"
 msgstr "Nem megbízható tanúsítvány"
 
-#: error-dictionary.cpp:174
+#: KTp/error-dictionary.cpp:174
 msgctxt "Short user visible error string"
 msgid "Banned from channel"
 msgstr "Kitiltva a csatornáról"
 
-#: error-dictionary.cpp:176
+#: KTp/error-dictionary.cpp:176
 msgctxt "Short user visible error string"
 msgid "The channel is full"
 msgstr "A csatorna megtelt"
 
-#: error-dictionary.cpp:178
+#: KTp/error-dictionary.cpp:178
 msgctxt "Short user visible error string"
 msgid "The channel is invite-only"
 msgstr "A csatornára csak meghívóval lehet belépni"
 
-#: error-dictionary.cpp:180
+#: KTp/error-dictionary.cpp:180
 msgctxt "Short user visible error string"
 msgid "Kicked from channel"
 msgstr "Kirúgva a csatornáról"
 
-#: error-dictionary.cpp:182
+#: KTp/error-dictionary.cpp:182
 msgctxt "Short user visible error string"
 msgid "Something's seriously wrong"
 msgstr "Valami nagyon rossz történt"
 
-#: error-dictionary.cpp:184
+#: KTp/error-dictionary.cpp:184
 msgctxt "Short user visible error string"
 msgid "Connection failed"
 msgstr "Kapcsolódás meghiúsult"
 
-#: error-dictionary.cpp:186
+#: KTp/error-dictionary.cpp:186
 msgctxt "Short user visible error string"
 msgid "Connection lost"
 msgstr "A kapcsolat megszakadt"
 
-#: error-dictionary.cpp:188
+#: KTp/error-dictionary.cpp:188
 msgctxt "Short user visible error string"
 msgid "Connection refused"
 msgstr "Kapcsolat visszautasítva"
 
-#: error-dictionary.cpp:190
+#: KTp/error-dictionary.cpp:190
 msgctxt "Short user visible error string"
 msgid "Connection stolen by other account"
 msgstr "A kapcsolatot egy másik azonosító ellopta"
 
-#: error-dictionary.cpp:192
+#: KTp/error-dictionary.cpp:192
 msgctxt "Short user visible error string"
 msgid "Disconnected"
-msgstr "Kapcsolat bontva"
+msgstr "Szétkapcsolva"
 
-#: error-dictionary.cpp:194
+#: KTp/error-dictionary.cpp:194
 msgctxt "Short user visible error string"
 msgid "User does not exist"
 msgstr "A felhasználó nem létezik"
 
-#: error-dictionary.cpp:196
+#: KTp/error-dictionary.cpp:196
 msgctxt "Short user visible error string"
 msgid "Emergency calls unsupported"
 msgstr "A segélyhívás nem támogatott"
 
-#: error-dictionary.cpp:198
+#: KTp/error-dictionary.cpp:198
 msgctxt "Short user visible error string"
 msgid "Encryption error"
 msgstr "Titkosítási hiba"
 
-#: error-dictionary.cpp:200
+#: KTp/error-dictionary.cpp:200
 msgctxt "Short user visible error string"
 msgid "Encryption not available"
 msgstr "Nem érhető el titkosítás"
 
-#: error-dictionary.cpp:202
+#: KTp/error-dictionary.cpp:202
 msgctxt "Short user visible error string"
 msgid "Invalid argument"
 msgstr "Érvénytelen argumentum"
 
-#: error-dictionary.cpp:204
+#: KTp/error-dictionary.cpp:204
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
 msgstr "Érvénytelen kezelés"
 
-#: error-dictionary.cpp:206
+#: KTp/error-dictionary.cpp:206
 msgctxt "Short user visible error string"
 msgid "Network error"
 msgstr "Hálózati hiba"
 
-#: error-dictionary.cpp:208
+#: KTp/error-dictionary.cpp:208
 msgctxt "Short user visible error string"
 msgid "Removed from channel"
 msgstr "Eltávolítva a csatornáról"
 
-#: error-dictionary.cpp:210
+#: KTp/error-dictionary.cpp:210
 msgctxt "Short user visible error string"
-msgid "Capability not available"
-msgstr "A képesség nem érhető el"
+msgid "Service not available"
+msgstr "A szolgáltatás nem érhető el"
 
-#: error-dictionary.cpp:212
+#: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
 msgid "Contact has no support"
 msgstr "A partner nem támogatja"
 
-#: error-dictionary.cpp:214
+#: KTp/error-dictionary.cpp:214
 msgctxt "Short user visible error string"
 msgid "Operation not implemented"
 msgstr "A művelet nincs implementálva"
 
-#: error-dictionary.cpp:216
+#: KTp/error-dictionary.cpp:216
 msgctxt "Short user visible error string"
 msgid "Operation not yet implemented"
 msgstr "A művelet még nincs implementálva"
 
-#: error-dictionary.cpp:218
+#: KTp/error-dictionary.cpp:218
 msgctxt "Short user visible error string"
 msgid "Channel already being handled"
 msgstr "A csatorna már kezelt"
 
-#: error-dictionary.cpp:220
+#: KTp/error-dictionary.cpp:220
 msgctxt "Short user visible error string"
 msgid "Contact is offline"
 msgstr "A partner kilépett"
 
-#: error-dictionary.cpp:222
+#: KTp/error-dictionary.cpp:222
 msgctxt "Short user visible error string"
 msgid "Operation not permitted"
 msgstr "A művelet nem engedélyezett"
 
-#: error-dictionary.cpp:224
+#: KTp/error-dictionary.cpp:224
 msgctxt "Short user visible error string"
 msgid "Call picked by other resource"
 msgstr "A hívást egy másik erőforrás vette fel"
 
-#: error-dictionary.cpp:226
+#: KTp/error-dictionary.cpp:226
 msgctxt "Short user visible error string"
 msgid "Username already taken"
 msgstr "A felhasználónév már foglalt"
 
-#: error-dictionary.cpp:228
+#: KTp/error-dictionary.cpp:228
 msgctxt "Short user visible error string"
 msgid "Call rejected"
 msgstr "Hívás elutasítva"
 
-#: error-dictionary.cpp:230
+#: KTp/error-dictionary.cpp:230
 msgctxt "Short user visible error string"
 msgid "Insufficient resources"
 msgstr "Kevés erőforrás"
 
-#: error-dictionary.cpp:232
+#: KTp/error-dictionary.cpp:232
 msgctxt "Short user visible error string"
 msgid "Service is busy"
 msgstr "A szolgáltatás foglalt"
 
-#: error-dictionary.cpp:234
+#: KTp/error-dictionary.cpp:234
 msgctxt "Short user visible error string"
 msgid "Internal error"
 msgstr "Belső hiba"
 
-#: error-dictionary.cpp:236
+#: KTp/error-dictionary.cpp:236
 msgctxt "Short user visible error string"
 msgid "Software upgrade required"
 msgstr "Szoftverfrissítés szükséges"
 
-#: error-dictionary.cpp:238
+#: KTp/error-dictionary.cpp:238
 msgctxt "Short user visible error string"
 msgid "Channel terminated"
 msgstr "A csatorna megszakadt"
 
-#: error-dictionary.cpp:240
+#: KTp/error-dictionary.cpp:240
 msgctxt "Short user visible error string"
 msgid "Anonymity break possible"
 msgstr "A névtelenség megtörése lehetséges"
 
-#: error-dictionary.cpp:242
+#: KTp/error-dictionary.cpp:242
 msgctxt "Short user visible error string"
 msgid "Internal component error"
 msgstr "Belső komponenshiba"
 
-#: error-dictionary.cpp:246
+#: KTp/error-dictionary.cpp:246
 msgctxt "User visible error string"
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: logs-importer-private.cpp:57
+#: KTp/logs-importer-private.cpp:52
 msgid "No Kopete logs found"
 msgstr "Nem található Kopete napló"
 
-#: logs-importer-private.cpp:342 logs-importer-private.cpp:349
+#: KTp/logs-importer-private.cpp:333 KTp/logs-importer-private.cpp:340
 msgid "Invalid Kopete log format"
 msgstr "Érvénytelen Kopete naplóformátum"
 
-#: Models/accounts-list-model.cpp:251
+#: KTp/Models/accounts-list-model.cpp:261
 msgctxt "This is a connection state"
 msgid "Connecting"
 msgstr "Kapcsolódás"
 
-#: Models/accounts-list-model.cpp:253
+#: KTp/Models/accounts-list-model.cpp:263
 msgctxt "This is a connection state"
 msgid "Disconnected"
 msgstr "Szétkapcsolva"
 
-#: Models/accounts-list-model.cpp:255
+#: KTp/Models/accounts-list-model.cpp:265
 msgctxt "This is an unknown connection state"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: Models/accounts-list-model.cpp:258
+#: KTp/Models/accounts-list-model.cpp:268
 msgctxt "This is a disabled account"
 msgid "Disabled"
 msgstr "Letiltva"
 
-#: Models/groups-tree-proxy-model.cpp:61
+#: KTp/Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
 msgstr "Rendezetlen"
 
-#: Models/rooms-model.cpp:72
+#: KTp/Models/rooms-model.cpp:72
 msgid "Password required"
 msgstr "Jelszó szükséges"
 
-#: Models/rooms-model.cpp:74
+#: KTp/Models/rooms-model.cpp:74
 msgid "No password required"
 msgstr "Nem szükséges jelszó"
 
-#: Models/rooms-model.cpp:94
+#: KTp/Models/rooms-model.cpp:94
 msgid "Member count"
 msgstr "Tagszám"
 
-#: Models/rooms-model.cpp:114
+#: KTp/Models/rooms-model.cpp:114
 msgctxt "Chatrooms name"
 msgid "Name"
 msgstr "Név"
 
-#: Models/rooms-model.cpp:116
+#: KTp/Models/rooms-model.cpp:116
 msgctxt "Chatrooms description"
 msgid "Description"
 msgstr "Leírás"
 
-#: presence.cpp:95
+#: KTp/presence.cpp:95
 msgctxt "IM presence: a person is available"
 msgid "Available"
 msgstr "Elérhető"
 
-#: presence.cpp:97
+#: KTp/presence.cpp:97
 msgctxt "IM presence: a person is busy"
 msgid "Busy"
 msgstr "Elfoglalt"
 
-#: presence.cpp:99
+#: KTp/presence.cpp:99
 msgctxt "IM presence: a person is away"
 msgid "Away"
 msgstr "Távollét"
 
-#: presence.cpp:101
+#: KTp/presence.cpp:101
 msgctxt "IM presence: a person is not available"
 msgid "Not Available"
 msgstr "Nem érhető el"
 
-#: presence.cpp:103
+#: KTp/presence.cpp:103
 msgctxt "IM presence: a person is invisible"
 msgid "Invisible"
 msgstr "Láthatatlan"
 
-#: presence.cpp:105
+#: KTp/presence.cpp:105
 msgctxt "IM presence: a person is offline"
 msgid "Offline"
 msgstr "Kilépett"
 
-#: telepathy-handler-application.cpp:113
+#: KTp/telepathy-handler-application.cpp:113
 msgid "Persistent mode (do not exit on timeout)"
 msgstr "Folyamatos mód (nem lép ki időtúllépésnél)"
 
-#: telepathy-handler-application.cpp:114
+#: KTp/telepathy-handler-application.cpp:114
 msgid "Show Telepathy debugging information"
 msgstr "A Telepathy hibakövetési információinak megjelenítése"
 
-#: telepathy-handler-application.cpp:115
+#: KTp/telepathy-handler-application.cpp:115
 msgid "KDE Telepathy"
 msgstr "KDE Telepathy"
 
-#: Widgets/add-contact-dialog.cpp:86
+#: KTp/Widgets/add-contact-dialog.cpp:89
 msgid "Add new contact"
 msgstr "Új partner hozzáadása"
 
-#: Widgets/add-contact-dialog.cpp:112
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
 msgid "No account selected."
 msgstr "Nincs kijelölve felhasználói fiók."
 
-#: Widgets/add-contact-dialog.cpp:114
+#: KTp/Widgets/add-contact-dialog.cpp:143
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
-msgstr ""
-"A kért felhasználói fiók nem kapcsolódott, ezért a partner nem adható hozzá."
+msgstr "A kért fiók le lett választva, ezért a partner nem adható hozzá."
 
-#: Widgets/add-contact-dialog.cpp:117
+#: KTp/Widgets/add-contact-dialog.cpp:146
 msgid "You did not specify the name of the contact to add."
 msgstr "Nem adta meg a partner nevét."
 
-#: Widgets/add-contact-dialog.cpp:143
+#: KTp/Widgets/add-contact-dialog.cpp:172
 msgid "Failed to create new contact."
 msgstr "Nem sikerült létrehozni az új névjegyet."
 
-#: Widgets/add-contact-dialog.cpp:160
+#: KTp/Widgets/add-contact-dialog.cpp:189
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Nem sikerült lekérdezni a partner állapotát."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: Widgets/add-contact-dialog.ui:17
+#: KTp/Widgets/add-contact-dialog.ui:17 KTp/Widgets/start-chat-dialog.ui:17
 msgid "Account:"
 msgstr "Felhasználói fiók:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Widgets/add-contact-dialog.ui:24
+#: KTp/Widgets/add-contact-dialog.ui:24 KTp/Widgets/start-chat-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Megjelenített név:"
 
-#: Widgets/contact-grid-dialog.cpp:140
+#: KTp/Widgets/contact-grid-dialog.cpp:114
 msgid "Search in Contacts..."
 msgstr "Keresés a partnerekben…"
 
-#: Widgets/join-chat-room-dialog.cpp:197
+#: KTp/Widgets/join-chat-room-dialog.cpp:208
 msgid "This room is already in your favorites."
 msgstr "Ez a szoba már szerepel a kedvencek között."
 
-#: Widgets/join-chat-room-dialog.cpp:199
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Add room"
 msgstr "Szoba hozzáadása"
 
-#: Widgets/join-chat-room-dialog.cpp:199
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Name"
 msgstr "Név"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
-#: Widgets/join-chat-room-dialog.ui:20
+#: KTp/Widgets/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
 msgstr "Csatlakozás csevegőszobához"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: Widgets/join-chat-room-dialog.ui:29
+#: KTp/Widgets/join-chat-room-dialog.ui:29
 msgid "Enter chat room:"
 msgstr "Belépés csevegőszobába:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: Widgets/join-chat-room-dialog.ui:47
+#: KTp/Widgets/join-chat-room-dialog.ui:47
 msgid "Favorites"
 msgstr "Kedvencek"
 
 #. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: Widgets/join-chat-room-dialog.ui:63
+#: KTp/Widgets/join-chat-room-dialog.ui:63
 msgid "Add Room"
 msgstr "Szoba hozzáadása"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: Widgets/join-chat-room-dialog.ui:73
+#: KTp/Widgets/join-chat-room-dialog.ui:73
 msgid "Remove Room"
 msgstr "Szoba eltávolítása"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:98
 msgid "Recent"
 msgstr "Legutóbbi"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:112
 msgid "Remove"
 msgstr "Eltávolítás"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Clear list"
 msgstr "Lista törlése"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: Widgets/join-chat-room-dialog.ui:145 Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:145
+#: KTp/Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
 msgstr "Lekérdezés"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
 msgstr "A lekérdezendő kiszolgáló:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
 msgstr ""
 "Hagyja üresen a kijelölt azonosító alapértelmezett kiszolgálójának "
 "használatához"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
 msgstr "Leállítás"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
 msgstr "Szobák keresése"
 
-#: Widgets/notificationconfigdialog.cpp:43
-#: Widgets/notificationconfigdialog.cpp:95
+#: KTp/Widgets/notification-config-dialog.cpp:43
+#: KTp/Widgets/notification-config-dialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
 msgstr "Értesítések beállítása ehhez: %1"
 
-#: Widgets/notificationconfigdialog.cpp:51
+#: KTp/Widgets/notification-config-dialog.cpp:51
 msgid "Configure notifications for"
 msgstr "Értesítések beállítása ehhez:"
 
-#: Widgets/notificationconfigdialog.cpp:56
+#: KTp/Widgets/notification-config-dialog.cpp:56
 msgid "All users"
 msgstr "Minden felhasználó"
 
-#: Widgets/notificationconfigdialog.cpp:98
+#: KTp/Widgets/notification-config-dialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Értesítések beállítása minden felhasználóhoz"
+
+#: KTp/Widgets/start-chat-dialog.cpp:56
+msgid "Start a chat"
+msgstr "Csevegés indítása"
+
+#: KTp/Widgets/start-chat-dialog.cpp:81
+msgid ""
+"The requested account has been disconnected and so a chat could not be "
+"initiated."
+msgstr ""
+"A kért fiók le lett választva, ezért a csevegést nem lehet előkészíteni."
+
+#: KTp/Widgets/start-chat-dialog.cpp:84
+msgid "You did not specify the name of the contact to start a chat with."
+msgstr "Nem adta meg a partner nevét, akivel csevegni szeretne."
+
+#: KTp/Widgets/start-chat-dialog.cpp:107
+msgid "Failed to start a chat with the contact."
+msgstr "Nem sikerült elindítani a csevegést a partnerrel."
+
+#, fuzzy
+#~| msgid "KDE Telepathy"
+#~ msgid "KDE Telepathy Debug Tool"
+#~ msgstr "KDE Telepathy"
+
+#~ msgctxt "Short user visible error string"
+#~ msgid "Capability not available"
+#~ msgstr "A képesség nem érhető el"
 
 #~ msgid "Ungrouped"
 #~ msgstr "Csoportosítatlan"
