@@ -5,16 +5,29 @@ Source: ftp://ftp.kde.org/pub/kde/unstable/kde-telepathy/
 License: LGPL-2.1+
 
 Files: *
-Copyright: 2011 Martin Klapetek <martin.klapetek@gmail.com>
-           2010-2011 Collabora Ltd. <info@collabora.com>
-           2011 David Edmundson <kde@davidedmundson.co.uk>
-           2011-2012 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
+Copyright: 2011-2013 David Edmundson <kde@davidedmundson.co.uk>
+           2009-2011 Collabora Ltd. <info@collabora.com>
+           2011-2012 Lasath Fernando <kde@lasath.org>
+           2009-2011 George Goldberg <george.goldberg@collabora.co.uk>
+           2010-2012 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
+           2012 Dominik Cermak <d.cermak@arcor.de>
+           2011-2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
+           2012-2013 Aleix Pol <aleixpol@kde.org>
+           2011 Martin Klapetek <martin.klapetek@gmail.com>
            2011 Dario Freddi <drf@kde.org>
            1999 Preston Brown <pbrown@kde.org>
            2011 Przemek Czekaj <xcojack@gmail.com>
            2004 Peter Simonsson <psn@linux.se>
            2006-2008 Eike Hein <hein@kde.org>
 License: LGPL-2.1+
+
+Files KTp/Logger/*
+Copyright: 2013 Daniel Vrátil <dvratil@redhat.com>
+License: GPL-2+
+
+Files: kpeople/actionsplugin/kpeople-actions-plugin.*
+Copyright: 2013 David Edmundson <davidedmundson@kde.org>
+License: GPL-3+
 
 Files: KTp/ktp-export.h
 Copyright: 2011 Dario Freddi <drf@kde.org>
@@ -26,7 +39,7 @@ Copyright: 2012 Kira J. Fernandez <kirajfdez@gmail.com>
            2011 Marcus Gama <marcus.gama@gmail.com>
            2012 Kristóf Kiszel <ulysses@kubuntu.org>
            2011 André Marcelo Alvarenga <andrealvarenga@gmx.net>
-           2011 Pino Toscano <toscano.pino@tiscali.it>
+           2011-2013 Pino Toscano <toscano.pino@tiscali.it>
            2011 Yuri Chornoivan <yurchor@ukr.net>
            2011 Frederik Schwarzer <schwarzer@kde.org>
            2011 Manfred Wiese <m.j.wiese@web.de>
@@ -39,6 +52,39 @@ Copyright: 2012 Kira J. Fernandez <kirajfdez@gmail.com>
            2012 Ni Hui <shuizhuyuanluo@126.com>
            2012 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
            2011 Martin Schlander <mschlander@opensuse.org>
+           2012-2013 Josep Ma. Ferrer <txemaq@gmail.com>
+           2012 Canonical Ltd.
+           2012-2013 Tomáš Chvátal <tomas.chvatal@gmail.com>
+           2012-2013 Burkhard Lück <lueck@hube-lueck.de>
+           2012 Stelios <sstavra@gmail.com>
+           2012 Dimitrios Glentadakis <dglent@gmail.com>
+           2012 Enrique Matias Sanchez <cronopios@gmail.com>
+           2012-2013 Raul Gonzalez <raulgf83@gmail.com>
+           2012 Tommi Nieminen <translator@legisign.org>
+           2012-2013 Lasse Liehu <lasse.liehu@gmail.com>
+           2012-2013 Joëlle Cornavin <jcorn@free.fr>
+           2011 Kevin Scannell <kscanne@gmail.com>
+           2012 Xosé <xosecalvo@gmail.com>
+           2012 Adrian Chaves Fernandez <adriyetichaves@gmail.com>
+           2013 Miguel Branco <mgl.branco@gmail.com>
+           2013 Marce Villarino <mvillarino@kde-espana.es>
+           2012-2013 Balázs Úr <urbalazs@gmail.com>
+           2013 Giovanni Sora <g.sora@tiscali.it>
+           2012-2013 Sairan Kikkarin <sairan@computer.org>
+           2012-2013 Liudas Ališauskas <liudas.alisauskas@gmail.com>
+           2013 Chetan Khona <chetan@kompkin.com>
+           2012-2013 Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
+           2012-2013 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2012-2013 Sergiu Bivol <sergiu@ase.md>
+           2012-2013 Yuri Efremov <yur.arh@gmail.com>
+           2013 Alexander Lakhin <exclusion@gmail.com>
+           2012-2013 Roman Paholik <wizzardsk@gmail.com>
+           2012 Andrej Vernekar <andrej.vernekar@gmail.com>
+           2013 Andrej Mernik <andrejm@ubuntu.si>
+           2012 Mladen Pejakovic <pejakm@gmail.com>
+           2012-2013 Chusslove Illich <caslav.ilic@gmx.net>
+           2012-2013 Weng Xuetian <wengxt@gmail.com>
+           2012 Wang Jiajun <amesists@gmail.com>
 License: LGPL-2.1+
 
 Files: debian/*
