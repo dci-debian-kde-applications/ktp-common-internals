@@ -1,4 +1,4 @@
-ktp-common-internals (0.7.0) UNRELEASED; urgency=low
+ktp-common-internals (0.7.0-1) UNRELEASED; urgency=low
 
   * Imported upstream 0.7.0
   * Ship new libraries libktploggerprivate.
