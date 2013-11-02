@@ -64,6 +64,16 @@ Description: KDE Telepathy internal library - debug symbols
  .
  This package contains debugging symbols for the ktp-common-internals library.
 
+Package: kde-telepathy-kpeople
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: meta-contact support for kde-telepathy
+ This allows grouping multiple IM accounts into meta-contacts.
+ .
+ This contains the nepomuk storage server and supporting plugins.
+ If you don't have this installed ktp-contact-list will default
+ to classic mode.
+
 Package: kde-telepathy-debugger
 Architecture: any
 Priority: extra

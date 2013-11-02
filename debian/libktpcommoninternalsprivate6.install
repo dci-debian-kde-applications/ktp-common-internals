@@ -6,8 +6,5 @@ usr/lib/libktpmodelsprivate.so.0.7*
 usr/lib/libktpmodelsprivate.so.6
 usr/lib/libktpwidgetsprivate.so.0.7*
 usr/lib/libktpwidgetsprivate.so.6
-usr/lib/kde4/imdetailswidgetplugin.so
-usr/lib/kde4/im_persons_data_source_plugin.so
-usr/lib/kde4/ktp_kpeople_plugin.so
 usr/lib/kde4/ktploggerplugin_tplogger.so
-usr/lib/kde4/nepomuktelepathyservice.so
+

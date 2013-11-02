@@ -1,0 +1,10 @@
+usr/lib/kde4/imdetailswidgetplugin.so
+usr/lib/kde4/im_persons_data_source_plugin.so
+usr/lib/kde4/ktp_kpeople_plugin.so
+usr/lib/kde4/nepomuktelepathyservice.so
+usr/share/kde4/services/imdetailswidgetplugin.desktop
+usr/share/kde4/services/im_persons_data_source_plugin.desktop
+usr/share/kde4/services/ktploggerplugin_tplogger.desktop
+usr/share/kde4/services/nepomuktelepathyservice.desktop
+usr/share/ontology/telepathy/telepathy.ontology
+usr/share/ontology/telepathy/telepathy.trig
