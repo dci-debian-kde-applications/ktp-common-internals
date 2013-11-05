@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9), cmake,
  libtelepathy-logger-dev,
  pkg-kde-tools, kdelibs5-dev,
  nepomuk-core-dev, shared-desktop-ontologies,
- libkpeople-dev,
+# libkpeople-dev,
 Standards-Version: 3.9.4
 Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
@@ -66,15 +66,15 @@ Description: KDE Telepathy internal library - debug symbols
  .
  This package contains debugging symbols for the ktp-common-internals library.
 
-Package: kde-telepathy-kpeople
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: meta-contact support for kde-telepathy
- This allows grouping multiple IM accounts into meta-contacts.
- .
- This contains the nepomuk storage server and supporting plugins.
- If you don't have this installed ktp-contact-list will default
- to classic mode.
+#Package: kde-telepathy-kpeople
+#Architecture: any
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Description: meta-contact support for kde-telepathy
+# This allows grouping multiple IM accounts into meta-contacts.
+# .
+# This contains the nepomuk storage server and supporting plugins.
+# If you don't have this installed ktp-contact-list will default
+# to classic mode.
 
 Package: kde-telepathy-debugger
 Architecture: any
