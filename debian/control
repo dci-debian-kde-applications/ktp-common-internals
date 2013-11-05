@@ -33,13 +33,15 @@ Package: libktpcommoninternalsprivate6
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy internal library
- Internal library which consits of the most reused
+ Internal library which consists of the most reused
  parts across KDE Telepathy.
+ .
+ This also includes the shared KDE-Telepathy logger service.
 
 Package: kde-telepathy-declarative
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: kde-telepathy QtDeclarative QML support.
+Description: kde-telepathy QtDeclarative QML support
  Contains a plugin for QtDeclarative that provides
  support for using KDE-Telepathy to components written
  in QML.
