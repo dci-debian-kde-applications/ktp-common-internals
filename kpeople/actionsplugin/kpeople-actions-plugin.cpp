@@ -28,13 +28,12 @@
 
 #include "KTp/contact.h"
 #include "KTp/actions.h"
-#include "KTp/im-persons-data-source.h"
+#include "KTp/core.h"
+#include "KTp/global-contact-manager.h"
 
 #include <TelepathyQt/Account>
 #include <TelepathyQt/ContactManager>
 
-
-#include <kpeople/personpluginmanager.h>
 #include <KPeople/PersonData>
 
 enum IMActionType {
@@ -101,95 +100,99 @@ QUrl IMAction::uri() const
     return m_uri;
 }
 
-KPeopleActionsPlugin::KPeopleActionsPlugin(QObject* parent, const QVariantList &args):
-AbstractPersonPlugin(parent)
+KPeopleActionsPlugin::KPeopleActionsPlugin(QObject *parent, const QVariantList &args)
+    : AbstractPersonAction(parent)
 {
+    Q_UNUSED(args);
 }
 
-QList<QAction*> KPeopleActionsPlugin::actionsForPerson(const KPeople::PersonDataPtr &personData, QObject *parent)
+QList<QAction*> KPeopleActionsPlugin::actionsForPerson(const KABC::Addressee &person,
+                                                       const KABC::AddresseeList &contacts,
+                                                       QObject *parent) const
 {
     QList<QAction*> actions;
 
-    IMPersonsDataSource *dataSource = dynamic_cast<IMPersonsDataSource*>(KPeople::PersonPluginManager::presencePlugin());
-    if (!dataSource) {
+    // === TODO ===
+    // This creates actions just for the "most online contact", what we want is to query all
+    // the subcontacts for all capabilities and fill them in on the Person, so if eg. one of
+    // the subcontacts can do audio calls and the other can do video calls, the Person
+    // should have both actions present.
+    Q_UNUSED(contacts);
+
+    const QString &accountPath = person.custom(QLatin1String("telepathy"), QLatin1String("accountPath"));
+    const QString &contactId = person.custom(QLatin1String("telepathy"), QLatin1String("contactId"));
+
+    const Tp::AccountPtr account = KTp::contactManager()->accountForAccountPath(accountPath);
+    if (!account) {
         return actions;
     }
 
-    QStringList imContactsIds = personData->imAccounts();
-
-    for (int i = 0; i < imContactsIds.size(); i++) {
-        const QString contactId = imContactsIds[i];
-        const KTp::ContactPtr contact = dataSource->contactForContactId(contactId);
-        if (!contact || !contact->manager()) {
-            continue;
-        }
-        const Tp::AccountPtr account = dataSource->accountForContact(contact);
-
-        if (!account) {
-            continue;
-        }
-
-        if (true) { //no such query for text chat capability, added an "if true" because makes the code look consistent
-            QAction *action = new IMAction(i18n("Start Chat Using %1...", account->displayName()),
-                                KIcon(QLatin1String("text-x-generic")),
-                                contact,
-                                account,
-                                TextChannel,
-                                parent);
-            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-            actions << action;
-        }
-        if (contact->audioCallCapability()) {
-            QAction *action = new IMAction(i18n("Start Audio Call Using %1...", account->displayName()),
-                                KIcon(QLatin1String("audio-headset")),
-                                contact,
-                                account,
-                                AudioChannel,
-                                parent);
-            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-            actions << action;
-        }
-        if (contact->videoCallCapability()) {
-            QAction *action = new IMAction(i18n("Start Video Call Using %1...", account->displayName()),
-                                KIcon(QLatin1String("camera-web")),
-                                contact,
-                                account,
-                                VideoChannel,
-                                parent);
-            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-            actions << action;
-        }
-
-        if (contact->fileTransferCapability()) {
-            QAction *action = new IMAction(i18n("Send a File Using %1...", account->displayName()),
-                                        KIcon(QLatin1String("mail-attachment")),
-                                        contact,
-                                        account,
-                                        FileTransfer,
-                                        parent);
-            action->setDisabled(true); //FIXME: we need to prompt for file
-            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-            actions << action;
-        }
-        if (contact->collaborativeEditingCapability()) {
-            QAction *action = new IMAction(i18n("Collaboratively edit a document Using %1...", account->displayName()),
-                                        KIcon(QLatin1String("document-edit")),
-                                        contact,
-                                        account,
-                                        CollabEditing,
-                                        parent);
-            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-            actions << action;
-        }
+    const KTp::ContactPtr contact = KTp::contactManager()->contactForContactId(accountPath, contactId);
+    if (!contact || !contact->manager()) {
+        return actions;
     }
 
-    QAction *action = new IMAction(i18n("Open Log Viewer..."),
-                                   KIcon(QLatin1String("documentation")),
-                                   personData->uri(),
-                                   LogViewer,
-                                   parent);
-    connect(action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-    actions << action;
+    if (contact->textChatCapability()) {
+        QAction *action = new IMAction(i18n("Start Chat Using %1...", account->displayName()),
+                            KIcon(QLatin1String("text-x-generic")),
+                            contact,
+                            account,
+                            TextChannel,
+                            parent);
+        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+        actions << action;
+    }
+    if (contact->audioCallCapability()) {
+        QAction *action = new IMAction(i18n("Start Audio Call Using %1...", account->displayName()),
+                            KIcon(QLatin1String("audio-headset")),
+                            contact,
+                            account,
+                            AudioChannel,
+                            parent);
+        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+        actions << action;
+    }
+    if (contact->videoCallCapability()) {
+        QAction *action = new IMAction(i18n("Start Video Call Using %1...", account->displayName()),
+                            KIcon(QLatin1String("camera-web")),
+                            contact,
+                            account,
+                            VideoChannel,
+                            parent);
+        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+        actions << action;
+    }
+
+    if (contact->fileTransferCapability()) {
+        QAction *action = new IMAction(i18n("Send a File Using %1...", account->displayName()),
+                                    KIcon(QLatin1String("mail-attachment")),
+                                    contact,
+                                    account,
+                                    FileTransfer,
+                                    parent);
+        action->setDisabled(true); //FIXME: we need to prompt for file
+        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+        actions << action;
+    }
+    if (contact->collaborativeEditingCapability()) {
+        QAction *action = new IMAction(i18n("Collaboratively edit a document Using %1...", account->displayName()),
+                                    KIcon(QLatin1String("document-edit")),
+                                    contact,
+                                    account,
+                                    CollabEditing,
+                                    parent);
+        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+        actions << action;
+    }
+
+    //FIXME-KPEOPLE
+//     QAction *action = new IMAction(i18n("Open Log Viewer..."),
+//                                    KIcon(QLatin1String("documentation")),
+//                                    personData->uri(),
+//                                    LogViewer,
+//                                    parent);
+//     connect(action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+//     actions << action;
     return actions;
 }
 

@@ -37,10 +37,17 @@
 KTp::Contact::Contact(Tp::ContactManager *manager, const Tp::ReferencedHandles &handle, const Tp::Features &requestedFeatures, const QVariantMap &attributes)
     : Tp::Contact(manager, handle, requestedFeatures, attributes)
 {
+    m_accountUniqueIdentifier = manager->connection()->property("accountUID").toString();
+
     connect(manager->connection().data(), SIGNAL(destroyed()), SIGNAL(invalidated()));
     connect(manager->connection().data(), SIGNAL(invalidated(Tp::DBusProxy*,QString,QString)), SIGNAL(invalidated()));
     connect(this, SIGNAL(avatarTokenChanged(QString)), SLOT(invalidateAvatarCache()));
     connect(this, SIGNAL(avatarDataChanged(Tp::AvatarData)), SLOT(invalidateAvatarCache()));
+}
+
+QString KTp::Contact::accountUniqueIdentifier() const
+{
+    return m_accountUniqueIdentifier;
 }
 
 KTp::Presence KTp::Contact::presence() const
@@ -48,62 +55,84 @@ KTp::Presence KTp::Contact::presence() const
     return KTp::Presence(Tp::Contact::presence());
 }
 
-bool KTp::Contact::audioCallCapability() const
+bool KTp::Contact::textChatCapability() const
 {
-    if (! manager()->connection()) {
+    if (!manager() || !manager()->connection()) {
         return false;
     }
-    Tp::ConnectionPtr connection = manager()->connection();
-    if (connection) {
-        bool contactCanStreamAudio = CapabilitiesHackPrivate::audioCalls(
-                                         capabilities(), connection->cmName());
-        bool selfCanStreamAudio = CapabilitiesHackPrivate::audioCalls(
-                                      connection->selfContact()->capabilities(), connection->cmName());
-        return contactCanStreamAudio && selfCanStreamAudio;
+
+    return capabilities().textChats();
+}
+
+bool KTp::Contact::audioCallCapability() const
+{
+    if (!manager() || !manager()->connection()) {
+        return false;
     }
-    return false;
+
+    Tp::ConnectionPtr connection = manager()->connection();
+    bool contactCanStreamAudio = CapabilitiesHackPrivate::audioCalls(
+                capabilities(), connection->cmName());
+    bool selfCanStreamAudio = CapabilitiesHackPrivate::audioCalls(
+                connection->selfContact()->capabilities(), connection->cmName());
+    return contactCanStreamAudio && selfCanStreamAudio;
 }
 
 bool KTp::Contact::videoCallCapability() const
 {
-    if (! manager()->connection()) {
+    if (!manager() || !manager()->connection()) {
         return false;
     }
-    Tp::ConnectionPtr connection = manager()->connection();
-    if (connection) {
-        bool contactCanStreamVideo = CapabilitiesHackPrivate::videoCalls(
-                                         capabilities(), connection->cmName());
-        bool selfCanStreamVideo = CapabilitiesHackPrivate::videoCalls(
-                                      connection->selfContact()->capabilities(), connection->cmName());
-        return contactCanStreamVideo && selfCanStreamVideo;
-    }
 
-    return false;
+    Tp::ConnectionPtr connection = manager()->connection();
+    bool contactCanStreamVideo = CapabilitiesHackPrivate::videoCalls(
+                capabilities(), connection->cmName());
+    bool selfCanStreamVideo = CapabilitiesHackPrivate::videoCalls(
+                connection->selfContact()->capabilities(), connection->cmName());
+    return contactCanStreamVideo && selfCanStreamVideo;
 }
 
 bool KTp::Contact::fileTransferCapability()  const
 {
-    if (! manager()->connection()) {
+    if (!manager() || !manager()->connection()) {
         return false;
     }
-    if (manager()->connection()) {
-        bool contactCanHandleFiles = capabilities().fileTransfers();
-        bool selfCanHandleFiles = manager()->connection()->selfContact()->capabilities().fileTransfers();
-        return contactCanHandleFiles && selfCanHandleFiles;
-    }
 
-    return false;
+    bool contactCanHandleFiles = capabilities().fileTransfers();
+    bool selfCanHandleFiles = manager()->connection()->selfContact()->capabilities().fileTransfers();
+    return contactCanHandleFiles && selfCanHandleFiles;
 }
 
 bool KTp::Contact::collaborativeEditingCapability() const
 {
-    if (! manager()->connection()) {
+    if (!manager() || !manager()->connection()) {
         return false;
     }
-    const QString collab(QLatin1String("infinote"));
+
+    static const QString collab(QLatin1String("infinote"));
     bool selfCanShare = manager()->connection()->selfContact()->capabilities().streamTubes(collab);
     bool otherCanShare = capabilities().streamTubes(collab);
     return selfCanShare && otherCanShare;
+}
+
+QStringList KTp::Contact::dbusTubeServicesCapability() const
+{
+    if (!manager() || !manager()->connection()) {
+        return QStringList();
+    }
+
+    return getCommonElements(capabilities().dbusTubeServices(),
+                             manager()->connection()->selfContact()->capabilities().dbusTubeServices());
+}
+
+QStringList KTp::Contact::streamTubeServicesCapability() const
+{
+    if (!manager() || !manager()->connection()) {
+        return QStringList();
+    }
+
+    return getCommonElements(capabilities().streamTubeServices(),
+                             manager()->connection()->selfContact()->capabilities().streamTubeServices());
 }
 
 QStringList KTp::Contact::clientTypes() const
@@ -207,4 +236,17 @@ void KTp::Contact::invalidateAvatarCache()
 {
     QPixmapCache::remove(id() + QLatin1String("-offline"));
     QPixmapCache::remove(id() + QLatin1String("-online"));
+}
+
+QStringList KTp::Contact::getCommonElements(const QStringList &list1, const QStringList &list2)
+{
+    /* QStringList::contains(QString) perform iterative comparsion, so there is no reason
+     * to select smaller list as base for this cycle. */
+    QStringList commonElements;
+    Q_FOREACH(const QString &i, list1) {
+        if (list2.contains(i)) {
+            commonElements << i;
+        }
+    }
+    return commonElements;
 }

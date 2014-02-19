@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-09-30 20:37+0200\n"
-"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2013-11-30 16:16+0100\n"
+"Last-Translator: Maxime Corteel\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -23,44 +23,51 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Joëlle Cornavin"
+msgstr "Joëlle Cornavin, Maxime Corteel"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "jcorn@free.fr"
+msgstr "jcorn@free.fr, mcorteel@gmail.com"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "Démarrer une discussion à l'aide de %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr "Démarrer un appel audio à l'aide de %1..."
+msgstr "Démarrer un appel audio à l'aide de %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr "Démarrer un appel vidéo à l'aide de %1..."
+msgstr "Démarrer un appel vidéo à l'aide de %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "Envoyer un fichier à l'aide de %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Modifier en collaboration un document à l'aide de %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
-msgstr "Ouvrir l'afficheur de journaux..."
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "Messagerie instantanée"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
-msgstr "Comptes de messagerie instantanée"
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
+msgstr ""
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr ""
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -68,7 +75,7 @@ msgstr "Nom complet :"
 
 #: KTp/contact-info-dialog.cpp:67
 msgid "Nickname:"
-msgstr "Surnom :"
+msgstr "Pseudo :"
 
 #: KTp/contact-info-dialog.cpp:68
 msgid "Email:"
@@ -151,7 +158,7 @@ msgstr "La connexion a été annulée sur votre demande"
 #: KTp/error-dictionary.cpp:45
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is expired"
-msgstr "Le certificat SSL / TLS reçu depuis le serveur a expiré"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur a expiré"
 
 #: KTp/error-dictionary.cpp:47
 msgctxt "Verbose user visible error string"
@@ -159,7 +166,7 @@ msgid ""
 "The SSL/TLS certificate received from server has different fingerprint than "
 "expected"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur présente une empreinte "
+"Le certificat SSL / TLS reçu depuis le serveur présente une empreinte "
 "différente de celle qui était attendue"
 
 #: KTp/error-dictionary.cpp:49
@@ -168,43 +175,43 @@ msgid ""
 "The SSL/TLS certificate received from server has different hostname than "
 "expected"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur présente un nom d'hôte "
+"Le certificat SSL / TLS reçu depuis le serveur présente un nom d'hôte "
 "différent de celui qui était attendu"
 
 #: KTp/error-dictionary.cpp:51
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server uses too weak encryption"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur utilise un chiffrement trop "
+"Le certificat SSL / TLS reçu depuis le serveur utilise un chiffrement trop "
 "faible"
 
 #: KTp/error-dictionary.cpp:53
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server is invalid"
-msgstr "Le certificat SSL / TLS reçu depuis le serveur n'est pas valable"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur n'est pas valable"
 
 #: KTp/error-dictionary.cpp:55
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has exceeded length limit"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur a dépassé la limite de "
+"Le certificat SSL / TLS reçu depuis le serveur a dépassé la limite de "
 "longueur"
 
 #: KTp/error-dictionary.cpp:57
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has not been activated yet"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur n'a pas encore été activé"
+"Le certificat SSL / TLS reçu depuis le serveur n'a pas encore été activé"
 
 #: KTp/error-dictionary.cpp:59
 msgctxt "Verbose user visible error string"
 msgid "The server did not provide any SSL/TLS certificate"
-msgstr "Le serveur n'a fourni aucun certificat SSL / TLS"
+msgstr "Le serveur n'a fourni aucun certificat SSL / TLS"
 
 #: KTp/error-dictionary.cpp:61
 msgctxt "Verbose user visible error string"
 msgid "The SSL/TLS certificate received from server has been revoked"
-msgstr "Le certificat SSL / TLS reçu depuis le serveur a été révoqué"
+msgstr "Le certificat SSL / TLS reçu depuis le serveur a été révoqué"
 
 #: KTp/error-dictionary.cpp:63
 msgctxt "Verbose user visible error string"
@@ -212,7 +219,7 @@ msgid ""
 "The SSL/TLS certificate received from server was self-signed by the server "
 "and is untrusted"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur a été auto-signé par le "
+"Le certificat SSL / TLS reçu depuis le serveur a été auto-signé par le "
 "serveur n'est pas digne de confiance"
 
 #: KTp/error-dictionary.cpp:65
@@ -221,7 +228,7 @@ msgid ""
 "The SSL/TLS certificate received from server was not signed by a trusted "
 "certificate authority"
 msgstr ""
-"Le certificat SSL / TLS reçu depuis le serveur n'a pas été signé par une "
+"Le certificat SSL / TLS reçu depuis le serveur n'a pas été signé par une "
 "autorité de certification de confiance"
 
 #: KTp/error-dictionary.cpp:67
@@ -403,7 +410,7 @@ msgid ""
 "packages to a newer version"
 msgstr ""
 "Les bibliothèques installées sont trop anciennes. Veuillez essayer de mettre "
-"à jour tous les paquetages de Telepathy vers une version plus récente"
+"à jour tous les paquets de Telepathy vers une version plus récente"
 
 #: KTp/error-dictionary.cpp:131
 msgctxt "Verbose user visible error string"
@@ -766,7 +773,7 @@ msgstr "Invisible"
 #: KTp/presence.cpp:105
 msgctxt "IM presence: a person is offline"
 msgid "Offline"
-msgstr "Hors  ligne"
+msgstr "Hors ligne"
 
 #: KTp/telepathy-handler-application.cpp:113
 msgid "Persistent mode (do not exit on timeout)"
@@ -784,7 +791,7 @@ msgstr "Telepathy pour KDE"
 msgid "Add new contact"
 msgstr "Ajouter un nouveau contact"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Aucun contact sélectionné."
 
@@ -818,21 +825,21 @@ msgstr "Compte :"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: KTp/Widgets/add-contact-dialog.ui:24 KTp/Widgets/start-chat-dialog.ui:24
 msgid "Screen Name:"
-msgstr "Nom d'écran :"
+msgstr "Nom d'affichage :"
 
 #: KTp/Widgets/contact-grid-dialog.cpp:114
 msgid "Search in Contacts..."
 msgstr "Chercher dans les contacts..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Ce salon est déjà dans vos favoris."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Ajouter un salon"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Nom"
 
@@ -856,50 +863,55 @@ msgstr "Favoris"
 msgid "Add Room"
 msgstr "Ajouter un salon"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Modifier le salon de discussion"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Supprimer un salon"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Récent"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Supprimer"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Effacer la liste"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Recherche"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Serveur à interroger :"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr "Laisser vide pour le serveur par défaut du compte sélectionné"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Arrêter"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Chercher des salons"
 
@@ -921,11 +933,11 @@ msgstr "Tous les utilisateurs"
 msgid "Configure notifications for all users"
 msgstr "Configurer les notifications pour tous les utilisateurs"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
 msgstr "Démarrer une discussion"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
@@ -933,15 +945,29 @@ msgstr ""
 "Le compte demandé a été déconnecté et il est donc impossible d'initier une "
 "discussion."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr ""
 "Vous n'avez pas spécifié le nom du contact avec lequel démarrer une "
 "discussion."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Le nom d'affichage que vous avez saisi n'est pas valable ou n'accepte pas la "
+"messagerie instantanée."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Il est impossible de démarrer une discussion avec le contact."
+
+#~ msgid "Open Log Viewer..."
+#~ msgstr "Ouvrir l'afficheur de journaux..."
+
+#~ msgid "Instant Messaging Accounts"
+#~ msgstr "Comptes de messagerie instantanée"
 
 #, fuzzy
 #~| msgid "KDE Telepathy"

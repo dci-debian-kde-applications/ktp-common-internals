@@ -4,6 +4,7 @@ include_directories (${CMAKE_CURRENT_BINARY_DIR}
 set (ktp_common_internals_private_SRCS
      ${KTP_GLOBAL_SOURCES}
      abstract-message-filter.cpp
+     account-factory.cpp
      actions.cpp
      capabilities-hack-private.cpp
      contact-info-dialog.cpp
@@ -69,6 +70,7 @@ set (ktp_private_LIBS
                        ${KDE4_KIO_LIBS}
                        ${TELEPATHY_QT4_LIBRARIES}
                        ${KDE4_KDEUI_LIBS}
+                       ${KDEPIMLIBS_KABC_LIBS}
 )
 
 if (TELEPATHY_LOGGER_QT4_FOUND)
@@ -79,18 +81,10 @@ if (TELEPATHY_LOGGER_QT4_FOUND)
 endif (TELEPATHY_LOGGER_QT4_FOUND)
 
 if (KPEOPLE_FOUND)
-    #this is temporary whilst im-persons-data-source still has it's own query
-    find_package (NepomukCore REQUIRED)
     include_directories(${KPEOPLE_INCLUDES})
-
-    set (ktp_common_internals_private_SRCS
-         ${ktp_common_internals_private_SRCS}
-         im-persons-data-source.cpp
-         )
 
     set (ktp_private_LIBS
          ${ktp_private_LIBS}
-         ${NEPOMUK_CORE_LIBRARY}
          ${KPEOPLE_LIBS}
          )
 endif(KPEOPLE_FOUND)

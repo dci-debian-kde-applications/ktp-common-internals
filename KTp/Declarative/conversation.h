@@ -26,18 +26,20 @@
 
 #include <KIcon>
 
-#include "conversation-target.h"
 #include "messages-model.h"
 
-class ConversationTarget;
 class MessagesModel;
 class Conversation : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(ConversationTarget *target READ target CONSTANT)
     Q_PROPERTY(MessagesModel *messages READ messages CONSTANT)
     Q_PROPERTY(bool valid READ isValid NOTIFY validityChanged)
+    Q_PROPERTY(QString title READ title CONSTANT)
+    Q_PROPERTY(QIcon presenceIcon READ presenceIcon CONSTANT)
+    Q_PROPERTY(QIcon avatar READ avatar CONSTANT)
+    Q_PROPERTY(Tp::AccountPtr account READ account CONSTANT)
+    Q_PROPERTY(KTp::ContactPtr targetContact READ targetContact CONSTANT)
 
 public:
     Conversation(const Tp::TextChannelPtr &channel, const Tp::AccountPtr &account, QObject *parent = 0);
@@ -48,28 +50,44 @@ public:
     Tp::TextChannelPtr textChannel() const;
 
     MessagesModel* messages() const;
-    ConversationTarget* target() const;
+    QString title() const;
+    QIcon presenceIcon() const;
+    QIcon avatar() const;
+
+    /**
+     * Target contact of this conversation. May be null if conversation is a group chat.
+     */
+    KTp::ContactPtr targetContact() const;
+    Tp::AccountPtr account() const;
 
     bool isValid();
 
 Q_SIGNALS:
     void validityChanged(bool isValid);
+    void avatarChanged(QIcon avatar);
+    void titleChanged(QString title);
+    void presenceIconChanged(QIcon icon);
     void conversationCloseRequested();
 
 public Q_SLOTS:
     void delegateToProperClient();
     void requestClose();
+    void updateTextChanged(const QString &message);
 
 private Q_SLOTS:
     void onChannelInvalidated(Tp::DBusProxy *proxy, const QString &errorName, const QString &errorMessage);
     void onAccountConnectionChanged(const Tp::ConnectionPtr &connection);
     void onCreateChannelFinished(Tp::PendingOperation *op);
+    void onChatPausedTimerExpired();
+    void onTargetContactAvatarDataChanged();
+    void onTargetContactAliasChanged();
+    void onTargetContactPresenceChanged();
 
 private:
     class ConversationPrivate;
     ConversationPrivate *d;
 };
 
-Q_DECLARE_METATYPE(Conversation*);
+Q_DECLARE_METATYPE(Conversation*)
 
 #endif // CONVERSATION_H

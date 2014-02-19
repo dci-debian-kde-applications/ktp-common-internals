@@ -28,53 +28,49 @@
 #include <KGlobal>
 
 #include <TelepathyQt/AccountManager>
+#include <KTp/global-contact-manager.h>
 #include "contact-factory.h"
+#include "account-factory_p.h"
 
 class CorePrivate
 {
 public:
     CorePrivate();
     bool m_kPeopleEnabled;
+    Tp::AccountFactoryPtr m_accountFactory;
+    Tp::ConnectionFactoryPtr m_connectionFactory;
+    Tp::ContactFactoryPtr m_contactFactory;
+    Tp::ChannelFactoryPtr m_channelFactory ;
+
     Tp::AccountManagerPtr m_accountManager;
+    KTp::GlobalContactManager *m_contactManager;
 };
 
 CorePrivate::CorePrivate()
-    : m_kPeopleEnabled(false)
+    : m_kPeopleEnabled(false),
+      m_contactManager(0)
 {
-    //if built with kpeople support, enable kpeople if Nepomuk is running
+    //if built with kpeople support, enable it
     #ifdef HAVE_KPEOPLE
-    QDBusInterface nepomukServer(QLatin1String("org.kde.NepomukServer"), QLatin1String("/servicemanager"), QLatin1String("org.kde.nepomuk.ServiceManager"));
-    QDBusReply<bool> reply = nepomukServer.call(QLatin1String("startService"), QLatin1String("nepomuktelepathyservice"));
-    if (reply.isValid()) {
-        if (reply.value()) {
-            m_kPeopleEnabled = true;
-        }
-    }
-    //else if it can't be started, or nepomukServer doesn't reply leave it disabled.
+    m_kPeopleEnabled = true;
     #endif
 
-    Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(QDBusConnection::sessionBus(),
+    m_accountFactory = KTp::AccountFactory::create(QDBusConnection::sessionBus(),
                                                                     Tp::Features() << Tp::Account::FeatureCore
                                                                                    << Tp::Account::FeatureCapabilities
-                                                                                   << Tp::Account::FeatureProtocolInfo
                                                                                    << Tp::Account::FeatureProfile);
 
-    Tp::ConnectionFactoryPtr connectionFactory = Tp::ConnectionFactory::create(QDBusConnection::sessionBus(),
+    m_connectionFactory = Tp::ConnectionFactory::create(QDBusConnection::sessionBus(),
                                                                                Tp::Features() << Tp::Connection::FeatureCore
                                                                                               << Tp::Connection::FeatureSelfContact);
 
-    Tp::ContactFactoryPtr contactFactory = KTp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
+    m_contactFactory = KTp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
                                                                                        << Tp::Contact::FeatureSimplePresence
                                                                                        << Tp::Contact::FeatureCapabilities
-                                                                                       << Tp::Contact::FeatureClientTypes);
+                                                                                       << Tp::Contact::FeatureClientTypes
+                                                                                       << Tp::Contact::FeatureAvatarData);
 
-    Tp::ChannelFactoryPtr channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
-
-    m_accountManager = Tp::AccountManager::create(QDBusConnection::sessionBus(),
-                                                   accountFactory,
-                                                   connectionFactory,
-                                                   channelFactory,
-                                                   contactFactory);
+    m_channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
 }
 
 K_GLOBAL_STATIC(CorePrivate, s_instance)
@@ -84,7 +80,43 @@ bool KTp::kpeopleEnabled()
     return s_instance->m_kPeopleEnabled;
 }
 
+Tp::AccountFactoryConstPtr KTp::accountFactory()
+{
+    return s_instance->m_accountFactory;
+}
+
+Tp::ConnectionFactoryConstPtr KTp::connectionFactory()
+{
+    return s_instance->m_connectionFactory;
+}
+
+Tp::ChannelFactoryConstPtr KTp::channelFactory()
+{
+    return s_instance->m_channelFactory;
+}
+
+Tp::ContactFactoryConstPtr KTp::contactFactory()
+{
+    return s_instance->m_contactFactory;
+}
+
 Tp::AccountManagerPtr KTp::accountManager()
 {
+    if (!s_instance->m_accountManager) {
+        s_instance->m_accountManager = Tp::AccountManager::create(QDBusConnection::sessionBus(),
+                                                   KTp::accountFactory(),
+                                                   KTp::connectionFactory(),
+                                                   KTp::channelFactory(),
+                                                   KTp::contactFactory());
+    }
     return s_instance->m_accountManager;
+}
+
+KTp::GlobalContactManager* KTp::contactManager()
+{
+    if (!s_instance->m_contactManager) {
+        s_instance->m_contactManager = new KTp::GlobalContactManager(KTp::accountManager(), 0);
+    }
+
+    return s_instance->m_contactManager;
 }

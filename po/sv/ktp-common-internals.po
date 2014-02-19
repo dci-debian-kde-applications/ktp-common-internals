@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012, 2013.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-09-24 19:11+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2014-02-07 17:40+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -23,40 +23,49 @@ msgstr "Stefan Asserhäll"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "stefan.asserhall@comhem.se"
+msgstr "stefan.asserhall@bredband.net"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "Starta chatt med användning av %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr "Starta röstsamtal med användning av %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr "Starta videosamtal med användning av %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "Skicka fil med användning av %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Samredigera ett dokument med användning av %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
-msgstr "Öppna loggvisning..."
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "DM"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
-msgstr "Konton för direktmeddelande"
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
+msgstr ""
+"Att överföra filer med filändelserna .exe eller .ini tillåts inte av Google "
+"Talk. Den skickades med filnamnet <i>%1</i>."
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr "Namn på överfört fil ändrades"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -770,7 +779,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Lägg till ny kontakt"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Inget konto valt."
 
@@ -807,15 +816,15 @@ msgstr "Namn på skärmen:"
 msgid "Search in Contacts..."
 msgstr "Sök i kontakter..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Rummet finns redan i dina favoriter."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Lägg till rum"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Namn"
 
@@ -839,50 +848,55 @@ msgstr "Favoriter"
 msgid "Add Room"
 msgstr "Lägg till rum"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Redigera rum"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Ta bort rum"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Senaste"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Ta bort"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Rensa lista"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Fråga"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Server att fråga:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr "Lämna tomt för det valda kontots standardserver"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Stoppa"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Sök rum"
 
@@ -904,29 +918,43 @@ msgstr "Alla användare"
 msgid "Configure notifications for all users"
 msgstr "Anpassa underrättelser för alla användare"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
 msgstr "Starta en chatt"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr "Det begärda kontot har kopplats ner, så en chatt kunde inte inledas."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr "Du angav inte namnet på kontakten att starta en chatt med."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Kontaktens namn på skärmen som du tillhandahöll är ogiltig och accepterar "
+"inte textchatt."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Misslyckades starta en chatt med kontakten."
+
+#~ msgid "Open Log Viewer..."
+#~ msgstr "Öppna loggvisning..."
+
+#~ msgid "Instant Messaging Accounts"
+#~ msgstr "Konton för direktmeddelande"
 
 #~ msgid "Telepathy KDE Models Test UI"
 #~ msgstr "Användargränssnitt för test av Telepathy-KDE modeller"
 
 #~ msgid "(C) 2011 Collabora Ltd"
-#~ msgstr "© 2011, Collabora Ltd"
+#~ msgstr "© 2011 Collabora Ltd"
 
 #~ msgid "Telepathy-KDE Models Testing UI"
 #~ msgstr "Användargränssnitt för test av Telepathy-KDE modeller"
