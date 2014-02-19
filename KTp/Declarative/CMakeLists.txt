@@ -5,7 +5,6 @@ include_directories (${CMAKE_CURRENT_BINARY_DIR}
 
 set (ktp_qml_plugin_SRCS
     ${KTP_GLOBAL_SOURCES}
-    conversation-target.cpp
     conversation.cpp
     conversations-model.cpp
     hide-window-component.cpp
@@ -26,6 +25,7 @@ target_link_libraries (ktpqmlplugin
     ${TELEPATHY_QT4_LIBRARIES}
     ${KDE4_KDEUI_LIBS}
     ktpcommoninternalsprivate
+    ktploggerprivate
     ktpmodelsprivate
 )
 

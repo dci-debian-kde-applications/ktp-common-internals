@@ -1,15 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2013.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2014.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-04-01 08:26+0200\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2014-02-03 15:41+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kdei18n-pl-uwagi>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,37 +27,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
-msgstr ""
+msgstr "Rozpocznij rozmowę używając %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr ""
+msgstr "Rozpocznij rozmowę głosową używając %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr ""
+msgstr "Rozpocznij rozmowę wideo używając %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
-msgstr ""
+msgstr "Wyślij plik używając %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
+msgstr "Współpracuj nad edycją dokumentu używając %1..."
+
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
 msgstr ""
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
 msgstr ""
 
 #: KTp/contact-info-dialog.cpp:66
@@ -105,7 +113,7 @@ msgstr "Zapisz"
 
 #: KTp/contact-info-dialog.cpp:367
 msgid "Contact can see when you are online:"
-msgstr "Kontakt może zobaczyć, gdy jesteś dostępny"
+msgstr "Kontakt może zobaczyć, gdy jesteś dostępny(a):"
 
 #: KTp/contact-info-dialog.cpp:368
 msgid "You can see when the contact is online:"
@@ -312,12 +320,9 @@ msgid "You were removed from the channel because you did not respond"
 msgstr "Zostałeś usunięty z kanału, bo nie odpowiedziałeś"
 
 #: KTp/error-dictionary.cpp:103
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "This capability is not available"
 msgctxt "Verbose user visible error string"
 msgid "The service is not available"
-msgstr "Możliwość nie jest dostępna"
+msgstr "Usługa jest niedostępna"
 
 #: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -588,17 +593,14 @@ msgid "Removed from channel"
 msgstr "Usunięty z kanału"
 
 #: KTp/error-dictionary.cpp:210
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Encryption not available"
 msgctxt "Short user visible error string"
 msgid "Service not available"
-msgstr "Szyfrowanie niedostępne"
+msgstr "Usługa niedostępna"
 
 #: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
 msgid "Contact has no support"
-msgstr "Kontakt nie ma wsparcia"
+msgstr "Kontakt nie obsługuje"
 
 #: KTp/error-dictionary.cpp:214
 msgctxt "Short user visible error string"
@@ -618,7 +620,7 @@ msgstr "Kanał już jest obsługiwany"
 #: KTp/error-dictionary.cpp:220
 msgctxt "Short user visible error string"
 msgid "Contact is offline"
-msgstr "Kontakt jest rozłączony"
+msgstr "Kontakt jest niedostępny"
 
 #: KTp/error-dictionary.cpp:222
 msgctxt "Short user visible error string"
@@ -780,7 +782,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Dodaj nowy kontakt"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Nie wybrano konta."
 
@@ -817,15 +819,15 @@ msgstr "Nazwa ekranu:"
 msgid "Search in Contacts..."
 msgstr "Znajdź w kontaktach..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Pokój ten jest już twoim ulubionym."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Dodaj pokój"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Nazwa"
 
@@ -849,50 +851,57 @@ msgstr "Ulubione"
 msgid "Add Room"
 msgstr "Dodaj pokój"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+#, fuzzy
+#| msgid "Add Room"
+msgid "Edit Room"
+msgstr "Dodaj pokój"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Usuń pokój"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Ostatnie"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Usuń"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Wyczyść listę"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Zapytanie"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Serwer do odpytania:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr "Pozostaw puste dla domyślnego serwera wybranego konta"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Zatrzymaj"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Znajdź pokoje"
 
@@ -914,32 +923,30 @@ msgstr "Wszyscy użytkownicy"
 msgid "Configure notifications for all users"
 msgstr "Konfiguruj powiadomienia dla wszystkich użytkowników"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
-msgstr ""
+msgstr "Rozpocznij rozmowę"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
-#, fuzzy
-#| msgid ""
-#| "The requested account has been disconnected and so the contact could not "
-#| "be added."
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr ""
-"Żądane konto zostało rozłączone i przez to nie można było dodać kontaktu."
+"Żądane konto zostało rozłączone i przez to nie można było rozpocząć rozmowy."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
-#, fuzzy
-#| msgid "You did not specify the name of the contact to add."
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
-msgstr "Nie podałeś nazwy kontaktu do dodania."
+msgstr "Nie podałeś nazwy kontaktu, z którym chcesz zacząć rozmowę."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
-#, fuzzy
-#| msgid "Failed to create new contact."
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
-msgstr "Nieudane utworzenie nowego kontaktu."
+msgstr "Nieudane rozpoczęcie rozmowy z kontaktem."
 
 #, fuzzy
 #~| msgid "KDE Telepathy"

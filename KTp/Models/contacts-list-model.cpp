@@ -136,7 +136,7 @@ QVariant KTp::ContactsListModel::data(const QModelIndex &index, int role) const
             return contact->isBlocked();
 
         case KTp::ContactCanTextChatRole:
-            return true; //FIXME
+            return contact->textChatCapability();
           case KTp::ContactCanFileTransferRole:
             return contact->fileTransferCapability();
         case KTp::ContactCanAudioCallRole:
@@ -144,10 +144,8 @@ QVariant KTp::ContactsListModel::data(const QModelIndex &index, int role) const
         case KTp::ContactCanVideoCallRole:
             return contact->videoCallCapability();
         case KTp::ContactTubesRole:
-            //FIXME this does not check own selfContact caps.
-            return QStringList() << contact->capabilities().streamTubeServices()
-                                 << contact->capabilities().dbusTubeServices();
-
+            return QStringList() << contact->streamTubeServicesCapability()
+                                 << contact->dbusTubeServicesCapability();
         default:
             break;
         }

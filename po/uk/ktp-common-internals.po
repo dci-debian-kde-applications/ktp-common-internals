@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-09-24 15:46+0300\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2014-02-07 08:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -26,38 +26,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "Розпочати спілкування за допомогою %1…"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr "Розпочати аудіоспілкування за допомогою %1…"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr "Розпочати відеоспілкування за допомогою %1…"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "Надіслати файл за допомогою %1…"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Спільно редагувати документ за допомогою %1…"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
-msgstr "Відкрити вікно перегляду журналу…"
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "Обмін повідомленнями"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
-msgstr "Облікові записи миттєвого обміну повідомленнями"
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
+msgstr ""
+"Перенесення файлів із суфіксами назв .exe та .ini заборонено правилами "
+"Google Talk. Назву надісланого файла було змінено на <i>%1</i>"
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr "Перенесений файл перейменовано"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -780,7 +789,7 @@ msgstr "Telepathy KDE"
 msgid "Add new contact"
 msgstr "Додати новий контакт"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Не позначено жодного облікового запису."
 
@@ -817,15 +826,15 @@ msgstr "Екранне ім’я:"
 msgid "Search in Contacts..."
 msgstr "Шукати у контактах…"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Цю кімнату вже додано до улюблених."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Додавання кімнати"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Назва"
 
@@ -849,51 +858,56 @@ msgstr "Улюблене"
 msgid "Add Room"
 msgstr "Додати кімнату"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Редагувати кімнату"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Вилучити кімнату"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Нещодавні"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Вилучити"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Спорожнити список"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Діалог"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Сервер для запитів:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr ""
 "Не заповнюйте, якщо хочете користуватися типовим сервером облікового запису"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Зупинити"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Шукати кімнати"
 
@@ -915,11 +929,11 @@ msgstr "Всі користувачі"
 msgid "Configure notifications for all users"
 msgstr "Налаштувати сповіщення для всіх користувачів"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
 msgstr "Розпочати спілкування"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
@@ -927,15 +941,29 @@ msgstr ""
 "Бажаний обліковий запис від’єднано від системи, отже розпочати з ним "
 "спілкування неможливо."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr ""
 "Ви не вказали назву облікового запису контакту, з яким слід розпочати "
 "спілкування."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Вказане вами показане ім’я є некоректним або не приймає запитів щодо "
+"текстового режиму спілкування."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Не вдалося розпочати спілкування з цим контактом."
+
+#~ msgid "Open Log Viewer..."
+#~ msgstr "Відкрити вікно перегляду журналу…"
+
+#~ msgid "Instant Messaging Accounts"
+#~ msgstr "Облікові записи миттєвого обміну повідомленнями"
 
 #~ msgid "Telepathy KDE Models Test UI"
 #~ msgstr "Інтерфейс перевірки моделей KDE Telepathy"

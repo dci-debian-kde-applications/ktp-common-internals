@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-04-21 09:32+0200\n"
-"Last-Translator: Marce Villarino <mvillarino@kde-espana.es>\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2013-11-27 00:04+0100\n"
+"Last-Translator: Marce Villarino <mvillarino@kde-espana.org>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -31,37 +31,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adriyetichaves@gmail.com"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
-msgstr ""
+msgstr "Comezar unha conversa usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr ""
+msgstr "Facer unha chamada usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr ""
+msgstr "Facer unha vídeo chamada usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
-msgstr ""
+msgstr "Enviar un ficheiro usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
+msgstr "Editar colaborativamente un documento usando %1..."
+
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "IM"
+
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
-msgstr ""
-
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
 msgstr ""
 
 #: KTp/contact-info-dialog.cpp:66
@@ -316,12 +323,9 @@ msgid "You were removed from the channel because you did not respond"
 msgstr "Expulsóuselle temporalmente da canle por non ter respondido"
 
 #: KTp/error-dictionary.cpp:103
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "This capability is not available"
 msgctxt "Verbose user visible error string"
 msgid "The service is not available"
-msgstr "Esta capacidade non está dispoñíbel"
+msgstr "O servizo non está dispoñíbel"
 
 #: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -592,12 +596,9 @@ msgid "Removed from channel"
 msgstr "Foi eliminado da canle"
 
 #: KTp/error-dictionary.cpp:210
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Encryption not available"
 msgctxt "Short user visible error string"
 msgid "Service not available"
-msgstr "O cifrado non está dispoñíbel"
+msgstr "Servizo non dispoñíbel"
 
 #: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
@@ -784,7 +785,7 @@ msgstr "Telepathy do KDE"
 msgid "Add new contact"
 msgstr "Engadir un novo contacto"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Non se escolleu ningunha conta."
 
@@ -821,15 +822,15 @@ msgstr "Alcume:"
 msgid "Search in Contacts..."
 msgstr "Buscar nos contactos…"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "A sala xa está entre as súas favoritas."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Engadir unha sala"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Nome"
 
@@ -853,52 +854,57 @@ msgstr "Favoritas"
 msgid "Add Room"
 msgstr "Engadir unha sala"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Editar unha sala"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Borrar a sala"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Recentes"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Borrar"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Limpar a lista"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Consultar"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Servidor para consultar:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr ""
 "Déixese en branco para empregar o servidor predeterminado da conta "
 "seleccionada."
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Deter"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Buscar nas salas"
 
@@ -920,32 +926,39 @@ msgstr "Todos os usuarios"
 msgid "Configure notifications for all users"
 msgstr "Configurar as notificacións para todos os usuarios"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
-msgstr ""
+msgstr "Comezar unha conversa"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
-#, fuzzy
-#| msgid ""
-#| "The requested account has been disconnected and so the contact could not "
-#| "be added."
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr ""
-"A conta solicitada desconectouse, polo que non se puido engadir o contacto."
+"A conta solicitada desconectouse, polo que non se puido iniciar unha "
+"conversa."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
-#, fuzzy
-#| msgid "You did not specify the name of the contact to add."
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
-msgstr "Non indicou o nome do contacto para engadir."
+msgstr "Non indicou o nome do contacto co que comezar unha conversa."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
-#, fuzzy
-#| msgid "Failed to create new contact."
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"O alcume que forneceu para o contacto non é válido ou non acepta conversas "
+"de texto."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
-msgstr "Non foi posíbel crear o novo contacto."
+msgstr "Non foi posíbel comezar unha conversa co contacto."
+
+#~ msgid "Open Log Viewer..."
+#~ msgstr "Abrir o visor de rexistros..."
+
+#~ msgid "Instant Messaging Accounts"
+#~ msgstr "Contas de mensaxería instantánea"
 
 #, fuzzy
 #~| msgid "KDE Telepathy"

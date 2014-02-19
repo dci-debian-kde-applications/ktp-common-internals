@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Pino Toscano <toscano.pino@tiscali.it>, 2011, 2012, 2013.
+# Pino Toscano <toscano.pino@tiscali.it>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-09-24 17:45+0200\n"
+"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"PO-Revision-Date: 2014-02-10 09:27+0100\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -26,38 +26,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toscano.pino@tiscali.it"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:133
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "Avvia una chat usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:143
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr "Avvia una chiamata vocale usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:153
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr "Avvia una videochiamata usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:164
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "Invia un file usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:175
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Modifica un documento collaborativamente usando %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:186
-msgid "Open Log Viewer..."
-msgstr "Apri il visore registri..."
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "Messaggistica istantanea"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
-msgstr "Account di messaggistica istantanea"
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
+msgstr ""
+"Non è permesso in Google Talk inviare file con estensione «.exe» o «.ini». È "
+"stato inviato come <i>%1</i>"
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr "File trasferito rinominato"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -299,7 +308,7 @@ msgstr "È stato fornito un argomento non valido"
 #: KTp/error-dictionary.cpp:97
 msgctxt "Verbose user visible error string"
 msgid "The specified handle is unknown on this channel"
-msgstr ""
+msgstr "Il riferimento specificato è sconosciuto in questo canale"
 
 #: KTp/error-dictionary.cpp:99
 msgctxt "Verbose user visible error string"
@@ -574,7 +583,7 @@ msgstr "Argomento non valido"
 #: KTp/error-dictionary.cpp:204
 msgctxt "Short user visible error string"
 msgid "Invalid handle"
-msgstr ""
+msgstr "Riferimento non valido"
 
 #: KTp/error-dictionary.cpp:206
 msgctxt "Short user visible error string"
@@ -776,7 +785,7 @@ msgstr "Telepathy KDE"
 msgid "Add new contact"
 msgstr "Aggiungi nuovo contatto"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Nessun account selezionato."
 
@@ -816,15 +825,15 @@ msgstr "Nome pubblico:"
 msgid "Search in Contacts..."
 msgstr "Cerca nei contatti..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Questa stanza è già tra quelle preferite."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Aggiungi stanza"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Nome"
 
@@ -848,50 +857,55 @@ msgstr "Preferite"
 msgid "Add Room"
 msgstr "Aggiungi stanza"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Modifica stanza"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Rimuovi stanza"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Recenti"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Rimuovi"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Pulisci lista"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Interroga"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Server da interrogare:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr "Lascia vuoto per usare il server predefinito dell'account selezionato"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Ferma"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Cerca stanze"
 
@@ -913,11 +927,11 @@ msgstr "Tutti gli utenti"
 msgid "Configure notifications for all users"
 msgstr "Configura le notifiche per tutti gli utenti"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
 msgstr "Avvia una chat"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
@@ -925,39 +939,27 @@ msgstr ""
 "L'account richiesto è stato disconnesso e per questo non è stato possibile "
 "iniziare la chat."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr "Non hai specificato il nome del contatto con cui chiaccherare."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Il nome pubblico del contatto che hai inserito non è valido oppure non "
+"accetta chat di testo."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Non è stato possibile avviare una chat con il contatto."
 
-#~ msgid "Telepathy KDE Models Test UI"
-#~ msgstr "Interfaccia di prova dei modelli di Telepathy KDE"
+#~ msgid "Open Log Viewer..."
+#~ msgstr "Apri il visore registri..."
 
-#~ msgid "(C) 2011 Collabora Ltd"
-#~ msgstr "C) 2011 Collabora Ltd"
-
-#~ msgid "Telepathy-KDE Models Testing UI"
-#~ msgstr "Interfaccia di prova dei modelli di Telepathy KDE"
-
-#~ msgid "KDE Telepathy Debug Tool"
-#~ msgstr "Strumento di debug di Telepathy KDE"
-
-#~ msgid ""
-#~ "Tool for inspecting logs of the various underlying telepathy components"
-#~ msgstr ""
-#~ "Strumenti per ispezionare i registri dei vari componenti di Telepathy"
-
-#~ msgid "Copyright (C) 2011 Collabora Ltd."
-#~ msgstr "Copyright (C) 2011 Collabora Ltd."
-
-#~ msgid "George Kiagiadakis"
-#~ msgstr "George Kiagiadakis"
-
-#~ msgid "Developer"
-#~ msgstr "Sviluppatore"
+#~ msgid "Instant Messaging Accounts"
+#~ msgstr "Account di messaggistica istantanea"
 
 #~ msgid "Me"
 #~ msgstr "Io"

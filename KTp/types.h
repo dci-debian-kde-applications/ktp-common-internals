@@ -46,7 +46,7 @@ namespace KTp
         // general roles
         RowTypeRole = Qt::UserRole, //returns one of KTp::ContactRowType, KTp::PersonRowType, KTp::GroupRowType, KTp::AccountRowType
         IdRole, //returns Contact ID, Account UID, or group ID (group name or "_ungrouped")
-        NepomukUriRole, ///< url of the corresponding contact/person resource in Nepomuk
+        PersonIdRole, ///< id of the corresponding contact/person resource in kpeople
 
         //telepathy roles
         ContactRole = Qt::UserRole + 1000,  ///<return Tp::ContactPtr
@@ -77,6 +77,8 @@ namespace KTp
         ContactCanAudioCallRole, ///< bool. You and contact can both audio call
         ContactCanVideoCallRole, ///< bool. You and contact can both video call
         ContactTubesRole, ///< stringlist. common supported dbus + stream services between you and contact
+
+        ContactVCardRole, ///< VCard of the contact in KABC::Addresse format; KPeople only at the moment
 
         //heading roles
         HeaderTotalUsersRole = Qt::UserRole  + 3000,

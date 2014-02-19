@@ -29,3 +29,26 @@ target_link_libraries(ktp_contact_list_model_view
   ktpmodelsprivate
 )
 
+if (KPEOPLE_FOUND)
+
+include_directories(${KPEOPLE_INCLUDES})
+
+
+kde4_add_executable(ktp_kpeople_list_model_view
+    ${model_view_SRCS}
+    kpeople-model-view-main.cpp
+)
+
+target_link_libraries(ktp_kpeople_list_model_view
+  ${QT_QTTEST_LIBRARY}
+  ${KDE4_KDECORE_LIBS}
+  ${KDE4_KDEUI_LIBS}
+  ${TELEPATHY_QT4_LIBRARIES}
+  ${KPEOPLE_LIBS}
+  ktpcommoninternalsprivate
+  ktpmodelsprivate
+)
+
+endif (KPEOPLE_FOUND)
+
+
