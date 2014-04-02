@@ -1,12 +1,12 @@
-ktp-common-internals (0.7.80-1) UNRELEASED; urgency=medium
+ktp-common-internals (0.8.0-1) UNRELEASED; urgency=medium
 
-  * Imported upstream 0.7.80
+  * Imported upstream 0.8.0
   * Bump libktpcommoninternalsprivate6 SONAME to 7
   * Bump libtelepathy-logger-qt4-dev dependency to >= 0.8.0
   * Bump Standards-Version to 3.9.5. No changes needed.
   * Enable kpeople
 
- -- Diane Trout <diane@ghic.org>  Tue, 18 Feb 2014 22:59:59 -0800
+ -- Diane Trout <diane@ghic.org>  Tue, 01 Apr 2014 21:53:01 -0700
 
 ktp-common-internals (0.7.0-1) unstable; urgency=low
 
