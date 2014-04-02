@@ -2,6 +2,7 @@ ktp-common-internals (0.7.80-1) UNRELEASED; urgency=medium
 
   * Imported upstream 0.7.80
   * Bump libktpcommoninternalsprivate6 SONAME to 7
+  * Bump libtelepathy-logger-qt4-dev dependency to >= 0.8.0
 
  -- Diane Trout <diane@ghic.org>  Tue, 18 Feb 2014 22:59:59 -0800
 
