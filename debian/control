@@ -17,7 +17,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: libktpcommoninternalsprivate-dev
 Section: libdevel
 Architecture: any
-Depends: libktpcommoninternalsprivate6 (= ${binary:Version}), ${misc:Depends}
+Depends: libktpcommoninternalsprivate7 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consits of the most reused
  parts across KDE Telepathy.
@@ -29,7 +29,9 @@ Description: KDE Telepathy internal library - Development headers
  outside of the KDE Telepathy project umbrella. This package
  is only provided for compiling the rest of the components.
 
-Package: libktpcommoninternalsprivate6
+Package: libktpcommoninternalsprivate7
+Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
+Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy internal library
@@ -59,7 +61,7 @@ Package: libktpcommoninternalsprivate-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: libktpcommoninternalsprivate6 (= ${binary:Version}), ${misc:Depends}
+Depends: libktpcommoninternalsprivate7 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
  Internal library which consits of the most reused
  parts across KDE Telepathy.
