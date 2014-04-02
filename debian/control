@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9), cmake,
  pkg-kde-tools, kdelibs5-dev,
  nepomuk-core-dev, shared-desktop-ontologies,
 # libkpeople-dev,
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-common-internals.git
