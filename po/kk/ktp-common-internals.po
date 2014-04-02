@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"POT-Creation-Date: 2013-11-02 04:50+0000\n"
 "PO-Revision-Date: 2013-09-27 04:22+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -25,45 +25,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:134
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "%1 пайдаланып чат-әңгімені бастау..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:144
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr "%1 пайдаланып адиошақыруды бастау..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:154
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr "%1 пайдаланып видеошақыруды бастау..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:165
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "%1 пайдаланып файлды жіберу..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:176
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "%1 пайдаланып ынтымақтаса құжатты өңдеу..."
 
-#: kpeople/uiplugins/imdetailswidget.cpp:48
-msgid "IM"
-msgstr ""
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:187
+msgid "Open Log Viewer..."
+msgstr "Журналын қарау құралын ашу..."
 
-#: KTp/actions.cpp:181
-#, kde-format
-msgid ""
-"Transferring files with .exe or .ini extension is not allowed by Google "
-"Talk. It was sent with filename <i>%1</i>"
-msgstr ""
-
-#: KTp/actions.cpp:182
-msgid "Transferred file renamed"
-msgstr ""
+#: kpeople/uiplugins/imdetailswidget.cpp:44
+msgid "Instant Messaging Accounts"
+msgstr "Лезде хабарласу тіркелгілері"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -763,7 +756,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Жаңа контактты қосу"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
 msgid "No account selected."
 msgstr "Тіркелгі таңдалмаған."
 
@@ -799,15 +792,15 @@ msgstr "Экрандағы атауы:"
 msgid "Search in Contacts..."
 msgstr "Контакттар арасында іздеу..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:216
+#: KTp/Widgets/join-chat-room-dialog.cpp:208
 msgid "This room is already in your favorites."
 msgstr "Бұл бөлме таңдамалыңыздарда бар екен."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Add room"
 msgstr "Бөлмені қосу"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Name"
 msgstr "Атауы"
 
@@ -831,57 +824,50 @@ msgstr "Таңдамалылар"
 msgid "Add Room"
 msgstr "Бөлмені қосу"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:73
-#, fuzzy
-#| msgid "Add Room"
-msgid "Edit Room"
-msgstr "Бөлмені қосу"
-
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:83
+#: KTp/Widgets/join-chat-room-dialog.ui:73
 msgid "Remove Room"
 msgstr "Бөлмені өшіру"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:108
+#: KTp/Widgets/join-chat-room-dialog.ui:98
 msgid "Recent"
 msgstr "Жуырдағы"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:112
 msgid "Remove"
 msgstr "Өшіру"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:132
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Clear list"
 msgstr "Тізімді тазалау"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:155
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:145
+#: KTp/Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
 msgstr "Жеке әңгіме"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:161
+#: KTp/Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
 msgstr "Сұрайтын сервері:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:173
+#: KTp/Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
 msgstr "Таңдалған тіркелгінін әдетті серверін қолдану үшін бос қалдырыңыз "
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:196
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
 msgstr "Тоқтату"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:227
+#: KTp/Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
 msgstr "Бөлмелерде іздеу"
 
@@ -903,35 +889,23 @@ msgstr "Бүкіл пайдаланушылар"
 msgid "Configure notifications for all users"
 msgstr "Бүкіл пайдаланушыларды құлақтандыруларын баптау"
 
-#: KTp/Widgets/start-chat-dialog.cpp:60
+#: KTp/Widgets/start-chat-dialog.cpp:56
 msgid "Start a chat"
 msgstr "Чат-әңгімені бастау"
 
-#: KTp/Widgets/start-chat-dialog.cpp:85
+#: KTp/Widgets/start-chat-dialog.cpp:81
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr "Сұралған тіркелгі ажыратылған, сондықтан чатты бастауға болмайды."
 
-#: KTp/Widgets/start-chat-dialog.cpp:88
+#: KTp/Widgets/start-chat-dialog.cpp:84
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr "Чатты кіммен бастау керек контакт атауы келтірілмеген."
 
-#: KTp/Widgets/start-chat-dialog.cpp:106
-msgid ""
-"The contact Screen Name you provided is invalid or does not accept text "
-"chats."
-msgstr ""
-
-#: KTp/Widgets/start-chat-dialog.cpp:132
+#: KTp/Widgets/start-chat-dialog.cpp:107
 msgid "Failed to start a chat with the contact."
 msgstr "Контактпен чат-әңгіме құру жаңылысы."
-
-#~ msgid "Open Log Viewer..."
-#~ msgstr "Журналын қарау құралын ашу..."
-
-#~ msgid "Instant Messaging Accounts"
-#~ msgstr "Лезде хабарласу тіркелгілері"
 
 #, fuzzy
 #~| msgid "KDE Telepathy"

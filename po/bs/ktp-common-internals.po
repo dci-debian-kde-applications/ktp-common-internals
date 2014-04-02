@@ -7,67 +7,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-07 01:35+0000\n"
-"PO-Revision-Date: 2013-10-29 13:04+0000\n"
-"Last-Translator: Amra Dautbegovic <adautbegov1@etf.unsa.ba>\n"
+"POT-Creation-Date: 2013-11-02 04:50+0000\n"
+"PO-Revision-Date: 2013-09-24 21:22+0100\n"
+"Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Launchpad (build 16820)\n"
-"X-Launchpad-Export-Date: 2013-10-30 05:47+0000\n"
+"X-Launchpad-Export-Date: 2012-12-21 01:45+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Samir Ribić,Amra Dautbegovic,Haris Javoraš"
+msgstr "Samir Ribić"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"samir.ribic@etf.unsa.ba,adautbegov1@etf.unsa.ba,miniprogrammerme@gmail.com"
+msgstr "samir.ribic@etf.unsa.ba"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:134
 #, kde-format
 msgid "Start Chat Using %1..."
-msgstr "Započni dopisivanje koristeći %1"
+msgstr "Počni ćaskanje koristeći %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:144
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr "Započni audio poziv koristeći %1"
+msgstr "Pokreni glasovni poziv koristeći %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:154
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr "Započni video poziv koristeći %1"
+msgstr "Pokreni video poziv koristeći %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:165
 #, kde-format
 msgid "Send a File Using %1..."
-msgstr "Pošalji datotetku koristeći %1"
+msgstr "Pokreni datoteku koristeći %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:176
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
-msgstr "Kolaborativno izmijeni dokument koristeći %1"
+msgstr "Uredi dokument u saradnji  s drugim ljudima koristeći %1..."
 
-#: kpeople/uiplugins/imdetailswidget.cpp:48
-msgid "IM"
-msgstr ""
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:187
+msgid "Open Log Viewer..."
+msgstr "Otvori preglednik dnevnika..."
 
-#: KTp/actions.cpp:181
-#, kde-format
-msgid ""
-"Transferring files with .exe or .ini extension is not allowed by Google "
-"Talk. It was sent with filename <i>%1</i>"
-msgstr ""
-
-#: KTp/actions.cpp:182
-msgid "Transferred file renamed"
-msgstr ""
+#: kpeople/uiplugins/imdetailswidget.cpp:44
+msgid "Instant Messaging Accounts"
+msgstr "Nalozi brzih poruka"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -316,7 +308,7 @@ msgstr "Uklonjeni ste sa kanala jer niste odgovorili"
 #: KTp/error-dictionary.cpp:103
 msgctxt "Verbose user visible error string"
 msgid "The service is not available"
-msgstr "Servis nije dostupan"
+msgstr "Ova usluga nije dostupna"
 
 #: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -587,7 +579,7 @@ msgstr "Uklonjen sa kanala"
 #: KTp/error-dictionary.cpp:210
 msgctxt "Short user visible error string"
 msgid "Service not available"
-msgstr "Servis nije dostupan"
+msgstr "Usluga nije dostupna"
 
 #: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
@@ -774,7 +766,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Dodaj novi kontakt"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
 msgid "No account selected."
 msgstr "Nije izabran nijedan račun."
 
@@ -810,15 +802,15 @@ msgstr "Ime za prikaz"
 msgid "Search in Contacts..."
 msgstr "Traži u kontaktima..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:216
+#: KTp/Widgets/join-chat-room-dialog.cpp:208
 msgid "This room is already in your favorites."
 msgstr "Ova soba je već u vašim omiljenim"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Add room"
 msgstr "Dodaj sobu"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Name"
 msgstr "Ime"
 
@@ -842,55 +834,50 @@ msgstr "Omiljene"
 msgid "Add Room"
 msgstr "Dodaj sobu"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:73
-msgid "Edit Room"
-msgstr "Uredi sobu"
-
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:83
+#: KTp/Widgets/join-chat-room-dialog.ui:73
 msgid "Remove Room"
 msgstr "Ukloni sobu"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:108
+#: KTp/Widgets/join-chat-room-dialog.ui:98
 msgid "Recent"
 msgstr "Skorašnji"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:112
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:132
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Clear list"
 msgstr "Očisti spisak"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:155
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:145
+#: KTp/Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
 msgstr "Upit"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:161
+#: KTp/Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
 msgstr "Poslužitelj koji če biti upitan"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:173
+#: KTp/Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
 msgstr "Ostavite prazno za zadani poslužitelj odabranog računa"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:196
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
 msgstr "Prekini"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:227
+#: KTp/Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
 msgstr "Pretraži sobe"
 
@@ -912,36 +899,24 @@ msgstr "Svi korisnici"
 msgid "Configure notifications for all users"
 msgstr "Konfiguriši napomene za sve korisnike"
 
-#: KTp/Widgets/start-chat-dialog.cpp:60
+#: KTp/Widgets/start-chat-dialog.cpp:56
 msgid "Start a chat"
-msgstr "Započni dopisivanje"
+msgstr "Pokreni ćaskanje"
 
-#: KTp/Widgets/start-chat-dialog.cpp:85
+#: KTp/Widgets/start-chat-dialog.cpp:81
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr ""
-"Traženi profil se odjavio sa mreže tako da nije moguće započeti dopisivanje."
+"Zahtijevani nalog je izgubio vezu pa nije bilo moguće pokrenuti ćaskanje"
 
-#: KTp/Widgets/start-chat-dialog.cpp:88
+#: KTp/Widgets/start-chat-dialog.cpp:84
 msgid "You did not specify the name of the contact to start a chat with."
-msgstr "Niste naznačili ime kontakta s kojim ćete započeti dopisivanje."
+msgstr "Niste naveli ime kontakta s kojim počinjete ćaskan je"
 
-#: KTp/Widgets/start-chat-dialog.cpp:106
-msgid ""
-"The contact Screen Name you provided is invalid or does not accept text "
-"chats."
-msgstr ""
-
-#: KTp/Widgets/start-chat-dialog.cpp:132
+#: KTp/Widgets/start-chat-dialog.cpp:107
 msgid "Failed to start a chat with the contact."
-msgstr "Neuspio pokušaj dopisivanja s kontaktom."
-
-#~ msgid "Open Log Viewer..."
-#~ msgstr "Otvori preglednik imenika..."
-
-#~ msgid "Instant Messaging Accounts"
-#~ msgstr "Profili za trenutno dopisivanje"
+msgstr "Neuspjelo započinjanje ćaskanja s kontaktom"
 
 #~ msgid "Telepathy KDE Models Test UI"
 #~ msgstr "Korisnički interfejs za testirahje KDE Telepathy modela"
