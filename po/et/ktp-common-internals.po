@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-07 01:35+0000\n"
+"POT-Creation-Date: 2013-11-02 04:50+0000\n"
 "PO-Revision-Date: 2013-01-14 20:16+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -25,44 +25,37 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bald@smail.ee"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:134
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:144
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:154
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:165
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr ""
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:176
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr ""
 
-#: kpeople/uiplugins/imdetailswidget.cpp:48
-msgid "IM"
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:187
+msgid "Open Log Viewer..."
 msgstr ""
 
-#: KTp/actions.cpp:181
-#, kde-format
-msgid ""
-"Transferring files with .exe or .ini extension is not allowed by Google "
-"Talk. It was sent with filename <i>%1</i>"
-msgstr ""
-
-#: KTp/actions.cpp:182
-msgid "Transferred file renamed"
+#: kpeople/uiplugins/imdetailswidget.cpp:44
+msgid "Instant Messaging Accounts"
 msgstr ""
 
 #: KTp/contact-info-dialog.cpp:66
@@ -99,13 +92,11 @@ msgstr ""
 
 #: KTp/contact-info-dialog.cpp:149
 #, fuzzy
-#| msgid "Clear list"
 msgid "Clear Avatar"
 msgstr "Puhasta nimekiri"
 
 #: KTp/contact-info-dialog.cpp:214
 #, fuzzy
-#| msgid "Failed to create new contact."
 msgid "Failed to load the new avatar image"
 msgstr "Uue kontakti loomine nurjus."
 
@@ -123,8 +114,6 @@ msgstr ""
 
 #: KTp/contact-info-dialog.cpp:369
 #, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Contact is offline"
 msgid "Contact is blocked:"
 msgstr "Kontakt ei ole võrgus"
 
@@ -776,7 +765,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Uue kontakti lisamine"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
 msgid "No account selected."
 msgstr "Kontot pole valitud."
 
@@ -812,15 +801,15 @@ msgstr "Näidatav nimi:"
 msgid "Search in Contacts..."
 msgstr "Otsi kontaktides..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:216
+#: KTp/Widgets/join-chat-room-dialog.cpp:208
 msgid "This room is already in your favorites."
 msgstr "See tuba on juba sinu lemmikute seas."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Add room"
 msgstr "Jututoa lisamine"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
+#: KTp/Widgets/join-chat-room-dialog.cpp:210
 msgid "Name"
 msgstr "Nimi"
 
@@ -844,57 +833,50 @@ msgstr "Lemmikud"
 msgid "Add Room"
 msgstr "Lisa jututuba"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:73
-#, fuzzy
-#| msgid "Add Room"
-msgid "Edit Room"
-msgstr "Lisa jututuba"
-
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:83
+#: KTp/Widgets/join-chat-room-dialog.ui:73
 msgid "Remove Room"
 msgstr "Eemalda jututuba"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:108
+#: KTp/Widgets/join-chat-room-dialog.ui:98
 msgid "Recent"
 msgstr "Viimati kasutatud"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:112
 msgid "Remove"
 msgstr "Eemalda"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:132
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Clear list"
 msgstr "Puhasta nimekiri"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:155
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:145
+#: KTp/Widgets/join-chat-room-dialog.ui:176
 msgid "Query"
 msgstr "Päring"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:161
+#: KTp/Widgets/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
 msgstr "Server, millele päring esitada:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:173
+#: KTp/Widgets/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
 msgstr "Jäta tühjaks valitud konto vaikeserveri kasutamiseks"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:196
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Stop"
 msgstr "Peata"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:227
+#: KTp/Widgets/join-chat-room-dialog.ui:217
 msgid "Search rooms"
 msgstr "Otsi jututuba"
 
@@ -916,11 +898,11 @@ msgstr "Kõik kasutajad"
 msgid "Configure notifications for all users"
 msgstr "Märguannete seadistamine kõigile kasutajatele"
 
-#: KTp/Widgets/start-chat-dialog.cpp:60
+#: KTp/Widgets/start-chat-dialog.cpp:56
 msgid "Start a chat"
 msgstr ""
 
-#: KTp/Widgets/start-chat-dialog.cpp:85
+#: KTp/Widgets/start-chat-dialog.cpp:81
 #, fuzzy
 #| msgid ""
 #| "The requested account has been disconnected and so the contact could not "
@@ -930,19 +912,13 @@ msgid ""
 "initiated."
 msgstr "Soovitud konto ei ole ühendatud, mistõttu kontakti ei saa lisada."
 
-#: KTp/Widgets/start-chat-dialog.cpp:88
+#: KTp/Widgets/start-chat-dialog.cpp:84
 #, fuzzy
 #| msgid "You did not specify the name of the contact to add."
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr "Sa ei ole määranud lisatava kontakti nime."
 
-#: KTp/Widgets/start-chat-dialog.cpp:106
-msgid ""
-"The contact Screen Name you provided is invalid or does not accept text "
-"chats."
-msgstr ""
-
-#: KTp/Widgets/start-chat-dialog.cpp:132
+#: KTp/Widgets/start-chat-dialog.cpp:107
 #, fuzzy
 #| msgid "Failed to create new contact."
 msgid "Failed to start a chat with the contact."
