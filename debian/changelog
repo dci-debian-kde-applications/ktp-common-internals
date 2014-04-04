@@ -6,6 +6,7 @@ ktp-common-internals (0.8.0-1) UNRELEASED; urgency=low
   * Bump libtelepathy-logger-qt4-dev dependency to >= 0.8.0
   * Bump Standards-Version to 3.9.5. No changes needed.
   * Enable kpeople
+  * Split libraries from common-internals into additional packages.
 
  -- Diane Trout <diane@ghic.org>  Tue, 01 Apr 2014 21:53:01 -0700
 

@@ -40,7 +40,34 @@ Description: KDE Telepathy internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
- This also includes the shared KDE-Telepathy logger service.
+ This contians the generic common components.
+
+Package: libktpmodelsprivate7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal library
+ Internal library which consists of the most reused
+ parts across KDE Telepathy.
+ .
+ This includes Qt models.
+
+Package: libktpwidgetsprivate7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal library
+ Internal library which consists of the most reused
+ parts across KDE Telepathy.
+ .
+ This also includes common widgets like the contact grid.
+
+Package: libktploggerprivate7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal library
+ Internal library which consists of the most reused
+ parts across KDE Telepathy.
+ .
+ This includes the shared KDE-Telepathy logger service.
 
 Package: kde-telepathy-declarative
 Architecture: any
