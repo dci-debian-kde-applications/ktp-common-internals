@@ -1,4 +1,4 @@
-ktp-common-internals (0.8.0-1) UNRELEASED; urgency=medium
+ktp-common-internals (0.8.0-1) UNRELEASED; urgency=low
 
   * Imported upstream 0.8.0
   * Bump libktpcommoninternalsprivate6 SONAME to 7
