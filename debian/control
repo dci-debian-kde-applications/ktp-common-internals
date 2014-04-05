@@ -36,7 +36,7 @@ Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Recommends: kde-telepathy-kpeople
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy internal library
+Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
@@ -45,7 +45,7 @@ Description: KDE Telepathy internal library
 Package: libktpmodelsprivate7
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy internal library
+Description: KDE Telepathy data models internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
@@ -54,7 +54,7 @@ Description: KDE Telepathy internal library
 Package: libktpwidgetsprivate7
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy internal library
+Description: KDE Telepathy common internal widgets library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
@@ -63,7 +63,7 @@ Description: KDE Telepathy internal library
 Package: libktploggerprivate7
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy internal library
+Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
