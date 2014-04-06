@@ -18,7 +18,9 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: libktpcommoninternalsprivate-dev
 Section: libdevel
 Architecture: any
-Depends: libktpcommoninternalsprivate7 (= ${binary:Version}), ${misc:Depends}
+Depends: libktpwidgetsprivate7 (= ${binary:Version}),
+ libktploggerprivate7 (= ${binary:Version}),
+ ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consits of the most reused
  parts across KDE Telepathy.
@@ -35,7 +37,7 @@ Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Recommends: kde-telepathy-kpeople
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libktpmodelsprivate7, libktpwidgetsprivate7, libktploggerprivate7
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
