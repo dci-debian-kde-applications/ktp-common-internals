@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-02 04:50+0000\n"
-"PO-Revision-Date: 2013-09-29 16:31+0200\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2014-02-08 15:58+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -27,38 +27,48 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net,pejakm@gmail.com"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:134
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
 msgstr "Započni ćaskanje preko %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:144
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
 msgstr "Započni audio poziv preko %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:154
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
 msgstr "Započni video poziv preko %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:165
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
 msgstr "Pošalji fajl preko %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:176
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Sarađuj na uređivanju dokumenta preko %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:187
-msgid "Open Log Viewer..."
-msgstr "Otvori prikazivač dnevnika..."
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "IM"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
-msgstr "Brzoglasnički nalozi"
+# rewrite-msgid: /with filename/with name/
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
+msgstr ""
+"Google-razgovor ne dozvoljava slanje fajlova sa nastavkom .exe ili .ini. "
+"Poslat je pod imenom <i>%1</i>."
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr "Fajl preimenovan radi prenosa"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -790,7 +800,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Dodavanje novog kontakta"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Nije izabran nijedan nalog."
 
@@ -827,16 +837,16 @@ msgstr "Ekransko ime:"
 msgid "Search in Contacts..."
 msgstr "Potraži u kontaktima..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Ovo soba je već među vašim omiljenim."
 
 # >> @title:window
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Dodavanje sobe"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Ime"
 
@@ -860,50 +870,55 @@ msgstr "Omiljene"
 msgid "Add Room"
 msgstr "Dodaj sobu"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Uredi sobu"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Ukloni sobu"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Nedavne"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Očisti spisak"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Upit"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Server za upit:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr "Ostavite prazno za podrazumijevani server izabranog naloga."
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Zaustavi"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Potraži sobe"
 
@@ -929,20 +944,28 @@ msgid "Configure notifications for all users"
 msgstr "Podešavanje obavještenja za sve korisnike"
 
 # >> @title:window
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
 msgstr "Započinjanje ćaskanja"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr "Zatraženom nalogu je prekinuta veza, pa ćaskanje ne može da otpočne."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
 msgstr "Niste zadali ime kontakta sa kojim treba započeti ćaskanje."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Ekransko ime kontakta koje ste zadali ili nije dobro ili ne prihvata "
+"tekstualna ćaskanja."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Ne mogu da započnem ćaskanje sa kontaktom."

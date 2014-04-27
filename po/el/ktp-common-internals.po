@@ -5,19 +5,20 @@
 #
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-common-internals\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-02 04:50+0000\n"
-"PO-Revision-Date: 2013-02-10 21:42+0200\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2014-04-21 20:33+0300\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -28,38 +29,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sstavra@gmail.com"
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:134
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
-msgstr ""
+msgstr "Έναρξη συνομιλίας με τη χρήση του %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:144
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr ""
+msgstr "Έναρξη ηχητικής κλήσης με τη χρήση του %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:154
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr ""
+msgstr "Έναρξη βιντεο-κλήσης με τη χρήση του %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:165
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
-msgstr ""
+msgstr "Αποστολή αρχείου με τη χρήση του %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:176
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
-msgstr ""
+msgstr "Συλλογική επεξεργασία εγγράφου με τη χρήση του %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:187
-msgid "Open Log Viewer..."
-msgstr ""
+#: kpeople/uiplugins/imdetailswidget.cpp:48
+msgid "IM"
+msgstr "IM"
 
-#: kpeople/uiplugins/imdetailswidget.cpp:44
-msgid "Instant Messaging Accounts"
+#: KTp/actions.cpp:181
+#, kde-format
+msgid ""
+"Transferring files with .exe or .ini extension is not allowed by Google "
+"Talk. It was sent with filename <i>%1</i>"
 msgstr ""
+"Η αποστολή αρχείων με επέκταση .exe ή .ini δεν επιτρέπεται από το Google "
+"Talk. Στάλθηκε με το όνομα αρχείου <i>%1</i>"
+
+#: KTp/actions.cpp:182
+msgid "Transferred file renamed"
+msgstr "Το αρχείο μεταφέρθηκε μετονομασμένο"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -319,12 +329,9 @@ msgid "You were removed from the channel because you did not respond"
 msgstr "Διαγραφήκατε από το κανάλι επειδή δεν απαντήσατε"
 
 #: KTp/error-dictionary.cpp:103
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "This capability is not available"
 msgctxt "Verbose user visible error string"
 msgid "The service is not available"
-msgstr "Αυτή η δυνατότητα δεν είναι διαθέσιμη"
+msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
 
 #: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -594,12 +601,9 @@ msgid "Removed from channel"
 msgstr "Διαγραφή από κανάλι"
 
 #: KTp/error-dictionary.cpp:210
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Encryption not available"
 msgctxt "Short user visible error string"
 msgid "Service not available"
-msgstr "Η κρυπτογράφηση δεν είναι διαθέσιμη"
+msgstr "Η υπηρεσία δεν είναι διαθέσιμη"
 
 #: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
@@ -786,7 +790,7 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Προσθήκη νέας επαφής"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:79
+#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Δεν επελέγη λογαριασμός."
 
@@ -824,15 +828,15 @@ msgstr "Όνομα στην οθόνη:"
 msgid "Search in Contacts..."
 msgstr "Αναζήτηση στις επαφές..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:208
+#: KTp/Widgets/join-chat-room-dialog.cpp:216
 msgid "This room is already in your favorites."
 msgstr "Αυτή η αίθουσα είναι ήδη στις αγαπημένες σας."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Add room"
 msgstr "Προσθήκη αίθουσας"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:210
+#: KTp/Widgets/join-chat-room-dialog.cpp:218
 msgid "Name"
 msgstr "Όνομα"
 
@@ -856,52 +860,57 @@ msgstr "Αγαπημένα"
 msgid "Add Room"
 msgstr "Προσθήκη αίθουσας"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
+msgid "Edit Room"
+msgstr "Επεξεργασία αίθουσας"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:83
 msgid "Remove Room"
 msgstr "Αφαίρεση αίθουσας"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:98
+#: KTp/Widgets/join-chat-room-dialog.ui:108
 msgid "Recent"
 msgstr "Πρόσφατο"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:112
+#: KTp/Widgets/join-chat-room-dialog.ui:122
 msgid "Remove"
 msgstr "Αφαίρεση"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
+#: KTp/Widgets/join-chat-room-dialog.ui:132
 msgid "Clear list"
 msgstr "Καθαρισμός λίστας"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:145
-#: KTp/Widgets/join-chat-room-dialog.ui:176
+#: KTp/Widgets/join-chat-room-dialog.ui:155
+#: KTp/Widgets/join-chat-room-dialog.ui:186
 msgid "Query"
 msgstr "Ερώτηση"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:151
+#: KTp/Widgets/join-chat-room-dialog.ui:161
 msgid "Server to be queried:"
 msgstr "Εξυπηρετητής που θα ερωτηθεί:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:163
+#: KTp/Widgets/join-chat-room-dialog.ui:173
 msgid "Leave blank for the selected account's default server"
 msgstr ""
 "Να παραμείνει κενό για τον προκαθορισμένο εξυπηρετητή του επιλεγμένου "
 "λογαριασμού"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:186
+#: KTp/Widgets/join-chat-room-dialog.ui:196
 msgid "Stop"
 msgstr "Διακοπή"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:217
+#: KTp/Widgets/join-chat-room-dialog.ui:227
 msgid "Search rooms"
 msgstr "Αναζήτηση αιθουσών"
 
@@ -923,33 +932,33 @@ msgstr "Όλους τους χρήστες"
 msgid "Configure notifications for all users"
 msgstr "Διαμόρφωση ειδοποιήσεων για όλους τους χρήστες"
 
-#: KTp/Widgets/start-chat-dialog.cpp:56
+#: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
-msgstr ""
+msgstr "Έναρξη συνομιλίας"
 
-#: KTp/Widgets/start-chat-dialog.cpp:81
-#, fuzzy
-#| msgid ""
-#| "The requested account has been disconnected and so the contact could not "
-#| "be added."
+#: KTp/Widgets/start-chat-dialog.cpp:85
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
 msgstr ""
-"Ο λογαριασμός που ζητήθηκε έχει αποσυνδεθεί και έτσι η επαφή δεν μπορεί να "
-"προστεθεί."
+"Ο λογαριασμός που ζητήθηκε έχει αποσυνδεθεί και έτσι η συνομιλία δεν μπορεί "
+"να ξεκινήσει."
 
-#: KTp/Widgets/start-chat-dialog.cpp:84
-#, fuzzy
-#| msgid "You did not specify the name of the contact to add."
+#: KTp/Widgets/start-chat-dialog.cpp:88
 msgid "You did not specify the name of the contact to start a chat with."
-msgstr "Δεν ορίσατε το όνομα της επαφής που θα προσθέσετε."
+msgstr "Δεν ορίσατε το όνομα της επαφής για την έναρξη συνομιλίας με αυτή."
 
-#: KTp/Widgets/start-chat-dialog.cpp:107
-#, fuzzy
-#| msgid "Failed to create new contact."
+#: KTp/Widgets/start-chat-dialog.cpp:106
+msgid ""
+"The contact Screen Name you provided is invalid or does not accept text "
+"chats."
+msgstr ""
+"Το όνομα οθόνης για την επαφή που δώσατε δεν είναι έγκυρο ή δε δέχεται "
+"μηνύματα κειμένου."
+
+#: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
-msgstr "Αποτυχία δημιουργίας νέας επαφής."
+msgstr "Αποτυχία εκκίνησης συνομιλίας με την επαφή."
 
 #, fuzzy
 #~| msgid "KDE Telepathy"
