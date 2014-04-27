@@ -8,6 +8,7 @@ ktp-common-internals (0.8.1-1) UNRELEASED; urgency=low
   * Enable kpeople
   * Split libraries from common-internals into additional packages.
   * Add symbols files.
+  * Fix description typo (Closes: #745313, #745314)
 
  -- Diane Trout <diane@ghic.org>  Sun, 27 Apr 2014 09:53:04 -0700
 

@@ -22,7 +22,7 @@ Depends: libktpwidgetsprivate7 (= ${binary:Version}),
  libktploggerprivate7 (= ${binary:Version}),
  ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
- Internal library which consits of the most reused
+ Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
  This package contains development headers for
@@ -94,7 +94,7 @@ Section: debug
 Priority: extra
 Depends: libktpcommoninternalsprivate7 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
- Internal library which consits of the most reused
+ Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
  This package contains debugging symbols for the ktp-common-internals library.
