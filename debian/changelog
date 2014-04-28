@@ -4,6 +4,7 @@ ktp-common-internals (0.8.1-1) UNRELEASED; urgency=low
   * Bump libktpcommoninternalsprivate6 SONAME to 7
   * Update share library symlinks to match package version.
   * Bump libtelepathy-logger-qt4-dev dependency to >= 0.8.0
+  * Set libkpeople-dev build dependency to >= 0.2.2
   * Bump Standards-Version to 3.9.5. No changes needed.
   * Enable kpeople
   * Split libraries from common-internals into additional packages.
