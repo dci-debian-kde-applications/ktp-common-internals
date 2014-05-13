@@ -19,11 +19,16 @@ Copyright: 2011-2013 David Edmundson <kde@davidedmundson.co.uk>
            2011 Przemek Czekaj <xcojack@gmail.com>
            2004 Peter Simonsson <psn@linux.se>
            2006-2008 Eike Hein <hein@kde.org>
+	   2014 Amandeep Singh <aman.dedman@gmail.com>
 License: LGPL-2.1+
 
 Files: KTp/Logger/*
 Copyright: 2013 Daniel Vrátil <dvratil@redhat.com>
 License: GPL-2+
+
+Files: KTp/Logger/scrollback-manager.cpp
+Copyright: 2013 Daniel Vrátil <dvratil@redhat.com>
+License: LGPL-2.1+
 
 Files: kpeople/actionsplugin/kpeople-actions-plugin.*
 Copyright: 2013 David Edmundson <davidedmundson@kde.org>
@@ -44,7 +49,7 @@ Copyright: 2012 Kira J. Fernandez <kirajfdez@gmail.com>
            2011 Frederik Schwarzer <schwarzer@kde.org>
            2011 Manfred Wiese <m.j.wiese@web.de>
            2012 Franklin Weng <franklin@mail.everfocus.com.tw>
-           2011 Stefan Asserhall <stefan.asserhall@comhem.se>
+           2011 Stefan Asserhall <stefan.asserhall@bredband.net>
            2012 Freek de Kruijf <freekdekruijf@kde.nl>
            2012 Marek Laane <bald@smail.ee>
            2011-2012 Vít Pelčák <vit@pelcak.org>
