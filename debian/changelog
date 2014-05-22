@@ -1,8 +1,8 @@
-ktp-common-internals (0.8.1-2) UNRELEASED; urgency=medium
+ktp-common-internals (0.8.1-2) unstable; urgency=medium
 
   * Fix typo in copyright file.
 
- -- Diane Trout <diane@ghic.org>  Mon, 19 May 2014 11:24:24 -0700
+ -- Diane Trout <diane@ghic.org>  Mon, 19 May 2014 11:25:06 -0700
 
 ktp-common-internals (0.8.1-1) unstable; urgency=low
 
