@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sergiu Bivol <sergiu@ase.md>, 2012, 2013.
+# Sergiu Bivol <sergiu@ase.md>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-10-27 07:43+0200\n"
+"PO-Revision-Date: 2014-07-04 14:37+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -53,7 +53,7 @@ msgstr "Redactează un document în colaborare folosind %1..."
 
 #: kpeople/uiplugins/imdetailswidget.cpp:48
 msgid "IM"
-msgstr ""
+msgstr "MI"
 
 #: KTp/actions.cpp:181
 #, kde-format
@@ -61,10 +61,12 @@ msgid ""
 "Transferring files with .exe or .ini extension is not allowed by Google "
 "Talk. It was sent with filename <i>%1</i>"
 msgstr ""
+"Transferarea fișierelor cu extensie .exe sau .ini nu este permisă de Google "
+"Talk. A fost expediat cu denumirea <i>%1</i>"
 
 #: KTp/actions.cpp:182
 msgid "Transferred file renamed"
-msgstr ""
+msgstr "Fișierul transferat a fost redenumit"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -938,6 +940,8 @@ msgid ""
 "The contact Screen Name you provided is invalid or does not accept text "
 "chats."
 msgstr ""
+"Numele de ecran al contactului pe care l-ați furnizat nu este valid sau nu "
+"acceptă discuții textuale."
 
 #: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."

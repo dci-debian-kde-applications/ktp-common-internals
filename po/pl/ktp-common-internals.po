@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-04-16 17:30+0200\n"
+"PO-Revision-Date: 2014-08-15 07:37+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -908,11 +908,11 @@ msgstr "Znajdź pokoje"
 #: KTp/Widgets/notification-config-dialog.cpp:95
 #, kde-format
 msgid "Configure notifications for %1"
-msgstr "Konfiguruj powiadomienia dla %1"
+msgstr "Ustawiania powiadomień dla %1"
 
 #: KTp/Widgets/notification-config-dialog.cpp:51
 msgid "Configure notifications for"
-msgstr "Konfiguruj powiadomienia dla"
+msgstr "Ustawienia powiadomień dla"
 
 #: KTp/Widgets/notification-config-dialog.cpp:56
 msgid "All users"
@@ -920,7 +920,7 @@ msgstr "Wszyscy użytkownicy"
 
 #: KTp/Widgets/notification-config-dialog.cpp:98
 msgid "Configure notifications for all users"
-msgstr "Konfiguruj powiadomienia dla wszystkich użytkowników"
+msgstr "Ustawienia powiadomienia dla wszystkich użytkowników"
 
 #: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
