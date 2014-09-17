@@ -22,10 +22,13 @@
 #define GLOBALPRESENCE_H
 
 #include <QObject>
+
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/AccountSet>
+#include <TelepathyQt/Constants>
 
 #include <KTp/ktp-export.h>
+#include <KTp/types.h>
 #include "presence.h"
 
 namespace KTp
@@ -38,19 +41,51 @@ namespace KTp
 class KTP_EXPORT GlobalPresence : public QObject
 {
     Q_OBJECT
+    Q_ENUMS(ConnectionPresenceType)
+    Q_PROPERTY(Tp::AccountManagerPtr accountManager READ accountManager WRITE addAccountManager)
+
+    Q_PROPERTY(QString presenceMessage READ currentPresenceMessage NOTIFY currentPresenceChanged)
+    Q_PROPERTY(ConnectionPresenceType presenceType READ currentPresenceType NOTIFY currentPresenceChanged)
+    Q_PROPERTY(QIcon currentPresenceIcon READ currentPresenceIcon NOTIFY currentPresenceChanged)
+    Q_PROPERTY(QString currentPresenceIconName READ currentPresenceIconName NOTIFY currentPresenceChanged)
+    Q_PROPERTY(KTp::Presence currentPresence READ currentPresence NOTIFY currentPresenceChanged)
+
+    Q_PROPERTY(KTp::Presence requestedPresence READ requestedPresence WRITE setPresence NOTIFY requestedPresenceChanged)
+
+
 public:
     explicit GlobalPresence(QObject *parent = 0);
+
+    enum ConnectionPresenceType
+    {
+        Offline = Tp::ConnectionPresenceTypeOffline,
+        Available = Tp::ConnectionPresenceTypeAvailable,
+        Away = Tp::ConnectionPresenceTypeAway,
+        ExtendedAway = Tp::ConnectionPresenceTypeExtendedAway,
+        Hidden = Tp::ConnectionPresenceTypeHidden,
+        Busy = Tp::ConnectionPresenceTypeBusy,
+        Unknown = Tp::ConnectionPresenceTypeUnknown,
+        Error = Tp::ConnectionPresenceTypeError
+    };
+    Q_ENUMS(ConnectionPresenceType)
 
     /** Set the account manager to use
       * @param accountManager should be ready.
       */
     void setAccountManager(const Tp::AccountManagerPtr &accountManager);
 
+    void addAccountManager(const Tp::AccountManagerPtr &accountManager);
+    Tp::AccountManagerPtr accountManager() const;
+
     /** Returns connecting if any account is connecting, else connected if at least one account is connected, disconnected otherwise*/
     Tp::ConnectionStatus connectionStatus() const;
 
     /** The most online presence of any account*/
     Presence currentPresence() const;
+    QString currentPresenceMessage() const;
+    QIcon currentPresenceIcon() const;
+    QString currentPresenceIconName() const;
+    ConnectionPresenceType currentPresenceType() const;
 
     /** The most online presence requested for any account if any of the accounts are changing state.
       otherwise returns current presence*/
@@ -64,15 +99,18 @@ public:
 
     Tp::AccountSetPtr onlineAccounts() const;
 
+
 Q_SIGNALS:
     void requestedPresenceChanged(const KTp::Presence &customPresence);
     void currentPresenceChanged(const KTp::Presence &presence);
     void changingPresence(bool isChanging);
     void connectionStatusChanged(Tp::ConnectionStatus);
+    void accountManagerReady();
 
 public Q_SLOTS:
     /** Set all enabled accounts to the specified presence*/
-    void setPresence(const Tp::Presence &presence);
+    void setPresence(const KTp::Presence &presence);
+    void setPresence(ConnectionPresenceType p, QString message);
 
     /**Saves the current presence to memory*/
     void saveCurrentPresence();
@@ -86,8 +124,11 @@ private Q_SLOTS:
     void onConnectionStatusChanged();
 
     void onAccountAdded(const Tp::AccountPtr &account);
+    void onAccountManagerReady(Tp::PendingOperation* op);
 
 private:
+    Tp::AccountManagerPtr m_accountManager;
+
     Tp::AccountSetPtr m_enabledAccounts;
     Tp::AccountSetPtr m_onlineAccounts;
 

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
-# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-10-06 11:33+0200\n"
+"PO-Revision-Date: 2014-06-15 16:38+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -53,7 +53,7 @@ msgstr "Egy dokumentum együttműködő szerkesztése %1 használatával…"
 
 #: kpeople/uiplugins/imdetailswidget.cpp:48
 msgid "IM"
-msgstr ""
+msgstr "IM"
 
 #: KTp/actions.cpp:181
 #, kde-format
@@ -61,10 +61,12 @@ msgid ""
 "Transferring files with .exe or .ini extension is not allowed by Google "
 "Talk. It was sent with filename <i>%1</i>"
 msgstr ""
+"Az .exe vagy .ini kiterjesztéssel rendelkező fájlok átvitelét nem "
+"engedélyezi a Google Talk. A következő fájlnévvel lett elküldve: <i>%1</i>"
 
 #: KTp/actions.cpp:182
 msgid "Transferred file renamed"
-msgstr ""
+msgstr "Az átküldött fájl átnevezve"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
@@ -840,10 +842,8 @@ msgstr "Szoba hozzáadása"
 
 #. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
-#, fuzzy
-#| msgid "Add Room"
 msgid "Edit Room"
-msgstr "Szoba hozzáadása"
+msgstr "Szoba szerkesztése"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:83
@@ -932,6 +932,8 @@ msgid ""
 "The contact Screen Name you provided is invalid or does not accept text "
 "chats."
 msgstr ""
+"A partner megadott megjelenített neve érvénytelen vagy nem fogad szöveges "
+"üzeneteket."
 
 #: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."

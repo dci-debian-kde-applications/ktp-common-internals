@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <bald@smail.ee>, 2012, 2013.
+# Marek Laane <bald@smail.ee>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-01-14 20:16+0200\n"
+"PO-Revision-Date: 2014-06-13 14:44+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -28,31 +28,31 @@ msgstr "bald@smail.ee"
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:136
 #, kde-format
 msgid "Start Chat Using %1..."
-msgstr ""
+msgstr "Alusta vestlust %1 abil..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:146
 #, kde-format
 msgid "Start Audio Call Using %1..."
-msgstr ""
+msgstr "Alusta häälkõnet %1 abil..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:156
 #, kde-format
 msgid "Start Video Call Using %1..."
-msgstr ""
+msgstr "Alusta videokõnet %1 abil..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
 msgid "Send a File Using %1..."
-msgstr ""
+msgstr "Saada fail %1 abil..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
-msgstr ""
+msgstr "Muuda ühistöös dokumenti %1 abil..."
 
 #: kpeople/uiplugins/imdetailswidget.cpp:48
 msgid "IM"
-msgstr ""
+msgstr "IM"
 
 #: KTp/actions.cpp:181
 #, kde-format
@@ -60,69 +60,68 @@ msgid ""
 "Transferring files with .exe or .ini extension is not allowed by Google "
 "Talk. It was sent with filename <i>%1</i>"
 msgstr ""
+"Google Talk ei luba failide edastamist, mille laiend on .exe või .ini. See "
+"saadetakse failinimega <i>%1</i>"
 
 #: KTp/actions.cpp:182
 msgid "Transferred file renamed"
-msgstr ""
+msgstr "Edastatud fail nimetati ümber"
 
 #: KTp/contact-info-dialog.cpp:66
 msgid "Full name:"
-msgstr ""
+msgstr "Täielik nimi:"
 
 #: KTp/contact-info-dialog.cpp:67
 msgid "Nickname:"
-msgstr ""
+msgstr "Hüüdnimi:"
 
 #: KTp/contact-info-dialog.cpp:68
 msgid "Email:"
-msgstr ""
+msgstr "E-post:"
 
 #: KTp/contact-info-dialog.cpp:69
 msgid "Phone:"
-msgstr ""
+msgstr "Telefon:"
 
 #: KTp/contact-info-dialog.cpp:70
 msgid "Homepage:"
-msgstr ""
+msgstr "Kodulehekülg:"
 
 #: KTp/contact-info-dialog.cpp:71
 msgid "Birthday:"
-msgstr ""
+msgstr "Sünnipäev:"
 
 #: KTp/contact-info-dialog.cpp:72
 msgid "Organization:"
-msgstr ""
+msgstr "Organisatsioon:"
 
 #: KTp/contact-info-dialog.cpp:144
 msgid "Change Avatar"
-msgstr ""
+msgstr "Muuda avatari"
 
 #: KTp/contact-info-dialog.cpp:149
-#, fuzzy
 msgid "Clear Avatar"
-msgstr "Puhasta nimekiri"
+msgstr "Puhasta avatar"
 
 #: KTp/contact-info-dialog.cpp:214
-#, fuzzy
 msgid "Failed to load the new avatar image"
-msgstr "Uue kontakti loomine nurjus."
+msgstr "Uue avataripildi laadimine nurjus"
 
 #: KTp/contact-info-dialog.cpp:332
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: KTp/contact-info-dialog.cpp:367
 msgid "Contact can see when you are online:"
-msgstr ""
+msgstr "Kontakt võib näha, kas oled võrgus:"
 
 #: KTp/contact-info-dialog.cpp:368
 msgid "You can see when the contact is online:"
-msgstr ""
+msgstr "Sina võid näha, kas kontakt on võrgus:"
 
 #: KTp/contact-info-dialog.cpp:369
-#, fuzzy
 msgid "Contact is blocked:"
-msgstr "Kontakt ei ole võrgus"
+msgstr "Kontakt on blokitud:"
 
 #: KTp/error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -313,12 +312,9 @@ msgid "You were removed from the channel because you did not respond"
 msgstr "Sa oled kanalilt eemaldatud, sest sa ei vastanud"
 
 #: KTp/error-dictionary.cpp:103
-#, fuzzy
-#| msgctxt "Verbose user visible error string"
-#| msgid "This capability is not available"
 msgctxt "Verbose user visible error string"
 msgid "The service is not available"
-msgstr "Seda võimalust pole saadaval"
+msgstr "Teenus ei ole saadaval"
 
 #: KTp/error-dictionary.cpp:105
 msgctxt "Verbose user visible error string"
@@ -580,12 +576,9 @@ msgid "Removed from channel"
 msgstr "Kanalilt eemaldamine"
 
 #: KTp/error-dictionary.cpp:210
-#, fuzzy
-#| msgctxt "Short user visible error string"
-#| msgid "Encryption not available"
 msgctxt "Short user visible error string"
 msgid "Service not available"
-msgstr "Krüptimine pole saadaval"
+msgstr "Teenus ei ole saadaval"
 
 #: KTp/error-dictionary.cpp:212
 msgctxt "Short user visible error string"
@@ -702,7 +695,7 @@ msgstr "Keelatud"
 
 #: KTp/Models/groups-tree-proxy-model.cpp:61
 msgid "Unsorted"
-msgstr ""
+msgstr "Sortimata"
 
 #: KTp/Models/rooms-model.cpp:72
 msgid "Password required"
@@ -842,10 +835,8 @@ msgstr "Lisa jututuba"
 
 #. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:73
-#, fuzzy
-#| msgid "Add Room"
 msgid "Edit Room"
-msgstr "Lisa jututuba"
+msgstr "Muuda jututuba"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
 #: KTp/Widgets/join-chat-room-dialog.ui:83
@@ -914,35 +905,28 @@ msgstr "Märguannete seadistamine kõigile kasutajatele"
 
 #: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
-msgstr ""
+msgstr "Vestluse alustamine"
 
 #: KTp/Widgets/start-chat-dialog.cpp:85
-#, fuzzy
-#| msgid ""
-#| "The requested account has been disconnected and so the contact could not "
-#| "be added."
 msgid ""
 "The requested account has been disconnected and so a chat could not be "
 "initiated."
-msgstr "Soovitud konto ei ole ühendatud, mistõttu kontakti ei saa lisada."
+msgstr "Soovitud konto ei ole ühendatud, mistõttu vestlust ei saa alustada."
 
 #: KTp/Widgets/start-chat-dialog.cpp:88
-#, fuzzy
-#| msgid "You did not specify the name of the contact to add."
 msgid "You did not specify the name of the contact to start a chat with."
-msgstr "Sa ei ole määranud lisatava kontakti nime."
+msgstr "Sa ei ole määranud kontakti nime, kellega vestlust alustada."
 
 #: KTp/Widgets/start-chat-dialog.cpp:106
 msgid ""
 "The contact Screen Name you provided is invalid or does not accept text "
 "chats."
 msgstr ""
+"Sinu antud kontakti ekraaninimi on vigane või ei võta vastu tekstivestlusi."
 
 #: KTp/Widgets/start-chat-dialog.cpp:132
-#, fuzzy
-#| msgid "Failed to create new contact."
 msgid "Failed to start a chat with the contact."
-msgstr "Uue kontakti loomine nurjus."
+msgstr "Vestluse alustamine kontaktiga nurjus."
 
 #, fuzzy
 #~| msgid "KDE Telepathy"

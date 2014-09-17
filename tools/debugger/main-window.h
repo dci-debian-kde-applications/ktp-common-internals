@@ -19,6 +19,9 @@
 #define MAIN_WINDOW_H
 
 #include "ui_main-window.h"
+
+#include <TelepathyQt/Types>
+
 #include <KXmlGuiWindow>
 
 class MainWindow : public KXmlGuiWindow
@@ -28,7 +31,16 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     virtual ~MainWindow();
 
+public Q_SLOTS:
+    void saveLogFile();
+
+private Q_SLOTS:
+    void onAccountManagerBecameReady(Tp::PendingOperation *pendingReady);
+
 private:
+    void initConnectionManagerTabs(const QSet<QString> &connectionManagerSet);
+
+    Tp::AccountManagerPtr m_AccountManager;
     Ui::MainWindow m_ui;
 };
 
