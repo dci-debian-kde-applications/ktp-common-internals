@@ -2,3 +2,7 @@
 
 %:
 	dh $@ --parallel --with kde --dbg-package=libktpcommoninternalsprivate-dbg --list-missing
+
+override_dh_auto_test:
+
+.PHONY: override_dh_auto_test
