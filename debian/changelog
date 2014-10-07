@@ -5,6 +5,7 @@ ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
     - libktploggerprivate7 -> libktploggerprivate8
     - libktpmodelsprivate7 -> libktpmodelsprivate8
     - libktpwidgetsprivate7 -> libktpwidgetsprivate8
+  * Bump libtelepathy-qt4-dev build-depends to 0.9.5
 
  -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
 
