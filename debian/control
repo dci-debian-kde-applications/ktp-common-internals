@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 9), cmake,
  libtelepathy-qt4-dev (>= 0.9.5),
  libtelepathy-logger-qt4-dev (>= 0.8.0),
  libtelepathy-logger-dev,
- pkg-kde-tools, kdelibs5-dev,
- shared-desktop-ontologies,
+ pkg-kde-tools,
+ kdelibs5-dev,
  libkpeople-dev (>= 0.2.2),
  kdepimlibs5-dev
 Standards-Version: 3.9.5
