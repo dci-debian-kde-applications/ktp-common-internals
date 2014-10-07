@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9), cmake,
  libtelepathy-logger-dev,
  pkg-kde-tools,
  kdelibs5-dev,
- libkpeople-dev (>= 0.2.2),
+ libkpeople-dev (>= 0.3.0),
  kdepimlibs5-dev
 Standards-Version: 3.9.5
 Section: libs
@@ -39,7 +39,7 @@ Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Recommends: kde-telepathy-kpeople
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople3 (>= 0.2.2), libtelepathy-logger-qt4-1 (>= 0.8.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople4 (>= 0.3.0), libtelepathy-logger-qt4-1 (>= 0.8.0)
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
