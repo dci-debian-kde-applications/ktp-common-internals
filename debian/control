@@ -23,7 +23,7 @@ Section: libdevel
 Architecture: any
 Depends: libktpcommoninternalsprivate8 (= ${binary:Version}),
  libktpwidgetsprivate8 (= ${binary:Version}),
- libktploggerprivate8 (= ${binary:Version})
+ libktploggerprivate8 (= ${binary:Version}),
  ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consists of the most reused
