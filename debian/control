@@ -37,9 +37,10 @@ Description: KDE Telepathy internal library - Development headers
 Package: libktpcommoninternalsprivate8
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
-Recommends: kde-telepathy-kpeople
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople4 (>= 0.3.0), libtelepathy-logger-qt4-1 (>= 0.8.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople4 (>= 0.3.0),
+ libtelepathy-logger-qt4-1 (>= 0.8.0),
+ kde-telepathy-kpeople
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
