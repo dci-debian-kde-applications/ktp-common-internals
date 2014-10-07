@@ -96,7 +96,7 @@ Package: libktpcommoninternalsprivate-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: libktpcommoninternalsprivate7 (= ${binary:Version}), ${misc:Depends}
+Depends: libktpcommoninternalsprivate8 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
  Internal library which consists of the most reused
  parts across KDE Telepathy.
