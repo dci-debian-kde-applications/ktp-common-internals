@@ -8,6 +8,7 @@ ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
   * Bump libtelepathy-qt4-dev build-depends to 0.9.5
   * Remove shared-desktop-ontolgies build-dep
   * Bump libkpeople build-dep to 0.3.0
+  * Update kde-telepathy-kpeople description.
 
  -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
 
