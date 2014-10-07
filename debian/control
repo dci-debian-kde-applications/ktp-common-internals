@@ -19,8 +19,9 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: libktpcommoninternalsprivate-dev
 Section: libdevel
 Architecture: any
-Depends: libktpwidgetsprivate7 (= ${binary:Version}),
- libktploggerprivate7 (= ${binary:Version}),
+Depends: libktpcommoninternalsprivate8 (= ${binary:Version}),
+ libktpwidgetsprivate8 (= ${binary:Version}),
+ libktploggerprivate8 (= ${binary:Version})
  ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consists of the most reused
@@ -33,7 +34,7 @@ Description: KDE Telepathy internal library - Development headers
  outside of the KDE Telepathy project umbrella. This package
  is only provided for compiling the rest of the components.
 
-Package: libktpcommoninternalsprivate7
+Package: libktpcommoninternalsprivate8
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Recommends: kde-telepathy-kpeople
@@ -45,7 +46,7 @@ Description: KDE Telepathy common internal library
  .
  This contians the generic common components.
 
-Package: libktpmodelsprivate7
+Package: libktpmodelsprivate8
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy data models internal library
@@ -54,7 +55,7 @@ Description: KDE Telepathy data models internal library
  .
  This includes Qt models.
 
-Package: libktpwidgetsprivate7
+Package: libktpwidgetsprivate8
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy common internal widgets library
@@ -63,7 +64,9 @@ Description: KDE Telepathy common internal widgets library
  .
  This also includes common widgets like the contact grid.
 
-Package: libktploggerprivate7
+Package: libktploggerprivate8
+Breaks: libktploggerprivate7 (<< 0.8.80~)
+Replaces: libktploggerprivate7 (<< 0.8.80~)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy internal logger library
