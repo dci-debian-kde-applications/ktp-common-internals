@@ -9,7 +9,9 @@ Build-Depends: debhelper (>= 9), cmake,
  pkg-kde-tools,
  kdelibs5-dev,
  libkpeople-dev (>= 0.3.0),
- kdepimlibs5-dev
+ kdepimlibs5-dev,
+ libotr5-dev,
+ libgcrypt11-dev,
 Standards-Version: 3.9.5
 Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
@@ -75,6 +77,15 @@ Description: KDE Telepathy internal logger library
  parts across KDE Telepathy.
  .
  This includes the shared KDE-Telepathy logger service.
+
+Package: libktpotrprivate8
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy internal OTR library
+ Internal library which consists of the most reused
+ parts across KDE Telepathy.
+ .
+ This includes components to support OTR
 
 Package: kde-telepathy-declarative
 Architecture: any
