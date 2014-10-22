@@ -43,7 +43,7 @@ Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
  .
- This contians the generic common components.
+ This contains the generic common components.
 
 Package: libktpmodelsprivate7
 Architecture: any
