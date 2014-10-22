@@ -14,6 +14,7 @@ ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
   * Add kpeople_chat_plugin.so and associated desktop file to 
     kde-telepathy-kpeople package.
   * Update copyright file.
+  * Fix typo thanks Filipus Klutiero (Closes: #759756)
 
  -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
 
