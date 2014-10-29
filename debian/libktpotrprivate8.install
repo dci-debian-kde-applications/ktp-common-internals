@@ -1,5 +1,5 @@
 usr/lib/libktpotrprivate.so.8
-usr/lib/libktpotrprivate.so.0.8.80
+usr/lib/libktpotrprivate.so.0.*
 usr/lib/kde4/libexec/ktp-proxy
 usr/share/kde4/config.kcfg/ktp-proxy-config.kcfg
 usr/share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.Proxy.service

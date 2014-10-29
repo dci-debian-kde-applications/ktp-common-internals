@@ -1,3 +1,10 @@
+ktp-common-internals (0.9.0-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release
+  * Merge with Debian, no changes
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
+
 ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
 
   * New upstream release.
@@ -52,6 +59,66 @@ ktp-common-internals (0.7.0-1) unstable; urgency=low
     KPeople is currently disabled as recommended by upstream.
 
  -- Diane Trout <diane@ghic.org>  Tue, 05 Nov 2013 09:54:57 -0800
+
+ktp-common-internals (0.8.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release (LP: #1313611)
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Apr 2014 15:35:35 +0200
+
+ktp-common-internals (0.8.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 01 Apr 2014 12:59:21 +0200
+
+ktp-common-internals (0.7.80-0ubuntu2) trusty; urgency=medium
+
+  * Bump KPeople requirement
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 18 Feb 2014 17:22:20 +0100
+
+ktp-common-internals (0.7.80-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 18 Feb 2014 00:12:31 +0100
+
+ktp-common-internals (0.7.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 29 Jan 2014 19:44:32 +0100
+
+ktp-common-internals (0.7.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+  * Release packaging from debian experimental git
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Oct 2013 18:03:20 +0100
+
+ktp-common-internals (0.6.80-1) UNRELEASED; urgency=low
+
+  * Imported upstream 0.6.80
+  * Ship new libraries libktploggerprivate.
+  * Ship plugins imdetailswidgetplugin, im_persons_data_source_plugin,
+    ktploggerplugin, ktp_kpeople_plugin, nepomuktelepathyservice
+  * Bump libktpcommoninternalsprivate SONAME to 6
+  * Add desktop and service files for new plugins
+
+ -- Diane Trout <diane@ghic.org>  Tue, 24 Sep 2013 21:26:49 -0700
+
+ktp-common-internals (0.6.3-1fakesync1ubuntu1) saucy; urgency=low
+
+  * kde-telepathy-declarative replaces/breaks libktpcommoninternalsprivate5
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 21 Aug 2013 15:56:17 +0100
+
+ktp-common-internals (0.6.3-1fakesync1) saucy-proposed; urgency=low
+
+  * Fake sync due to mismatching orig tarball (LP: #1212826).
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 21 Aug 2013 12:49:46 +0200
 
 ktp-common-internals (0.6.3-1) unstable; urgency=low
 
