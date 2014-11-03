@@ -1,3 +1,15 @@
+ktp-common-internals (0.9.0-1) UNRELEASED; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * Merge with Debian, no changes
+  * Make -dev package depend on libktpotrprivate8
+
+  [ Diane Trout ]
+  Pull changes from kubuntu.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
+
 ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
 
   * New upstream release.
