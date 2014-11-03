@@ -1,9 +1,9 @@
-ktp-common-internals (0.8.1-3) UNRELEASED; urgency=medium
+ktp-common-internals (0.8.1-3) unstable; urgency=medium
 
   * Update kde-telepathy-kpeople description.
   * Fix typo thanks Filipus Klutiero (Closes: #759756)
 
- -- Diane Trout <diane@ghic.org>  Tue, 21 Oct 2014 21:04:01 -0700
+ -- Diane Trout <diane@ghic.org>  Sun, 02 Nov 2014 11:54:54 -0800
 
 ktp-common-internals (0.8.1-2) unstable; urgency=medium
 
