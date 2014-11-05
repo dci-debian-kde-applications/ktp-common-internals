@@ -119,6 +119,8 @@ Description: KDE Telepathy internal library - debug symbols
 Package: kde-telepathy-kpeople
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: kde-telepathy-data (<< 0.9.0)
+Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
  This allows grouping multiple IM accounts into meta-contacts.
  .
