@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-04-23 11:27+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-08-11 17:20+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -45,13 +45,27 @@ msgstr "Zahájit video hovor pomocí %1..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
 #, kde-format
-msgid "Send a File Using %1..."
+msgid "Send Files Using %1..."
 msgstr "Poslat soubor pomocí %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:177
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Společně upravit dokument pomocí %1..."
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:219
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "Vyberte soubory pro poslání %1"
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:232
+#, kde-format
+msgid "Choose a file to edit with %1"
+msgstr "Vyberte soubor pro upravení pomocí %1"
+
+#: kpeople/uiplugins/chatplugin/kpeople_chat_plugin.cpp:158
+msgid "Chat"
+msgstr "Rozhovor"
 
 #: kpeople/uiplugins/imdetailswidget.cpp:48
 msgid "IM"
@@ -70,61 +84,61 @@ msgstr ""
 msgid "Transferred file renamed"
 msgstr "Přejmenován přenášený soubor"
 
-#: KTp/contact-info-dialog.cpp:66
+#: KTp/contact-info-dialog.cpp:67
 msgid "Full name:"
 msgstr "Celé jméno:"
 
-#: KTp/contact-info-dialog.cpp:67
+#: KTp/contact-info-dialog.cpp:68
 msgid "Nickname:"
 msgstr "Přezdívka:"
 
-#: KTp/contact-info-dialog.cpp:68
+#: KTp/contact-info-dialog.cpp:69
 msgid "Email:"
 msgstr "E-mail:"
 
-#: KTp/contact-info-dialog.cpp:69
+#: KTp/contact-info-dialog.cpp:70
 msgid "Phone:"
 msgstr "Telefon:"
 
-#: KTp/contact-info-dialog.cpp:70
+#: KTp/contact-info-dialog.cpp:71
 msgid "Homepage:"
 msgstr "Domácí stránka:"
 
-#: KTp/contact-info-dialog.cpp:71
+#: KTp/contact-info-dialog.cpp:72
 msgid "Birthday:"
 msgstr "Narozeniny:"
 
-#: KTp/contact-info-dialog.cpp:72
+#: KTp/contact-info-dialog.cpp:73
 msgid "Organization:"
 msgstr "Organizace:"
 
-#: KTp/contact-info-dialog.cpp:144
+#: KTp/contact-info-dialog.cpp:147
 msgid "Change Avatar"
 msgstr "Změnit avatara"
 
-#: KTp/contact-info-dialog.cpp:149
+#: KTp/contact-info-dialog.cpp:152
 msgid "Clear Avatar"
 msgstr "Vymazat avatara"
 
-#: KTp/contact-info-dialog.cpp:214
+#: KTp/contact-info-dialog.cpp:222
 msgid "Failed to load the new avatar image"
 msgstr "Selhalo načtení nového obrázku avatara."
 
-#: KTp/contact-info-dialog.cpp:332
-msgid "Save"
-msgstr "Uložit"
-
-#: KTp/contact-info-dialog.cpp:367
+#: KTp/contact-info-dialog.cpp:328
 msgid "Contact can see when you are online:"
 msgstr "Kontakty vás mohou vidět když jste připojeni:"
 
-#: KTp/contact-info-dialog.cpp:368
+#: KTp/contact-info-dialog.cpp:329
 msgid "You can see when the contact is online:"
 msgstr "Můžete vidět, kdy je kontakt připojen:"
 
-#: KTp/contact-info-dialog.cpp:369
+#: KTp/contact-info-dialog.cpp:330
 msgid "Contact is blocked:"
 msgstr "Kontakt je blokován:"
+
+#: KTp/contact-info-dialog.cpp:349
+msgid "Save"
+msgstr "Uložit"
 
 #: KTp/error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -708,27 +722,45 @@ msgstr "Zakázaný"
 msgid "Unsorted"
 msgstr "Neseřazeno"
 
-#: KTp/Models/rooms-model.cpp:72
+#: KTp/Models/rooms-model.cpp:73
 msgid "Password required"
 msgstr "Je vyžadováno heslo"
 
-#: KTp/Models/rooms-model.cpp:74
+#: KTp/Models/rooms-model.cpp:75
 msgid "No password required"
 msgstr "Není vyžadováno heslo"
 
-#: KTp/Models/rooms-model.cpp:94
+#: KTp/Models/rooms-model.cpp:93
 msgid "Member count"
 msgstr "Počet členů"
 
-#: KTp/Models/rooms-model.cpp:114
+#: KTp/Models/rooms-model.cpp:113
 msgctxt "Chatrooms name"
 msgid "Name"
 msgstr "Název"
 
-#: KTp/Models/rooms-model.cpp:116
+#: KTp/Models/rooms-model.cpp:115
 msgctxt "Chatrooms description"
 msgid "Description"
 msgstr "Popis"
+
+#: KTp/Models/rooms-model.cpp:199
+msgid "Room bookmarked"
+msgstr "Místnost byla zazáložkována"
+
+#: KTp/Models/rooms-model.cpp:201
+msgid "Room not bookmarked"
+msgstr "Místnost nebyla zazáložkována"
+
+#: KTp/OTR/utils.cpp:78
+#, kde-format
+msgid "OTR error: %1"
+msgstr "Chyba OTR: %1"
+
+#: KTp/OTR/utils.cpp:84
+#, kde-format
+msgid "Received unencrypted message: [%1]"
+msgstr "Obdržena zašifrovaná zpráva: [%1]"
 
 #: KTp/presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -776,125 +808,140 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Přidat nový kontakt"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
+#: KTp/Widgets/add-contact-dialog.cpp:144 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Není vybrán žádný účet."
 
-#: KTp/Widgets/add-contact-dialog.cpp:143
+#: KTp/Widgets/add-contact-dialog.cpp:146
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
 msgstr "Požadovaný účet byl odpojen a proto nemohl být kontakt přidán."
 
-#: KTp/Widgets/add-contact-dialog.cpp:146
+#: KTp/Widgets/add-contact-dialog.cpp:149
 msgid "You did not specify the name of the contact to add."
 msgstr "Nezadali jste jméno kontaktu k přidání."
 
-#: KTp/Widgets/add-contact-dialog.cpp:172
+#: KTp/Widgets/add-contact-dialog.cpp:175
 msgid "Failed to create new contact."
 msgstr "Selhalo vytvoření nového kontaktu."
 
-#: KTp/Widgets/add-contact-dialog.cpp:189
+#: KTp/Widgets/add-contact-dialog.cpp:192
 msgid "Failed to request presence subscription from the requested contact."
 msgstr "Selhalo vyžádání prav na zjištění stavu kontaktu."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: KTp/Widgets/add-contact-dialog.ui:17 KTp/Widgets/start-chat-dialog.ui:17
+#: KTp/Widgets/add-contact-dialog.ui:20 KTp/Widgets/start-chat-dialog.ui:17
 msgid "Account:"
 msgstr "Účet:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: KTp/Widgets/add-contact-dialog.ui:24 KTp/Widgets/start-chat-dialog.ui:24
+#: KTp/Widgets/add-contact-dialog.ui:37 KTp/Widgets/start-chat-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Jméno kontaktu:"
+
+#. i18n: ectx: property (text), widget (QLabel, messageLineLabel)
+#: KTp/Widgets/add-contact-dialog.ui:47
+msgid "Message:"
+msgstr "Zpráva:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, messageLineEdit)
+#: KTp/Widgets/add-contact-dialog.ui:54
+msgid "Optional message to send"
+msgstr "Volitelná zpráva k odeslání"
 
 #: KTp/Widgets/contact-grid-dialog.cpp:114
 msgid "Search in Contacts..."
 msgstr "Hledat v kontaktech..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:216
-msgid "This room is already in your favorites."
-msgstr "Místnost je již ve vašich oblíbených."
+#: KTp/Widgets/join-chat-room-dialog.cpp:63
+msgctxt "Dialog title"
+msgid "Join Chat Room"
+msgstr "Připojit se do místnosti"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
-msgid "Add room"
-msgstr "Přidat místnost"
+#: KTp/Widgets/join-chat-room-dialog.cpp:78
+msgctxt "button"
+msgid "Join/Create"
+msgstr "Připojit/Vytvořit"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
-msgid "Name"
-msgstr "Název"
+#: KTp/Widgets/join-chat-room-dialog.cpp:359
+msgctxt "Button text"
+msgid "Query"
+msgstr "Prohledat"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:360
+msgctxt "Tooltip text"
+msgid "Start query"
+msgstr "Spustit prohledávání"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:372
+msgctxt "Button text"
+msgid "Stop"
+msgstr "Zastavit"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:373
+msgctxt "Tooltip text"
+msgid "Stop query"
+msgstr "Zastavit prohledávání"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:421
+msgid "Could not join chatroom"
+msgstr "Do místnosti se nelze připojit"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: KTp/Widgets/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
 msgstr "Připojit do místnosti"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: KTp/Widgets/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "Vstoupit do místnosti:"
+#. i18n: ectx: property (title), widget (QGroupBox, accountGroupBox)
+#: KTp/Widgets/join-chat-room-dialog.ui:35
+msgid "Account"
+msgstr "Účet"
 
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "Oblíbené"
+#. i18n: ectx: property (title), widget (QGroupBox, chatRoomGroupBox)
+#: KTp/Widgets/join-chat-room-dialog.ui:60
+msgid "Chat Room"
+msgstr "Místnost"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "Přidat místnost"
-
-#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:73
-msgid "Edit Room"
-msgstr "Upravit místnost"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:83
-msgid "Remove Room"
-msgstr "Odstranit místnost"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:108
-msgid "Recent"
-msgstr "Nedávný"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
-msgid "Remove"
-msgstr "Odstranit"
+#. i18n: ectx: attribute (title), widget (QWidget, previousTab)
+#: KTp/Widgets/join-chat-room-dialog.ui:70
+msgid "Previous"
+msgstr "Předchozí"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:132
-msgid "Clear list"
-msgstr "Vymazat seznam"
+#: KTp/Widgets/join-chat-room-dialog.ui:98
+msgid "Clear Recent Rooms"
+msgstr "Vyprázdnit nedávné místnosti"
 
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:155
-#: KTp/Widgets/join-chat-room-dialog.ui:186
-msgid "Query"
-msgstr "Prohledat"
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, lineEdit)
+#: KTp/Widgets/join-chat-room-dialog.ui:109
+msgid "Enter chat room name or address"
+msgstr "Vstoupit do názvu nebo adresy místnosti"
+
+#. i18n: ectx: attribute (title), widget (QWidget, searchTab)
+#: KTp/Widgets/join-chat-room-dialog.ui:120
+msgid "Search"
+msgstr "Hledat"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:161
+#: KTp/Widgets/join-chat-room-dialog.ui:126
 msgid "Server to be queried:"
 msgstr "Server, jenž má být prohledán:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:173
+#: KTp/Widgets/join-chat-room-dialog.ui:138
 msgid "Leave blank for the selected account's default server"
 msgstr "Ponechte prázdné pro výchozí server vybraného účtu"
 
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:196
-msgid "Stop"
-msgstr "Zastavit"
+#. i18n: ectx: property (text), widget (QToolButton, queryButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:151
+msgid "Query"
+msgstr "Prohledat"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:227
-msgid "Search rooms"
-msgstr "Hledat místnosti"
+#: KTp/Widgets/join-chat-room-dialog.ui:196
+msgid "Filter rooms"
+msgstr "Filtrovat místnosti"
 
 #: KTp/Widgets/notification-config-dialog.cpp:43
 #: KTp/Widgets/notification-config-dialog.cpp:95
@@ -913,6 +960,22 @@ msgstr "Všichni uživatelé"
 #: KTp/Widgets/notification-config-dialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Nastavit oznamování pro všechny uživatele"
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:39
+msgid ""
+"It appears you do not have the IM Accounts control module installed. Please "
+"install ktp-accounts-kcm package."
+msgstr ""
+"Vypadá to, že nemáte nainstalován modul ovládání účtů komunikátoru. Prosím, "
+"nainstalujte balíček ktp-accounts-kcm."
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:40
+msgid "IM Accounts KCM Plugin Is Not Installed"
+msgstr "Modul KCM účtů komunikátoru není nainstalován"
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:64
+msgid "Notifications"
+msgstr "Oznamování"
 
 #: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"

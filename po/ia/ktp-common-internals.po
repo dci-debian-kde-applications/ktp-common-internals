@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2014-03-17 13:33+0100\n"
 "Last-Translator: G.Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
@@ -41,14 +41,29 @@ msgid "Start Video Call Using %1..."
 msgstr "Initia appello video per usar %1..."
 
 #: kpeople/actionsplugin/kpeople-actions-plugin.cpp:167
-#, kde-format
-msgid "Send a File Using %1..."
+#, fuzzy, kde-format
+#| msgid "Send a File Using %1..."
+msgid "Send Files Using %1..."
 msgstr "Invia un file per usar %1..."
 
-#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:178
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:177
 #, kde-format
 msgid "Collaboratively edit a document Using %1..."
 msgstr "Collaborativemente modifica un documento per usar %1..."
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:219
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr ""
+
+#: kpeople/actionsplugin/kpeople-actions-plugin.cpp:232
+#, kde-format
+msgid "Choose a file to edit with %1"
+msgstr ""
+
+#: kpeople/uiplugins/chatplugin/kpeople_chat_plugin.cpp:158
+msgid "Chat"
+msgstr ""
 
 #: kpeople/uiplugins/imdetailswidget.cpp:48
 msgid "IM"
@@ -67,61 +82,61 @@ msgstr ""
 msgid "Transferred file renamed"
 msgstr "File transferite renminate"
 
-#: KTp/contact-info-dialog.cpp:66
+#: KTp/contact-info-dialog.cpp:67
 msgid "Full name:"
 msgstr "Nomine complete:"
 
-#: KTp/contact-info-dialog.cpp:67
+#: KTp/contact-info-dialog.cpp:68
 msgid "Nickname:"
 msgstr "Pseudonymo:"
 
-#: KTp/contact-info-dialog.cpp:68
+#: KTp/contact-info-dialog.cpp:69
 msgid "Email:"
 msgstr "E-posta:"
 
-#: KTp/contact-info-dialog.cpp:69
+#: KTp/contact-info-dialog.cpp:70
 msgid "Phone:"
 msgstr "Telephono:"
 
-#: KTp/contact-info-dialog.cpp:70
+#: KTp/contact-info-dialog.cpp:71
 msgid "Homepage:"
 msgstr "Pagina Domo o Principal:"
 
-#: KTp/contact-info-dialog.cpp:71
+#: KTp/contact-info-dialog.cpp:72
 msgid "Birthday:"
 msgstr "Anniversario de nativitate:"
 
-#: KTp/contact-info-dialog.cpp:72
+#: KTp/contact-info-dialog.cpp:73
 msgid "Organization:"
 msgstr "Organization:"
 
-#: KTp/contact-info-dialog.cpp:144
+#: KTp/contact-info-dialog.cpp:147
 msgid "Change Avatar"
 msgstr "Cambia Avatar"
 
-#: KTp/contact-info-dialog.cpp:149
+#: KTp/contact-info-dialog.cpp:152
 msgid "Clear Avatar"
 msgstr "Netta Avatar"
 
-#: KTp/contact-info-dialog.cpp:214
+#: KTp/contact-info-dialog.cpp:222
 msgid "Failed to load the new avatar image"
 msgstr "Il falleva cargar le nove image de avatar"
 
-#: KTp/contact-info-dialog.cpp:332
-msgid "Save"
-msgstr "Salveguarda"
-
-#: KTp/contact-info-dialog.cpp:367
+#: KTp/contact-info-dialog.cpp:328
 msgid "Contact can see when you are online:"
 msgstr "Contacto pote vider quando tu es in linea."
 
-#: KTp/contact-info-dialog.cpp:368
+#: KTp/contact-info-dialog.cpp:329
 msgid "You can see when the contact is online:"
 msgstr "Tu pote vider quando le contacto es in linea:"
 
-#: KTp/contact-info-dialog.cpp:369
+#: KTp/contact-info-dialog.cpp:330
 msgid "Contact is blocked:"
 msgstr "Contacto es blocate:"
+
+#: KTp/contact-info-dialog.cpp:349
+msgid "Save"
+msgstr "Salveguarda"
 
 #: KTp/error-dictionary.cpp:37
 msgctxt "Verbose user visible error string"
@@ -715,27 +730,45 @@ msgstr "Dishabilitate"
 msgid "Unsorted"
 msgstr "Non ordinate"
 
-#: KTp/Models/rooms-model.cpp:72
+#: KTp/Models/rooms-model.cpp:73
 msgid "Password required"
 msgstr "Contrasigno requirite "
 
-#: KTp/Models/rooms-model.cpp:74
+#: KTp/Models/rooms-model.cpp:75
 msgid "No password required"
 msgstr "Nulle contrasigno esseva requirite"
 
-#: KTp/Models/rooms-model.cpp:94
+#: KTp/Models/rooms-model.cpp:93
 msgid "Member count"
 msgstr "Computo de membro"
 
-#: KTp/Models/rooms-model.cpp:114
+#: KTp/Models/rooms-model.cpp:113
 msgctxt "Chatrooms name"
 msgid "Name"
 msgstr "Nomine"
 
-#: KTp/Models/rooms-model.cpp:116
+#: KTp/Models/rooms-model.cpp:115
 msgctxt "Chatrooms description"
 msgid "Description"
 msgstr "Description"
+
+#: KTp/Models/rooms-model.cpp:199
+msgid "Room bookmarked"
+msgstr ""
+
+#: KTp/Models/rooms-model.cpp:201
+msgid "Room not bookmarked"
+msgstr ""
+
+#: KTp/OTR/utils.cpp:78
+#, kde-format
+msgid "OTR error: %1"
+msgstr ""
+
+#: KTp/OTR/utils.cpp:84
+#, kde-format
+msgid "Received unencrypted message: [%1]"
+msgstr ""
 
 #: KTp/presence.cpp:95
 msgctxt "IM presence: a person is available"
@@ -783,11 +816,11 @@ msgstr "KDE Telepathy"
 msgid "Add new contact"
 msgstr "Adde nove contacto"
 
-#: KTp/Widgets/add-contact-dialog.cpp:141 KTp/Widgets/start-chat-dialog.cpp:83
+#: KTp/Widgets/add-contact-dialog.cpp:144 KTp/Widgets/start-chat-dialog.cpp:83
 msgid "No account selected."
 msgstr "Nulle conto seligite"
 
-#: KTp/Widgets/add-contact-dialog.cpp:143
+#: KTp/Widgets/add-contact-dialog.cpp:146
 msgid ""
 "The requested account has been disconnected and so the contact could not be "
 "added."
@@ -795,115 +828,150 @@ msgstr ""
 "Le conto requirite ha essite disconnectite e assi le contacto non poteva "
 "esser addite."
 
-#: KTp/Widgets/add-contact-dialog.cpp:146
+#: KTp/Widgets/add-contact-dialog.cpp:149
 msgid "You did not specify the name of the contact to add."
 msgstr "Tu non specificava le nomine del contacto de adder."
 
-#: KTp/Widgets/add-contact-dialog.cpp:172
+#: KTp/Widgets/add-contact-dialog.cpp:175
 msgid "Failed to create new contact."
 msgstr "Il falleva crear nove contacto"
 
-#: KTp/Widgets/add-contact-dialog.cpp:189
+#: KTp/Widgets/add-contact-dialog.cpp:192
 msgid "Failed to request presence subscription from the requested contact."
 msgstr ""
 "Il falleva requirer subscription de presentia ex le contacto requirite."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: KTp/Widgets/add-contact-dialog.ui:17 KTp/Widgets/start-chat-dialog.ui:17
+#: KTp/Widgets/add-contact-dialog.ui:20 KTp/Widgets/start-chat-dialog.ui:17
 msgid "Account:"
 msgstr "Conto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: KTp/Widgets/add-contact-dialog.ui:24 KTp/Widgets/start-chat-dialog.ui:24
+#: KTp/Widgets/add-contact-dialog.ui:37 KTp/Widgets/start-chat-dialog.ui:24
 msgid "Screen Name:"
 msgstr "Nomine de schermo:"
+
+#. i18n: ectx: property (text), widget (QLabel, messageLineLabel)
+#: KTp/Widgets/add-contact-dialog.ui:47
+msgid "Message:"
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, messageLineEdit)
+#: KTp/Widgets/add-contact-dialog.ui:54
+msgid "Optional message to send"
+msgstr ""
 
 #: KTp/Widgets/contact-grid-dialog.cpp:114
 msgid "Search in Contacts..."
 msgstr "Cerca in Contactos..."
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:216
-msgid "This room is already in your favorites."
-msgstr "Iste sala ja es in tu favoritos"
+#: KTp/Widgets/join-chat-room-dialog.cpp:63
+#, fuzzy
+#| msgid "Join Chatroom"
+msgctxt "Dialog title"
+msgid "Join Chat Room"
+msgstr "Unite al sala de conversation"
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
-msgid "Add room"
-msgstr "Adde sala"
+#: KTp/Widgets/join-chat-room-dialog.cpp:78
+msgctxt "button"
+msgid "Join/Create"
+msgstr ""
 
-#: KTp/Widgets/join-chat-room-dialog.cpp:218
-msgid "Name"
-msgstr "Nomine"
+#: KTp/Widgets/join-chat-room-dialog.cpp:359
+#, fuzzy
+#| msgid "Query"
+msgctxt "Button text"
+msgid "Query"
+msgstr "Requesta"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:360
+msgctxt "Tooltip text"
+msgid "Start query"
+msgstr ""
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:372
+#, fuzzy
+#| msgid "Stop"
+msgctxt "Button text"
+msgid "Stop"
+msgstr "Stoppa"
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:373
+msgctxt "Tooltip text"
+msgid "Stop query"
+msgstr ""
+
+#: KTp/Widgets/join-chat-room-dialog.cpp:421
+#, fuzzy
+#| msgid "Join Chatroom"
+msgid "Could not join chatroom"
+msgstr "Unite al sala de conversation"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: KTp/Widgets/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
 msgstr "Unite al sala de conversation"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: KTp/Widgets/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "Inserta sala de conversation:"
+#. i18n: ectx: property (title), widget (QGroupBox, accountGroupBox)
+#: KTp/Widgets/join-chat-room-dialog.ui:35
+#, fuzzy
+#| msgid "Account:"
+msgid "Account"
+msgstr "Conto:"
 
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "Favoritos"
-
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "Adde sala"
-
-#. i18n: ectx: property (text), widget (QPushButton, editFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:73
-msgid "Edit Room"
+#. i18n: ectx: property (title), widget (QGroupBox, chatRoomGroupBox)
+#: KTp/Widgets/join-chat-room-dialog.ui:60
+#, fuzzy
+#| msgid "Edit Room"
+msgid "Chat Room"
 msgstr "Modifica sala"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:83
-msgid "Remove Room"
-msgstr "Remove sala"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: KTp/Widgets/join-chat-room-dialog.ui:108
-msgid "Recent"
-msgstr "Recente"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:122
-msgid "Remove"
-msgstr "Remove"
+#. i18n: ectx: attribute (title), widget (QWidget, previousTab)
+#: KTp/Widgets/join-chat-room-dialog.ui:70
+msgid "Previous"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:132
-msgid "Clear list"
-msgstr "Netta lista"
+#: KTp/Widgets/join-chat-room-dialog.ui:98
+#, fuzzy
+#| msgid "Search rooms"
+msgid "Clear Recent Rooms"
+msgstr "Cerca salas"
 
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:155
-#: KTp/Widgets/join-chat-room-dialog.ui:186
-msgid "Query"
-msgstr "Requesta"
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, lineEdit)
+#: KTp/Widgets/join-chat-room-dialog.ui:109
+#, fuzzy
+#| msgid "Enter chat room:"
+msgid "Enter chat room name or address"
+msgstr "Inserta sala de conversation:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, searchTab)
+#: KTp/Widgets/join-chat-room-dialog.ui:120
+#, fuzzy
+#| msgid "Search rooms"
+msgid "Search"
+msgstr "Cerca salas"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: KTp/Widgets/join-chat-room-dialog.ui:161
+#: KTp/Widgets/join-chat-room-dialog.ui:126
 msgid "Server to be queried:"
 msgstr "Servitor del qual on debe demandar:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: KTp/Widgets/join-chat-room-dialog.ui:173
+#: KTp/Widgets/join-chat-room-dialog.ui:138
 msgid "Leave blank for the selected account's default server"
 msgstr "Lassa vacue pro le servitor predefinite del conto seligite"
 
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: KTp/Widgets/join-chat-room-dialog.ui:196
-msgid "Stop"
-msgstr "Stoppa"
+#. i18n: ectx: property (text), widget (QToolButton, queryButton)
+#: KTp/Widgets/join-chat-room-dialog.ui:151
+msgid "Query"
+msgstr "Requesta"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: KTp/Widgets/join-chat-room-dialog.ui:227
-msgid "Search rooms"
+#: KTp/Widgets/join-chat-room-dialog.ui:196
+#, fuzzy
+#| msgid "Search rooms"
+msgid "Filter rooms"
 msgstr "Cerca salas"
 
 #: KTp/Widgets/notification-config-dialog.cpp:43
@@ -923,6 +991,22 @@ msgstr "Omne usatores"
 #: KTp/Widgets/notification-config-dialog.cpp:98
 msgid "Configure notifications for all users"
 msgstr "Configura notificationes pro omne usatores"
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:39
+msgid ""
+"It appears you do not have the IM Accounts control module installed. Please "
+"install ktp-accounts-kcm package."
+msgstr ""
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:40
+msgid "IM Accounts KCM Plugin Is Not Installed"
+msgstr ""
+
+#: KTp/Widgets/settings-kcm-dialog.cpp:64
+#, fuzzy
+#| msgid "Configure notifications for"
+msgid "Notifications"
+msgstr "Configura notificationes pro"
 
 #: KTp/Widgets/start-chat-dialog.cpp:60
 msgid "Start a chat"
@@ -953,6 +1037,33 @@ msgstr ""
 #: KTp/Widgets/start-chat-dialog.cpp:132
 msgid "Failed to start a chat with the contact."
 msgstr "Il falleva crear un conversation con le contacto."
+
+#~ msgid "This room is already in your favorites."
+#~ msgstr "Iste sala ja es in tu favoritos"
+
+#~ msgid "Add room"
+#~ msgstr "Adde sala"
+
+#~ msgid "Name"
+#~ msgstr "Nomine"
+
+#~ msgid "Favorites"
+#~ msgstr "Favoritos"
+
+#~ msgid "Add Room"
+#~ msgstr "Adde sala"
+
+#~ msgid "Remove Room"
+#~ msgstr "Remove sala"
+
+#~ msgid "Recent"
+#~ msgstr "Recente"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
+
+#~ msgid "Clear list"
+#~ msgstr "Netta lista"
 
 #~ msgid "Open Log Viewer..."
 #~ msgstr "Aperi visor de registro ..."
