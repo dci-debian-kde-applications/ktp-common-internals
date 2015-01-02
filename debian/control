@@ -122,9 +122,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Breaks: kde-telepathy-data (<< 0.9.0)
 Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
- This allows grouping multiple IM accounts into meta-contacts.
- .
- This contains plugins to work with libkpeople.
+ This contains plugins to allow kde-telepathy to use kpeople,
+ This is necessary for grouping multiple IM accounts into
+ meta-contacts.
 
 Package: kde-telepathy-debugger
 Architecture: any
