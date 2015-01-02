@@ -1,5 +1,5 @@
-# SymbolsHelper-Confirmed: 0.8.0 amd64
-libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
+# SymbolsHelper-Confirmed: 0.9.0 amd64
+libktpcommoninternalsprivate.so.8 libktpcommoninternalsprivate8 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 0.8.0
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 0.8.0
  _ZN3KTp10TextParser8instanceEv@Base 0.8.0
@@ -8,8 +8,8 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZN3KTp10TextParserD0Ev@Base 0.8.0
  _ZN3KTp10TextParserD1Ev@Base 0.8.0
  _ZN3KTp10TextParserD2Ev@Base 0.8.0
- _ZN3KTp11TextUrlDataD1Ev@Base 0.8.0
- _ZN3KTp11TextUrlDataD2Ev@Base 0.8.0
+ (optional=inline)_ZN3KTp11TextUrlDataD1Ev@Base 0.8.0
+ (optional=inline)_ZN3KTp11TextUrlDataD2Ev@Base 0.8.0
  _ZN3KTp11WalletUtils18setAccountPasswordERKN2Tp9SharedPtrINS1_7AccountEEERK7QString@Base 0.8.0
  _ZN3KTp11WalletUtils21removeAccountPasswordERKN2Tp9SharedPtrINS1_7AccountEEE@Base 0.8.0
  _ZN3KTp12LogsImporter11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
@@ -55,14 +55,18 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZN3KTp14ContactFactoryD2Ev@Base 0.8.0
  _ZN3KTp14GlobalPresence11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN3KTp14GlobalPresence11qt_metacastEPKc@Base 0.8.0
- _ZN3KTp14GlobalPresence11setPresenceERKN2Tp8PresenceE@Base 0.8.0
+ _ZN3KTp14GlobalPresence11setPresenceENS0_22ConnectionPresenceTypeE7QString@Base 0.9.0
+ _ZN3KTp14GlobalPresence11setPresenceERKNS_8PresenceE@Base 0.9.0
  _ZN3KTp14GlobalPresence14onAccountAddedERKN2Tp9SharedPtrINS1_7AccountEEE@Base 0.8.0
  _ZN3KTp14GlobalPresence16changingPresenceEb@Base 0.8.0
  _ZN3KTp14GlobalPresence16staticMetaObjectE@Base 0.8.0
+ _ZN3KTp14GlobalPresence17addAccountManagerERKN2Tp9SharedPtrINS1_14AccountManagerEEE@Base 0.9.0
  _ZN3KTp14GlobalPresence17setAccountManagerERKN2Tp9SharedPtrINS1_14AccountManagerEEE@Base 0.8.0
  _ZN3KTp14GlobalPresence18onChangingPresenceEv@Base 0.8.0
+ _ZN3KTp14GlobalPresence19accountManagerReadyEv@Base 0.9.0
  _ZN3KTp14GlobalPresence19saveCurrentPresenceEv@Base 0.8.0
  _ZN3KTp14GlobalPresence20restoreSavedPresenceEv@Base 0.8.0
+ _ZN3KTp14GlobalPresence21onAccountManagerReadyEPN2Tp16PendingOperationE@Base 0.9.0
  _ZN3KTp14GlobalPresence22currentPresenceChangedERKNS_8PresenceE@Base 0.8.0
  _ZN3KTp14GlobalPresence23connectionStatusChangedEN2Tp16ConnectionStatusE@Base 0.8.0
  _ZN3KTp14GlobalPresence24onCurrentPresenceChangedEv@Base 0.8.0
@@ -154,8 +158,10 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZN3KTp17ContactInfoDialog17slotButtonClickedEi@Base 0.8.0
  _ZN3KTp17ContactInfoDialog7Private10addInfoRowENS_12InfoRowIndexERK7QString@Base 0.8.0
  _ZN3KTp17ContactInfoDialog7Private11addStateRowERK7QStringN2Tp7Contact13PresenceStateE@Base 0.8.0
+ _ZN3KTp17ContactInfoDialog7Private13loadStateRowsEv@Base 0.9.0
  _ZN3KTp17ContactInfoDialog7Private17onContactUpgradedEPN2Tp16PendingOperationE@Base 0.8.0
  _ZN3KTp17ContactInfoDialog7Private17onInfoDataChangedEv@Base 0.8.0
+ _ZN3KTp17ContactInfoDialog7Private20onFeatureRosterReadyEPN2Tp16PendingOperationE@Base 0.9.0
  _ZN3KTp17ContactInfoDialog7Private21onContactInfoReceivedEPN2Tp16PendingOperationE@Base 0.8.0
  _ZN3KTp17ContactInfoDialog7Private26onClearAvatarButtonClickedEv@Base 0.8.0
  _ZN3KTp17ContactInfoDialog7Private27onChangeAvatarButtonClickedEv@Base 0.8.0
@@ -251,6 +257,7 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZN3KTp27TelepathyHandlerApplicationD2Ev@Base 0.8.0
  _ZN3KTp5Debug15installCallbackEbb@Base 0.8.0
  _ZN3KTp7Actions13openLogViewerERK4QUrl@Base 0.8.0
+ _ZN3KTp7Actions13openLogViewerERKN2Tp9SharedPtrINS1_7AccountEEERK7QString@Base 0.9.0
  _ZN3KTp7Actions13openLogViewerERKN2Tp9SharedPtrINS1_7AccountEEERKNS2_INS1_7ContactEEE@Base 0.8.0
  _ZN3KTp7Actions14startAudioCallERKN2Tp9SharedPtrINS1_7AccountEEERKNS2_INS1_7ContactEEE@Base 0.8.0
  _ZN3KTp7Actions14startGroupChatERKN2Tp9SharedPtrINS1_7AccountEEERK7QString@Base 0.8.0
@@ -270,6 +277,7 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZN3KTp7Contact15buildAvatarPathERK7QString@Base 0.8.0
  _ZN3KTp7Contact16staticMetaObjectE@Base 0.8.0
  _ZN3KTp7Contact17getCommonElementsERK11QStringListS3_@Base 0.8.0
+ _ZN3KTp7Contact17onPresenceChangedERKN2Tp8PresenceE@Base 0.9.0
  _ZN3KTp7Contact21invalidateAvatarCacheEv@Base 0.8.0
  _ZN3KTp7ContactC1EPN2Tp14ContactManagerERKNS1_17ReferencedHandlesERKNS1_8FeaturesERK4QMapI7QString8QVariantE@Base 0.8.0
  _ZN3KTp7ContactC2EPN2Tp14ContactManagerERKNS1_17ReferencedHandlesERKNS1_8FeaturesERK4QMapI7QString8QVariantE@Base 0.8.0
@@ -307,12 +315,17 @@ libktpcommoninternalsprivate.so.7 libktpcommoninternalsprivate7 #MINVER#
  _ZNK3KTp13PendingWallet15walletInterfaceEv@Base 0.8.0
  _ZNK3KTp14ContactFactory9constructEPN2Tp14ContactManagerERKNS1_17ReferencedHandlesERKNS1_8FeaturesERK4QMapI7QString8QVariantE@Base 0.8.0
  _ZNK3KTp14GlobalPresence10metaObjectEv@Base 0.8.0
+ _ZNK3KTp14GlobalPresence14accountManagerEv@Base 0.9.0
  _ZNK3KTp14GlobalPresence14onlineAccountsEv@Base 0.8.0
  _ZNK3KTp14GlobalPresence15currentPresenceEv@Base 0.8.0
  _ZNK3KTp14GlobalPresence16connectionStatusEv@Base 0.8.0
  _ZNK3KTp14GlobalPresence17requestedPresenceEv@Base 0.8.0
  _ZNK3KTp14GlobalPresence18hasEnabledAccountsEv@Base 0.8.0
  _ZNK3KTp14GlobalPresence18isChangingPresenceEv@Base 0.8.0
+ _ZNK3KTp14GlobalPresence19currentPresenceIconEv@Base 0.9.0
+ _ZNK3KTp14GlobalPresence19currentPresenceTypeEv@Base 0.9.0
+ _ZNK3KTp14GlobalPresence22currentPresenceMessageEv@Base 0.9.0
+ _ZNK3KTp14GlobalPresence23currentPresenceIconNameEv@Base 0.9.0
  _ZNK3KTp14MessageContext7accountEv@Base 0.8.0
  _ZNK3KTp14MessageContext7channelEv@Base 0.8.0
  _ZNK3KTp15OutgoingMessage4textEv@Base 0.8.0
