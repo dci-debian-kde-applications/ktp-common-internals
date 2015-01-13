@@ -1,3 +1,9 @@
+ktp-common-internals (0.8.1-4) UNRELEASED; urgency=medium
+
+  * Make sure telepathy-logger is installed (Closes: #774552)
+
+ -- Diane Trout <diane@ghic.org>  Sun, 11 Jan 2015 21:19:37 -0800
+
 ktp-common-internals (0.8.1-3) unstable; urgency=medium
 
   * Update kde-telepathy-kpeople description.

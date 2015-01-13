@@ -65,7 +65,7 @@ Description: KDE Telepathy common internal widgets library
 
 Package: libktploggerprivate7
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, telepathy-logger
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
