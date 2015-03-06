@@ -1,3 +1,27 @@
+ktp-common-internals (15.03.80-0ubuntu1) UNRELEASED; urgency=medium
+
+  * KDE Frameworks 5 port
+    + rename lib packages for sobump
+    + rename -dev package to libktp-dev to match the cmake config one
+      would be looking for. Also it contains more than one library anyway.
+    + rename -dbg to libktp-dbg to align with the dev and also because it
+      affects more than one lib
+      + Add all library packages as possibly depends for the dbg package. Any
+        one of them may be neeeded depending on the app one wants to debug.
+    + Remove kde-telepathy-kpeople for now as kpeople is not released.
+    + Rename kde-telepathy-declarative to qml-module-org-kde-telepathy to
+      align with the implicit naming policy for qml modules in Qt5 (no
+      conflicts)
+    + Update watch file. The source now is released as part of applications.
+    + Split OTR helper proxy binary and related runtime assets out of
+      libktpotr package and into a standalone ktp-proxy package which is
+      depended upon by libktpotr.
+    + ktp-proxy breaks and replaces older version of libktpotrprivate8, this
+      is necessary because the assets didn't change path and previously lived
+      in the lib.
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 06 Mar 2015 11:05:05 +0100
+
 ktp-common-internals (0.9.0-0ubuntu3) vivid; urgency=medium
 
   * kde-telepathy-kpeople breaks/replaces old kde-telepathy-data
