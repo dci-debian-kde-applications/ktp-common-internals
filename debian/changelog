@@ -21,6 +21,7 @@ ktp-common-internals (0.9.0-1) UNRELEASED; urgency=medium
   * Update copyright file.
   * Update description to use better English (Closes: #769362)
     Thanks Filipus Klutiero
+  * Update Standards-Version to 3.9.6.0. No changes needed.
 
  -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
 
