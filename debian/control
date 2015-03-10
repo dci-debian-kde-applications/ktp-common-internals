@@ -71,7 +71,7 @@ Package: libktploggerprivate8
 Breaks: libktploggerprivate7 (<< 0.8.80~)
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, telepathy-logger
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -99,10 +99,11 @@ Package: kde-telepathy-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
- KDE telepathy shared data.
+ This package contains KDE Telepathy shared data.
  .
- This package contains various data files that are used by nearly all
- the different KDE Telepathy components.
+ These various data files are used by nearly all the different KDE
+ Telepathy components, and include files such as icons and
+ translations.
 
 Package: libktpcommoninternalsprivate-dbg
 Architecture: any
