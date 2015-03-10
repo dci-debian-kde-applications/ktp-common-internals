@@ -84,10 +84,11 @@ Package: kde-telepathy-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
- KDE telepathy shared data.
+ This package contains KDE Telepathy shared data.
  .
- This package contains various data files that are used by nearly all
- the different KDE Telepathy components.
+ These various data files are used by nearly all the different KDE
+ Telepathy components, and include files such as icons and
+ translations.
 
 Package: libktpcommoninternalsprivate-dbg
 Architecture: any
