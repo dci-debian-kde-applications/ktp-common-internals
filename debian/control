@@ -102,7 +102,9 @@ Description: KDE Telepathy common internal widgets library
 
 Package: libktplogger9
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: kde-telepathy-data (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
