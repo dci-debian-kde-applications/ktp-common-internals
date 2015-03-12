@@ -1,4 +1,11 @@
-# SymbolsHelper-Confirmed: 13.03.80 amd64
+# SymbolsHelper-Confirmed: 15.03.80+git20150311.1432 amd64 i386
+ktploggerplugin_tplogger.so libktplogger9 #MINVER#
+ _ZTIN3Tpl5EventE@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
+ _ZTIN3Tpl9TextEventE@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
+ _ZTSN3Tpl5EventE@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
+ _ZTSN3Tpl9TextEventE@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
+ qt_plugin_instance@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
+ qt_plugin_query_metadata@Base 15.03.80+git20150311.1432+15.04-0ubuntu0
 libKTpLogger.so.9 libktplogger9 #MINVER#
  _ZN17ScrollbackManager11qt_metacallEN11QMetaObject4CallEiPPv@Base 13.03.80
  _ZN17ScrollbackManager11qt_metacastEPKc@Base 13.03.80
