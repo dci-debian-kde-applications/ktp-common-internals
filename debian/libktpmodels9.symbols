@@ -1,5 +1,13 @@
-# SymbolsHelper-Confirmed: 15.03.80 amd64
+# SymbolsHelper-Confirmed: 15.03.80+git20150319.1326+15.04 amd64 i386
 libKTpModels.so.9 libktpmodels9 #MINVER#
+ _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxy16staticMetaObjectE@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxyC1EP7QObject@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxyC2EP7QObject@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxyD0Ev@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxyD1Ev@Base 15.03.80+git20150319.1326+15.04
+ _ZN23KPeopleTranslationProxyD2Ev@Base 15.03.80+git20150319.1326+15.04
  _ZN3KTp10RoomsModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80
  _ZN3KTp10RoomsModel11qt_metacastEPKc@Base 15.03.80
  _ZN3KTp10RoomsModel16staticMetaObjectE@Base 15.03.80
@@ -194,6 +202,12 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN3KTp28TextChannelWatcherProxyModelD0Ev@Base 15.03.80
  _ZN3KTp28TextChannelWatcherProxyModelD1Ev@Base 15.03.80
  _ZN3KTp28TextChannelWatcherProxyModelD2Ev@Base 15.03.80
+ _ZNK23KPeopleTranslationProxy10metaObjectEv@Base 15.03.80+git20150319.1326+15.04
+ _ZNK23KPeopleTranslationProxy13contactPixmapERK11QModelIndex@Base 15.03.80+git20150319.1326+15.04
+ _ZNK23KPeopleTranslationProxy16filterAcceptsRowEiRK11QModelIndex@Base 15.03.80+git20150319.1326+15.04
+ _ZNK23KPeopleTranslationProxy17dataForKTpContactERK7QStringS2_i@Base 15.03.80+git20150319.1326+15.04
+ _ZNK23KPeopleTranslationProxy17translatePresenceERK8QVariant@Base 15.03.80+git20150319.1326+15.04
+ _ZNK23KPeopleTranslationProxy4dataERK11QModelIndexi@Base 15.03.80+git20150319.1326+15.04
  _ZNK3KTp10RoomsModel10headerDataEiN2Qt11OrientationEi@Base 15.03.80
  _ZNK3KTp10RoomsModel10metaObjectEv@Base 15.03.80
  _ZNK3KTp10RoomsModel11columnCountERK11QModelIndex@Base 15.03.80
@@ -264,6 +278,7 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZNK3KTp26AbstractGroupingProxyModel9roleNamesEv@Base 15.03.80
  _ZNK3KTp28TextChannelWatcherProxyModel10metaObjectEv@Base 15.03.80
  _ZNK3KTp28TextChannelWatcherProxyModel4dataERK11QModelIndexi@Base 15.03.80
+ _ZTI23KPeopleTranslationProxy@Base 15.03.80+git20150319.1326+15.04
  _ZTIN2Tp10RefCountedE@Base 15.03.80
  _ZTIN3KTp10RoomsModelE@Base 15.03.80
  _ZTIN3KTp13ContactsModelE@Base 15.03.80
@@ -276,6 +291,7 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZTIN3KTp22AccountsTreeProxyModelE@Base 15.03.80
  _ZTIN3KTp26AbstractGroupingProxyModelE@Base 15.03.80
  _ZTIN3KTp28TextChannelWatcherProxyModelE@Base 15.03.80
+ _ZTS23KPeopleTranslationProxy@Base 15.03.80+git20150319.1326+15.04
  _ZTSN2Tp10RefCountedE@Base 15.03.80
  _ZTSN3KTp10RoomsModelE@Base 15.03.80
  _ZTSN3KTp13ContactsModelE@Base 15.03.80
@@ -289,6 +305,7 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZTSN3KTp26AbstractGroupingProxyModelE@Base 15.03.80
  _ZTSN3KTp28TextChannelWatcherProxyModelE@Base 15.03.80
  _ZTTN3KTp28TextChannelWatcherProxyModelE@Base 15.03.80
+ _ZTV23KPeopleTranslationProxy@Base 15.03.80+git20150319.1326+15.04
  _ZTVN2Tp10RefCountedE@Base 15.03.80
  _ZTVN3KTp10RoomsModelE@Base 15.03.80
  _ZTVN3KTp13ContactsModelE@Base 15.03.80
