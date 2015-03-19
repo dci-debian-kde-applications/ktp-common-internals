@@ -1,4 +1,4 @@
-usr/lib/*/libKTpOTR.so.0.9.*
+usr/lib/*/libKTpOTR.so.15.*
 usr/lib/*/libKTpOTR.so.9
 usr/lib/*/libexec/ktp-proxy
 usr/share/config.kcfg/ktp-proxy-config.kcfg
