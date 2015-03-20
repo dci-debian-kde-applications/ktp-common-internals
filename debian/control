@@ -76,6 +76,14 @@ Description: KDE Telepathy internal library - Development headers
  outside of the KDE Telepathy project umbrella. This package
  is only provided for compiling the rest of the components.
 
+Package: kde-telepathy-kpeople
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: kpeople plugins for kde-telepathy
+ This allows grouping multiple IM accounts into meta-contacts.
+ .
+ This contains plugins to work with libkpeople.
+
 Package: libktpcommoninternals9
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
