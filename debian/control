@@ -86,9 +86,8 @@ Description: kpeople plugins for kde-telepathy
 
 Package: libktpcommoninternals9
 Architecture: any
-Depends: kde-telepathy-kpeople (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: kde-telepathy-kpeople (= ${binary:Version})
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
