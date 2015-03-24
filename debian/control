@@ -84,10 +84,21 @@ Description: kpeople plugins for kde-telepathy
  .
  This contains plugins to work with libkpeople.
 
+Package: kde-telepathy-kaccounts
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: kaccounts plugins for kde-telepathy
+ This links kde telepathy to kaccounts and vice versa, allowing migrating
+ settings from telepathy internal storage to a system-wide shared accounts
+ management system.
+ .
+ This contains plugins to work with kaccounts.
+
 Package: libktpcommoninternals9
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: kde-telepathy-kpeople (= ${binary:Version})
+Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
+            kde-telepathy-kpeople (= ${binary:Version})
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
