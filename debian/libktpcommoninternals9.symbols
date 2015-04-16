@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.03.80 amd64
+# SymbolsHelper-Confirmed: 15.03.80+git20150416.0144+15.04 amd64 i386
 libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 15.03.80
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 15.03.80
@@ -66,6 +66,7 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp14GlobalPresence20restoreSavedPresenceEv@Base 15.03.80
  _ZN3KTp14GlobalPresence21onAccountManagerReadyEPN2Tp16PendingOperationE@Base 15.03.80
  _ZN3KTp14GlobalPresence22currentPresenceChangedERKNS_8PresenceE@Base 15.03.80
+ _ZN3KTp14GlobalPresence22enabledAccountsChangedEv@Base 15.03.80+git20150416.0144+15.04
  _ZN3KTp14GlobalPresence23connectionStatusChangedEN2Tp16ConnectionStatusE@Base 15.03.80
  _ZN3KTp14GlobalPresence24onCurrentPresenceChangedEv@Base 15.03.80
  _ZN3KTp14GlobalPresence24requestedPresenceChangedERKNS_8PresenceE@Base 15.03.80
@@ -344,6 +345,7 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZNK3KTp7Contact26dbusTubeServicesCapabilityEv@Base 15.03.80
  _ZNK3KTp7Contact28streamTubeServicesCapabilityEv@Base 15.03.80
  _ZNK3KTp7Contact30collaborativeEditingCapabilityEv@Base 15.03.80
+ _ZNK3KTp7Contact3uriEv@Base 15.03.80+git20150416.0144+15.04
  _ZNK3KTp7Contact8keyCacheEv@Base 15.03.80
  _ZNK3KTp7Contact8presenceEv@Base 15.03.80
  _ZNK3KTp7Message11senderAliasEv@Base 15.03.80
