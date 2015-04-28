@@ -1,4 +1,4 @@
-ktp-common-internals (15.03.80-0ubuntu1) UNRELEASED; urgency=medium
+ktp-common-internals (15.04.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * KDE Frameworks 5 port
     + rename lib packages for sobump
