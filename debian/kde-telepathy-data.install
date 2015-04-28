@@ -1,6 +1,6 @@
 usr/share/icons/hicolor/*
-usr/share/kde4/apps/ktelepathy/*
 usr/share/kde4/apps/katepart/syntax/ktpdebugoutput.xml
+usr/share/kde4/apps/ktelepathy/*
 usr/share/kde4/services/ktploggerplugin_tplogger.desktop
 usr/share/kde4/servicetypes/ktp_logger_plugin.desktop
 usr/share/locale/*

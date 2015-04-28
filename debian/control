@@ -1,17 +1,20 @@
 Source: ktp-common-internals
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
-Build-Depends: debhelper (>= 9), cmake,
- libtelepathy-qt4-dev (>= 0.9.5),
- libtelepathy-logger-qt4-dev (>= 0.8.0),
- libtelepathy-logger-dev,
- pkg-kde-tools,
- kdelibs5-dev,
- libkpeople-dev (>= 0.3.0),
- kdepimlibs5-dev,
- libotr5-dev,
- libgcrypt11-dev,
+Uploaders: Diane Trout <diane@ghic.org>,
+           Michał Zając <quintasan@kubuntu.org>,
+           Mark Purcell <msp@debian.org>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               kdelibs5-dev,
+               kdepimlibs5-dev,
+               libgcrypt11-dev,
+               libkpeople-dev (>= 0.3.0),
+               libotr5-dev,
+               libtelepathy-logger-dev,
+               libtelepathy-logger-qt4-dev (>= 0.8.0),
+               libtelepathy-qt4-dev (>= 0.9.5),
+               pkg-kde-tools
 Standards-Version: 3.9.6
 Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
@@ -22,10 +25,10 @@ Package: libktpcommoninternalsprivate-dev
 Section: libdevel
 Architecture: any
 Depends: libktpcommoninternalsprivate8 (= ${binary:Version}),
- libktpwidgetsprivate8 (= ${binary:Version}),
- libktploggerprivate8 (= ${binary:Version}),
- libktpotrprivate8 (= ${binary:Version}),
- ${misc:Depends}
+         libktploggerprivate8 (= ${binary:Version}),
+         libktpotrprivate8 (= ${binary:Version}),
+         libktpwidgetsprivate8 (= ${binary:Version}),
+         ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -41,8 +44,10 @@ Package: libktpcommoninternalsprivate8
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople4 (>= 0.3.0),
- libtelepathy-logger-qt4-1 (>= 0.8.0)
+Depends: libkpeople4 (>= 0.3.0),
+         libtelepathy-logger-qt4-1 (>= 0.8.0),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -51,7 +56,7 @@ Description: KDE Telepathy common internal library
 
 Package: libktpmodelsprivate8
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy data models internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -60,7 +65,7 @@ Description: KDE Telepathy data models internal library
 
 Package: libktpwidgetsprivate8
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy common internal widgets library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -71,7 +76,7 @@ Package: libktploggerprivate8
 Breaks: libktploggerprivate7 (<< 0.8.80~)
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, telepathy-logger
+Depends: telepathy-logger, ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -80,7 +85,7 @@ Description: KDE Telepathy internal logger library
 
 Package: libktpotrprivate8
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy internal OTR library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -89,7 +94,7 @@ Description: KDE Telepathy internal OTR library
 
 Package: kde-telepathy-declarative
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: kde-telepathy QtDeclarative QML support
  Contains a plugin for QtDeclarative that provides
  support for using KDE-Telepathy to components written
@@ -118,7 +123,7 @@ Description: KDE Telepathy internal library - debug symbols
 
 Package: kde-telepathy-kpeople
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: kde-telepathy-data (<< 0.9.0)
 Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
@@ -129,7 +134,7 @@ Description: kpeople plugins for kde-telepathy
 Package: kde-telepathy-debugger
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Debugging tool for KDE Telepathy
  This package contains a GUI debugging tool which can be used to debug
  issues in Telepathy.
