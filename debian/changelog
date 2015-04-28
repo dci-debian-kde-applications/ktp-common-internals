@@ -1,3 +1,21 @@
+ktp-common-internals (15.03.80-0ubuntu1) UNRELEASED; urgency=medium
+
+  * KDE Frameworks 5 port
+    + rename lib packages for sobump
+    + rename -dev package to libktp-dev to match the cmake config one
+      would be looking for. Also it contains more than one library anyway.
+    + rename -dbg to libktp-dbg to align with the dev and also because it
+      affects more than one lib
+      + Add all library packages as possibly depends for the dbg package. Any
+        one of them may be neeeded depending on the app one wants to debug.
+    + Remove kde-telepathy-kpeople for now as kpeople is not released.
+    + Rename kde-telepathy-declarative to qml-module-org-kde-telepathy to
+      align with the implicit naming policy for qml modules in Qt5 (no
+      conflicts)
+    + Update watch file. The source now is released as part of applications.
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 06 Mar 2015 11:05:05 +0100
+
 ktp-common-internals (0.9.0-1) UNRELEASED; urgency=medium
 
   [ Jonathan Riddell ]
@@ -25,6 +43,25 @@ ktp-common-internals (0.9.0-1) UNRELEASED; urgency=medium
   * Update debian/watch file.
 
  -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
+
+ktp-common-internals (0.9.0-0ubuntu3) vivid; urgency=medium
+
+  * kde-telepathy-kpeople breaks/replaces old kde-telepathy-data
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 05 Nov 2014 12:27:52 +0100
+
+ktp-common-internals (0.9.0-0ubuntu2) vivid; urgency=medium
+
+  * Make -dev package depend on libktpotrprivate8
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 03 Nov 2014 16:10:47 +0100
+
+ktp-common-internals (0.9.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Merge with Debian, no changes
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
 
 ktp-common-internals (0.8.1-4) unstable; urgency=medium
 
@@ -73,6 +110,66 @@ ktp-common-internals (0.7.0-1) unstable; urgency=low
     KPeople is currently disabled as recommended by upstream.
 
  -- Diane Trout <diane@ghic.org>  Tue, 05 Nov 2013 09:54:57 -0800
+
+ktp-common-internals (0.8.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release (LP: #1313611)
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Apr 2014 15:35:35 +0200
+
+ktp-common-internals (0.8.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 01 Apr 2014 12:59:21 +0200
+
+ktp-common-internals (0.7.80-0ubuntu2) trusty; urgency=medium
+
+  * Bump KPeople requirement
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 18 Feb 2014 17:22:20 +0100
+
+ktp-common-internals (0.7.80-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 18 Feb 2014 00:12:31 +0100
+
+ktp-common-internals (0.7.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 29 Jan 2014 19:44:32 +0100
+
+ktp-common-internals (0.7.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+  * Release packaging from debian experimental git
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Oct 2013 18:03:20 +0100
+
+ktp-common-internals (0.6.80-1) UNRELEASED; urgency=low
+
+  * Imported upstream 0.6.80
+  * Ship new libraries libktploggerprivate.
+  * Ship plugins imdetailswidgetplugin, im_persons_data_source_plugin,
+    ktploggerplugin, ktp_kpeople_plugin, nepomuktelepathyservice
+  * Bump libktpcommoninternalsprivate SONAME to 6
+  * Add desktop and service files for new plugins
+
+ -- Diane Trout <diane@ghic.org>  Tue, 24 Sep 2013 21:26:49 -0700
+
+ktp-common-internals (0.6.3-1fakesync1ubuntu1) saucy; urgency=low
+
+  * kde-telepathy-declarative replaces/breaks libktpcommoninternalsprivate5
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 21 Aug 2013 15:56:17 +0100
+
+ktp-common-internals (0.6.3-1fakesync1) saucy-proposed; urgency=low
+
+  * Fake sync due to mismatching orig tarball (LP: #1212826).
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 21 Aug 2013 12:49:46 +0200
 
 ktp-common-internals (0.6.3-1) unstable; urgency=low
 
