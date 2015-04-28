@@ -12,7 +12,7 @@ Build-Depends: debhelper (>= 9), cmake,
  kdepimlibs5-dev,
  libotr5-dev,
  libgcrypt11-dev,
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-common-internals.git
@@ -42,8 +42,7 @@ Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libkpeople4 (>= 0.3.0),
- libtelepathy-logger-qt4-1 (>= 0.8.0),
- kde-telepathy-kpeople
+ libtelepathy-logger-qt4-1 (>= 0.8.0)
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -72,7 +71,7 @@ Package: libktploggerprivate8
 Breaks: libktploggerprivate7 (<< 0.8.80~)
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, telepathy-logger
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -100,10 +99,11 @@ Package: kde-telepathy-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
- KDE telepathy shared data.
+ This package contains KDE Telepathy shared data.
  .
- This package contains various data files that are used by nearly all
- the different KDE Telepathy components.
+ These various data files are used by nearly all the different KDE
+ Telepathy components, and include files such as icons and
+ translations.
 
 Package: libktpcommoninternalsprivate-dbg
 Architecture: any
@@ -122,9 +122,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Breaks: kde-telepathy-data (<< 0.9.0)
 Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
- This allows grouping multiple IM accounts into meta-contacts.
- .
- This contains plugins to work with libkpeople.
+ This contains plugins to allow kde-telepathy to use kpeople,
+ This is necessary for grouping multiple IM accounts into
+ meta-contacts.
 
 Package: kde-telepathy-debugger
 Architecture: any

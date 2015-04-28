@@ -1,5 +1,5 @@
-# SymbolsHelper-Confirmed: 0.8.0 amd64
-libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
+# SymbolsHelper-Confirmed: 0.9.0 amd64
+libktpmodelsprivate.so.8 libktpmodelsprivate8 #MINVER#
  _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 0.8.0
  _ZN23KPeopleTranslationProxy16staticMetaObjectE@Base 0.8.0
@@ -23,7 +23,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZN3KTp13ContactsModel12setGroupModeENS0_9GroupModeE@Base 0.8.0
  _ZN3KTp13ContactsModel14setSourceModelEP18QAbstractItemModel@Base 0.8.0
  _ZN3KTp13ContactsModel16groupModeChangedEv@Base 0.8.0
- _ZN3KTp13ContactsModel16modelInitializedEv@Base 0.8.0
+ _ZN3KTp13ContactsModel16modelInitializedEb@Base 0.9.0
  _ZN3KTp13ContactsModel16staticMetaObjectE@Base 0.8.0
  _ZN3KTp13ContactsModel17setAccountManagerERKN2Tp9SharedPtrINS1_14AccountManagerEEE@Base 0.8.0
  _ZN3KTp13ContactsModel22setTrackUnreadMessagesEb@Base 0.8.0
@@ -34,6 +34,22 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZN3KTp13ContactsModelD0Ev@Base 0.8.0
  _ZN3KTp13ContactsModelD1Ev@Base 0.8.0
  _ZN3KTp13ContactsModelD2Ev@Base 0.8.0
+ _ZN3KTp13PresenceModel11addPresenceERKNS_8PresenceE@Base 0.9.0
+ _ZN3KTp13PresenceModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.9.0
+ _ZN3KTp13PresenceModel11qt_metacastEPKc@Base 0.9.0
+ _ZN3KTp13PresenceModel12countChangedEv@Base 0.9.0
+ _ZN3KTp13PresenceModel13loadPresencesEv@Base 0.9.0
+ _ZN3KTp13PresenceModel14removePresenceERKNS_8PresenceE@Base 0.9.0
+ _ZN3KTp13PresenceModel16staticMetaObjectE@Base 0.9.0
+ _ZN3KTp13PresenceModel19loadCustomPresencesEv@Base 0.9.0
+ _ZN3KTp13PresenceModel20loadDefaultPresencesEv@Base 0.9.0
+ _ZN3KTp13PresenceModel20updatePresenceAppletEv@Base 0.9.0
+ _ZN3KTp13PresenceModel25syncCustomPresencesToDiskEv@Base 0.9.0
+ _ZN3KTp13PresenceModelC1EP7QObject@Base 0.9.0
+ _ZN3KTp13PresenceModelC2EP7QObject@Base 0.9.0
+ _ZN3KTp13PresenceModelD0Ev@Base 0.9.0
+ _ZN3KTp13PresenceModelD1Ev@Base 0.9.0
+ _ZN3KTp13PresenceModelD2Ev@Base 0.9.0
  _ZN3KTp17AccountsListModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN3KTp17AccountsListModel11qt_metacastEPKc@Base 0.8.0
  _ZN3KTp17AccountsListModel13setAccountSetERKN2Tp9SharedPtrINS1_10AccountSetEEE@Base 0.8.0
@@ -49,7 +65,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZN3KTp17AccountsListModelD2Ev@Base 0.8.0
  _ZN3KTp17ContactsListModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN3KTp17ContactsListModel11qt_metacastEPKc@Base 0.8.0
- _ZN3KTp17ContactsListModel16modelInitializedEv@Base 0.8.0
+ _ZN3KTp17ContactsListModel16modelInitializedEb@Base 0.9.0
  _ZN3KTp17ContactsListModel16staticMetaObjectE@Base 0.8.0
  _ZN3KTp17ContactsListModel17onContactsChangedERK4QSetIN2Tp9SharedPtrINS2_7ContactEEEES8_@Base 0.8.0
  _ZN3KTp17ContactsListModel17setAccountManagerERKN2Tp9SharedPtrINS1_14AccountManagerEEE@Base 0.8.0
@@ -60,6 +76,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZN3KTp17ContactsListModelD0Ev@Base 0.8.0
  _ZN3KTp17ContactsListModelD1Ev@Base 0.8.0
  _ZN3KTp17ContactsListModelD2Ev@Base 0.8.0
+ _ZN3KTp18FavoriteRoomsModel10clearRoomsEv@Base 0.9.0
  _ZN3KTp18FavoriteRoomsModel10removeRoomERK4QMapI7QString8QVariantE@Base 0.8.0
  _ZN3KTp18FavoriteRoomsModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN3KTp18FavoriteRoomsModel11qt_metacastEPKc@Base 0.8.0
@@ -202,6 +219,12 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZNK3KTp13ContactsModel14accountManagerEv@Base 0.8.0
  _ZNK3KTp13ContactsModel19trackUnreadMessagesEv@Base 0.8.0
  _ZNK3KTp13ContactsModel9groupModeEv@Base 0.8.0
+ _ZNK3KTp13PresenceModel10metaObjectEv@Base 0.9.0
+ _ZNK3KTp13PresenceModel3getEiRK10QByteArray@Base 0.9.0
+ _ZNK3KTp13PresenceModel4dataERK11QModelIndexi@Base 0.9.0
+ _ZNK3KTp13PresenceModel4dataEi@Base 0.9.0
+ _ZNK3KTp13PresenceModel8rowCountERK11QModelIndex@Base 0.9.0
+ _ZNK3KTp13PresenceModel9roleNamesEv@Base 0.9.0
  _ZNK3KTp17AccountsListModel10metaObjectEv@Base 0.8.0
  _ZNK3KTp17AccountsListModel11columnCountERK11QModelIndex@Base 0.8.0
  _ZNK3KTp17AccountsListModel19connectionStateIconERKN2Tp9SharedPtrINS1_7AccountEEE@Base 0.8.0
@@ -257,6 +280,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZTI23KPeopleTranslationProxy@Base 0.8.0
  _ZTIN3KTp10RoomsModelE@Base 0.8.0
  _ZTIN3KTp13ContactsModelE@Base 0.8.0
+ _ZTIN3KTp13PresenceModelE@Base 0.9.0
  _ZTIN3KTp17AccountsListModelE@Base 0.8.0
  _ZTIN3KTp17ContactsListModelE@Base 0.8.0
  _ZTIN3KTp18FavoriteRoomsModelE@Base 0.8.0
@@ -268,6 +292,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZTS23KPeopleTranslationProxy@Base 0.8.0
  _ZTSN3KTp10RoomsModelE@Base 0.8.0
  _ZTSN3KTp13ContactsModelE@Base 0.8.0
+ _ZTSN3KTp13PresenceModelE@Base 0.9.0
  _ZTSN3KTp17AccountsListModelE@Base 0.8.0
  _ZTSN3KTp17ContactsListModelE@Base 0.8.0
  _ZTSN3KTp18FavoriteRoomsModelE@Base 0.8.0
@@ -280,6 +305,7 @@ libktpmodelsprivate.so.7 libktpmodelsprivate7 #MINVER#
  _ZTV23KPeopleTranslationProxy@Base 0.8.0
  _ZTVN3KTp10RoomsModelE@Base 0.8.0
  _ZTVN3KTp13ContactsModelE@Base 0.8.0
+ _ZTVN3KTp13PresenceModelE@Base 0.9.0
  _ZTVN3KTp17AccountsListModelE@Base 0.8.0
  _ZTVN3KTp17ContactsListModelE@Base 0.8.0
  _ZTVN3KTp18FavoriteRoomsModelE@Base 0.8.0

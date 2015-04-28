@@ -1,5 +1,5 @@
 # SymbolsHelper-Confirmed: 0.8.0 amd64
-libktploggerprivate.so.7 libktploggerprivate7 #MINVER#
+libktploggerprivate.so.8 libktploggerprivate8 #MINVER#
  _ZN17ScrollbackManager11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.8.0
  _ZN17ScrollbackManager11qt_metacastEPKc@Base 0.8.0
  _ZN17ScrollbackManager12fetchHistoryEi@Base 0.8.0

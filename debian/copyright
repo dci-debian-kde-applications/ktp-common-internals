@@ -42,7 +42,7 @@ Copyright: 2011 Dario Freddi <drf@kde.org>
            2007 David Faure <faure@kde.org>
 License: LGPL-2+
 
-Files: KTP/OTR/
+Files: KTp/OTR/*
 Copyright: 2014 Marcin Ziemiński <zieminn@gmail.com>
 License: GPL-2+
 
