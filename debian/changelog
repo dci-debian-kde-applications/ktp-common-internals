@@ -23,7 +23,7 @@ ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
   * Bump libkpeople build-dep to 0.3.0
   * Make kde-telepathy-kpeople a dependency.
   * Add libotr5-dev and libgcrypt11-dev build-dep to enable OTR support.
-  * Add kpeople_chat_plugin.so and associated desktop file to 
+  * Add kpeople_chat_plugin.so and associated desktop file to
     kde-telepathy-kpeople package.
   * Update copyright file.
 
