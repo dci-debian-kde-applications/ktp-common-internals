@@ -18,13 +18,11 @@
 
 #include "message-filter-config-manager.h"
 #include "message-processor-private.h"
-#include "version.h"
 
 #include <QMutex>
 #include <QSet>
 
-#include <KGlobal>
-#include <KDebug>
+#include "ktp-debug.h"
 #include <KServiceTypeTrader>
 
 typedef QSet<KPluginInfo> PluginSet;

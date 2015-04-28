@@ -20,13 +20,11 @@
 
 #include "qml-plugins.h"
 
-#include <QtDeclarative/QDeclarativeItem>
-#include <QtDeclarative/QDeclarativeEngine>
-#include <QtDeclarative/QDeclarativeContext>
+#include <QQmlEngine>
+#include <QQmlContext>
 
 #include "conversation.h"
 #include "conversations-model.h"
-#include "hide-window-component.h"
 #include "messages-model.h"
 #include "pinned-contacts-model.h"
 #include "contact-pin.h"
@@ -41,8 +39,9 @@
 #include "KTp/Models/contacts-model.h"
 #include "KTp/Models/accounts-list-model.h"
 
+#include <QtQml>
 
-void QmlPlugins::initializeEngine(QDeclarativeEngine *engine, const char *uri)
+void QmlPlugins::initializeEngine(QQmlEngine *engine, const char *uri)
 {
     Q_UNUSED(uri)
 
@@ -56,7 +55,6 @@ void QmlPlugins::registerTypes(const char *uri)
 
     qmlRegisterType<ConversationsModel> (uri, 0, 1, "ConversationsModel");
     qmlRegisterType<Conversation>(uri, 0, 1, "Conversation");
-    qmlRegisterType<HideWindowComponent>(uri, 0, 1, "HideWindowComponent");
     qmlRegisterType<PinnedContactsModel>(uri, 0, 1, "PinnedContactsModel");
     qmlRegisterType<ContactPin>(uri, 0, 1, "ContactPin");
     qmlRegisterType<FilteredPinnedContactsProxyModel>(uri, 0, 1, "FilteredPinnedContactsProxyModel");
@@ -68,7 +66,6 @@ void QmlPlugins::registerTypes(const char *uri)
 
     qmlRegisterType<TelepathyManager>();
     qmlRegisterType<ConversationsModel>();
-
     qmlRegisterType<Tp::PendingChannelRequest>();
     qRegisterMetaType<Tp::Presence>();
     qRegisterMetaType<KTp::Presence>();
@@ -77,4 +74,3 @@ void QmlPlugins::registerTypes(const char *uri)
     qRegisterMetaType<Tp::AccountPtr>();
 }
 
-Q_EXPORT_PLUGIN2(conversation, QmlPlugins);

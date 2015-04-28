@@ -21,7 +21,7 @@
 #include "conversation.h"
 #include "messages-model.h"
 
-#include <KDebug>
+#include "debug.h"
 
 #include <TelepathyQt/ChannelClassSpec>
 #include <TelepathyQt/TextChannel>
@@ -44,9 +44,6 @@ ConversationsModel::ConversationsModel(QObject *parent) :
         Tp::AbstractClientHandler(channelClassList()),
         d(new ConversationsModelPrivate)
 {
-    QHash<int, QByteArray> roles;
-    roles[ConversationRole] = "conversation";
-    setRoleNames(roles);
     d->activeChatIndex = -1;
     connect(this, SIGNAL(rowsInserted(QModelIndex,int,int)), SIGNAL(totalUnreadCountChanged()));
     connect(this, SIGNAL(rowsRemoved(QModelIndex,int,int)), SIGNAL(totalUnreadCountChanged()));
@@ -58,13 +55,19 @@ ConversationsModel::~ConversationsModel()
     delete d;
 }
 
+QHash<int, QByteArray> ConversationsModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
+    roles[ConversationRole] = "conversation";
+    return roles;
+}
+
 QVariant ConversationsModel::data(const QModelIndex &index, int role) const
 {
     QVariant result;
     if (index.isValid()) {
         if (role == ConversationRole) {
             result = QVariant::fromValue<Conversation*>(d->conversations[index.row()]);
-            kDebug() << "returning value " << result;
         }
     }
     return result;
@@ -104,7 +107,7 @@ void ConversationsModel::handleChannels(const Tp::MethodInvocationContextPtr<> &
 
     //find the relevant channelRequest
     Q_FOREACH(const Tp::ChannelRequestPtr channelRequest, channelRequests) {
-        kDebug() << channelRequest->hints().allHints();
+        qCDebug(KTP_DECLARATIVE) << channelRequest->hints().allHints();
         shouldDelegate = channelRequest->hints().hint(QLatin1String("org.freedesktop.Telepathy.ChannelRequest"), QLatin1String("DelegateToPreferredHandler")).toBool();
     }
 
@@ -172,7 +175,7 @@ void ConversationsModel::removeConversation(Conversation* conv)
         conv->deleteLater();
         endRemoveRows();
     } else {
-        kError() << "attempting to delete non-existent conversation";
+        qWarning() << "attempting to delete non-existent conversation";
     }
 }
 
@@ -205,4 +208,11 @@ int ConversationsModel::totalUnreadCount() const
 int ConversationsModel::activeChatIndex() const
 {
     return d->activeChatIndex;
+}
+
+void ConversationsModel::closeAllConversations()
+{
+    Q_FOREACH(Conversation *c, d->conversations) {
+        c->requestClose();
+    }
 }

@@ -24,7 +24,8 @@
 #include <TelepathyQt/Connection>
 #include <TelepathyQt/ContactManager>
 #include <TelepathyQt/AccountSet>
-#include <KDebug>
+#include "debug.h"
+#include <QPixmap>
 
 #include "contact.h"
 #include "presence.h"

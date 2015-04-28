@@ -34,7 +34,7 @@
 #include "kpeopletranslationproxy.h"
 #endif
 
-#include <KDebug>
+#include "debug.h"
 
 
 namespace KTp
@@ -44,7 +44,7 @@ class ContactsModel::Private
 public:
     GroupMode groupMode;
     bool trackUnread;
-    QWeakPointer<KTp::AbstractGroupingProxyModel> proxy;
+    QPointer<KTp::AbstractGroupingProxyModel> proxy;
     QAbstractItemModel *source;
     Tp::AccountManagerPtr accountManager;
     Tp::ClientRegistrarPtr clientRegistrar;
@@ -61,7 +61,7 @@ KTp::ContactsModel::ContactsModel(QObject *parent)
     d->trackUnread = false;
     if (KTp::kpeopleEnabled()) {
         #ifdef HAVE_KPEOPLE
-        kDebug() << "Built with kpeople support, using kpeople model";
+        qCDebug(KTP_MODELS) << "Built with kpeople support, using kpeople model";
         KPeople::PersonsModel *personsModel = new KPeople::PersonsModel(this);
 
         connect(personsModel, SIGNAL(modelInitialized(bool)),
@@ -73,7 +73,7 @@ KTp::ContactsModel::ContactsModel(QObject *parent)
     }
     else
     {
-        kDebug() << "KPeople support not built-in, using normal model";
+        qCDebug(KTP_MODELS) << "KPeople support not built-in, using normal model";
         d->source = new KTp::ContactsListModel(this);
         connect(d->source, SIGNAL(modelInitialized(bool)),
                 this, SIGNAL(modelInitialized(bool)));
@@ -145,7 +145,8 @@ void KTp::ContactsModel::updateGroupProxyModels()
     //reset the filter
     //trying to track current selections whilst updating proxy models can cause issues
     //debug versions of Qt will assert
-    reset();
+    beginResetModel();
+    endResetModel();
 
     //if there no account manager there's not a lot point doing anything
     if (!d->accountManager) {
@@ -178,7 +179,7 @@ void KTp::ContactsModel::updateGroupProxyModels()
 
     //delete any previous proxy
     if (d->proxy) {
-        d->proxy.data()->deleteLater();
+        d->proxy->deleteLater();
     }
 
     switch (d->groupMode) {
@@ -192,26 +193,18 @@ void KTp::ContactsModel::updateGroupProxyModels()
         break;
     case AccountGrouping:
         d->proxy = new KTp::AccountsTreeProxyModel(modelToGroup, d->accountManager);
-        setSourceModel(d->proxy.data());
+        setSourceModel(d->proxy);
         break;
     case GroupGrouping:
         d->proxy = new KTp::GroupsTreeProxyModel(modelToGroup);
-        setSourceModel(d->proxy.data());
+        setSourceModel(d->proxy);
         break;
     }
 }
 
-void KTp::ContactsModel::setSourceModel(QAbstractItemModel *sourceModel)
+QHash<int, QByteArray> KTp::ContactsModel::roleNames() const
 {
-    KTp::ContactsFilterModel::setSourceModel(sourceModel);
-
-    //Qt automatically updates the role names to use that of the source model
-    //this causes problems when we have multiple source models that we change between
-    //instead we update here just after we set a source model
-
-    //in Qt5.0 override the virtual roleNames() method and do it there.
-
-    QHash<int, QByteArray> roles = roleNames();
+    QHash<int, QByteArray> roles = KTp::ContactsFilterModel::roleNames();
     roles[KTp::RowTypeRole]= "type";
     roles[KTp::IdRole]= "id";
 
@@ -238,5 +231,6 @@ void KTp::ContactsModel::setSourceModel(QAbstractItemModel *sourceModel)
     roles[KTp::ContactCanAudioCallRole]= "audioCall";
     roles[KTp::ContactCanVideoCallRole]= "videoCall";
     roles[KTp::ContactTubesRole]= "tubes";
-    setRoleNames(roles);
+    roles[KTp::PersonIdRole]= "personId";
+    return roles;
 }

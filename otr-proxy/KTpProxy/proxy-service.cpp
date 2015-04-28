@@ -23,16 +23,13 @@
 #include "otr-config.h"
 #include "otr-utils.h"
 #include "pending-curry-operation.h"
+#include "ktp-proxy-debug.h"
 
 #include "KTp/OTR/constants.h"
 
 #include <TelepathyQt/ClientRegistrar>
 #include <TelepathyQt/TextChannel>
 #include <TelepathyQt/PendingReady>
-
-#include <KDebug>
-#include <KApplication>
-
 
 ProxyService::ProxyService(const QDBusConnection &dbusConnection, OTR::Config *config, const Tp::ClientRegistrarPtr &registrar)
     : Tp::DBusService(dbusConnection),
@@ -74,7 +71,7 @@ void ProxyService::addChannel(const Tp::TextChannelPtr &channel, const Tp::Accou
     proxyChannel->registerService(&error);
 
     if(error.isValid()) {
-        kError() << "Couldn't install proxy for the channel: " << channel->objectPath() << "\n"
+        qCCritical(KTP_PROXY) << "Couldn't install proxy for the channel: " << channel->objectPath() << "\n"
             << "error name: " << error.name() << "\n"
             << "error message: " << error.message();
 
@@ -91,7 +88,7 @@ void ProxyService::addChannel(const Tp::TextChannelPtr &channel, const Tp::Accou
             proxyChannel.data(), SIGNAL(disconnected(const QDBusObjectPath&)),
             &adaptee, SLOT(onProxyDisconnected(const QDBusObjectPath&)));
 
-    kDebug() << "Installed proxy: " << proxyChannel->objectPath() << "\n"
+    qCDebug(KTP_PROXY) << "Installed proxy: " << proxyChannel->objectPath() << "\n"
         << " for the channel: " << channel->objectPath() << "\n"
         << "Context: " << "\n"
         << "\t id: " << ctx.accountId << "\n"
@@ -132,7 +129,7 @@ void ProxyService::setPolicy(OtrlPolicy otrPolicy)
 void ProxyService::onChannelProxyClosed()
 {
     OtrProxyChannel *proxyChannel = dynamic_cast<OtrProxyChannel*>(QObject::sender());
-    kDebug() << "Removing proxy: " << proxyChannel->objectPath()
+    qCDebug(KTP_PROXY) << "Removing proxy: " << proxyChannel->objectPath()
         << " for the channel: " << proxyChannel->wrappedChannel()->objectPath();
 
     proxyChannel->dbusConnection().unregisterObject(proxyChannel->objectPath());
@@ -140,18 +137,18 @@ void ProxyService::onChannelProxyClosed()
 
     // stop the application when not needed anymore
     if(channels.isEmpty()) {
-        KApplication::kApplication()->quit();
+        qApp->quit();
     }
 }
 
 bool ProxyService::createNewPrivateKey(const QString &accountId, const QString &accountName)
 {
-    kDebug() << "Generating new private key for " << accountId;
+    qCDebug(KTP_PROXY) << "Generating new private key for " << accountId;
     OTR::KeyGenerationWorker *keyWorker = manager.createNewPrivateKey(accountId, accountName);
     if(keyWorker) {
         if(keyWorker->prepareCreation()) {
             // alredy started creation for this account
-            kDebug() << "Cannot prepare key generation for " << accountId;
+            qCDebug(KTP_PROXY) << "Cannot prepare key generation for " << accountId;
             keyWorker->deleteLater();
             return false;
         }
@@ -193,10 +190,10 @@ bool ProxyService::forgetFingerprint(const QString &accountId, const QString &co
 void ProxyService::onKeyGenerationThreadFinished()
 {
     OTR::KeyGenerationWorker *worker = qobject_cast<OTR::KeyGenerationWorker*>(QObject::sender());
-    kDebug() << "Finished generating a new private key for " << worker->accountId;
+    qCDebug(KTP_PROXY) << "Finished generating a new private key for " << worker->accountId;
 
     if(worker->error() || worker->finalizeCreation()) {
-        kDebug() << "Error generating private key for " << worker->accountId;
+        qCDebug(KTP_PROXY) << "Error generating private key for " << worker->accountId;
         Q_EMIT keyGenerationFinished(worker->accountId, true);
     } else{
         Q_EMIT keyGenerationFinished(worker->accountId, false);

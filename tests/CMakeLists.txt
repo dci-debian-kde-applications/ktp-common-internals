@@ -1,4 +1,3 @@
-set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 include_directories(
   ${CMAKE_SOURCE_DIR}
@@ -8,47 +7,41 @@ include_directories(
 
 set(model_view_SRCS
     model-view.cpp
-    roles-proxy-model.cpp
 )
 
-kde4_add_ui_files(model_view_SRCS model-view.ui)
+qt5_wrap_ui(model_view_SRCS model-view.ui)
 
-###
-
-kde4_add_executable(ktp_contact_list_model_view
+add_executable(ktp_contact_list_model_view
     ${model_view_SRCS}
     contact-list-model-view-main.cpp
 )
 
 target_link_libraries(ktp_contact_list_model_view
-  ${QT_QTTEST_LIBRARY}
-  ${KDE4_KDECORE_LIBS}
-  ${KDE4_KDEUI_LIBS}
-  ${TELEPATHY_QT4_LIBRARIES}
-  ktpcommoninternalsprivate
-  ktpmodelsprivate
+  Qt5::Test
+  Qt5::Widgets
+  KF5::CoreAddons
+  KF5::I18n
+  KTp::CommonInternals
+  KTp::Models
 )
 
-if (KPEOPLE_FOUND)
+if (KF5People_FOUND)
 
-include_directories(${KPEOPLE_INCLUDES})
+    add_executable(ktp_kpeople_list_model_view
+        ${model_view_SRCS}
+        kpeople-model-view-main.cpp
+    )
 
+    target_link_libraries(ktp_kpeople_list_model_view
+    Qt5::Test
+    Qt5::Widgets
+    KF5::I18n
+    KF5::People
+    KF5::CoreAddons
+    KTp::CommonInternals
+    KTp::Models
+    )
 
-kde4_add_executable(ktp_kpeople_list_model_view
-    ${model_view_SRCS}
-    kpeople-model-view-main.cpp
-)
-
-target_link_libraries(ktp_kpeople_list_model_view
-  ${QT_QTTEST_LIBRARY}
-  ${KDE4_KDECORE_LIBS}
-  ${KDE4_KDEUI_LIBS}
-  ${TELEPATHY_QT4_LIBRARIES}
-  ${KPEOPLE_LIBS}
-  ktpcommoninternalsprivate
-  ktpmodelsprivate
-)
-
-endif (KPEOPLE_FOUND)
+endif ()
 
 

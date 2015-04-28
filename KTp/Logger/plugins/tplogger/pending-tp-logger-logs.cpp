@@ -21,14 +21,14 @@
 #include "utils.h"
 
 #include <TelepathyQt/Contact>
-#include <TelepathyLoggerQt4/LogManager>
-#include <TelepathyLoggerQt4/Entity>
-#include <TelepathyLoggerQt4/TextEvent>
-#include <TelepathyLoggerQt4/PendingEvents>
+#include <TelepathyLoggerQt/LogManager>
+#include <TelepathyLoggerQt/Entity>
+#include <TelepathyLoggerQt/TextEvent>
+#include <TelepathyLoggerQt/PendingEvents>
 
 #include <KTp/message-processor.h>
 
-#include <KDebug>
+#include "Logger/debug.h"
 
 PendingTpLoggerLogs::PendingTpLoggerLogs(const Tp::AccountPtr &account,
                                          const KTp::LogEntity &entity,
@@ -63,7 +63,7 @@ void PendingTpLoggerLogs::logsRetrieved(Tpl::PendingOperation *op)
     Q_FOREACH (const Tpl::EventPtr &event, events) {
         const Tpl::TextEventPtr textEvent = event.dynamicCast<Tpl::TextEvent>();
         if (textEvent.isNull()) {
-            kDebug() << "Received a null TextEvent!";
+            qWarning() << "Received a null TextEvent!";
             continue;
         }
 

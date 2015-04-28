@@ -18,17 +18,13 @@
 
 
 #include "kpeopletranslationproxy.h"
+#include "KTp/types.h"
+#include "KTp/global-contact-manager.h"
 
 #include <KPeople/PersonsModel>
+#include <KPeople/KPeopleBackend/AbstractContact>
 
-#include <kpeople/global.h>
-
-#include "KTp/types.h"
-#include <global-contact-manager.h>
-
-#include <KDebug>
 #include <KIconLoader>
-#include <KABC/Addressee>
 
 #include <QPixmapCache>
 
@@ -54,75 +50,73 @@ QVariant KPeopleTranslationProxy::data(const QModelIndex &proxyIndex, int role) 
 //     IMPersonsDataSource *imPlugin = qobject_cast<IMPersonsDataSource*>(PersonPluginManager::presencePlugin());
 //
 //     if (!imPlugin) {
-//         kWarning() << "No imPlugin";
+//         qCWarning(KTP_MODELS) << "No imPlugin";
 //         return QVariant();
 //     }
 //
-    const KABC::Addressee &contact = mapToSource(proxyIndex).data(KPeople::PersonsModel::PersonVCardRole).value<KABC::Addressee>();
+    const QModelIndex sourceIndex = mapToSource(proxyIndex);
+    AbstractContact::Ptr contact = sourceIndex.data(KPeople::PersonsModel::PersonVCardRole).value<AbstractContact::Ptr>();
 
     switch (role) {
         case KTp::ContactPresenceTypeRole:
-            return translatePresence(contact.custom(QLatin1String("telepathy"), QLatin1String("presence")));
+            return s_presenceStrings.key(contact->customProperty(S_KPEOPLE_PROPERTY_PRESENCE).toString());
         case KTp::ContactPresenceIconRole:
-            return KPeople::iconNameForPresenceString(contact.custom(QLatin1String("telepathy"), QLatin1String("presence")));
+            return KPeople::iconNameForPresenceString(contact->customProperty(S_KPEOPLE_PROPERTY_PRESENCE).toString());
 //         case KTp::ContactPresenceNameRole:
-//             return mapToSource(proxyIndex).data(PersonsModel::PresenceDisplayRole);
+//             return sourceIndex.data(PersonsModel::PresenceDisplayRole);
         case Qt::DisplayRole:
-            return mapToSource(proxyIndex).data(KPeople::PersonsModel::FormattedNameRole);
+            return sourceIndex.data(KPeople::PersonsModel::FormattedNameRole);
         case KTp::RowTypeRole:
-            if (proxyIndex.parent().isValid() || sourceModel()->rowCount(mapToSource(proxyIndex)) <= 1) {
+            if (proxyIndex.parent().isValid() || sourceModel()->rowCount(sourceIndex) <= 1) {
                 return KTp::ContactRowType;
             } else {
                 return KTp::PersonRowType;
             }
 //             //if the person has max 1 child, it's a fake person, so treat it as contact row
-//             if (mapToSource(proxyIndex).parent().isValid() || sourceModel()->rowCount(mapToSource(proxyIndex)) <= 1) {
+//             if (sourceIndex.parent().isValid() || sourceModel()->rowCount(sourceIndex) <= 1) {
 //                 return KTp::ContactRowType;
 //             } else {
 //                 return KTp::PersonRowType;
 //             }
 //         case KTp::ContactAvatarPathRole:
-//             return mapToSource(proxyIndex).data(PersonsModel::PhotosRole);
+//             return sourceIndex.data(PersonsModel::PhotosRole);
         case KTp::ContactAvatarPixmapRole:
-            return mapToSource(proxyIndex).data(KPeople::PersonsModel::PhotoRole);
+            return sourceIndex.data(KPeople::PersonsModel::PhotoRole);
+        case KTp::ContactUriRole:
+            return contact->customProperty(S_KPEOPLE_PROPERTY_CONTACT_URI);
         case KTp::IdRole:
-            return contact.custom(QLatin1String("telepathy"), QLatin1String("contactId"));
+            return contact->customProperty(S_KPEOPLE_PROPERTY_CONTACT_ID);
+        case KTp::ContactIsBlockedRole:
+            return contact->customProperty(S_KPEOPLE_PROPERTY_IS_BLOCKED);
 //         case KTp::HeaderTotalUsersRole:
-//             return sourceModel()->rowCount(mapToSource(proxyIndex));
+//             return sourceModel()->rowCount(sourceIndex);
         case KTp::ContactGroupsRole:
-            return mapToSource(proxyIndex).data(PersonsModel::GroupsRole);
+            return sourceIndex.data(PersonsModel::GroupsRole);
         case KTp::PersonIdRole:
-            return mapToSource(proxyIndex).data(PersonsModel::PersonIdRole);
+            return sourceIndex.data(PersonsModel::PersonUriRole);
         case KTp::ContactVCardRole:
-            return mapToSource(proxyIndex).data(KPeople::PersonsModel::PersonVCardRole);
+            return sourceIndex.data(KPeople::PersonsModel::PersonVCardRole);
     }
 
-    const KABC::AddresseeList &contacts = mapToSource(proxyIndex).data(PersonsModel::ContactsVCardRole).value<KABC::AddresseeList>();
+    AbstractContact::List contacts = sourceIndex.data(PersonsModel::ContactsVCardRole).value<AbstractContact::List>();
 
     int mostOnlineIndex = 0;
 
     for (int i = 0; i < contacts.size(); i++) {
-        if (KPeople::presenceSortPriority(contact.custom(QLatin1String("telepathy"), QLatin1String("presence")))
-            < KPeople::presenceSortPriority(contacts.at(mostOnlineIndex).custom(QLatin1String("telepathy"), QLatin1String("presence")))) {
+        if (KPeople::presenceSortPriority(contact->customProperty(S_KPEOPLE_PROPERTY_PRESENCE).toString())
+            < KPeople::presenceSortPriority(contacts.at(mostOnlineIndex)->customProperty(S_KPEOPLE_PROPERTY_PRESENCE).toString())) {
 
             mostOnlineIndex = i;
         }
     }
 
-    QVariant rValue;
-
-    if (contacts.size() == 0) {
-        rValue = dataForKTpContact(contact.custom(QLatin1String("telepathy"), QLatin1String("accountPath")),
-                                 contact.custom(QLatin1String("telepathy"), QLatin1String("contactId")),
-                                 role);
-    } else {
-        rValue = dataForKTpContact(contacts.at(mostOnlineIndex).custom(QLatin1String("telepathy"), QLatin1String("accountPath")),
-                                 contacts.at(mostOnlineIndex).custom(QLatin1String("telepathy"), QLatin1String("contactId")),
-                                 role);
-    }
+    AbstractContact::Ptr informationContact = contacts.isEmpty() ? contact : contacts.at(mostOnlineIndex);
+    QVariant rValue = dataForKTpContact(informationContact->customProperty(S_KPEOPLE_PROPERTY_ACCOUNT_PATH).toString(),
+                               informationContact->customProperty(S_KPEOPLE_PROPERTY_CONTACT_ID).toString(),
+                               role);
 
     if (rValue.isNull()) {
-        return mapToSource(proxyIndex).data(role);
+        return sourceIndex.data(role);
     } else {
         return rValue;
     }
@@ -130,13 +124,16 @@ QVariant KPeopleTranslationProxy::data(const QModelIndex &proxyIndex, int role) 
 
 QVariant KPeopleTranslationProxy::dataForKTpContact(const QString &accountPath, const QString &contactId, int role) const
 {
-    KTp::ContactPtr ktpContact = KTp::contactManager()->contactForContactId(accountPath, contactId);
+    if (accountPath.isEmpty()) {
+        return QVariant();
+    }
+    if (role == KTp::AccountRole) {
+        return QVariant::fromValue<Tp::AccountPtr>(KTp::contactManager()->accountForAccountPath(accountPath));
+    }
 
+    KTp::ContactPtr ktpContact = KTp::contactManager()->contactForContactId(accountPath, contactId);
     if (!ktpContact.isNull()) {
         switch (role) {
-        case KTp::AccountRole:
-            return QVariant::fromValue<Tp::AccountPtr>(KTp::contactManager()->accountForContact(ktpContact));
-            break;
         case KTp::ContactRole:
             return QVariant::fromValue<KTp::ContactPtr>(ktpContact);
             break;
@@ -163,15 +160,7 @@ QVariant KPeopleTranslationProxy::dataForKTpContact(const QString &accountPath, 
             break;
         }
     }
-    //     } else if (ktpContact.isNull() && role == KTp::AccountRole) {
-    //         QVariant accountPath = mapToSource(proxyIndex).data(PersonsModel::UserRole);
-    //         if (accountPath.type() == QVariant::List) {
-    //             return QVariant::fromValue<Tp::AccountPtr>(imPlugin->accountManager()->accountForObjectPath(accountPath.toList().first().toString()));
-    //         } else {
-    //             return QVariant::fromValue<Tp::AccountPtr>(imPlugin->accountManager()->accountForObjectPath(accountPath.toString()));
-    //         }
-    //     }
-    // //     }
+
     return QVariant();
 }
 
@@ -180,30 +169,12 @@ bool KPeopleTranslationProxy::filterAcceptsRow(int source_row, const QModelIndex
     QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
 
     //if no valid presence (not even "offline") .. reject the contact
-    return !sourceIndex.data(KPeople::PersonsModel::PersonVCardRole).value<KABC::Addressee>().custom(QLatin1String("telepathy"), QLatin1String("presence")).isEmpty();
+    return !sourceIndex.data(KPeople::PersonsModel::PersonVCardRole).value<KPeople::AbstractContact::Ptr>()->customProperty(S_KPEOPLE_PROPERTY_PRESENCE).isNull();
 }
 
 QVariant KPeopleTranslationProxy::translatePresence(const QVariant &presenceName) const
 {
-    if (presenceName == QLatin1String("available")) {
-        return Tp::ConnectionPresenceTypeAvailable;
-    }
 
-    if (presenceName == QLatin1String("away")) {
-        return Tp::ConnectionPresenceTypeAway;
-    }
-
-    if (presenceName == QLatin1String("busy") || presenceName == QLatin1String("dnd")) {
-        return Tp::ConnectionPresenceTypeBusy;
-    }
-
-    if (presenceName == QLatin1String("xa")) {
-        return Tp::ConnectionPresenceTypeExtendedAway;
-    }
-
-    if (presenceName == QLatin1String("hidden")) {
-        return Tp::ConnectionPresenceTypeHidden;
-    }
 
     return Tp::ConnectionPresenceTypeOffline;
 }
@@ -239,15 +210,15 @@ QPixmap KPeopleTranslationProxy::contactPixmap(const QModelIndex &index) const
         //if the contact is offline, gray it out
         if (presenceType == Tp::ConnectionPresenceTypeOffline) {
             QImage image = avatar.toImage();
-            const QPixmap alpha = avatar.alphaChannel();
+            const QImage alpha = image.alphaChannel();
             for (int i = 0; i < image.width(); ++i) {
                 for (int j = 0; j < image.height(); ++j) {
                     int colour = qGray(image.pixel(i, j));
                     image.setPixel(i, j, qRgb(colour, colour, colour));
                 }
             }
+            image.setAlphaChannel(alpha);
             avatar = avatar.fromImage(image);
-            avatar.setAlphaChannel(alpha);
         }
 
         //insert the contact into pixmap cache for faster lookup

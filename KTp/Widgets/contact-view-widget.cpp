@@ -20,14 +20,11 @@
 
 #include "contact-view-widget.h"
 
-#include <KDE/KIcon>
-#include <KDE/KLineEdit>
-#include <KDE/KDebug>
-
-#include <QtGui/QApplication>
-#include <QtGui/QTextOption>
-#include <QtGui/QPainter>
-#include <QtGui/QVBoxLayout>
+#include <QLineEdit>
+#include <QTextOption>
+#include <QPainter>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QVBoxLayout>
 
 #include "types.h"
 #include <KTp/Models/contacts-list-model.h>
@@ -74,7 +71,7 @@ void KTp::ContactViewDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     QPixmap avatar;
     avatar.load(index.data(KTp::ContactAvatarPathRole).toString());
     if (avatar.isNull()) {
-        avatar = KIcon(QLatin1String("im-user-online")).pixmap(option.decorationSize);
+        avatar = QIcon::fromTheme(QStringLiteral("im-user-online")).pixmap(option.decorationSize);
     } else if (avatar.width() > option.decorationSize.width() || avatar.height() > option.decorationSize.height()) {
         //resize larger avatars if required
         avatar = avatar.scaled(option.decorationSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -106,7 +103,7 @@ public:
         : q(parent),
           layout(new QVBoxLayout(parent)),
           contactView(new QListView(parent)),
-          contactFilterLineEdit(new KLineEdit(parent)),
+          contactFilterLineEdit(new QLineEdit(parent)),
           contactsModel(0),
           filterModel(0)
     {
@@ -122,7 +119,7 @@ public:
     KTp::ContactViewWidget *q;
     QVBoxLayout *layout;
     QListView *contactView;
-    KLineEdit *contactFilterLineEdit;
+    QLineEdit *contactFilterLineEdit;
     KTp::ContactsListModel *contactsModel;
     KTp::ContactsFilterModel *filterModel;
 };
@@ -131,7 +128,6 @@ void KTp::ContactViewWidget::Private::_k_onSelectionChanged(const QItemSelection
                                                             const QItemSelection &oldSelection)
 {
     Q_UNUSED(oldSelection)
-    kDebug() << newSelection << oldSelection;
 
     if (newSelection.isEmpty()) {
         Q_EMIT q->selectionChanged(Tp::AccountPtr(), KTp::ContactPtr());
@@ -170,7 +166,7 @@ KTp::ContactViewWidget::ContactViewWidget(KTp::ContactsListModel* model, QWidget
     d->contactView->setIconSize(QSize(80, 80));
 
     d->contactFilterLineEdit->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    d->contactFilterLineEdit->setClearButtonShown(true);
+    d->contactFilterLineEdit->setClearButtonEnabled(true);
 
     d->layout->setMargin(0);
     d->layout->addWidget(d->contactView);
@@ -223,7 +219,6 @@ QSize KTp::ContactViewWidget::iconSize() const
 
 void KTp::ContactViewWidget::setIconSize(const QSize& iconSize)
 {
-    kDebug();
     if (iconSize != d->contactView->iconSize()) {
         d->contactView->setIconSize(iconSize);
         Q_EMIT iconSizeChanged(iconSize);
@@ -280,7 +275,7 @@ KTp::ContactsFilterModel* KTp::ContactViewWidget::filter() const
     return d->filterModel;
 }
 
-KLineEdit* KTp::ContactViewWidget::contactFilterLineEdit() const
+QLineEdit* KTp::ContactViewWidget::contactFilterLineEdit() const
 {
     return d->contactFilterLineEdit;
 }

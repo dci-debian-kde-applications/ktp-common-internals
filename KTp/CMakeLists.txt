@@ -2,12 +2,10 @@ include_directories (${CMAKE_CURRENT_BINARY_DIR}
                      ${CMAKE_CURRENT_SOURCE_DIR})
 
 set (ktp_common_internals_private_SRCS
-     ${KTP_GLOBAL_SOURCES}
      abstract-message-filter.cpp
      account-factory.cpp
      actions.cpp
      capabilities-hack-private.cpp
-     contact-info-dialog.cpp
      circular-countdown.cpp
      contact.cpp
      contact-factory.cpp
@@ -39,7 +37,6 @@ set (ktp_common_internals_private_HDRS
      actions.h
      circular-countdown.h
      contact.h
-     contact-info-dialog.h
      contact-factory.h
      core.h
      debug.h
@@ -61,49 +58,54 @@ set (ktp_common_internals_private_HDRS
      wallet-interface.h
      wallet-utils.h
      types.h
-     ktp-export.h
+     ${CMAKE_CURRENT_BINARY_DIR}/ktpcommoninternals_export.h
 )
 
-set (ktp_private_LIBS
-                       ${KDE4_KDECORE_LIBS}
-                       ${KDE4_KIO_LIBS}
-                       ${TELEPATHY_QT4_LIBRARIES}
-                       ${KDE4_KDEUI_LIBS}
-                       ${KDEPIMLIBS_KABC_LIBS}
-)
-
-if (TELEPATHY_LOGGER_QT4_FOUND)
+if (TelepathyLoggerQt_FOUND)
     set (ktp_private_LIBS
          ${ktp_private_LIBS}
-         ${TELEPATHY_LOGGER_QT4_LIBRARIES}
+         ${TELEPATHY_LOGGER_LIBRARIES}
          )
-endif (TELEPATHY_LOGGER_QT4_FOUND)
+endif ()
 
-if (KPEOPLE_FOUND)
-    include_directories(${KPEOPLE_INCLUDES})
-
+if (KF5People_FOUND)
     set (ktp_private_LIBS
          ${ktp_private_LIBS}
-         ${KPEOPLE_LIBS}
+         KF5::People
          )
-endif(KPEOPLE_FOUND)
+endif()
 
-kde4_add_library (ktpcommoninternalsprivate SHARED
+add_library (KTpCommonInternals
                  ${ktp_common_internals_private_SRCS}
 )
+add_library (KTp::CommonInternals ALIAS KTpCommonInternals)
+
+generate_export_header(KTpCommonInternals BASE_NAME KTpCommonInternals)
 
 #Raise SOVERSION for every 0.x cycle
-set_target_properties(ktpcommoninternalsprivate PROPERTIES
-                                                         VERSION ${KTP_VERSION}
-                                                         SOVERSION ${KTP_SONUMBER}
-                                                         DEFINE_SYMBOL MAKE_KTP_LIB)
+set_target_properties(KTpCommonInternals PROPERTIES
+                                        VERSION ${KTP_VERSION}
+                                        SOVERSION ${KTP_SONUMBER}
+                                        EXPORT_NAME CommonInternals
+                                        DEFINE_SYMBOL MAKE_KTP_LIB)
 
-target_link_libraries (ktpcommoninternalsprivate
-                      ${ktp_private_LIBS}
+target_link_libraries (KTpCommonInternals
+                PUBLIC
+                    KF5::Wallet #included from wallet-interface.h
+                    ${TELEPATHY_QT5_LIBRARIES}
+                PRIVATE
+                    ${ktp_private_LIBS}
+                    KF5::KIOWidgets
+                    KF5::I18n
+                    KF5::IconThemes
+                    KF5::Notifications
+                    KF5::IconThemes
 )
+target_include_directories(KTpCommonInternals PUBLIC ${TELEPATHY_QT5_INCLUDE_DIR}) # TODO: Remove when TelepathyQt exports include paths properly
 
-install (TARGETS ktpcommoninternalsprivate
-         DESTINATION ${LIB_INSTALL_DIR}
+install (TARGETS KTpCommonInternals
+         EXPORT KTpTargets
+         ${INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 install (FILES ${ktp_common_internals_private_HDRS}
@@ -114,7 +116,10 @@ add_subdirectory(Declarative)
 add_subdirectory(Models)
 add_subdirectory(Widgets)
 add_subdirectory(Logger)
-add_subdirectory(OTR)
+
+if (OTR_LIBS_FOUND)
+    add_subdirectory(OTR)
+endif (OTR_LIBS_FOUND)
 
 # API docs
 find_package(Doxygen)
@@ -125,4 +130,4 @@ if(DOXYGEN_EXECUTABLE)
   add_custom_target(
     apidox
     COMMAND ${DOXYGEN_EXECUTABLE} Doxyfile)
-endif(DOXYGEN_EXECUTABLE)
+endif()

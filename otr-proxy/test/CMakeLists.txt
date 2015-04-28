@@ -1,14 +1,11 @@
 add_subdirectory(lib)
 
 set(ktp-proxy-test_LIBS
-        ${KDE4_KDECORE_LIBS}
-        ${KDE4_KDEUI_LIBS}
-        ${KDE4_KIO_LIBS}
-        ${QT_QTTEST_LIBRARY}
-        ${TELEPATHY_QT4_LIBRARIES}
-        ${TELEPATHY_QT4_SERVICE_LIBRARIES}
+        Qt5::Test
+        ${TELEPATHY_QT5_LIBRARIES}
+        ${TELEPATHY_QT5_SERVICE_LIBRARIES}
         ktp-proxy-test-lib
-        ktpotrprivate
+        KTp::OTR
 )
 
 message("-- Adding test files:")
@@ -21,7 +18,7 @@ foreach(file ${TEST_FILES})
     get_filename_component(base_name ${file} NAME_WE)
     get_filename_component(full_name ${file} NAME)
 
-    kde4_add_unit_test(${base_name} TESTNAME ktp-proxy-${base_name} ${full_name})
+    add_executable(${base_name} ${full_name} )
     target_link_libraries (${base_name} ${ktp-proxy-test_LIBS})
 
     LIST(APPEND TEST_NAMES ${base_name})

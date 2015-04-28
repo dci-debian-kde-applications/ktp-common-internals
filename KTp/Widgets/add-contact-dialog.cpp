@@ -21,15 +21,16 @@
 
 #include "add-contact-dialog.h"
 #include "ui_add-contact-dialog.h"
+#include "debug.h"
 
 #include <KTp/types.h>
 
 #include <QObject>
 #include <QCloseEvent>
+#include <QDialogButtonBox>
 
 #include <KMessageBox>
-#include <KPushButton>
-#include <KDebug>
+#include <KLocalizedString>
 
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/Account>
@@ -42,7 +43,7 @@
 
 namespace KTp {
 
-class KTP_NO_EXPORT SubscribableAccountFilter : public Tp::AccountFilter
+class KTPCOMMONINTERNALS_NO_EXPORT SubscribableAccountFilter : public Tp::AccountFilter
 {
 public:
     SubscribableAccountFilter() : Tp::AccountFilter()
@@ -71,7 +72,7 @@ public:
 };
 
 
-struct KTP_NO_EXPORT AddContactDialog::Private
+struct KTPCOMMONINTERNALS_NO_EXPORT AddContactDialog::Private
 {
     Private() :
         ui(new Ui::AddContactDialog),
@@ -80,10 +81,11 @@ struct KTP_NO_EXPORT AddContactDialog::Private
 
     Ui::AddContactDialog *ui;
     bool acceptInProgress;
+    QDialogButtonBox *buttonBox;
 };
 
 AddContactDialog::AddContactDialog(const Tp::AccountManagerPtr &accountManager, QWidget *parent) :
-    KDialog(parent),
+    QDialog(parent),
     d(new Private)
 {
     setWindowTitle(i18n("Add new contact"));
@@ -91,8 +93,17 @@ AddContactDialog::AddContactDialog(const Tp::AccountManagerPtr &accountManager, 
 
     QWidget *widget = new QWidget(this);
     d->ui->setupUi(widget);
-    setMainWidget(widget);
 
+    d->buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    connect(d->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(d->buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
+
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(widget);
+    mainLayout->addWidget(d->buttonBox);
+
+    setLayout(mainLayout);
 
     Tp::AccountFilterPtr filter = Tp::AccountFilterPtr(new KTp::SubscribableAccountFilter());
     Tp::AccountSetPtr accountSet = accountManager->filterAccounts(filter);
@@ -149,7 +160,7 @@ void AddContactDialog::accept()
         KMessageBox::sorry(this, i18n("You did not specify the name of the contact to add."));
     } else {
         QStringList identifiers = QStringList() << d->ui->screenNameLineEdit->text();
-        kDebug() << "Requesting contacts for identifiers:" << identifiers;
+        qCDebug(KTP_WIDGETS) << "Requesting contacts for identifiers:" << identifiers;
 
         Tp::PendingContacts *pendingContacts = account->connection()->contactManager()->contactsForIdentifiers(identifiers);
         connect(pendingContacts, SIGNAL(finished(Tp::PendingOperation*)),
@@ -163,19 +174,19 @@ void AddContactDialog::closeEvent(QCloseEvent *e)
 {
     // ignore close event if we are in the middle of an operation
     if (!d->acceptInProgress) {
-        KDialog::closeEvent(e);
+        QDialog::closeEvent(e);
     }
 }
 
 void AddContactDialog::_k_onContactsForIdentifiersFinished(Tp::PendingOperation *op)
 {
     if (op->isError()) {
-        kWarning() << "Failed to retrieve a contact for the given identifier"
+        qWarning() << "Failed to retrieve a contact for the given identifier"
                    << op->errorName() << op->errorMessage();
         KMessageBox::sorry(this, i18n("Failed to create new contact."));
         setInProgress(false);
     } else {
-        kDebug() << "Requesting presence subscription";
+        qCDebug(KTP_WIDGETS) << "Requesting presence subscription";
 
         Tp::PendingContacts *pc = qobject_cast<Tp::PendingContacts*>(op);
         connect(pc->manager()->requestPresenceSubscription(pc->contacts(), d->ui->messageLineEdit->text()),
@@ -187,7 +198,7 @@ void AddContactDialog::_k_onContactsForIdentifiersFinished(Tp::PendingOperation 
 void AddContactDialog::_k_onRequestPresenceSubscriptionFinished(Tp::PendingOperation *op)
 {
     if (op->isError()) {
-        kWarning() << "Failed to request presence subscription"
+        qWarning() << "Failed to request presence subscription"
                    << op->errorName() << op->errorMessage();
         KMessageBox::sorry(this, i18n("Failed to request presence subscription "
                                       "from the requested contact."));
@@ -212,11 +223,8 @@ void AddContactDialog::updateSubscriptionMessageVisibility()
 void AddContactDialog::setInProgress(bool inProgress)
 {
     d->acceptInProgress = inProgress;
-    mainWidget()->setEnabled(!inProgress);
-    button(KDialog::Ok)->setEnabled(!inProgress);
-    button(KDialog::Cancel)->setEnabled(!inProgress);
+    layout()->parentWidget()->setEnabled(!inProgress);
+    d->buttonBox->setEnabled(!inProgress);
 }
 
 } //namespace KTp
-
-#include "add-contact-dialog.moc"

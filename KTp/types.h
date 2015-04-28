@@ -81,7 +81,8 @@ namespace KTp
         ContactCanVideoCallRole, ///< bool. You and contact can both video call
         ContactTubesRole, ///< stringlist. common supported dbus + stream services between you and contact
 
-        ContactVCardRole, ///< VCard of the contact in KABC::Addresse format; KPeople only at the moment
+        ContactUriRole,
+        ContactVCardRole, ///< VCard of the contact in KContacts::Addresse format; KPeople only at the moment
 
         //heading roles
         HeaderTotalUsersRole = Qt::UserRole  + 3000,
@@ -90,6 +91,24 @@ namespace KTp
         CustomRole = Qt::UserRole + 4000 // a placemark for custom roles in inherited models
     };
 }
+
+static const QString S_KPEOPLE_PROPERTY_ACCOUNT_PATH = QStringLiteral("telepathy-accountPath");
+static const QString S_KPEOPLE_PROPERTY_CONTACT_ID = QStringLiteral("telepathy-contactId");
+static const QString S_KPEOPLE_PROPERTY_CONTACT_URI = QStringLiteral("telepathy-contactUri");
+static const QString S_KPEOPLE_PROPERTY_PRESENCE = QStringLiteral("telepathy-presence");
+static const QString S_KPEOPLE_PROPERTY_IS_BLOCKED = QStringLiteral("telepathy-isBlocked");
+
+const QHash<Tp::ConnectionPresenceType, QString> s_presenceStrings = {
+    { Tp::ConnectionPresenceTypeUnset, QString() },
+    { Tp::ConnectionPresenceTypeOffline, QStringLiteral("offline") },
+    { Tp::ConnectionPresenceTypeAvailable, QStringLiteral("available") },
+    { Tp::ConnectionPresenceTypeAway, QStringLiteral("away") },
+    { Tp::ConnectionPresenceTypeExtendedAway, QStringLiteral("xa") },
+    { Tp::ConnectionPresenceTypeHidden, QStringLiteral("hidden") }, //or 'offline' ?
+    { Tp::ConnectionPresenceTypeBusy, QStringLiteral("busy") },
+    { Tp::ConnectionPresenceTypeUnknown, QStringLiteral("unknown") },
+    { Tp::ConnectionPresenceTypeError, QStringLiteral("error") }
+};
 
 Q_DECLARE_METATYPE(Tp::AccountPtr)
 Q_DECLARE_METATYPE(KTp::ContactPtr)

@@ -29,12 +29,8 @@
 #include <TelepathyQt/ContactManager>
 #include <TelepathyQt/PendingContacts>
 
-#include <KIcon>
-#include <KGlobal>
-#include <KComponentData>
 #include <KConfigGroup>
-#include <KStandardDirs>
-#include <KDebug>
+#include "debug.h"
 
 #include "KTp/presence.h"
 #include "KTp/contact.h"
@@ -64,14 +60,6 @@ PinnedContactsModel::PinnedContactsModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(new PinnedContactsModelPrivate)
 {
-    QHash<int, QByteArray> roles = roleNames();
-    roles[PresenceIconRole] = "presenceIcon";
-    roles[AvailabilityRole] = "available";
-    roles[ContactRole] = "contact";
-    roles[AccountRole] = "account";
-    roles[AlreadyChattingRole] = "alreadyChatting";
-    setRoleNames(roles);
-
     connect(this, SIGNAL(rowsInserted(QModelIndex,int,int)), SIGNAL(countChanged()));
     connect(this, SIGNAL(rowsRemoved(QModelIndex,int,int)), SIGNAL(countChanged()));
 }
@@ -79,6 +67,17 @@ PinnedContactsModel::PinnedContactsModel(QObject *parent)
 PinnedContactsModel::~PinnedContactsModel()
 {
     delete d;
+}
+
+QHash<int, QByteArray> PinnedContactsModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
+    roles[PresenceIconRole] = "presenceIcon";
+    roles[AvailabilityRole] = "available";
+    roles[ContactRole] = "contact";
+    roles[AccountRole] = "account";
+    roles[AlreadyChattingRole] = "alreadyChatting";
+    return roles;
 }
 
 QStringList PinnedContactsModel::state() const
@@ -95,8 +94,8 @@ void PinnedContactsModel::setState(const QStringList &pins)
 
 QModelIndex PinnedContactsModel::indexForContact(const KTp::ContactPtr &contact) const
 {
-    for (int i=0; i<d->m_pins.size();i++) {
-        if (d->m_pins[i]->contact() == contact) {
+    for (int i=0; i<d->m_pins.size() && contact; i++) {
+        if (d->m_pins[i]->contactId() == contact->id()) {
             return index(i);
         }
     }
@@ -159,15 +158,15 @@ QVariant PinnedContactsModel::data(const QModelIndex &index, int role) const
             return found;
         }
         case Qt::DecorationRole: {
-            KIcon icon;
+            QIcon icon;
             if (p->contact()) {
                 QString file = p->contact()->avatarData().fileName;
                 if (!file.isEmpty()) {
-                    icon = KIcon(file);
+                    icon = QIcon::fromTheme(file);
                 }
             }
             if (icon.isNull()) {
-                icon = KIcon(QLatin1String("im-user"));
+                icon = QIcon::fromTheme(QStringLiteral("im-user"));
             }
             return icon;
         }
@@ -187,13 +186,23 @@ int PinnedContactsModel::rowCount(const QModelIndex &parent) const
 void PinnedContactsModel::removeContactPin(const KTp::PersistentContactPtr &pin)
 {
     int row = d->m_pins.indexOf(pin);
-    beginRemoveRows(QModelIndex(), row, row);
-    d->m_pins.removeAt(row);
-    endRemoveRows();
+    if (row>=0) {
+        beginRemoveRows(QModelIndex(), row, row);
+        d->m_pins.removeAt(row);
+        endRemoveRows();
+
+        Q_EMIT stateChanged();
+    } else
+        qWarning() << "trying to remove missing pin" << pin->contactId();
 }
 
 void PinnedContactsModel::appendContactPin(const KTp::PersistentContactPtr &pin)
 {
+    auto samePin = [pin](const KTp::PersistentContactPtr &p) -> bool { return p->contactId() == pin->contactId(); };
+    if (std::find_if(d->m_pins.constBegin(), d->m_pins.constEnd(), samePin) != d->m_pins.constEnd()) {
+        return;
+    }
+
     int s = d->m_pins.size();
     beginInsertRows(QModelIndex(), s, s);
     d->m_pins += pin;
@@ -207,6 +216,8 @@ void PinnedContactsModel::appendContactPin(const KTp::PersistentContactPtr &pin)
         contactChanged(pin->contact());
     }
     connect(pin.data(), SIGNAL(contactChanged(KTp::ContactPtr)), SLOT(contactChanged(KTp::ContactPtr)));
+
+    Q_EMIT stateChanged();
 }
 
 void PinnedContactsModel::contactChanged(const KTp::ContactPtr &contact)
@@ -237,9 +248,16 @@ void PinnedContactsModel::contactDataChanged()
 void PinnedContactsModel::setConversationsModel(ConversationsModel *model)
 {
     beginResetModel();
+    if (d->conversations) {
+        disconnect(d->conversations, &QAbstractItemModel::rowsAboutToBeRemoved, this, &PinnedContactsModel::conversationsStateChanged);
+        disconnect(d->conversations, &QAbstractItemModel::rowsInserted, this, &PinnedContactsModel::conversationsStateChanged);
+    }
+
     d->conversations = model;
-    connect(d->conversations, SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), SLOT(conversationsStateChanged(QModelIndex, int, int)));
-    connect(d->conversations, SIGNAL(rowsInserted(QModelIndex, int, int)), SLOT(conversationsStateChanged(QModelIndex, int, int)));
+    if (model) {
+        connect(d->conversations, &QAbstractItemModel::rowsAboutToBeRemoved, this, &PinnedContactsModel::conversationsStateChanged);
+        connect(d->conversations, &QAbstractItemModel::rowsInserted, this, &PinnedContactsModel::conversationsStateChanged);
+    }
     endResetModel();
 }
 
@@ -248,9 +266,10 @@ void PinnedContactsModel::conversationsStateChanged(const QModelIndex &parent, i
     for (int i = start; i <= end; i++) {
         QModelIndex idx = d->conversations->index(i, 0, parent);
         Conversation* conv = idx.data(ConversationsModel::ConversationRole).value<Conversation*>();
-        KTp::ContactPtr contact = conv->targetContact();
+        QString contactId = conv->targetContact()->id();
+
         Q_FOREACH(const KTp::PersistentContactPtr &p, d->m_pins) {
-            if (p->contact() == contact) {
+            if (p->contactId() == contactId) {
                 QModelIndex contactIdx = indexForContact(p->contact());
                 //We need to delay the dataChanged until the next event loop, when endRowsRemoved has been called
                 QMetaObject::invokeMethod(this, "dataChanged", Qt::QueuedConnection, Q_ARG(QModelIndex, contactIdx), Q_ARG(QModelIndex, contactIdx));

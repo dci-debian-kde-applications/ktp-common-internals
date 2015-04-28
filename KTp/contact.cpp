@@ -61,6 +61,10 @@ QString KTp::Contact::accountUniqueIdentifier() const
 
 KTp::Presence KTp::Contact::presence() const
 {
+    if (!manager() || !manager()->connection()) {
+        return Tp::Presence::offline();
+    }
+
     return KTp::Presence(Tp::Contact::presence());
 }
 
@@ -181,14 +185,10 @@ QPixmap KTp::Contact::avatarPixmap()
             avatar.load(file);
         }
 
-        //if neither above succeeded, we need to load the icon
+        //if neither above succeeded, return empty QPixmap,
+        //PersonsModel will return the default icon instead
         if (avatar.isNull()) {
-            avatar = KIconLoader::global()->loadIcon(QLatin1String("im-user"), KIconLoader::NoGroup, 96);
-        }
-
-        //if the contact is offline, gray it out
-        if (presence().type() == Tp::ConnectionPresenceTypeOffline) {
-            avatarToGray(avatar);
+            return QPixmap();
         }
 
         //insert the contact into pixmap cache for faster lookup
@@ -201,15 +201,15 @@ QPixmap KTp::Contact::avatarPixmap()
 void KTp::Contact::avatarToGray(QPixmap &avatar)
 {
     QImage image = avatar.toImage();
-    QPixmap alpha= avatar.alphaChannel();
+    QImage alpha= image.alphaChannel();
     for (int i = 0; i < image.width(); ++i) {
         for (int j = 0; j < image.height(); ++j) {
             int colour = qGray(image.pixel(i, j));
             image.setPixel(i, j, qRgb(colour, colour, colour));
         }
     }
-    avatar = avatar.fromImage(image);
-    avatar.setAlphaChannel(alpha);
+    image.setAlphaChannel(alpha);
+    avatar = QPixmap::fromImage(image);
 }
 
 QString KTp::Contact::keyCache() const
@@ -221,7 +221,7 @@ QString KTp::Contact::buildAvatarPath(const QString &avatarToken)
 {
     QString cacheDir = QString::fromLatin1(qgetenv("XDG_CACHE_HOME"));
     if (cacheDir.isEmpty()) {
-        cacheDir = QString::fromLatin1("%1/.cache").arg(QLatin1String(qgetenv("HOME")));
+        cacheDir = QStringLiteral("%1/.cache").arg(QLatin1String(qgetenv("HOME")));
     }
 
     if (manager().isNull()) {
@@ -233,10 +233,10 @@ QString KTp::Contact::buildAvatarPath(const QString &avatarToken)
     }
 
     Tp::ConnectionPtr conn = manager()->connection();
-    QString path = QString::fromLatin1("%1/telepathy/avatars/%2/%3").
+    QString path = QStringLiteral("%1/telepathy/avatars/%2/%3").
         arg(cacheDir).arg(conn->cmName()).arg(conn->protocolName());
 
-    QString avatarFileName = QString::fromLatin1("%1/%2").arg(path).arg(Tp::escapeAsIdentifier(avatarToken));
+    QString avatarFileName = QStringLiteral("%1/%2").arg(path).arg(Tp::escapeAsIdentifier(avatarToken));
 
     return avatarFileName;
 }
