@@ -1,4 +1,4 @@
-ktp-common-internals (15.04.0-1~) UNRELEASED; urgency=medium
+ktp-common-internals (15.04.1-1~) UNRELEASED; urgency=medium
 
   [ Harald Sitter ]
   * KDE Frameworks 5 port
@@ -39,7 +39,10 @@ ktp-common-internals (15.04.0-1~) UNRELEASED; urgency=medium
   * Update Standards-Version to 3.9.6.0. No changes needed.
   * Update debian/watch file.
 
- -- Harald Sitter <sitter@kde.org>  Fri, 06 Mar 2015 11:05:05 +0100
+  [ Maximiliano Curia ]
+  * New upstream release (15.04.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 18 May 2015 14:24:06 +0200
 
 ktp-common-internals (0.9.0-0ubuntu3) vivid; urgency=medium
 
