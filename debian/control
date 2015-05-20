@@ -8,40 +8,23 @@ Uploaders: Diane Trout <diane@ghic.org>,
 Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                doxygen,
-               extra-cmake-modules (>= 0.0.11~),
+               extra-cmake-modules (>= 5~),
                gettext,
                kio-dev,
                libaccounts-qt5-dev (>= 1.10~),
+               libgcrypt20-dev,
                libkaccounts-dev,
-               libkf5attica-dev,
-               libkf5auth-dev,
-               libkf5bookmarks-dev,
-               libkf5codecs-dev,
-               libkf5completion-dev,
                libkf5config-dev,
-               libkf5configwidgets-dev,
                libkf5coreaddons-dev,
-               libkf5dbusaddons-dev,
-               libkf5globalaccel-dev,
-               libkf5guiaddons-dev,
-               libkf5i18n-dev,
                libkf5iconthemes-dev,
-               libkf5itemviews-dev,
-               libkf5jobwidgets-dev,
                libkf5kcmutils-dev,
                libkf5notifications-dev,
                libkf5notifyconfig-dev,
-               libkf5parts-dev,
                libkf5people-dev (>= 0.5~),
-               libkf5service-dev,
-               libkf5solid-dev,
-               libkf5sonnet-dev,
                libkf5texteditor-dev,
-               libkf5textwidgets-dev,
                libkf5wallet-dev,
                libkf5widgetsaddons-dev,
                libkf5windowsystem-dev,
-               libkf5xmlgui-dev,
                libotr5-dev (>= 4.0.0~),
                libtelepathy-logger-qt-dev (>= 0.9.80),
                libtelepathy-qt5-dev (>= 0.9.5),
@@ -76,6 +59,7 @@ Description: KDE Telepathy internal library - Development headers
  is only provided for compiling the rest of the components.
 
 Package: kde-telepathy-kpeople
+Section: kde
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: kpeople plugins for kde-telepathy
@@ -84,6 +68,7 @@ Description: kpeople plugins for kde-telepathy
  This contains plugins to work with libkpeople.
 
 Package: kde-telepathy-kaccounts
+Section: kde
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: kaccounts plugins for kde-telepathy
@@ -151,6 +136,7 @@ Description: kde-telepathy QtDeclarative QML support
  in QML.
 
 Package: kde-telepathy-data
+Section: kde
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
