@@ -43,7 +43,7 @@ Build-Depends: cmake,
                libkf5xmlgui-dev,
                libotr5-dev,
                libtelepathy-logger-qt-dev,
-               libtelepathy-qt5-dev (>= 0.9.5),
+               libtelepathy-qt-dev,
                pkg-kde-tools (>> 0.15.15),
                qtbase5-dev,
                qtdeclarative5-dev
