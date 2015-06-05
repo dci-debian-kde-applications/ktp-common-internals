@@ -1,4 +1,4 @@
-ktp-common-internals (15.04.1-1~) UNRELEASED; urgency=medium
+ktp-common-internals (15.04.2-1~) UNRELEASED; urgency=medium
 
   [ Harald Sitter ]
   * KDE Frameworks 5 port
@@ -41,8 +41,9 @@ ktp-common-internals (15.04.1-1~) UNRELEASED; urgency=medium
 
   [ Maximiliano Curia ]
   * New upstream release (15.04.1).
+  * New upstream release (15.04.2).
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 18 May 2015 14:24:06 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 05 Jun 2015 11:16:17 +0200
 
 ktp-common-internals (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
