@@ -1,10 +1,14 @@
-ktp-common-internals (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
+ktp-common-internals (4:15.04.2-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Scarlett Clark ]
   * Backport to vivid. 
   * Fix libtelepathy-qt5-dev  version req. 
   * otr requires telepathy-qt5 > 0.9.5 
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 27 May 2015 13:01:14 -0700
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Sat, 06 Jun 2015 02:01:57 +0200
 
 ktp-common-internals (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
