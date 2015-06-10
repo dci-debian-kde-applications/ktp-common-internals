@@ -1,4 +1,4 @@
-ktp-common-internals (4:15.04.2-0ubuntu1) UNRELEASED; urgency=medium
+ktp-common-internals (4:15.04.2-0ubuntu1) wily; urgency=medium
 
   [ Scarlett Clark ]
   * Backport to vivid. 
@@ -8,7 +8,7 @@ ktp-common-internals (4:15.04.2-0ubuntu1) UNRELEASED; urgency=medium
   [ Jonathan Riddell ]
   * New upstream release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Sat, 06 Jun 2015 02:01:57 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 09 Jun 2015 19:28:40 +0200
 
 ktp-common-internals (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
