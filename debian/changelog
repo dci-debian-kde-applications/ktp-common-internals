@@ -5,6 +5,14 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Update watchfile for kde-telepathys inclusion in KDE Applications.
   * New upstream release.
   * Update library package names to match new SONAME.
+  * Update build-dependencies according to cmake rules.
+    - Bump libkpeople-dev version to >= 0.5.0
+    - Add extra-cmake-modules, qtdeclarative5-dev,
+      libkf5coreaddons-dev, libkf5notifcations-dev, kio-dev,
+      libkf5widgetsaddons-dev, libkf5kcmutils-dev,
+      libkf5notifyconfig-dev, libkf5texteditor-dev, libkf5wallet-dev,
+      libkf5config-dev libkf5windowsystem-dev, libkf5iconthemes-dev,
+      libaccounts-qt5-dev >= 1.10
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
