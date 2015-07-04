@@ -21,10 +21,10 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: libktpcommoninternalsprivate-dev
 Section: libdevel
 Architecture: any
-Depends: libktpcommoninternalsprivate8 (= ${binary:Version}),
- libktpwidgetsprivate8 (= ${binary:Version}),
- libktploggerprivate8 (= ${binary:Version}),
- libktpotrprivate8 (= ${binary:Version}),
+Depends: libktpcommoninternalsprivate9 (= ${binary:Version}),
+ libktpwidgetsprivate9 (= ${binary:Version}),
+ libktploggerprivate9 (= ${binary:Version}),
+ libktpotrprivate9 (= ${binary:Version}),
  ${misc:Depends}
 Description: KDE Telepathy internal library - Development headers
  Internal library which consists of the most reused
@@ -37,7 +37,7 @@ Description: KDE Telepathy internal library - Development headers
  outside of the KDE Telepathy project umbrella. This package
  is only provided for compiling the rest of the components.
 
-Package: libktpcommoninternalsprivate8
+Package: libktpcommoninternalsprivate9
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Architecture: any
@@ -49,7 +49,7 @@ Description: KDE Telepathy common internal library
  .
  This contains the generic common components.
 
-Package: libktpmodelsprivate8
+Package: libktpmodelsprivate9
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy data models internal library
@@ -58,7 +58,7 @@ Description: KDE Telepathy data models internal library
  .
  This includes Qt models.
 
-Package: libktpwidgetsprivate8
+Package: libktpwidgetsprivate9
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy common internal widgets library
@@ -67,7 +67,7 @@ Description: KDE Telepathy common internal widgets library
  .
  This also includes common widgets like the contact grid.
 
-Package: libktploggerprivate8
+Package: libktploggerprivate9
 Breaks: libktploggerprivate7 (<< 0.8.80~)
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Architecture: any
@@ -78,7 +78,7 @@ Description: KDE Telepathy internal logger library
  .
  This includes the shared KDE-Telepathy logger service.
 
-Package: libktpotrprivate8
+Package: libktpotrprivate9
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy internal OTR library
@@ -109,7 +109,7 @@ Package: libktpcommoninternalsprivate-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: libktpcommoninternalsprivate8 (= ${binary:Version}), ${misc:Depends}
+Depends: libktpcommoninternalsprivate9 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
  Internal library which consists of the most reused
  parts across KDE Telepathy.
