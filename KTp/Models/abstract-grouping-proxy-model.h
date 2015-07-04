@@ -24,7 +24,7 @@
 
 #include <QStandardItemModel>
 
-#include <KTp/ktp-export.h>
+#include <KTp/Models/ktpmodels_export.h>
 
 class ProxyNode;
 class GroupNode;
@@ -32,7 +32,7 @@ class GroupNode;
 namespace KTp
 {
 
-class KTP_EXPORT AbstractGroupingProxyModel : public QStandardItemModel
+class KTPMODELS_EXPORT AbstractGroupingProxyModel : public QStandardItemModel
 {
     Q_OBJECT
 public:
@@ -43,6 +43,8 @@ public:
     void unforceGroup(const QString &group);
 
     void groupChanged(const QString &group);
+
+    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
 
 //protected:
     /** Return a list of all groups this items belongs to. Subclasses must override this*/

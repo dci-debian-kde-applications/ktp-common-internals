@@ -27,7 +27,7 @@
 
 #include "KTp/types.h"
 
-#include <KDebug>
+#include "ktp-debug.h"
 
 
 namespace KTp {
@@ -70,7 +70,7 @@ Tp::Contacts GlobalContactManager::allKnownContacts() const
 void GlobalContactManager::onAccountManagerReady(Tp::PendingOperation *op)
 {
     if (op->isError()) {
-        kWarning() << "Account Manager becomeReady failed";
+        qCWarning(KTP_COMMONINTERNALS) << "Account Manager becomeReady failed";
     }
 
     Q_FOREACH(const Tp::AccountPtr &account, d->accountManager->allAccounts()) {
@@ -143,7 +143,7 @@ void GlobalContactManager::onContactManagerStateChanged(const Tp::ContactManager
 Tp::AccountPtr GlobalContactManager::accountForContact(const Tp::ContactPtr &contact) const
 {
     if (!contact || !contact->manager()) {
-        kWarning() << "Null contact or contact manager!";
+        qCWarning(KTP_COMMONINTERNALS) << "Null contact or contact manager!";
         return Tp::AccountPtr();
     }
     return accountForConnection(contact->manager()->connection());
@@ -186,12 +186,18 @@ Tp::AccountPtr GlobalContactManager::accountForAccountPath(const QString &accoun
 
 KTp::ContactPtr GlobalContactManager::contactForContactId(const QString &accountPath, const QString &contactId)
 {
+    Q_ASSERT(!accountPath.isEmpty());
     if (!d->accountManager || accountPath.isEmpty()) {
+        qWarning() << "Account manager unavailable";
         return KTp::ContactPtr();
     }
 
     Tp::AccountPtr account = d->accountManager->accountForObjectPath(accountPath);
-    if (account && account->connection() && account->connection()->contactManager()) {
+    if (!account) {
+        qWarning() << "account not found" << accountPath;
+    }
+
+    if (account && account->connection() && account->connection()->contactManager() && account->connection()->isReady(Tp::Connection::FeatureRoster)) {
         Tp::Contacts contactSet = account->connection()->contactManager()->allKnownContacts();
         Q_FOREACH (const Tp::ContactPtr &contact, contactSet) {
             if (contact->id() == contactId) {
@@ -199,6 +205,7 @@ KTp::ContactPtr GlobalContactManager::contactForContactId(const QString &account
             }
         }
     }
+//     qDebug() << "Couldn't find a contact for" << contactId;
 
     return KTp::ContactPtr();
 }

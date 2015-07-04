@@ -22,12 +22,13 @@
 #define GLOBALPRESENCE_H
 
 #include <QObject>
+#include <QIcon>
 
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/AccountSet>
 #include <TelepathyQt/Constants>
 
-#include <KTp/ktp-export.h>
+#include <KTp/ktpcommoninternals_export.h>
 #include <KTp/types.h>
 #include "presence.h"
 
@@ -38,7 +39,7 @@ namespace KTp
  * It shows the highest current available presence, indicates if any accounts are changing, and what they are changing to.
 */
 
-class KTP_EXPORT GlobalPresence : public QObject
+class KTPCOMMONINTERNALS_EXPORT GlobalPresence : public QObject
 {
     Q_OBJECT
     Q_ENUMS(ConnectionPresenceType)
@@ -49,9 +50,10 @@ class KTP_EXPORT GlobalPresence : public QObject
     Q_PROPERTY(QIcon currentPresenceIcon READ currentPresenceIcon NOTIFY currentPresenceChanged)
     Q_PROPERTY(QString currentPresenceIconName READ currentPresenceIconName NOTIFY currentPresenceChanged)
     Q_PROPERTY(KTp::Presence currentPresence READ currentPresence NOTIFY currentPresenceChanged)
-
+    Q_PROPERTY(QString currentPresenceName READ currentPresenceName NOTIFY currentPresenceChanged);
     Q_PROPERTY(KTp::Presence requestedPresence READ requestedPresence WRITE setPresence NOTIFY requestedPresenceChanged)
-
+    Q_PROPERTY(QString requestedPresenceName READ requestedPresenceName NOTIFY requestedPresenceChanged)
+    Q_PROPERTY(bool isChangingPresence READ isChangingPresence NOTIFY connectionStatusChanged)
 
 public:
     explicit GlobalPresence(QObject *parent = 0);
@@ -86,10 +88,13 @@ public:
     QIcon currentPresenceIcon() const;
     QString currentPresenceIconName() const;
     ConnectionPresenceType currentPresenceType() const;
+    QString currentPresenceName() const;
 
     /** The most online presence requested for any account if any of the accounts are changing state.
       otherwise returns current presence*/
     Presence requestedPresence() const;
+
+    QString requestedPresenceName() const;
 
     /** Returns true if any account is changing state (i.e connecting*/
     bool isChangingPresence() const;

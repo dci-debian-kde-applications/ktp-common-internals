@@ -22,7 +22,6 @@
 #include <Widgets/add-contact-dialog.h>
 #include <Widgets/settings-kcm-dialog.h>
 #include <KTp/actions.h>
-#include <kstandarddirs.h>
 #include <KToolInvocation>
 
 #include <TelepathyQt/Account>
@@ -32,7 +31,7 @@
 #include <TelepathyQt/TextChannel>
 #include <TelepathyQt/PendingChannelRequest>
 
-#include <QDeclarativeEngine>
+#include <QQmlEngine>
 
 TelepathyManager::TelepathyManager(QObject *parent)
     : QObject(parent)
@@ -81,7 +80,7 @@ bool TelepathyManager::registerClient(QObject *client, const QString &name)
     }
 
     //the client registrar will delete the handler when the registrar is deleted.
-    QDeclarativeEngine::setObjectOwnership(client, QDeclarativeEngine::CppOwnership);
+    QQmlEngine::setObjectOwnership(client, QQmlEngine::CppOwnership);
 
     return m_clientRegistrar->registerClient(Tp::AbstractClientPtr(abstractClient), name);
 }
@@ -164,12 +163,12 @@ Tp::PendingOperation* TelepathyManager::startFileTransfer(const Tp::AccountPtr &
 
 bool TelepathyManager::canDial() const
 {
-    return !KStandardDirs::findExe(QLatin1String("ktp-dialout-ui")).isEmpty();
+    return !QStandardPaths::findExecutable(QLatin1String("ktp-dialout-ui")).isEmpty();
 }
 
 bool TelepathyManager::canSendFiles() const
 {
-    return !KStandardDirs::findExe(QLatin1String("ktp-send-file")).isEmpty();
+    return !QStandardPaths::findExecutable(QLatin1String("ktp-send-file")).isEmpty();
 }
 
 void TelepathyManager::openDialUi() const
@@ -199,21 +198,23 @@ void TelepathyManager::joinChatRoom()
 void TelepathyManager::toggleContactList()
 {
     //contact list is registered, call toggleWindowVisibility in contact list
-    QDBusMessage methodCall = QDBusMessage::createMethodCall(QLatin1String("org.kde.ktp-contactlist"),
-                                                             QLatin1String("/ktp_contactlist/MainWindow"),
+    QDBusMessage methodCall = QDBusMessage::createMethodCall(QLatin1String("org.kde.ktpcontactlist"),
+                                                             QLatin1String("/ktpcontactlist/MainWindow"),
                                                              QLatin1String("org.kde.KTp.ContactList"),
                                                              QLatin1String("toggleWindowVisibility"));
 
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(methodCall);
-    QDBusPendingCallWatcher* watch = new QDBusPendingCallWatcher(call, this);
+    QDBusPendingCallWatcher *watch = new QDBusPendingCallWatcher(call, this);
     connect(watch, SIGNAL(finished(QDBusPendingCallWatcher*)), SLOT(contactlistDBusAccessed(QDBusPendingCallWatcher*)));
     connect(watch, SIGNAL(finished(QDBusPendingCallWatcher*)), watch, SLOT(deleteLater()));
 }
 
-void TelepathyManager::contactlistDBusAccessed(QDBusPendingCallWatcher* w)
+void TelepathyManager::contactlistDBusAccessed(QDBusPendingCallWatcher *w)
 {
-    if(w->isError())
-        KToolInvocation::startServiceByDesktopName(QLatin1String("ktp-contactlist"));
+    if (w->isError()) {
+        // if toggleWindowVisibility failed, try starting the application via dbus
+        QDBusConnection::sessionBus().interface()->startService(QStringLiteral("org.kde.ktpcontactlist"));
+    }
 }
 
 void TelepathyManager::showSettingsKCM()

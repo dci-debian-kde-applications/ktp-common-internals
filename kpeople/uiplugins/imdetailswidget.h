@@ -31,7 +31,7 @@ class ImDetailsWidget : public KPeople::AbstractFieldWidgetFactory
 public:
     explicit ImDetailsWidget(QObject *parent, const QVariantList &args);
     QString label() const;
-    virtual QWidget* createDetailsWidget(const KABC::Addressee& person, const KABC::AddresseeList &contacts, QWidget* parent) const;
+    virtual QWidget* createDetailsWidget(const KPeople::PersonData &person, QWidget *parent) const;
 };
 
 #endif // IM_DETAILS_WIDGET_H

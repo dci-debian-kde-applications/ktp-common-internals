@@ -23,6 +23,7 @@
 
 #include <KNotifyConfigWidget>
 #include <KMessageBox>
+#include <KLocalizedString>
 
 namespace KTp
 {
@@ -33,14 +34,14 @@ SettingsKcmDialog::SettingsKcmDialog(QWidget *parent) :
     setAttribute(Qt::WA_DeleteOnClose);
     resize(700, 640);
 
-    KService::Ptr tpAccKcm = KService::serviceByDesktopName(QLatin1String("kcm_ktp_accounts"));
+    KService::Ptr tpAccKcm = KService::serviceByDesktopName(QStringLiteral("kcm_kaccounts"));
     if (!tpAccKcm) {
         KMessageBox::error(this,
-                           i18n("It appears you do not have the IM Accounts control module installed. Please install ktp-accounts-kcm package."),
+                           i18n("It appears you do not have the IM Accounts control module installed. Please install kaccounts-integration package."),
                            i18n("IM Accounts KCM Plugin Is Not Installed"));
     }
 
-    addModule(QLatin1String("kcm_ktp_accounts"));
+    addModule(QStringLiteral("kcm_kaccounts"));
 }
 
 void SettingsKcmDialog::addGeneralSettingsModule()
@@ -62,7 +63,7 @@ void SettingsKcmDialog::addNotificationsModule()
             notificationWidget, SLOT(save()));
 
     KPageWidgetItem *notificationPage = new KPageWidgetItem(notificationWidget, i18n("Notifications"));
-    notificationPage->setIcon(KIcon(QLatin1String("preferences-desktop-notification")));
+    notificationPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-notification")));
     addPage(notificationPage);
 }
 
