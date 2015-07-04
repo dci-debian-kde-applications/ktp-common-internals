@@ -39,8 +39,8 @@ Name[zh_CN]=Telepathy 日志插件
 Name[zh_TW]=Telepathy 紀錄器外掛程式
 Comment=Provides integration with Telepathy Logger
 Comment[bs]=Obavlja integraciju s Telepathy dnevnikom
-Comment[ca]=Proporciona integració amb l'enregistrador del Telepathy
-Comment[ca@valencia]=Proporciona integració amb l'enregistrador del Telepathy
+Comment[ca]=Aquest connector proporciona integració amb l'enregistrador del Telepathy
+Comment[ca@valencia]=Este connector proporciona integració amb l'enregistrador del Telepathy
 Comment[cs]=Poskytuje integraci se zaznamenáváním Telepathy
 Comment[da]=Giver integration med Telepathy Logger
 Comment[de]=Stellt Integration mit Telepathy-Protokollen zur Verfügung
@@ -74,7 +74,7 @@ Comment[tr]=Telephaty Günlükleme ile bütünleştirme sağlar
 Comment[uk]=Забезпечує інтеграцію з засобом ведення журналу Telepathy
 Comment[x-test]=xxProvides integration with Telepathy Loggerxx
 Comment[zh_CN]=提供与 Telepathy 日志的集成
-Comment[zh_TW]=提供與 Telepathy 紀錄器的整合
+Comment[zh_TW]=提供 Telepathy 紀錄器的整合
 
 ServiceTypes=KTpLogger/Plugin
 

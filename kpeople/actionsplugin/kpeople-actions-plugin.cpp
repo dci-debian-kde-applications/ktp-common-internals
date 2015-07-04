@@ -20,11 +20,10 @@
 
 #include <QAction>
 
-#include <KIcon>
+#include <QIcon>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KFileDialog>
-#include <kdemacros.h>
+#include <QFileDialog>
 
 #include "KTp/contact.h"
 #include "KTp/actions.h"
@@ -33,6 +32,7 @@
 
 #include <TelepathyQt/Account>
 #include <TelepathyQt/ContactManager>
+#include <TelepathyQt/Constants>
 
 #include <KPeople/PersonData>
 
@@ -48,9 +48,9 @@ enum IMActionType {
 class IMAction : public QAction {
     Q_OBJECT
 public:
-    IMAction(const QString &text, const KIcon &icon, const KTp::ContactPtr &contact,
+    IMAction(const QString &text, const QIcon &icon, const KTp::ContactPtr &contact,
              const Tp::AccountPtr &account, IMActionType type, QObject *parent);
-    IMAction(const QString &text, const KIcon &icon, const QUrl &uri,
+    IMAction(const QString &text, const QIcon &icon, const QUrl &uri,
              IMActionType type, QObject *parent);
     KTp::ContactPtr contact() const;
     Tp::AccountPtr account() const;
@@ -63,7 +63,7 @@ private:
     IMActionType m_type;
 };
 
-IMAction::IMAction(const QString &text, const KIcon &icon, const KTp::ContactPtr &contact,
+IMAction::IMAction(const QString &text, const QIcon &icon, const KTp::ContactPtr &contact,
                    const Tp::AccountPtr &account, IMActionType type, QObject *parent):
     QAction(icon, text, parent),
     m_contact(contact),
@@ -72,7 +72,7 @@ IMAction::IMAction(const QString &text, const KIcon &icon, const KTp::ContactPtr
 {
 }
 
-IMAction::IMAction(const QString &text, const KIcon &icon, const QUrl &uri,
+IMAction::IMAction(const QString &text, const QIcon &icon, const QUrl &uri,
                    IMActionType type, QObject *parent):
     QAction(icon, text, parent),
     m_uri(uri),
@@ -106,92 +106,122 @@ KPeopleActionsPlugin::KPeopleActionsPlugin(QObject *parent, const QVariantList &
     Q_UNUSED(args);
 }
 
-QList<QAction*> KPeopleActionsPlugin::actionsForPerson(const KABC::Addressee &person,
-                                                       const KABC::AddresseeList &contacts,
+QList<QAction*> KPeopleActionsPlugin::actionsForPerson(const KPeople::PersonData &person,
                                                        QObject *parent) const
 {
     QList<QAction*> actions;
 
-    // === TODO ===
-    // This creates actions just for the "most online contact", what we want is to query all
-    // the subcontacts for all capabilities and fill them in on the Person, so if eg. one of
-    // the subcontacts can do audio calls and the other can do video calls, the Person
-    // should have both actions present.
-    Q_UNUSED(contacts);
+    // Get the most online account path and contact id
+    QString personAccountPath = person.contactCustomProperty(QLatin1String("telepathy-accountPath")).toString();
 
-    const QString &accountPath = person.custom(QLatin1String("telepathy"), QLatin1String("accountPath"));
-    const QString &contactId = person.custom(QLatin1String("telepathy"), QLatin1String("contactId"));
+    // The property for "telepathy-accountPath" is in form "/org/freedesktop/Telepathy/Account/gabble/jabber/myjabberaccount"
+    // which is needed for retrieving the account from Tp::AccountManager. However we can only retrieve the other
+    // contact uri list, not any objects which would give us the "telepathy-accountPath" for the subcontact.
+    // So the code below constructs the account path from the contact uri which is known to be for ktp contacts
+    // in form of "ktp:// + short account path + ? + contact id". But in order to not have the same actions
+    // twice in the menu (one for most online and one from the contactUris()), this turns these properties into regular
+    // uri format and puts it into the first position in the list, making sure that they will appear at the beggining.
+    // It's also easier to simply remove it here and not having to check each uri separately in the foreach below.
+    // And it cannot take the person.personUri() because for metacontacts that is in form of "kpeople://num_id".
+    personAccountPath = personAccountPath.right(personAccountPath.length() - TP_QT_ACCOUNT_OBJECT_PATH_BASE.size() - 1);
+    QString personContactId = person.contactCustomProperty(QLatin1String("telepathy-contactId")).toString();
+    QString mostOnlineUri = QStringLiteral("ktp://") + personAccountPath + QLatin1Char('?') + personContactId;
 
-    const Tp::AccountPtr account = KTp::contactManager()->accountForAccountPath(accountPath);
-    if (!account) {
-        return actions;
-    }
+    QStringList uris{mostOnlineUri};
+    QStringList contactUris = person.contactUris();
 
-    const KTp::ContactPtr contact = KTp::contactManager()->contactForContactId(accountPath, contactId);
-    if (!contact || !contact->manager()) {
-        return actions;
-    }
-
-    if (contact->textChatCapability()) {
-        QAction *action = new IMAction(i18n("Start Chat Using %1...", account->displayName()),
-                            KIcon(QLatin1String("text-x-generic")),
-                            contact,
-                            account,
-                            TextChannel,
-                            parent);
-        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-        actions << action;
-    }
-    if (contact->audioCallCapability()) {
-        QAction *action = new IMAction(i18n("Start Audio Call Using %1...", account->displayName()),
-                            KIcon(QLatin1String("audio-headset")),
-                            contact,
-                            account,
-                            AudioChannel,
-                            parent);
-        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-        actions << action;
-    }
-    if (contact->videoCallCapability()) {
-        QAction *action = new IMAction(i18n("Start Video Call Using %1...", account->displayName()),
-                            KIcon(QLatin1String("camera-web")),
-                            contact,
-                            account,
-                            VideoChannel,
-                            parent);
-        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-        actions << action;
+    // Only append the child contacts if there is more than 1, otherwise
+    // it means this contact has only itself as a subcontact.
+    if (contactUris.size() > 1) {
+        uris.append(contactUris);
+        // Make sure we don't have duplicate uris in the list
+        uris.removeDuplicates();
     }
 
-    if (contact->fileTransferCapability()) {
-        QAction *action = new IMAction(i18n("Send Files Using %1...", account->displayName()),
-                                    KIcon(QLatin1String("mail-attachment")),
-                                    contact,
-                                    account,
-                                    FileTransfer,
-                                    parent);
-        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-        actions << action;
-    }
-    if (contact->collaborativeEditingCapability()) {
-        QAction *action = new IMAction(i18n("Collaboratively edit a document Using %1...", account->displayName()),
-                                    KIcon(QLatin1String("document-edit")),
-                                    contact,
-                                    account,
-                                    CollabEditing,
-                                    parent);
-        connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
-        actions << action;
+    Q_FOREACH (const QString &uri, uris) {
+        if (!uri.startsWith(QStringLiteral("ktp://"))) {
+            continue;
+        }
+
+        int delimiterIndex = uri.indexOf(QLatin1Char('?'));
+        QString contactId = uri.right(uri.length() - delimiterIndex - 1);
+        QString accountPath = uri.mid(6, delimiterIndex - 6);
+        // Prepend the "/org/freedesktop/Telepathy" part so that Tp::AccountManager
+        // returns valid account
+        accountPath.prepend(TP_QT_ACCOUNT_OBJECT_PATH_BASE + QLatin1Char('/'));
+
+
+        const Tp::AccountPtr account = KTp::contactManager()->accountForAccountPath(accountPath);
+        if (!account) {
+            continue;
+        }
+
+        const KTp::ContactPtr contact = KTp::contactManager()->contactForContactId(accountPath, contactId);
+        if (!contact || !contact->manager()) {
+            continue;
+        }
+
+        if (contact->textChatCapability()) {
+            QAction *action = new IMAction(i18n("Start Chat Using %1...", account->displayName()),
+                                QIcon::fromTheme(QStringLiteral("text-x-generic")),
+                                contact,
+                                account,
+                                TextChannel,
+                                parent);
+            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+            actions << action;
+        }
+        if (contact->audioCallCapability()) {
+            QAction *action = new IMAction(i18n("Start Audio Call Using %1...", account->displayName()),
+                                QIcon::fromTheme(QStringLiteral("audio-headset")),
+                                contact,
+                                account,
+                                AudioChannel,
+                                parent);
+            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+            actions << action;
+        }
+        if (contact->videoCallCapability()) {
+            QAction *action = new IMAction(i18n("Start Video Call Using %1...", account->displayName()),
+                                QIcon::fromTheme(QStringLiteral("camera-web")),
+                                contact,
+                                account,
+                                VideoChannel,
+                                parent);
+            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+            actions << action;
+        }
+
+        if (contact->fileTransferCapability()) {
+            QAction *action = new IMAction(i18n("Send Files Using %1...", account->displayName()),
+                                        QIcon::fromTheme(QStringLiteral("mail-attachment")),
+                                        contact,
+                                        account,
+                                        FileTransfer,
+                                        parent);
+            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+            actions << action;
+        }
+        if (contact->collaborativeEditingCapability()) {
+            QAction *action = new IMAction(i18n("Collaboratively edit a document Using %1...", account->displayName()),
+                                        QIcon::fromTheme(QStringLiteral("document-edit")),
+                                        contact,
+                                        account,
+                                        CollabEditing,
+                                        parent);
+            connect (action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
+            actions << action;
+        }
     }
 
-    //FIXME-KPEOPLE
 //     QAction *action = new IMAction(i18n("Open Log Viewer..."),
-//                                    KIcon(QLatin1String("documentation")),
-//                                    personData->uri(),
+//                                    QIcon::fromTheme(QStringLiteral("documentation")),
+//                                    person.personUri(),
 //                                    LogViewer,
 //                                    parent);
 //     connect(action, SIGNAL(triggered(bool)), SLOT(onActionTriggered()));
 //     actions << action;
+
     return actions;
 }
 
@@ -213,10 +243,8 @@ void KPeopleActionsPlugin::onActionTriggered()
             KTp::Actions::startAudioVideoCall(account, contact);
             break;
         case FileTransfer: {
-            const QStringList fileNames = KFileDialog::getOpenFileNames(KUrl("kfiledialog:///FileTransferLastDirectory"),
-                                                                        QString(),
-                                                                        0,
-                                                                        i18n("Choose files to send to %1", contact->alias()));
+            const QStringList fileNames = QFileDialog::getOpenFileNames(Q_NULLPTR, i18n("Choose files to send to %1", contact->alias()),
+                                                                        QStringLiteral("kfiledialog:///FileTransferLastDirectory"));
             Q_FOREACH(const QString& file, fileNames) {
                 KTp::Actions::startFileTransfer(account, contact, file);
             }
@@ -226,19 +254,15 @@ void KPeopleActionsPlugin::onActionTriggered()
             KTp::Actions::openLogViewer(action->uri());
             break;
         case CollabEditing: {
-            const KUrl file = KUrl(KFileDialog::getOpenFileName(KUrl("kfiledialog:///CollabEditingLastDirectory"),
-                                                                QString(),
-                                                                0,
-                                                                i18n("Choose a file to edit with %1", contact->alias())));
-            KTp::Actions::startCollaborativeEditing(account, contact, QList<KUrl>() << file, true);
+            const QUrl file = QFileDialog::getOpenFileName(Q_NULLPTR, i18n("Choose a file to edit with %1", contact->alias()),
+                                                           QStringLiteral("kfiledialog:///CollabEditingLastDirectory"));
+            KTp::Actions::startCollaborativeEditing(account, contact, QList<QUrl>() << file, true);
             break;
         }
     }
 }
 
-#include "kpeople-actions-plugin.moc"
-#include "moc_kpeople-actions-plugin.cpp"
-
-
 K_PLUGIN_FACTORY( KPeopleActionsPluginFactory, registerPlugin<KPeopleActionsPlugin>(); )
 K_EXPORT_PLUGIN( KPeopleActionsPluginFactory("ktp_kpeople_plugin", "ktp-common-internals") )
+
+#include "kpeople-actions-plugin.moc"

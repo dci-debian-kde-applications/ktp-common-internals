@@ -27,12 +27,11 @@
 #include "pending-logger-entities-impl.h"
 #include "pending-logger-search-impl.h"
 
-#include <KGlobal>
 #include <KService>
 #include <KServiceTypeTrader>
 #include <KPluginInfo>
 
-#include <KDebug>
+#include "debug.h"
 
 using namespace KTp;
 
@@ -51,15 +50,15 @@ void LogManager::Private::loadPlugins()
         const KService::Ptr service = pluginInfo.service();
         KPluginFactory *factory = KPluginLoader(service->library()).factory();
         if (factory) {
-            kDebug() << "loaded factory :" << factory;
+            qCDebug(KTP_LOGGER) << "loaded factory :" << factory;
             AbstractLoggerPlugin *plugin = factory->create<AbstractLoggerPlugin>(q);
 
             if (plugin) {
-                kDebug() << "loaded logger plugin : " << plugin;
+                qCDebug(KTP_LOGGER) << "loaded logger plugin : " << plugin;
                 plugins << plugin;
             }
         } else {
-            kError() << "error loading plugin :" << service->library();
+            qCWarning(KTP_LOGGER) << "error loading plugin :" << service->library();
         }
     }
 }

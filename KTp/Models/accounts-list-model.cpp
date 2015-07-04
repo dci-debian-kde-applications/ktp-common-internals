@@ -21,8 +21,8 @@
 
 #include "accounts-list-model.h"
 
-#include <KDebug>
-#include <KIcon>
+#include <QIcon>
+#include "debug.h"
 #include <KLocalizedString>
 #include <KPixmapSequence>
 
@@ -44,8 +44,16 @@ KTp::AccountsListModel::AccountsListModel(QObject *parent)
  : QAbstractListModel(parent),
    d(new AccountsListModel::Private)
 {
-  
-    QHash<int, QByteArray> roles = roleNames();
+}
+
+KTp::AccountsListModel::~AccountsListModel()
+{
+    delete d;
+}
+
+QHash<int, QByteArray> KTp::AccountsListModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
     roles[ConnectionStateRole] = "connectionState";
     roles[ConnectionStateDisplayRole] = "conectionStateDisplay";
     roles[ConnectionStateIconRole] = "connectionStateIcon";
@@ -53,12 +61,7 @@ KTp::AccountsListModel::AccountsListModel(QObject *parent)
     roles[ConnectionProtocolNameRole] = "connectionProtocolName";
     roles[EnabledRole] = "enabled";
     roles[AccountRole] = "account";
-    setRoleNames(roles);
-}
-
-KTp::AccountsListModel::~AccountsListModel()
-{
-    delete d;
+    return roles;
 }
 
 void KTp::AccountsListModel::setAccountSet(const Tp::AccountSetPtr &accountSet)
@@ -112,7 +115,7 @@ QVariant KTp::AccountsListModel::data(const QModelIndex &index, int role) const
         break;
 
     case Qt::DecorationRole:
-        data = QVariant(KIcon(account->iconName()));
+        data = QVariant(QIcon::fromTheme(account->iconName()));
         break;
 
     case AccountsListModel::ConnectionStateRole:
@@ -183,7 +186,7 @@ QModelIndex KTp::AccountsListModel::index(int row, int column, const QModelIndex
 
 void KTp::AccountsListModel::onAccountAdded(const Tp::AccountPtr &account)
 {
-    kDebug() << "Creating a new Account from account:" << account.data();
+    qCDebug(KTP_MODELS) << "Creating a new Account from account:" << account.data();
 
     // Check if the account is already in the model.
     bool found = false;
@@ -198,11 +201,11 @@ void KTp::AccountsListModel::onAccountAdded(const Tp::AccountPtr &account)
     }
 
     if (found) {
-        kWarning() << "Requested to add account"
+        qCWarning(KTP_MODELS) << "Requested to add account"
                    << account.data()
                    << "to model, but it is already present. Doing nothing.";
     } else {
-        kDebug() << "Account not already in model. Create new Account from account:"
+        qCDebug(KTP_MODELS) << "Account not already in model. Create new Account from account:"
                  << account.data();
 
         beginInsertRows(QModelIndex(), d->accounts.size(), d->accounts.size());
@@ -243,7 +246,7 @@ void KTp::AccountsListModel::onAccountUpdated()
 
     Q_ASSERT(item);
     if (!item) {
-        kWarning() << "Not an Account pointer:" << sender();
+        qCWarning(KTP_MODELS) << "Not an Account pointer:" << sender();
         return;
     }
 
@@ -269,7 +272,7 @@ const QString KTp::AccountsListModel::connectionStateString(const Tp::AccountPtr
     }
 }
 
-const KIcon KTp::AccountsListModel::connectionStateIcon(const Tp::AccountPtr &account) const
+const QIcon KTp::AccountsListModel::connectionStateIcon(const Tp::AccountPtr &account) const
 {
     if (account->isEnabled()) {
         switch (account->connectionStatus()) {
@@ -277,14 +280,14 @@ const KIcon KTp::AccountsListModel::connectionStateIcon(const Tp::AccountPtr &ac
             return KTp::Presence(account->currentPresence()).icon();
         case Tp::ConnectionStatusConnecting:
             //imho this is not really worth animating, but feel free to play around..
-            return KIcon(KPixmapSequence(QLatin1String("process-working"), 22).frameAt(0));
+            return QIcon(KPixmapSequence(QLatin1String("process-working"), 22).frameAt(0));
         case Tp::ConnectionStatusDisconnected:
-            return KIcon(QLatin1String("user-offline"));
+            return QIcon::fromTheme(QStringLiteral("user-offline"));
         default:
-            return KIcon(QLatin1String("user-offline"));
+            return QIcon::fromTheme(QStringLiteral("user-offline"));
         }
     } else {
-        return KIcon();
+        return QIcon();
     }
 }
 

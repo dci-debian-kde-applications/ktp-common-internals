@@ -22,10 +22,12 @@
 
 #include "contact-grid-dialog.h"
 
-#include <KDE/KLineEdit>
-#include <KDE/KPushButton>
-#include <KDE/KLocalizedString>
-#include <KDE/KDebug>
+#include <KLocalizedString>
+
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QLineEdit>
+#include <QVBoxLayout>
 
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/AccountFactory>
@@ -37,8 +39,6 @@
 #include <KTp/Models/contacts-filter-model.h>
 #include <KTp/Widgets/contact-grid-widget.h>
 #include <KTp/contact-factory.h>
-
-
 
 class KTp::ContactGridDialog::Private
 {
@@ -54,28 +54,26 @@ public:
     Tp::AccountManagerPtr accountManager;
     KTp::ContactsListModel *contactsModel;
     KTp::ContactGridWidget *contactGridWidget;
+    QDialogButtonBox *buttonBox;
 
-public Q_SLOTS:
+public:
     void _k_onAccountManagerReady();
     void _k_onSelectionChanged();
 };
 
-
 void KTp::ContactGridDialog::Private::_k_onAccountManagerReady()
 {
-    kDebug() << "Account manager is ready";
     contactsModel->setAccountManager(accountManager);
 }
 
 void KTp::ContactGridDialog::Private::_k_onSelectionChanged()
 {
-    q->button(KDialog::Ok)->setEnabled(contactGridWidget->hasSelection());
+    buttonBox->button(QDialogButtonBox::Ok)->setEnabled(contactGridWidget->hasSelection());
 }
 
 
-
 KTp::ContactGridDialog::ContactGridDialog(QWidget *parent) :
-    KDialog(parent),
+    QDialog(parent),
     d(new Private(this))
 {
     resize(500,450);
@@ -111,10 +109,19 @@ KTp::ContactGridDialog::ContactGridDialog(QWidget *parent) :
 
 
     d->contactGridWidget = new KTp::ContactGridWidget(d->contactsModel, this);
-    d->contactGridWidget->contactFilterLineEdit()->setClickMessage(i18n("Search in Contacts..."));
+    d->contactGridWidget->contactFilterLineEdit()->setPlaceholderText(i18n("Search in Contacts..."));
     d->contactGridWidget->filter()->setPresenceTypeFilterFlags(KTp::ContactsFilterModel::ShowOnlyConnected);
 
-    setMainWidget(d->contactGridWidget);
+    d->buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    connect(d->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(d->buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
+
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(d->contactGridWidget);
+    mainLayout->addWidget(d->buttonBox);
+
+    setLayout(mainLayout);
 
     connect(d->contactGridWidget,
             SIGNAL(contactDoubleClicked(Tp::AccountPtr,KTp::ContactPtr)),
@@ -149,4 +156,4 @@ KTp::ContactsFilterModel* KTp::ContactGridDialog::filter() const
 }
 
 
-#include "contact-grid-dialog.moc"
+#include "moc_contact-grid-dialog.cpp"

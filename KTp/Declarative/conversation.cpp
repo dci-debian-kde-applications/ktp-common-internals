@@ -25,7 +25,7 @@
 #include <TelepathyQt/PendingChannelRequest>
 #include <TelepathyQt/PendingChannel>
 
-#include <KDebug>
+#include "debug.h"
 
 #include "channel-delegator.h"
 
@@ -50,7 +50,7 @@ Conversation::Conversation(const Tp::TextChannelPtr &channel,
         QObject(parent),
         d (new ConversationPrivate)
 {
-    kDebug();
+    qCDebug(KTP_DECLARATIVE);
 
     d->account = account;
     connect(d->account.data(), SIGNAL(connectionChanged(Tp::ConnectionPtr)), SLOT(onAccountConnectionChanged(Tp::ConnectionPtr)));
@@ -78,8 +78,7 @@ Conversation::Conversation(const Tp::TextChannelPtr &channel,
 
 Conversation::Conversation(QObject *parent) : QObject(parent)
 {
-    kError() << "Conversation should not be created directly. Use ConversationWatcher instead.";
-    Q_ASSERT(false);
+    qCCritical(KTP_DECLARATIVE) << "Conversation should not be created directly. Use ConversationWatcher instead.";
 }
 
 void Conversation::setTextChannel(const Tp::TextChannelPtr& channel)
@@ -127,11 +126,15 @@ QIcon Conversation::avatar() const
     if (d->isGroupChat) {
         return QIcon();
     } else {
-        QString path = d->targetContact->avatarData().fileName;
-        if (path.isEmpty()) {
-            path = QLatin1String("im-user");
+        const QString path = d->targetContact->avatarData().fileName;
+        QIcon icon;
+        if (!path.isEmpty()) {
+            icon = QIcon(path);
         }
-        return KIcon(path);
+        if (icon.availableSizes().isEmpty()) {
+            icon = QIcon::fromTheme(QStringLiteral("im-user"));
+        }
+        return icon;
     }
 }
 
@@ -154,7 +157,7 @@ bool Conversation::isValid()
 
 void Conversation::onChannelInvalidated(Tp::DBusProxy *proxy, const QString &errorName, const QString &errorMessage)
 {
-    kDebug() << proxy << errorName << ":" << errorMessage;
+    qCDebug(KTP_DECLARATIVE) << proxy << errorName << ":" << errorMessage;
 
     d->valid = false;
 
@@ -196,7 +199,7 @@ void Conversation::delegateToProperClient()
 
 void Conversation::requestClose()
 {
-    kDebug();
+    qCDebug(KTP_DECLARATIVE);
 
     //removing from the model will delete this object closing the channel
     Q_EMIT conversationCloseRequested();
@@ -228,7 +231,7 @@ void Conversation::onChatPausedTimerExpired()
 
 Conversation::~Conversation()
 {
-    kDebug();
+    qCDebug(KTP_DECLARATIVE);
     //if we are not handling the channel do nothing.
     if (!d->delegated) {
         d->messages->textChannel()->requestClose();

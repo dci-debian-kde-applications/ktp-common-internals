@@ -21,9 +21,7 @@
 #include "model-view.h"
 
 #include <KAboutData>
-#include <KCmdLineArgs>
-#include <KDebug>
-#include <KApplication>
+#include <KLocalizedString>
 
 #include <TelepathyQt/Types>
 #include <TelepathyQt/Debug>
@@ -43,17 +41,14 @@
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData("telepathy-kde-models-test-ui",
-                         0,
-                         ki18n("Telepathy KDE Models Test UI"),
-                         "0.1",
-                         ki18n("Telepathy KDE Models Test UI"),
-                         KAboutData::License_LGPL,
-                         ki18n("(C) 2011 Collabora Ltd"));
-
-    KCmdLineArgs::init(argc, argv, &aboutData);
-
-    KApplication app;
+    QApplication app(argc, argv);
+    KAboutData aboutData(QStringLiteral("telepathy-kde-models-test-ui"),
+                         i18n("Telepathy KDE Models Test UI"),
+                         QStringLiteral("0.1"),
+                         i18n("Telepathy KDE Models Test UI"),
+                         KAboutLicense::LGPL,
+                         i18n("(C) 2011 Collabora Ltd"));
+    KAboutData::setApplicationData(aboutData);
 
     Tp::registerTypes();
     Tp::enableDebug(false);

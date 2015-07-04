@@ -1,21 +1,13 @@
-include_directories(${KPEOPLE_INCLUDES})
-
-set (ktp_kpeople_plugin_SRCS
-     kpeople-actions-plugin.cpp
-)
-
-kde4_add_plugin (ktp_kpeople_plugin
-                 ${ktp_kpeople_plugin_SRCS}
+add_library (ktp_kpeople_plugin MODULE
+                 kpeople-actions-plugin.cpp
 )
 
 target_link_libraries (ktp_kpeople_plugin
-    ${QT_LIBRARIES}
-    ${TELEPATHY_QT4_LIBRARIES}
-    ${KDE4_KDEUI_LIBS}
-    ${KPEOPLE_LIBS}
-    ${KDE4_KFILE_LIBS}
-    ktpcommoninternalsprivate
-    ${KDEPIMLIBS_KABC_LIBS}
+    KF5::People
+    KF5::PeopleBackend
+    KF5::I18n
+    KF5::Service
+    KTp::CommonInternals
 )
 
 # Install:

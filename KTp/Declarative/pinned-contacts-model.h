@@ -34,7 +34,7 @@ class PinnedContactsModel : public QAbstractListModel
 
     Q_PROPERTY(ConversationsModel *conversations READ conversationsModel WRITE setConversationsModel)
     Q_PROPERTY(Tp::AccountManagerPtr accountManager READ accountManager WRITE setAccountManager)
-    Q_PROPERTY(QStringList state READ state WRITE setState)
+    Q_PROPERTY(QStringList state READ state WRITE setState NOTIFY stateChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
   public:
@@ -49,8 +49,9 @@ class PinnedContactsModel : public QAbstractListModel
         AlreadyChattingRole
     };
 
-    virtual QVariant data(const QModelIndex &index, int role) const;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+    virtual QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
     Q_SLOT void setPinning(const Tp::AccountPtr &account, const KTp::ContactPtr &contact, bool newState);
 
@@ -73,6 +74,7 @@ class PinnedContactsModel : public QAbstractListModel
 
   Q_SIGNALS:
     void countChanged();
+    void stateChanged();
 
   private:
     void appendContactPin(const KTp::PersistentContactPtr &pin);

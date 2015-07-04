@@ -18,10 +18,9 @@
 
 #include "message-filters-private.h"
 
-#include <QtGui/QTextDocument> //needed for Qt::escape
+#include <QTextDocument> //needed for Qt::escape
 
 #include <KTp/text-parser.h>
-#include <KUrl>
 
 MessageEscapeFilter::MessageEscapeFilter(QObject *parent)
     : KTp::AbstractMessageFilter(parent)
@@ -53,10 +52,10 @@ void MessageEscapeFilter::filterMessage(KTp::Message &message, const KTp::Messag
 
     int offset = 0;
     for (int i = 0; i < parsedUrl.fixedUrls.size(); i++) {
-         KUrl url(parsedUrl.fixedUrls.at(i));
-         if (url.protocol() != QLatin1String("mailto")) {
+         QUrl url(parsedUrl.fixedUrls.at(i));
+         if (url.scheme() != QLatin1String("mailto")) {
              QString originalText = messageText.mid(parsedUrl.urlRanges.at(i).first + offset, parsedUrl.urlRanges.at(i).second);
-             QString link = QString::fromLatin1("<a href=\"%1\">%2</a>").arg(QString::fromAscii(url.toEncoded()), originalText);
+             QString link = QString::fromLatin1("<a href=\"%1\">%2</a>").arg(QString::fromLatin1(url.toEncoded()), originalText);
 
              QString placeholder = QString::fromLatin1("#K#T#P%1").arg(i);
 
@@ -75,7 +74,7 @@ void MessageEscapeFilter::filterMessage(KTp::Message &message, const KTp::Messag
 
     message.setProperty("Urls", urls);
 
-    QString escapedMessage = Qt::escape(messageText);
+    QString escapedMessage = messageText.toHtmlEscaped();
 
     escapedMessage.replace(QLatin1String("\n "), QLatin1String("<br/>&nbsp;")); //keep leading whitespaces
     escapedMessage.replace(QLatin1Char('\n'), QLatin1String("<br/>"));

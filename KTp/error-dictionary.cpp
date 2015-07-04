@@ -24,9 +24,7 @@
 #include <TelepathyQt/Constants>
 
 #include <KLocalizedString>
-#include <KGlobal>
-#include <KLocale>
-#include <KDebug>
+#include "ktp-debug.h"
 
 namespace KTp
 {
@@ -242,7 +240,7 @@ QString ErrorDictionary::displayShortErrorMessage(const QString& dbusErrorName)
         return i18nc("Short user visible error string", "Internal component error");
     } else {
         //print the error so users can send it in
-        kWarning() << "Unknown error encountered:" << dbusErrorName;
+        qCWarning(KTP_COMMONINTERNALS) << "Unknown error encountered:" << dbusErrorName;
         return i18nc("User visible error string", "Unknown error");
     }
 }

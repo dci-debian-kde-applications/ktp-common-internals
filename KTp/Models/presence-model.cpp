@@ -21,15 +21,16 @@
 #include "presence-model.h"
 
 #include <QString>
-#include <QtGui/QFont>
+#include <QFont>
+#include <QFontDatabase>
+#include <QIcon>
 #include <QtDBus/QtDBus>
 
-#include <KDE/KIcon>
-#include <KDE/KLocalizedString>
-#include <KDE/KConfig>
-#include <KDE/KConfigGroup>
-#include <KDE/KGlobalSettings>
-#include <KDE/KDebug>
+#include <KSharedConfig>
+#include <KLocalizedString>
+#include <KConfig>
+#include <KConfigGroup>
+#include "debug.h"
 
 namespace KTp
 {
@@ -64,7 +65,7 @@ void PresenceModel::syncCustomPresencesToDisk()
 QVariant PresenceModel::data(int index) const
 {
     if (index < 0 || index >= m_presences.size()) {
-        kDebug() << "invalid index data requested" << index;
+        qCDebug(KTP_MODELS) << "invalid index data requested" << index;
         return QVariant();
     }
 
@@ -74,7 +75,7 @@ QVariant PresenceModel::data(int index) const
 QVariant PresenceModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        kDebug() << "invalid index data requested" << index;
+        qCDebug(KTP_MODELS) << "invalid index data requested" << index;
         return QVariant();
     }
 
@@ -92,7 +93,7 @@ QVariant PresenceModel::data(const QModelIndex &index, int role) const
 
     case Qt::FontRole:
         if (presence.statusMessage().isEmpty()) {
-            QFont font = KGlobalSettings::generalFont();
+            QFont font = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
             font.setBold(true);
             return font;
         } else {
@@ -117,7 +118,7 @@ int PresenceModel::rowCount(const QModelIndex &parent) const
 
 void PresenceModel::loadPresences()
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("ktelepathyrc"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("ktelepathyrc"));
     config->reparseConfiguration();
     m_presenceGroup = config->group("Custom Presence List");
     m_presences.clear();

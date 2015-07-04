@@ -21,11 +21,11 @@
 #ifndef STARTCHATDIALOG_H
 #define STARTCHATDIALOG_H
 
-#include <KDialog>
+#include <QDialog>
 
 #include <TelepathyQt/Types>
 
-#include <KTp/ktp-export.h>
+#include <KTp/ktpcommoninternals_export.h>
 
 namespace Tp {
     class PendingOperation;
@@ -33,7 +33,7 @@ namespace Tp {
 
 namespace KTp
 {
-class KTP_EXPORT StartChatDialog : public KDialog
+class KTPCOMMONINTERNALS_EXPORT StartChatDialog : public QDialog
 {
     Q_OBJECT
 
@@ -47,11 +47,11 @@ protected:
     virtual void closeEvent(QCloseEvent *e);
 
 private Q_SLOTS:
-    KTP_NO_EXPORT void _k_onStartChatFinished(Tp::PendingOperation *op);
-    KTP_NO_EXPORT void _k_onPendingContactFinished(Tp::PendingOperation *op);
+    KTPCOMMONINTERNALS_NO_EXPORT void _k_onStartChatFinished(Tp::PendingOperation *op);
+    KTPCOMMONINTERNALS_NO_EXPORT void _k_onPendingContactFinished(Tp::PendingOperation *op);
 
 private:
-    KTP_NO_EXPORT void setInProgress(bool inProgress);
+    KTPCOMMONINTERNALS_NO_EXPORT void setInProgress(bool inProgress);
 
     struct Private;
     Private * const d;

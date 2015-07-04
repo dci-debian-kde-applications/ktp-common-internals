@@ -20,13 +20,11 @@
 #ifndef IM_PERSONS_DATA_SOURCE_H
 #define IM_PERSONS_DATA_SOURCE_H
 
-#include <KPeople/BasePersonsDataSource>
+#include <KPeopleBackend/BasePersonsDataSource>
 
 #include <TelepathyQt/Types>
 
-#include "KTp/ktp-export.h"
-
-class KTP_EXPORT IMPersonsDataSource : public KPeople::BasePersonsDataSource
+class IMPersonsDataSource : public KPeople::BasePersonsDataSource
 {
 public:
     IMPersonsDataSource(QObject *parent, const QVariantList &data);
