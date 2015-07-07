@@ -6,6 +6,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Update library package names to match new SONAME.
   * Rename library packages to remove the "private" suffix.
+  * Replace old symbols files with new ones for the new SONAME.
   * Update build-dependencies according to cmake rules.
     - Bump libkpeople-dev version to >= 0.5.0
     - Add extra-cmake-modules, qtdeclarative5-dev,
