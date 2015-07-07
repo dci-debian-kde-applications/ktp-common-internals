@@ -1,5 +1,5 @@
 # SymbolsHelper-Confirmed: 15.04.2 amd64
-libKTpCommonInternals.so.9 libktpcommoninternals9.symbols #MINVER#
+libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 15.04.2
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 15.04.2
  _ZN3KTp10TextParser8instanceEv@Base 15.04.2

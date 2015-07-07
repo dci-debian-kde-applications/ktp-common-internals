@@ -1,5 +1,5 @@
 # SymbolsHelper-Confirmed: 15.04.2 amd64
-libKTpModels.so.9 libktpmodels.symbols #MINVER#
+libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
  _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 15.04.2
  _ZN23KPeopleTranslationProxy16staticMetaObjectE@Base 15.04.2
