@@ -1,2 +1,2 @@
-usr/lib/libktpwidgetsprivate.so.0.9*
-usr/lib/libktpwidgetsprivate.so.8
+usr/lib/*/libKTpWidgets.so.15.*
+usr/lib/*/libKTpWidgets.so.9

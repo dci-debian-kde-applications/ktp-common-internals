@@ -18,6 +18,9 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Change kpeople build dependiency to libkf5people-dev (>= 0.5.0)
   * Change build-depends telepathy-qt and telepathy-logger-qt to qt5
     versions.
+  * Update install paths to the new KF5 locations.
+    e.g. out of /usr/share/kde4, libraries into multi-arch directories,
+    and the new SONAME library filenames.
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
