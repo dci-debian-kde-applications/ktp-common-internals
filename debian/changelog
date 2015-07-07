@@ -8,7 +8,6 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Rename library packages to remove the "private" suffix.
   * Replace old symbols files with new ones for the new SONAME.
   * Update build-dependencies according to cmake rules.
-    - Bump libkpeople-dev version to >= 0.5.0
     - Add extra-cmake-modules, qtdeclarative5-dev,
       libkf5coreaddons-dev, libkf5notifcations-dev, kio-dev,
       libkf5widgetsaddons-dev, libkf5kcmutils-dev,
@@ -16,6 +15,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
       libkf5config-dev libkf5windowsystem-dev, libkf5iconthemes-dev,
       libaccounts-qt5-dev >= 1.10
   * Update date range and add Aleix Pols last name in the copyright file.
+  * Change kpeople build dependiency to libkf5people-dev (>= 0.5.0)
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
