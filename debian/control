@@ -3,8 +3,8 @@ Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Diane Trout <diane@debian.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
 Build-Depends: debhelper (>= 9), cmake,
- libtelepathy-qt4-dev (>= 0.9.5),
- libtelepathy-logger-qt4-dev (>= 0.8.0),
+ libtelepathy-qt5-dev (>= 0.9.5),
+ libtelepathy-logger-qt-dev (>= 15.04),
  libtelepathy-logger-dev,
  pkg-kde-tools,
  kdelibs5-dev,
