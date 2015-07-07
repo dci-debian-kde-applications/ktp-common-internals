@@ -21,6 +21,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Update install paths to the new KF5 locations.
     e.g. out of /usr/share/kde4, libraries into multi-arch directories,
     and the new SONAME library filenames.
+  * Remove unused blocks KTp/ktp-export.h and po/* from copyright file.
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
