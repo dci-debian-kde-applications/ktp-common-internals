@@ -95,7 +95,7 @@ Description: kaccounts plugins for kde-telepathy
 
 Package: libktpcommoninternals9
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: telepathy-accounts-signon, ${misc:Depends}, ${shlibs:Depends}
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version})
 Description: KDE Telepathy common internal library
