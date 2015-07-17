@@ -1,2 +1,3 @@
-usr/include/*
+usr/include/KTp/*
 usr/lib/*/lib*.so
+usr/lib/*/cmake/KTp/KTp*.cmake
