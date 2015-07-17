@@ -103,9 +103,11 @@ Description: KDE Telepathy internal OTR library
  .
  This includes components to support OTR
 
-Package: kde-telepathy-declarative
+Package: qml-module-org-kde-telepathy
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Replaces: kde-telepathy-declarative (<< 15.03)
+Breaks: kde-telepathy-declarative (<< 15.03)
 Description: kde-telepathy QtDeclarative QML support
  Contains a plugin for QtDeclarative that provides
  support for using KDE-Telepathy to components written
