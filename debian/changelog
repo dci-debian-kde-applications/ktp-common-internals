@@ -24,6 +24,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Remove unused blocks KTp/ktp-export.h and po/* from copyright file.
   * Rename liblktpcommoninterals-dev to libktp-dev
   * Rename kde-telepathy-declarative to qml-module-org-kde-telepathy
+  * Add kde-telepathy-kaccounts package.
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 

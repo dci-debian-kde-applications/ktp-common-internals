@@ -144,6 +144,17 @@ Description: kpeople plugins for kde-telepathy
  This is necessary for grouping multiple IM accounts into
  meta-contacts.
 
+Package: kde-telepathy-kaccounts
+Section: kde
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: kaccounts plugins for kde-telepathy
+ This links kde telepathy to kaccounts and vice versa, allowing migrating
+ settings from telepathy internal storage to a system-wide shared accounts
+ management system.
+ .
+ This contains plugins to work with kaccounts.
+
 Package: kde-telepathy-debugger
 Architecture: any
 Priority: extra
