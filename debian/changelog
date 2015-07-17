@@ -14,6 +14,8 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
       libkf5notifyconfig-dev, libkf5texteditor-dev, libkf5wallet-dev,
       libkf5config-dev libkf5windowsystem-dev, libkf5iconthemes-dev,
       libaccounts-qt5-dev >= 1.10
+      qtdeclarative5-dev, libtelepathy-logger-qt-dev, libkaccounts-dev,
+      libsignon-qt5-dev, libkf5kpeople
   * Update date range and add Aleix Pols last name in the copyright file.
   * Change kpeople build dependiency to libkf5people-dev (>= 0.5.0)
   * Change build-depends telepathy-qt and telepathy-logger-qt to qt5
