@@ -1,3 +1,4 @@
 usr/lib/*/libKTpLogger.so.15.*
 usr/lib/*/libKTpLogger.so.9
-usr/lib/*/plugins/ktploggerplugin_tplogger.so
+usr/lib/*/qt5/plugins/ktploggerplugin_tplogger.so
+

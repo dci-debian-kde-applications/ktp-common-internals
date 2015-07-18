@@ -1,2 +1,2 @@
-usr/lib/*/qml/org/kde/telepathy/libktpqmlplugin.so
-usr/lib/*/qml/org/kde/telepathy/qmldir
+usr/lib/*/qt5/qml/org/kde/telepathy/libktpqmlplugin.so
+usr/lib/*/qt5/qml/org/kde/telepathy/qmldir

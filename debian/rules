@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --parallel --with kde --dbg-package=libktpcommoninternals-dbg --fail-missing
+	dh $@ --parallel --with kf5 --dbg-package=libktpcommoninternals-dbg --fail-missing
 
 override_dh_auto_test:
 
