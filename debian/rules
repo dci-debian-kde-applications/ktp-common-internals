@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 
-%:
-	dh $@ --parallel --with kf5 --dbg-package=libktpcommoninternals-dbg --fail-missing
+include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
-override_dh_auto_test:
-
-.PHONY: override_dh_auto_test
+override_dh_strip:
+	$(overridden_command) --dbg-package=libktp-dbg

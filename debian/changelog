@@ -28,8 +28,10 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Rename kde-telepathy-declarative to qml-module-org-kde-telepathy
   * Add kde-telepathy-kaccounts package.
   * Use --fail-missing to make it easier to find not installed files.
-  * Switch to --with kf5. Update several plugin paths to $arch/qt5/plugin.
   * Rename libktpcommoninternals-dbg to libktp-dbg to match -dev file
+  * Use dhmk from pkg-kde-tools to build ktp.
+    - Change maintainer to debian-qt-kde
+    - Update debian/rules
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
