@@ -29,6 +29,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Add kde-telepathy-kaccounts package.
   * Use --fail-missing to make it easier to find not installed files.
   * Switch to --with kf5. Update several plugin paths to $arch/qt5/plugin.
+  * Rename libktpcommoninternals-dbg to libktp-dbg to match -dev file
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 

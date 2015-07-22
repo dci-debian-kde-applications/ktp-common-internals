@@ -125,10 +125,12 @@ Description: Shared data for all the KDE Telepathy components
  Telepathy components, and include files such as icons and
  translations.
 
-Package: libktpcommoninternals-dbg
+Package: libktp-dbg
 Architecture: any
 Section: debug
 Priority: extra
+Breaks: libktpcommoninternals-dbg (<< 15.03)
+Replaces: libktpcommoninternals-dbg (<< 15.03)
 Depends: libktpcommoninternals9 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
  Internal library which consists of the most reused
