@@ -33,6 +33,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
     - Change maintainer to debian-qt-kde
     - Update debian/rules
   * Add breaks/replaces libktpotrprivate9 to help migrate to new name
+  * Add KDE's unstable download url to watch file
 
  -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
 
