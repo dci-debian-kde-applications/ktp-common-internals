@@ -2,23 +2,28 @@ project(ktp-common-internals)
 
 cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 
-# Bump for every 0.x release, or whenever BC changes
-set (KTP_SONUMBER 9) # SO 9 is for 15.04 release
-set (KTP_VERSION "15.04.2")
-set (KTP_MESSAGE_FILTER_FRAMEWORK_VERSION "5")
-
-find_package(ECM 0.0.11 REQUIRED NO_MODULE)
+find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
      ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR}
 )
 cmake_policy(SET CMP0002 OLD)
 
+# KDE Application Version, managed by release script
+set (KDE_APPLICATIONS_VERSION_MAJOR "15")
+set (KDE_APPLICATIONS_VERSION_MINOR "07")
+set (KDE_APPLICATIONS_VERSION_MICRO "90")
+
+# Bump for every 0.x release, or whenever BC changes
+set (KTP_SONUMBER 9) # SO 9 is for 15.08 release
+set (KTP_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
+set (KTP_MESSAGE_FILTER_FRAMEWORK_VERSION "5")
+
 find_package (Qt5 REQUIRED CONFIG COMPONENTS
               Qml
               Test)
 
-find_package (KF5 REQUIRED COMPONENTS 
+find_package (KF5 5.11 REQUIRED COMPONENTS
               CoreAddons
               Notifications
               KIO
@@ -29,21 +34,23 @@ find_package (KF5 REQUIRED COMPONENTS
               Wallet
               Config
               WindowSystem
-              IconThemes)
+              IconThemes
+              People)
 
-set(REQUIRED_TPQT_VERSION 0.9.2.1)
+set(REQUIRED_TPQT_VERSION 0.9.5)
 
 find_package (TelepathyQt5 ${REQUIRED_TPQT_VERSION} REQUIRED)
 find_package (TelepathyQt5Service ${REQUIRED_TPQT_VERSION} REQUIRED) #used for the otr-proxy
 find_package (TelepathyLoggerQt)
-find_package (KF5People 0.5)
 
 find_package (KAccounts)
 find_package (AccountsQt5 1.10 CONFIG)
+find_package (SignOnQt5 8.55 CONFIG)
 find_package (LibOTR 4.0.0)
 find_package (Libgcrypt)
+find_package (telepathy-accounts-signon)
 
-if (LIBOTR_FOUND AND LIBGCRYPT_FOUND AND TelepathyQt5_VERSION VERSION_GREATER "0.9.4")
+if (LIBOTR_FOUND AND LIBGCRYPT_FOUND)
     set(OTR_LIBS_FOUND TRUE)
 endif ()
 
@@ -71,6 +78,11 @@ set_package_properties(TelepathyLoggerQt PROPERTIES DESCRIPTION "Qt bindings for
 set_package_properties(LibOTR PROPERTIES DESCRIPTION "Required for OTR support" TYPE OPTIONAL)
 set_package_properties(Libgcrypt PROPERTIES DESCRIPTION "Required for OTR support" TYPE OPTIONAL)
 
+set_package_properties(telepathy-accounts-signon PROPERTIES
+                       PURPOSE "Runtime-only dependency on a Telepathy Mission Control plugin, currently residing at https://gitlab.com/accounts-sso/telepathy-accounts-signon"
+                       TYPE RUNTIME
+                      )
+
 add_definitions(-DKTP_MESSAGE_FILTER_FRAMEWORK_VERSION=\"${KTP_MESSAGE_FILTER_FRAMEWORK_VERSION}\")
 add_definitions(-DTRANSLATION_DOMAIN=\"ktp-common-internals\")
 add_definitions (
@@ -90,8 +102,8 @@ if (KF5People_FOUND)
 endif ()
 
 #If we find KAccounts library, build the plugin for it
-if (KAccounts_FOUND AND AccountsQt5_FOUND)
-    include_directories(${ACCOUNTSQT_INCLUDE_DIRS})
+if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
+    include_directories(${ACCOUNTSQT_INCLUDE_DIRS} ${SIGNONQT_INCLUDE_DIRS})
     add_subdirectory(kaccounts)
 endif ()
 
