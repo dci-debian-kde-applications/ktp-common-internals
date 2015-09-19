@@ -1,4 +1,4 @@
-ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
+ktp-common-internals (15.07.90-1) UNRELEASED; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update Diane Trout's email address.
@@ -37,7 +37,7 @@ ktp-common-internals (15.04.3-1) UNRELEASED; urgency=medium
   * Update symbols files to be compatible with GCC-5
   * Update kde-telepathy-kepople.install to inly track kpeople related plugins
 
- -- Diane Trout <diane@debian.org>  Sat, 04 Jul 2015 09:50:32 -0700
+ -- Diane Trout <diane@debian.org>  Sun, 09 Aug 2015 14:15:11 -0700
 
 ktp-common-internals (0.9.0-1) unstable; urgency=medium
 
