@@ -36,6 +36,7 @@ ktp-common-internals (15.07.90-1) UNRELEASED; urgency=medium
   * Add KDE's unstable download url to watch file
   * Update symbols files to be compatible with GCC-5
   * Update kde-telepathy-kepople.install to rules track kpeople related plugins
+  * Add dh_install --list-missing to make sure everything is installed.
 
  -- Diane Trout <diane@debian.org>  Sun, 09 Aug 2015 14:15:11 -0700
 

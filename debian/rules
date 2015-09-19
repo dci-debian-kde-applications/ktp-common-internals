@@ -2,5 +2,8 @@
 
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
+override_dh_install:
+	dh_install --list-missing
+
 override_dh_strip:
 	$(overridden_command) --dbg-package=libktp-dbg
