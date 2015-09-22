@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 4:15.04.2 amd64
+# SymbolsHelper-Confirmed: 4:15.08.1+git20150917.1933 amd64 i386
 libKTpOTR.so.9 libktpotr9 #MINVER#
  _ZN3KTp14ChannelAdapter10setChannelERKN2Tp9SharedPtrINS1_11TextChannelEEE@Base 15.03.80
  _ZN3KTp14ChannelAdapter11acknowledgeERK5QListIN2Tp15ReceivedMessageEE@Base 15.03.80
@@ -66,9 +66,6 @@ libKTpOTR.so.9 libktpotr9 #MINVER#
  _ZN3KTp6Client21ProxyServiceInterfaceC2ERK7QStringS4_P7QObject@Base 15.03.80
  _ZN3KTp6Client21ProxyServiceInterfaceC2ERKN2Tp17AbstractInterfaceE@Base 15.03.80
  _ZN3KTp6Client21ProxyServiceInterfaceC2ERKN2Tp17AbstractInterfaceEP7QObject@Base 15.03.80
- (optional)_ZN3KTp6Client21ProxyServiceInterfaceD0Ev@Base 15.03.80
- (optional)_ZN3KTp6Client21ProxyServiceInterfaceD1Ev@Base 15.03.80
- (optional)_ZN3KTp6Client21ProxyServiceInterfaceD2Ev@Base 15.03.80
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterface10invalidateEPN2Tp9DBusProxyERK7QStringS7_@Base 15.03.80
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterface11MessageSentERK5QListIN2Tp11MessagePartEEjRK7QString@Base 15.03.80
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterface11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80
@@ -94,9 +91,6 @@ libKTpOTR.so.9 libktpotr9 #MINVER#
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceC2ERK7QStringS4_P7QObject@Base 15.03.80
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceC2ERKN2Tp17AbstractInterfaceE@Base 15.03.80
  _ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceC2ERKN2Tp17AbstractInterfaceEP7QObject@Base 15.03.80
- (optional)_ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceD0Ev@Base 15.03.80
- (optional)_ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceD1Ev@Base 15.03.80
- (optional)_ZN3KTp6Client33ChannelProxyInterfaceOTRInterfaceD2Ev@Base 15.03.80
  _ZN3KTpeqERKNS_15FingerprintInfoES2_@Base 15.03.80
  _ZN3KTplsER13QDBusArgumentRKNS_15FingerprintInfoE@Base 15.03.80
  _ZN3KTprsERK13QDBusArgumentRNS_15FingerprintInfoE@Base 15.03.80

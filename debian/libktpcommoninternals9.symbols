@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.03.80+git20150416.0144+15.04 amd64 i386
+# SymbolsHelper-Confirmed: 4:15.08.1+git20150917.1933 amd64 i386
 libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 15.03.80
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 15.03.80
@@ -48,9 +48,6 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp14ContactFactory6createERKN2Tp8FeaturesE@Base 15.03.80
  _ZN3KTp14ContactFactoryC1ERKN2Tp8FeaturesE@Base 15.03.80
  _ZN3KTp14ContactFactoryC2ERKN2Tp8FeaturesE@Base 15.03.80
- (optional)_ZN3KTp14ContactFactoryD0Ev@Base 15.03.80
- (optional)_ZN3KTp14ContactFactoryD1Ev@Base 15.03.80
- (optional)_ZN3KTp14ContactFactoryD2Ev@Base 15.03.80
  _ZN3KTp14GlobalPresence11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80
  _ZN3KTp14GlobalPresence11qt_metacastEPKc@Base 15.03.80
  _ZN3KTp14GlobalPresence11setPresenceENS0_22ConnectionPresenceTypeE7QString@Base 15.03.80
@@ -74,9 +71,6 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp14GlobalPresence26onRequestedPresenceChangedEv@Base 15.03.80
  _ZN3KTp14GlobalPresenceC1EP7QObject@Base 15.03.80
  _ZN3KTp14GlobalPresenceC2EP7QObject@Base 15.03.80
- (optional)_ZN3KTp14GlobalPresenceD0Ev@Base 15.03.80
- (optional)_ZN3KTp14GlobalPresenceD1Ev@Base 15.03.80
- (optional)_ZN3KTp14GlobalPresenceD2Ev@Base 15.03.80
  _ZN3KTp14MessageContextC1ERKN2Tp9SharedPtrINS1_7AccountEEERKNS2_INS1_11TextChannelEEE@Base 15.03.80
  _ZN3KTp14MessageContextC2ERKN2Tp9SharedPtrINS1_7AccountEEERKNS2_INS1_11TextChannelEEE@Base 15.03.80
  _ZN3KTp14MessageContextD0Ev@Base 15.03.80
@@ -259,9 +253,6 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp7Contact21invalidateAvatarCacheEv@Base 15.03.80
  _ZN3KTp7ContactC1EPN2Tp14ContactManagerERKNS1_17ReferencedHandlesERKNS1_8FeaturesERK4QMapI7QString8QVariantE@Base 15.03.80
  _ZN3KTp7ContactC2EPN2Tp14ContactManagerERKNS1_17ReferencedHandlesERKNS1_8FeaturesERK4QMapI7QString8QVariantE@Base 15.03.80
- (optional)_ZN3KTp7ContactD0Ev@Base 15.03.80
- (optional)_ZN3KTp7ContactD1Ev@Base 15.03.80
- (optional)_ZN3KTp7ContactD2Ev@Base 15.03.80
  _ZN3KTp7Message11setPropertyEPKcRK8QVariant@Base 15.03.80
  _ZN3KTp7Message12appendScriptERK7QString@Base 15.03.80
  _ZN3KTp7Message17appendMessagePartERK7QString@Base 15.03.80
@@ -424,5 +415,4 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZTVN3KTp7ContactE@Base 15.03.80
  _ZTVN3KTp7MessageE@Base 15.03.80
  (c++)"non-virtual thunk to KTp::CircularCountdown::~CircularCountdown()@Base" 15.03.80
- (optional|c++)"non-virtual thunk to KTp::Contact::~Contact()@Base" 15.03.80
  (c++)"non-virtual thunk to KTp::PersistentContact::~PersistentContact()@Base" 15.03.80

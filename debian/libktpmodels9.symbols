@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 4:15.04.2 amd64
+# SymbolsHelper-Confirmed: 4:15.08.1+git20150917.1933 amd64 i386
 libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80+git20150319.1326+15.04
  _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 15.03.80+git20150319.1326+15.04
@@ -15,9 +15,6 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN3KTp10RoomsModel8addRoomsE5QListIN2Tp8RoomInfoEE@Base 15.03.80
  _ZN3KTp10RoomsModelC1EP7QObject@Base 15.03.80
  _ZN3KTp10RoomsModelC2EP7QObject@Base 15.03.80
- (optional)_ZN3KTp10RoomsModelD0Ev@Base 15.03.80
- (optional)_ZN3KTp10RoomsModelD1Ev@Base 15.03.80
- (optional)_ZN3KTp10RoomsModelD2Ev@Base 15.03.80
  _ZN3KTp13ContactsModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80
  _ZN3KTp13ContactsModel11qt_metacastEPKc@Base 15.03.80
  _ZN3KTp13ContactsModel12setGroupModeENS0_9GroupModeE@Base 15.03.80
@@ -85,9 +82,6 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN3KTp18FavoriteRoomsModel8addRoomsE5QListI4QMapI7QString8QVariantEE@Base 15.03.80
  _ZN3KTp18FavoriteRoomsModelC1EP7QObject@Base 15.03.80
  _ZN3KTp18FavoriteRoomsModelC2EP7QObject@Base 15.03.80
- (optional)_ZN3KTp18FavoriteRoomsModelD0Ev@Base 15.03.80
- (optional)_ZN3KTp18FavoriteRoomsModelD1Ev@Base 15.03.80
- (optional)_ZN3KTp18FavoriteRoomsModelD2Ev@Base 15.03.80
  _ZN3KTp19ContactsFilterModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.03.80
  _ZN3KTp19ContactsFilterModel11qt_metacastEPKc@Base 15.03.80
  _ZN3KTp19ContactsFilterModel14setSourceModelEP18QAbstractItemModel@Base 15.03.80
