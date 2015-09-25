@@ -37,6 +37,7 @@ ktp-common-internals (15.08.1-1) UNRELEASED; urgency=medium
   * Update symbols files to be compatible with GCC-5
   * Update kde-telepathy-kepople.install to rules track kpeople related plugins
   * Add dh_install --list-missing to make sure everything is installed.
+  * Break/Replace libktpotrprivate8.
 
  -- Diane Trout <diane@debian.org>  Sun, 09 Aug 2015 14:15:11 -0700
 

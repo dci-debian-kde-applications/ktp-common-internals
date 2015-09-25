@@ -99,8 +99,8 @@ Description: KDE Telepathy internal logger library
 Package: libktpotr9
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libktpotrprivate9 (<< 15.03)
-Replaces: libktpotrprivate9 (<< 15.03)
+Breaks: libktpotrprivate8 (<< 15.03)
+Replaces: libktpotrprivate8 (<< 15.03)
 Description: KDE Telepathy internal OTR library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
