@@ -30,7 +30,10 @@ Copyright: 2013 Daniel Vrátil <dvratil@redhat.com>
 License: GPL-2+
 
 Files: KTp/Logger/scrollback-manager.cpp
+       KTp/Logger/debug.*
 Copyright: 2013 Daniel Vrátil <dvratil@redhat.com>
+           2014 Martin Klapetek <mklapetek@kde.org>
+           2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 License: LGPL-2.1+
 
 Files: kpeople/actionsplugin/kpeople-actions-plugin.*
@@ -41,9 +44,18 @@ Files: KTp/OTR/*
 Copyright: 2014 Marcin Ziemiński <zieminn@gmail.com>
 License: GPL-2+
 
+Files: otr-proxy/*
+Copyright: 2014 Marcin Ziemiński <zieminn@gmail.com>
+License: GPL-2.1+
+
+Files: otr-proxy/KTpProxy/ktp-proxy-debug.*
+Copyright: 2014 Martin Klapetek <mklapetek@kde.org>
+License: LGPL-2+
+
 Files: cmake/*
 Copyright: 2014 Marcin Ziemiński <zieminn@gmail.com>
            2008-2013 Michael Zanetti <mzanetti @ kde.org>
+           2015 Martin Klapetek <mklapetek@kde.org>
 License: BSD-3-clause
 
 Files: debian/*
