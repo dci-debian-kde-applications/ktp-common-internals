@@ -1,6 +1,7 @@
 ktp-common-internals (4:15.08.2-0ubuntu2) UNRELEASED; urgency=medium
 
   * Fix merge. 
+  * Vivid backport. 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 16 Oct 2015 17:14:37 -0700
 
