@@ -1,4 +1,4 @@
-ktp-common-internals (15.08.1-1) UNRELEASED; urgency=medium
+ktp-common-internals (15.08.2-1) UNRELEASED; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update Diane Trout's email address.
@@ -39,7 +39,7 @@ ktp-common-internals (15.08.1-1) UNRELEASED; urgency=medium
   * Add dh_install --list-missing to make sure everything is installed.
   * Break/Replace libktpotrprivate8.
 
- -- Diane Trout <diane@debian.org>  Sun, 09 Aug 2015 14:15:11 -0700
+ -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 21:23:43 -0800
 
 ktp-common-internals (0.9.0-1) unstable; urgency=medium
 
