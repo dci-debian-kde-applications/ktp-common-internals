@@ -1,0 +1,341 @@
+From 7458578617fb40271f64030bedf4678d25134758 Mon Sep 17 00:00:00 2001
+From: Diane Trout <diane@ghic.org>
+Date: Mon, 2 Nov 2015 11:04:08 -0800
+Subject: [PATCH 2/4] Relicense invalid license to LGPL 2.1+
+
+Scott Kitterman noticed the license for this code was
+"GPL 2.1+" which doesn't exist.
+
+I (Diane Trout) tried to contact the author on a few occasions but
+did not see a response.
+
+I believe this code was created as a Google Summer of Code project and
+so the following criteria which states that the student needs to choose
+a license approved by the mentoring organization.
+
+http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/help_page?PageSpeed=noscript#2._What_licenses_do_I_have_to_choose
+
+The most likely thing is that the original license block is a
+typo and the student had first written GPL-3, but then changed it to
+GPL 2.1, but forgot to add the "Lesser".
+
+This is some additional files that I missed from my previous
+review: 125780 but the same justifications should apply.
+---
+ KTp/OTR/constants.h                 | 27 +++++++++++++--------------
+ KTp/OTR/types.cpp                   | 27 +++++++++++++--------------
+ KTp/OTR/types.h                     | 27 +++++++++++++--------------
+ otr-proxy/test/lib/test-config.cpp  | 27 +++++++++++++--------------
+ otr-proxy/test/lib/test-config.h    | 27 +++++++++++++--------------
+ otr-proxy/test/lib/test-session.cpp | 27 +++++++++++++--------------
+ otr-proxy/test/lib/test-session.h   | 27 +++++++++++++--------------
+ otr-proxy/test/utils-test.cpp       | 27 +++++++++++++--------------
+ 8 files changed, 104 insertions(+), 112 deletions(-)
+
+diff --git a/KTp/OTR/constants.h b/KTp/OTR/constants.h
+index aa6c47d..7569279 100644
+--- a/KTp/OTR/constants.h
++++ b/KTp/OTR/constants.h
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #ifndef KTP_OTR_CONSTANTS_HEADER
+diff --git a/KTp/OTR/types.cpp b/KTp/OTR/types.cpp
+index 5e68641..a7293c1 100644
+--- a/KTp/OTR/types.cpp
++++ b/KTp/OTR/types.cpp
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 Marcin Ziemiński <zieminn@gmail.com>
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #include "types.h"
+diff --git a/KTp/OTR/types.h b/KTp/OTR/types.h
+index c448513..e3e7e63 100644
+--- a/KTp/OTR/types.h
++++ b/KTp/OTR/types.h
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 Marcin Ziemiński <zieminn@gmail.com>
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #ifndef OTR_TYPES_HEADER
+diff --git a/otr-proxy/test/lib/test-config.cpp b/otr-proxy/test/lib/test-config.cpp
+index cf62fea..53a9315 100644
+--- a/otr-proxy/test/lib/test-config.cpp
++++ b/otr-proxy/test/lib/test-config.cpp
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #include "test-config.h"
+diff --git a/otr-proxy/test/lib/test-config.h b/otr-proxy/test/lib/test-config.h
+index d1dacf0..0320fc1 100644
+--- a/otr-proxy/test/lib/test-config.h
++++ b/otr-proxy/test/lib/test-config.h
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #ifndef KTP_PROXY_OTR_TEST_CONFIG_HEADER
+diff --git a/otr-proxy/test/lib/test-session.cpp b/otr-proxy/test/lib/test-session.cpp
+index 2f51ec1..5b550ec 100644
+--- a/otr-proxy/test/lib/test-session.cpp
++++ b/otr-proxy/test/lib/test-session.cpp
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #include "test-session.h"
+diff --git a/otr-proxy/test/lib/test-session.h b/otr-proxy/test/lib/test-session.h
+index fc61a2c..388b462 100644
+--- a/otr-proxy/test/lib/test-session.h
++++ b/otr-proxy/test/lib/test-session.h
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #ifndef KTP_PROXY_OTR_TEST_SESSION_HEADER
+diff --git a/otr-proxy/test/utils-test.cpp b/otr-proxy/test/utils-test.cpp
+index 5b0e042..d18af4d 100644
+--- a/otr-proxy/test/utils-test.cpp
++++ b/otr-proxy/test/utils-test.cpp
+@@ -1,20 +1,19 @@
+ /***************************************************************************
+  *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
+  *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License as published by  *
+- *   the Free Software Foundation; either version 2.1 of the License, or   *
+- *   (at your option) any later version.                                   *
+- *                                                                         *
+- *   This program is distributed in the hope that it will be useful,       *
+- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+- *   GNU General Public License for more details.                          *
+- *                                                                         *
+- *   You should have received a copy of the GNU General Public License     *
+- *   along with this program; if not, write to the                         *
+- *   Free Software Foundation, Inc.,                                       *
+- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
++ * This library is free software; you can redistribute it and/or           *
++ * modify it under the terms of the GNU Lesser General Public		   *
++ * License as published by the Free Software Foundation; either		   *
++ * version 2.1 of the License, or (at your option) any later version.	   *
++ * 									   *
++ * This library is distributed in the hope that it will be useful,	   *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of	   *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU	   *
++ * Lesser General Public License for more details.			   *
++ * 									   *
++ * You should have received a copy of the GNU Lesser General Public	   *
++ * License along with this library; if not, write to the Free Software	   *
++ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA*
+  ***************************************************************************/
+ 
+ #include "KTpProxy/otr-utils.h"
+-- 
+2.6.2
+

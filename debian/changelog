@@ -38,6 +38,12 @@ ktp-common-internals (15.08.2-1) UNRELEASED; urgency=medium
   * Update kde-telepathy-kepople.install to rules track kpeople related plugins
   * Add dh_install --list-missing to make sure everything is installed.
   * Break/Replace libktpotrprivate8.
+  * Add patches listed below to deal with various licensing issues.
+    These have all been submitted upstream.
+    - 0001-Relicense-invalid-license-to-LGPL-2.1.patch
+    - 0002-Relicense-invalid-license-to-LGPL-2.1.patch
+    - 0003-Relicense-David-Edmundson-s-code-to-LGPL-2.1-to-matc.patch
+    - 0004-Add-GPLv2-COPYING-file-as-there-s-a-few-files-still-.patch
 
  -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 21:23:43 -0800
 
