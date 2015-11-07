@@ -1,6 +1,6 @@
-From 7b6e9ba30cabc2eca043e5c9714a769816babee4 Mon Sep 17 00:00:00 2001
-From: Diane Trout <diane@ghic.org>
+Author: Diane Trout <diane@ghic.org>
 Date: Mon, 2 Nov 2015 11:10:04 -0800
+Commit: http://quickgit.kde.org/?p=ktp-common-internals.git&a=commit&h=7b6e9ba30cabc2eca043e5c9714a769816babee4
 Subject: [PATCH 3/4] Relicense David Edmundson's code to LGPL-2.1 to match the
  rest of the project.
 

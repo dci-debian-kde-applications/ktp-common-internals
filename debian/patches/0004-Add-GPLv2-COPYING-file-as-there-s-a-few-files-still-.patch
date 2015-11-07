@@ -1,6 +1,6 @@
-From bbc0672da92620122d45e025cee3b04510502154 Mon Sep 17 00:00:00 2001
-From: Diane Trout <diane@ghic.org>
+Author: Diane Trout <diane@ghic.org>
 Date: Mon, 2 Nov 2015 11:38:55 -0800
+Commit: http://quickgit.kde.org/?p=ktp-common-internals.git&a=commit&h=bbc0672da92620122d45e025cee3b04510502154
 Subject: [PATCH 4/4] Add GPLv2+ COPYING file as there's a few files still
  licensed as GPL-2+
 MIME-Version: 1.0

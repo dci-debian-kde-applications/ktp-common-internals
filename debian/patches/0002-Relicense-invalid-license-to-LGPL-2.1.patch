@@ -1,6 +1,6 @@
-From 7458578617fb40271f64030bedf4678d25134758 Mon Sep 17 00:00:00 2001
-From: Diane Trout <diane@ghic.org>
+Author: Diane Trout <diane@ghic.org>
 Date: Mon, 2 Nov 2015 11:04:08 -0800
+Commit: http://quickgit.kde.org/?p=ktp-common-internals.git&a=commit&h=7458578617fb40271f64030bedf4678d25134758
 Subject: [PATCH 2/4] Relicense invalid license to LGPL 2.1+
 
 Scott Kitterman noticed the license for this code was
