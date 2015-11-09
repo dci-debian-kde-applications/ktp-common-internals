@@ -1,4 +1,4 @@
-ktp-common-internals (15.08.2-1) UNRELEASED; urgency=medium
+ktp-common-internals (15.08.2-1) unstable; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update Diane Trout's email address.
@@ -50,7 +50,7 @@ ktp-common-internals (15.08.2-1) UNRELEASED; urgency=medium
     https://git.reviewboard.kde.org/r/125925/
   * Update copyright file to match the above licensing fixes.
 
- -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 21:23:43 -0800
+ -- Diane Trout <diane@debian.org>  Fri, 06 Nov 2015 21:27:53 -0800
 
 ktp-common-internals (0.9.0-1) unstable; urgency=medium
 
