@@ -60,7 +60,8 @@ Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
 Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libkf5people5 (>= 0.3.0),
- libtelepathy-logger-qt5 (>= 15.04)
+ libtelepathy-logger-qt5 (>= 15.04),
+ telepathy-accounts-signon
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
