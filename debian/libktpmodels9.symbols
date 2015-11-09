@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.07.90 amd64
+# SymbolsHelper-Confirmed: 15.08.2 arm64 armel armhf hppa i386 mips mipsel powerpc ppc64el
 libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
  _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 15.04.2

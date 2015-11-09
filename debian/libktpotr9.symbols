@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.07.90 amd64
+# SymbolsHelper-Confirmed: 15.08.2 arm64 armel armhf hppa i386 mips mipsel powerpc ppc64el
 libKTpOTR.so.9 libktpotr9 #MINVER#
  _ZN3KTp14ChannelAdapter10setChannelERKN2Tp9SharedPtrINS1_11TextChannelEEE@Base 15.04.2
  _ZN3KTp14ChannelAdapter11acknowledgeERK5QListIN2Tp15ReceivedMessageEE@Base 15.04.2

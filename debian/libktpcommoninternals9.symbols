@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.07.90 amd64
+# SymbolsHelper-Confirmed: 15.08.2 arm64 armel armhf hppa i386 mips mipsel powerpc ppc64el
 libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 15.04.2
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 15.04.2

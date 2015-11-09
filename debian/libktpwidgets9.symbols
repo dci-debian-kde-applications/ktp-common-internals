@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.07.90 amd64
+# SymbolsHelper-Confirmed: 15.08.2 arm64 armel armhf hppa i386 mips mipsel powerpc ppc64el
 libKTpWidgets.so.9 libktpwidgets9 #MINVER#
  _ZN3KTp15StartChatDialog10closeEventEP11QCloseEvent@Base 15.04.2
  _ZN3KTp15StartChatDialog11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2

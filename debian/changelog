@@ -5,6 +5,7 @@ ktp-common-internals (15.08.2-2) UNRELEASED; urgency=medium
   * Change Diane Trouts email address back. (ease of SPAM filtering)
   * Add telepathy-accounts-signon dependency to libktpcommoninternals9,
     which is needed to integrate with kaccounts system.
+  * Confirm symbols on other architectures.
 
  -- Diane Trout <diane@ghic.org>  Mon, 09 Nov 2015 11:03:24 -0800
 
