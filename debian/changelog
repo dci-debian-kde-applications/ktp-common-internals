@@ -1,3 +1,9 @@
+ktp-common-internals (15.08.3-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 21:16:38 -0800
+
 ktp-common-internals (15.08.2-3) unstable; urgency=medium
 
   * Add kaccounts-integration dependes to libktpcommoninternals9
