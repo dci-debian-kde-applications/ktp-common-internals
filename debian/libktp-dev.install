@@ -1,6 +1,6 @@
 usr/include/KTp/
 usr/lib/*/cmake/KTp/
-usr/lib/*/libKTpCommonInternals.so`
+usr/lib/*/libKTpCommonInternals.so
 usr/lib/*/libKTpLogger.so
 usr/lib/*/libKTpModels.so
 usr/lib/*/libKTpOTR.so
