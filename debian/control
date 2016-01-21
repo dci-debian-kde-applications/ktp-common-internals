@@ -13,7 +13,6 @@ Build-Depends: cmake (>= 2.8.12~),
                kio-dev (>= 5.11~),
                libaccounts-qt5-dev (>= 1.10~),
                libgcrypt20-dev,
-               libsignon-qt5-dev,
                libkaccounts-dev,
                libkf5config-dev (>= 5.11~),
                libkf5coreaddons-dev (>= 5.11~),
@@ -27,6 +26,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libkf5widgetsaddons-dev (>= 5.11~),
                libkf5windowsystem-dev (>= 5.11~),
                libotr5-dev (>= 4.0.0~),
+               libsignon-qt5-dev,
                libtelepathy-logger-qt-dev (>= 15.04),
                libtelepathy-qt5-dev (>= 0.9.5),
                pkg-kde-tools (>> 0.15.15),
@@ -61,10 +61,12 @@ Description: KDE Telepathy internal library - Development headers
 
 Package: libktpcommoninternals9
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libkf5people5 (>= 0.3.0),
- libtelepathy-logger-qt5 (>= 15.04),
- kaccounts-integration (>= 15.04),
- telepathy-accounts-signon
+Depends: kaccounts-integration (>= 15.04),
+         libkf5people5 (>= 0.3.0),
+         libtelepathy-logger-qt5 (>= 15.04),
+         telepathy-accounts-signon,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version})
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
@@ -106,7 +108,7 @@ Description: KDE Telepathy internal logger library
 
 Package: libktpotr9
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: libktpotrprivate8 (<< 15.03)
 Replaces: libktpotrprivate8 (<< 15.03)
 Description: KDE Telepathy internal OTR library
@@ -117,7 +119,7 @@ Description: KDE Telepathy internal OTR library
 
 Package: qml-module-org-kde-telepathy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Replaces: kde-telepathy-declarative (<< 15.03)
 Breaks: kde-telepathy-declarative (<< 15.03)
 Description: kde-telepathy QtDeclarative QML support
@@ -140,8 +142,7 @@ Package: libktp-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libktpcommoninternals9 (= ${binary:Version}),
-         ${misc:Depends}
+Depends: libktpcommoninternals9 (= ${binary:Version}), ${misc:Depends}
 Description: KDE Telepathy internal library - debug symbols
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -150,7 +151,7 @@ Description: KDE Telepathy internal library - debug symbols
 
 Package: kde-telepathy-kpeople
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: kde-telepathy-data (<< 0.9.0)
 Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
