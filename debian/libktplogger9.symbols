@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.04.2 amd64
+# SymbolsHelper-Confirmed: 15.12.0 amd64
 ktploggerplugin_tplogger.so libktplogger9 #MINVER#
  _ZTIN3Tpl5EventE@Base 15.04.3
  _ZTIN3Tpl9TextEventE@Base 15.04.3

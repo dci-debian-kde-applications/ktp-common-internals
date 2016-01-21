@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.08.2 arm64 armel armhf hppa i386 mips mipsel powerpc ppc64el
+# SymbolsHelper-Confirmed: 15.12.0 amd64
 libKTpWidgets.so.9 libktpwidgets9 #MINVER#
  _ZN3KTp15StartChatDialog10closeEventEP11QCloseEvent@Base 15.04.2
  _ZN3KTp15StartChatDialog11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
@@ -50,9 +50,6 @@ libKTpWidgets.so.9 libktpwidgets9 #MINVER#
  _ZN3KTp17ContactGridWidget16staticMetaObjectE@Base 15.04.2
  _ZN3KTp17ContactGridWidgetC1EPNS_17ContactsListModelEP7QWidget@Base 15.04.2
  _ZN3KTp17ContactGridWidgetC2EPNS_17ContactsListModelEP7QWidget@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17ContactGridWidgetD0Ev@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17ContactGridWidgetD1Ev@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17ContactGridWidgetD2Ev@Base 15.04.2
  _ZN3KTp17ContactInfoDialog11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
  _ZN3KTp17ContactInfoDialog11qt_metacastEPKc@Base 15.04.2
  _ZN3KTp17ContactInfoDialog16staticMetaObjectE@Base 15.04.2
@@ -98,9 +95,6 @@ libKTpWidgets.so.9 libktpwidgets9 #MINVER#
  _ZN3KTp17SettingsKcmDialog24addGeneralSettingsModuleEv@Base 15.04.2
  _ZN3KTp17SettingsKcmDialogC1EP7QWidget@Base 15.04.2
  _ZN3KTp17SettingsKcmDialogC2EP7QWidget@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17SettingsKcmDialogD0Ev@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17SettingsKcmDialogD1Ev@Base 15.04.2
- (optional=gccinternal)_ZN3KTp17SettingsKcmDialogD2Ev@Base 15.04.2
  _ZN3KTp18JoinChatRoomDialog10closeEventEP11QCloseEvent@Base 15.04.2
  _ZN3KTp18JoinChatRoomDialog10onGotRoomsE5QListIN2Tp8RoomInfoEE@Base 15.04.2
  _ZN3KTp18JoinChatRoomDialog11getRoomListEv@Base 15.04.2
