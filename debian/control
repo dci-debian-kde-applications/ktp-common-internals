@@ -94,6 +94,7 @@ Description: KDE Telepathy common internal widgets library
  This also includes common widgets like the contact grid.
 
 Package: libktplogger9
+Architecture: any
 Breaks: libktploggerprivate7 (<< 0.8.80~)
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Depends: ${misc:Depends}, ${shlibs:Depends}
