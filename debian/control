@@ -44,6 +44,7 @@ Depends: libktpcommoninternals9 (= ${binary:Version}),
          libktplogger9 (= ${binary:Version}),
          libktpotr9 (= ${binary:Version}),
          libktpwidgets9 (= ${binary:Version}),
+         libktpmodels9 (= ${binary:Version}),
          libtelepathy-logger-qt-dev (>= 15.04),
          ${misc:Depends}
 Breaks: libktpcommoninternalsprivate-dev (<< 15.03.80)
