@@ -1,57 +1,41 @@
 Source: ktp-common-internals
+Section: libs
 Priority: optional
-Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
            Mark Purcell <msp@debian.org>
-Build-Depends: cmake,
+Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                doxygen,
-               extra-cmake-modules,
+               extra-cmake-modules (>= 5~),
                gettext,
-               kio-dev,
-               libaccounts-qt5-dev,
+               kio-dev (>= 5.11~),
+               libaccounts-qt5-dev (>= 1.10~),
+               libgcrypt20-dev,
                libkaccounts-dev,
-               libkf5attica-dev,
-               libkf5auth-dev,
-               libkf5bookmarks-dev,
-               libkf5codecs-dev,
-               libkf5completion-dev,
-               libkf5config-dev,
-               libkf5configwidgets-dev,
-               libkf5coreaddons-dev,
-               libkf5dbusaddons-dev,
-               libkf5globalaccel-dev,
-               libkf5guiaddons-dev,
-               libkf5i18n-dev,
-               libkf5iconthemes-dev,
-               libkf5itemviews-dev,
-               libkf5jobwidgets-dev,
-               libkf5kcmutils-dev,
-               libkf5notifications-dev,
-               libkf5notifyconfig-dev,
-               libkf5parts-dev,
-               libkf5people-dev,
-               libkf5service-dev,
-               libkf5solid-dev,
-               libkf5sonnet-dev,
-               libkf5texteditor-dev,
-               libkf5textwidgets-dev,
-               libkf5wallet-dev,
-               libkf5widgetsaddons-dev,
-               libkf5windowsystem-dev,
-               libkf5xmlgui-dev,
-               libotr5-dev,
-               libtelepathy-logger-qt-dev,
+               libkf5config-dev (>= 5.11~),
+               libkf5coreaddons-dev (>= 5.11~),
+               libkf5iconthemes-dev (>= 5.11~),
+               libkf5kcmutils-dev (>= 5.11~),
+               libkf5notifications-dev (>= 5.11~),
+               libkf5notifyconfig-dev (>= 5.11~),
+               libkf5people-dev (>= 5.11~),
+               libkf5texteditor-dev (>= 5.11~),
+               libkf5wallet-dev (>= 5.11~),
+               libkf5widgetsaddons-dev (>= 5.11~),
+               libkf5windowsystem-dev (>= 5.11~),
+               libotr5-dev (>= 4.0.0~),
+               libsignon-qt5-dev,
+               libtelepathy-logger-qt-dev (>= 15.04),
                libtelepathy-qt5-dev (>= 0.9.5),
                pkg-kde-tools (>> 0.15.15),
-               qtbase5-dev,
-               qtdeclarative5-dev
+               qtbase5-dev (>= 5.4),
+               qtdeclarative5-dev (>= 5.4)
 Standards-Version: 3.9.6
-Section: libs
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-common-internals
-Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/kde-applications/ktp-common-internals.git
-Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-applications/ktp-common-internals.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/applications/ktp-common-internals.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/applications/ktp-common-internals.git
 
 Package: libktp-dev
 Section: libdevel
@@ -60,7 +44,8 @@ Depends: libktpcommoninternals9 (= ${binary:Version}),
          libktplogger9 (= ${binary:Version}),
          libktpotr9 (= ${binary:Version}),
          libktpwidgets9 (= ${binary:Version}),
-         libtelepathy-logger-qt-dev (>= 0.9.80),
+         libktpmodels9 (= ${binary:Version}),
+         libtelepathy-logger-qt-dev (>= 15.04),
          ${misc:Depends}
 Breaks: libktpcommoninternalsprivate-dev (<< 15.03.80)
 Replaces: libktpcommoninternalsprivate-dev (<< 15.03.80)
@@ -75,29 +60,18 @@ Description: KDE Telepathy internal library - Development headers
  outside of the KDE Telepathy project umbrella. This package
  is only provided for compiling the rest of the components.
 
-Package: kde-telepathy-kpeople
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: kpeople plugins for kde-telepathy
- This allows grouping multiple IM accounts into meta-contacts.
- .
- This contains plugins to work with libkpeople.
-
-Package: kde-telepathy-kaccounts
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: kaccounts plugins for kde-telepathy
- This links kde telepathy to kaccounts and vice versa, allowing migrating
- settings from telepathy internal storage to a system-wide shared accounts
- management system.
- .
- This contains plugins to work with kaccounts.
-
 Package: libktpcommoninternals9
 Architecture: any
-Depends: telepathy-accounts-signon, ${misc:Depends}, ${shlibs:Depends}
+Depends: kaccounts-integration (>= 15.04),
+         libkf5people5 (>= 0.3.0),
+         libtelepathy-logger-qt5 (>= 15.04),
+         telepathy-accounts-signon,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version})
+Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
+Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -124,6 +98,8 @@ Description: KDE Telepathy common internal widgets library
 
 Package: libktplogger9
 Architecture: any
+Breaks: libktploggerprivate7 (<< 0.8.80~)
+Replaces: libktploggerprivate7 (<< 0.8.80~)
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy internal logger library
  Internal library which consists of the most reused
@@ -134,8 +110,8 @@ Description: KDE Telepathy internal logger library
 Package: libktpotr9
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: ktp-proxy (<< 15.03.80+git20150312~), libktpotrprivate8 (<< 15.03.80)
-Replaces: ktp-proxy (<< 15.03.80+git20150312~), libktpotrprivate8 (<< 15.03.80)
+Breaks: libktpotrprivate8 (<< 15.03)
+Replaces: libktpotrprivate8 (<< 15.03)
 Description: KDE Telepathy internal OTR library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -145,35 +121,48 @@ Description: KDE Telepathy internal OTR library
 Package: qml-module-org-kde-telepathy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Replaces: kde-telepathy-declarative (<< 15.03)
+Breaks: kde-telepathy-declarative (<< 15.03)
 Description: kde-telepathy QtDeclarative QML support
  Contains a plugin for QtDeclarative that provides
  support for using KDE-Telepathy to components written
  in QML.
 
 Package: kde-telepathy-data
+Section: kde
 Architecture: all
 Depends: ${misc:Depends}
 Description: Shared data for all the KDE Telepathy components
- KDE telepathy shared data.
+ This package contains KDE Telepathy shared data.
  .
- This package contains various data files that are used by nearly all
- the different KDE Telepathy components.
+ These various data files are used by nearly all the different KDE
+ Telepathy components, and include files such as icons and
+ translations.
 
-Package: libktp-dbg
+Package: kde-telepathy-kpeople
 Architecture: any
-Section: debug
-Priority: extra
-Depends: libktpcommoninternals9 (= ${binary:Version}) | libktplogger9 (= ${binary:Version}) | libktpmodels9 (= ${binary:Version}) | libktpotr9 (= ${binary:Version}) | libktpwidgets9 (= ${binary:Version}),
-         ${misc:Depends}
-Description: KDE Telepathy internal library - debug symbols
- Internal library which consists of the most reused
- parts across KDE Telepathy.
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: kde-telepathy-data (<< 0.9.0)
+Replaces: kde-telepathy-data (<< 0.9.0)
+Description: kpeople plugins for kde-telepathy
+ This contains plugins to allow kde-telepathy to use kpeople,
+ This is necessary for grouping multiple IM accounts into
+ meta-contacts.
+
+Package: kde-telepathy-kaccounts
+Section: kde
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: kaccounts plugins for kde-telepathy
+ This links KDE telepathy to kaccounts and vice versa, allowing migrating
+ settings from telepathy internal storage to a system-wide shared accounts
+ management system.
  .
- This package contains debugging symbols for the ktp-common-internals library.
+ This contains plugins to work with kaccounts.
 
 Package: kde-telepathy-debugger
-Architecture: any
 Priority: extra
+Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Debugging tool for KDE Telepathy
  This package contains a GUI debugging tool which can be used to debug

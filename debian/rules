@@ -1,6 +1,9 @@
 #!/usr/bin/make -f
 
-%:
-	dh $@ --with kf5 --dbg-package=libktp-dbg
+include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
-.PHONY: override_dh_auto_test
+override_dh_install:
+	dh_install --list-missing
+
+override_dh_strip:
+	$(overridden_command) --ddeb-migration='libktp-dbg (<= 15.12.1-1~~)'

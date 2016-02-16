@@ -1,8 +1,9 @@
-ktp-common-internals (4:15.12.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-common-internals (4:15.12.1-0ubuntu1) UNRELEASED; urgency=medium
 
+  * Merged with Debian
   * New upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Sat, 02 Jan 2016 14:23:33 +0000
+ -- Clive Johnston <clivejo@aol.com>  Tue, 16 Feb 2016 13:19:56 +0000
 
 ktp-common-internals (4:15.08.2-0ubuntu1) wily; urgency=medium
 
@@ -71,6 +72,149 @@ ktp-common-internals (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 27 May 2015 09:06:11 -0700
 
+ktp-common-internals (15.12.1-2) experimental; urgency=medium
+
+  * Add missing dependency to the -dev package.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Feb 2016 09:41:54 +0100
+
+ktp-common-internals (15.12.1-1) experimental; urgency=medium
+
+  [ Harald Sitter ]
+  * KDE Frameworks 5 port
+    + rename lib packages for sobump
+    + rename -dev package to libktp-dev to match the cmake config one
+      would be looking for. Also it contains more than one library anyway.
+    + rename -dbg to libktp-dbg to align with the dev and also because it
+      affects more than one lib
+      + Add all library packages as possibly depends for the dbg package. Any
+        one of them may be neeeded depending on the app one wants to debug.
+    + Remove kde-telepathy-kpeople for now as kpeople is not released.
+    + Rename kde-telepathy-declarative to qml-module-org-kde-telepathy to
+      align with the implicit naming policy for qml modules in Qt5 (no
+      conflicts)
+    + Update watch file. The source now is released as part of applications.
+
+  [ Scarlett Clark ]
+  * This needs libtelepathy-logger-qt5-dev it is a kf5 app.
+  * Remove the non existant version dep for above.
+  * Try libtelepthy-logger-qt-dev again.
+  * OTR requires telepathy-qt5 >= 0.9.5
+
+  [ Diane Trout ]
+  * Remove all 4 relicensing patches, applied upstream.
+
+  [ Maximiliano Curia ]
+  * New upstream release (15.12.0).
+  * New upstream release (15.12.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:23:39 +0100
+
+ktp-common-internals (15.08.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 21:18:53 -0800
+
+ktp-common-internals (15.08.2-3) unstable; urgency=medium
+
+  * Add kaccounts-integration dependes to libktpcommoninternals9
+
+ -- Diane Trout <diane@ghic.org>  Tue, 10 Nov 2015 10:12:44 -0800
+
+ktp-common-internals (15.08.2-2) unstable; urgency=medium
+
+  * Update libktpcommoninternals9 qt logger dependency to
+    libtelepathy-logger-qt5 (>= 15.04) (Closes: #804409)
+  * Change Diane Trouts email address back. (ease of SPAM filtering)
+  * Add telepathy-accounts-signon dependency to libktpcommoninternals9,
+    which is needed to integrate with kaccounts system.
+  * Confirm symbols on other architectures.
+
+ -- Diane Trout <diane@ghic.org>  Mon, 09 Nov 2015 11:33:33 -0800
+
+ktp-common-internals (15.08.2-1) unstable; urgency=medium
+
+  * Apply homepage update patch from Matthew Cope
+  * Update Diane Trout's email address.
+  * Update watchfile for kde-telepathys inclusion in KDE Applications.
+  * New upstream release.
+  * Update library package names to match new SONAME.
+  * Rename library packages to remove the "private" suffix.
+  * Replace old symbols files with new ones for the new SONAME.
+  * Update build-dependencies according to cmake rules.
+    - Add extra-cmake-modules, qtdeclarative5-dev,
+      libkf5coreaddons-dev, libkf5notifcations-dev, kio-dev,
+      libkf5widgetsaddons-dev, libkf5kcmutils-dev,
+      libkf5notifyconfig-dev, libkf5texteditor-dev, libkf5wallet-dev,
+      libkf5config-dev libkf5windowsystem-dev, libkf5iconthemes-dev,
+      libaccounts-qt5-dev >= 1.10
+      qtdeclarative5-dev, libtelepathy-logger-qt-dev, libkaccounts-dev,
+      libsignon-qt5-dev, libkf5kpeople
+  * Update date range and add Aleix Pols last name in the copyright file.
+  * Change kpeople build dependiency to libkf5people-dev (>= 0.5.0)
+  * Change build-depends telepathy-qt and telepathy-logger-qt to qt5
+    versions.
+  * Update install paths to the new KF5 locations.
+    e.g. out of /usr/share/kde4, libraries into multi-arch directories,
+    and the new SONAME library filenames.
+  * Remove unused blocks KTp/ktp-export.h and po/* from copyright file.
+  * Rename liblktpcommoninterals-dev to libktp-dev
+  * Rename kde-telepathy-declarative to qml-module-org-kde-telepathy
+  * Add kde-telepathy-kaccounts package.
+  * Use --fail-missing to make it easier to find not installed files.
+  * Rename libktpcommoninternals-dbg to libktp-dbg to match -dev file
+  * Use dhmk from pkg-kde-tools to build ktp.
+    - Change maintainer to debian-qt-kde
+    - Update debian/rules
+  * Add breaks/replaces libktpotrprivate9 to help migrate to new name
+  * Add KDE's unstable download url to watch file
+  * Update symbols files to be compatible with GCC-5
+  * Update kde-telepathy-kepople.install to rules track kpeople related plugins
+  * Add dh_install --list-missing to make sure everything is installed.
+  * Break/Replace libktpotrprivate8.
+  * Add patches listed below to deal with various licensing issues.
+    These have all been submitted upstream/accepted upstream.
+    - 0001-Relicense-invalid-license-to-LGPL-2.1.patch
+    - 0002-Relicense-invalid-license-to-LGPL-2.1.patch
+    - 0003-Relicense-David-Edmundson-s-code-to-LGPL-2.1-to-matc.patch
+    - 0004-Add-GPLv2-COPYING-file-as-there-s-a-few-files-still-.patch
+    See:
+    https://git.reviewboard.kde.org/r/125780/
+    https://git.reviewboard.kde.org/r/125923/
+    https://git.reviewboard.kde.org/r/125925/
+  * Update copyright file to match the above licensing fixes.
+
+ -- Diane Trout <diane@debian.org>  Fri, 06 Nov 2015 21:27:53 -0800
+
+ktp-common-internals (0.9.0-1) unstable; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * Merge with Debian, no changes
+  * Make -dev package depend on libktpotrprivate8
+  * kde-telepathy-kpeople breaks/replaces old kde-telepathy-data
+
+  [ Diane Trout ]
+  * Pull changes from Kubuntu.
+  * Update libktpcommoninternalsprivate7 SONAME to 8
+    - libktploggerprivate7 -> libktploggerprivate8
+    - libktpmodelsprivate7 -> libktpmodelsprivate8
+    - libktpwidgetsprivate7 -> libktpwidgetsprivate8
+  * Bump libtelepathy-qt4-dev build-depends to 0.9.5
+  * Remove shared-desktop-ontolgies build-dep
+  * Bump libkpeople build-dep to 0.3.0
+  * Add libotr5-dev and libgcrypt11-dev build-dep to enable OTR support.
+  * Add kpeople_chat_plugin.so and associated desktop file to 
+    kde-telepathy-kpeople package.
+  * Update copyright file.
+  * Update description to use better English (Closes: #769362)
+    Thanks Filipus Klutiero
+  * Update Standards-Version to 3.9.6.0. No changes needed.
+  * Update debian/watch file.
+
+ -- Diane Trout <diane@ghic.org>  Sat, 25 Apr 2015 19:30:59 -0700
+
 ktp-common-internals (0.9.0-0ubuntu3) vivid; urgency=medium
 
   * kde-telepathy-kpeople breaks/replaces old kde-telepathy-data
@@ -90,25 +234,18 @@ ktp-common-internals (0.9.0-0ubuntu1) vivid; urgency=medium
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
 
-ktp-common-internals (0.8.80-1) UNRELEASED; urgency=medium
+ktp-common-internals (0.8.1-4) unstable; urgency=medium
 
-  * New upstream release.
-  * Update libktpcommoninternalsprivate7 SONAME to 8
-    - libktploggerprivate7 -> libktploggerprivate8
-    - libktpmodelsprivate7 -> libktpmodelsprivate8
-    - libktpwidgetsprivate7 -> libktpwidgetsprivate8
-  * Bump libtelepathy-qt4-dev build-depends to 0.9.5
-  * Remove shared-desktop-ontolgies build-dep
-  * Bump libkpeople build-dep to 0.3.0
+  * Make sure telepathy-logger is installed (Closes: #774552)
+
+ -- Diane Trout <diane@ghic.org>  Sun, 11 Jan 2015 21:19:37 -0800
+
+ktp-common-internals (0.8.1-3) unstable; urgency=medium
+
   * Update kde-telepathy-kpeople description.
-  * Make kde-telepathy-kpeople a dependency.
-  * Add libotr5-dev and libgcrypt11-dev build-dep to enable OTR support.
-  * Add kpeople_chat_plugin.so and associated desktop file to 
-    kde-telepathy-kpeople package.
-  * Update copyright file.
   * Fix typo thanks Filipus Klutiero (Closes: #759756)
 
- -- Diane Trout <diane@ghic.org>  Tue, 16 Sep 2014 22:03:11 -0700
+ -- Diane Trout <diane@ghic.org>  Sun, 02 Nov 2014 11:54:54 -0800
 
 ktp-common-internals (0.8.1-2) unstable; urgency=medium
 
@@ -181,17 +318,6 @@ ktp-common-internals (0.7.0-0ubuntu1) trusty; urgency=low
   * Release packaging from debian experimental git
 
  -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Oct 2013 18:03:20 +0100
-
-ktp-common-internals (0.6.80-1) UNRELEASED; urgency=low
-
-  * Imported upstream 0.6.80
-  * Ship new libraries libktploggerprivate.
-  * Ship plugins imdetailswidgetplugin, im_persons_data_source_plugin,
-    ktploggerplugin, ktp_kpeople_plugin, nepomuktelepathyservice
-  * Bump libktpcommoninternalsprivate SONAME to 6
-  * Add desktop and service files for new plugins
-
- -- Diane Trout <diane@ghic.org>  Tue, 24 Sep 2013 21:26:49 -0700
 
 ktp-common-internals (0.6.3-1fakesync1ubuntu1) saucy; urgency=low
 
