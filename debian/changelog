@@ -1,9 +1,10 @@
-ktp-common-internals (4:15.12.2-0ubuntu1) UNRELEASED; urgency=medium
+ktp-common-internals (4:15.12.3-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release
   * Bump dependency versions to kaccounts-integration. 
+  * New upstream bugfix release
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 09 Mar 2016 22:10:42 -0800
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 16 Mar 2016 20:24:26 -0700
 
 ktp-common-internals (4:15.12.1-0ubuntu1) xenial; urgency=medium
 
