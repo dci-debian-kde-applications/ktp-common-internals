@@ -1,8 +1,15 @@
-ktp-common-internals (15.12.2-1~) UNRELEASED; urgency=medium
+ktp-common-internals (15.12.3-1~1.gbpe7f9bf) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @e7f9bfe92076b4147b7ca920f47545cfdad2828b **
+
+  [ Maximiliano Curia ]
   * New upstream release (15.12.2).
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 13 Feb 2016 09:56:53 +0100
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 20:51:36 +0200
 
 ktp-common-internals (15.12.1-2) experimental; urgency=medium
 
