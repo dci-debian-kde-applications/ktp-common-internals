@@ -1,17 +1,18 @@
-ktp-common-internals (16.04.0-1~2.gbpfa1783) UNRELEASED; urgency=medium
+ktp-common-internals (16.04.0-1~3.gbpf0635e) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @fa1783cf44afcafa02cf206766088fd2fbfd72c6 **
+  ** SNAPSHOT build @f0635e93902ff79621bb7592667d0e5a79006e80 **
 
   [ Maximiliano Curia ]
   * New upstream release (15.12.2).
   * Add dependency required by the cmake files
+  * Update install files
 
   [ Automatic packaging ]
   * Bump Standards-Version to 3.9.8
   * Update build-deps and deps with the info from cmake
   * UNRELEASED
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Fri, 29 Apr 2016 18:08:14 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Fri, 29 Apr 2016 18:29:52 +0200
 
 ktp-common-internals (15.12.1-2) experimental; urgency=medium
 
