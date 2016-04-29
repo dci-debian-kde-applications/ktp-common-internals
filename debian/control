@@ -40,7 +40,8 @@ Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/ktp-common-internal
 Package: libktp-dev
 Section: libdevel
 Architecture: any
-Depends: libktpcommoninternals9 (= ${binary:Version}),
+Depends: libkf5wallet-dev (>= 5.11~),
+         libktpcommoninternals9 (= ${binary:Version}),
          libktplogger9 (= ${binary:Version}),
          libktpmodels9 (= ${binary:Version}),
          libktpotr9 (= ${binary:Version}),
