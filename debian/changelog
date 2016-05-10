@@ -1,6 +1,6 @@
-ktp-common-internals (16.04.1-1~1.gbpc390f4) UNRELEASED; urgency=medium
+ktp-common-internals (16.04.1-1~2.gbp782f62) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @c390f4360895995fe386d620196adfa9c082af0a **
+  ** SNAPSHOT build @782f6242d9701bbb0104d00c314d5a2f0f49a613 **
 
   [ Maximiliano Curia ]
   * New upstream release (15.12.2).
@@ -12,8 +12,9 @@ ktp-common-internals (16.04.1-1~1.gbpc390f4) UNRELEASED; urgency=medium
   * Update build-deps and deps with the info from cmake
   * UNRELEASED
   * Update symbols files.
+  * Update symbols files.
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 10 May 2016 20:08:12 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 10 May 2016 21:08:21 +0200
 
 ktp-common-internals (15.12.1-2) experimental; urgency=medium
 
