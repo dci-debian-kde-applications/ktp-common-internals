@@ -1,6 +1,4 @@
-ktp-common-internals (16.04.1-1~2.gbp782f62) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @782f6242d9701bbb0104d00c314d5a2f0f49a613 **
+ktp-common-internals (16.04.1-1) experimental; urgency=medium
 
   [ Maximiliano Curia ]
   * New upstream release (15.12.2).
@@ -10,11 +8,9 @@ ktp-common-internals (16.04.1-1~2.gbp782f62) UNRELEASED; urgency=medium
   [ Automatic packaging ]
   * Bump Standards-Version to 3.9.8
   * Update build-deps and deps with the info from cmake
-  * UNRELEASED
-  * Update symbols files.
   * Update symbols files.
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 10 May 2016 21:08:21 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 May 2016 11:06:37 +0200
 
 ktp-common-internals (15.12.1-2) experimental; urgency=medium
 
