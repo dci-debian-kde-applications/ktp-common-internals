@@ -1,10 +1,9 @@
-ktp-common-internals (16.04.2-1~1.gbpc156b3) UNRELEASED; urgency=medium
+ktp-common-internals (16.04.2-1) experimental; urgency=medium
 
-  ** SNAPSHOT build @c156b3825f04eed2e2cf1215d3c654c28062314c **
-
+  [ Automatic packaging ]
   * Update symbols files from buildds logs (16.04.1-1).
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 15 Jun 2016 02:08:25 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 23 Jun 2016 14:36:57 +0200
 
 ktp-common-internals (16.04.1-1) experimental; urgency=medium
 
