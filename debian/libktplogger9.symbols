@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 16.04.2 amd64 arm64 armel armhf hppa hurd-i386 i386 mips mips64el mipsel powerpc ppc64el s390x
+# SymbolsHelper-Confirmed: 16.04.3 amd64 armhf i386
 ktploggerplugin_tplogger.so libktplogger9 #MINVER#
  _ZTIN3Tpl5EventE@Base 15.04.3
  _ZTIN3Tpl9TextEventE@Base 15.04.3
