@@ -11,8 +11,8 @@ cmake_policy(SET CMP0002 OLD)
 
 # KDE Application Version, managed by release script
 set (KDE_APPLICATIONS_VERSION_MAJOR "16")
-set (KDE_APPLICATIONS_VERSION_MINOR "04")
-set (KDE_APPLICATIONS_VERSION_MICRO "3")
+set (KDE_APPLICATIONS_VERSION_MINOR "08")
+set (KDE_APPLICATIONS_VERSION_MICRO "0")
 
 # Bump for every 0.x release, or whenever BC changes
 set (KTP_SONUMBER 9) # SO 9 is for 15.08 release
@@ -90,6 +90,7 @@ add_definitions (
                  -DQT_NO_KEYWORDS
                  -std=c++11
 )
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include_directories (
                      ${CMAKE_CURRENT_BINARY_DIR}
