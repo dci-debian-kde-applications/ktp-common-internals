@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 16.08.0 amd64 armhf i386
+# SymbolsHelper-Confirmed: 16.08.1 amd64 armhf i386
 ktploggerplugin_tplogger.so libktplogger9 #MINVER#
  _ZTIN3Tpl5EventE@Base 15.04.3
  _ZTIN3Tpl9TextEventE@Base 15.04.3
