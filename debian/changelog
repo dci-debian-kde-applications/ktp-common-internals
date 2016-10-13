@@ -1,14 +1,15 @@
-ktp-common-internals (16.08.1-1~2.gbp65a2d5) UNRELEASED; urgency=medium
+ktp-common-internals (16.08.2-1~1.gbpeb32be) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @65a2d591a67c9b0b09495880fade4880c66fb4fe **
+  ** SNAPSHOT build @eb32be2298570611479fedda351534e9bf94f587 **
 
   * Update symbols files from buildds logs (16.04.2-1).
   * Update symbols files.
   * Update symbols files.
   * Update symbols files.
   * Update symbols files.
+  * Update build-deps and deps with the info from cmake
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Thu, 08 Sep 2016 21:08:38 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Thu, 13 Oct 2016 20:08:26 +0200
 
 ktp-common-internals (16.04.2-1) experimental; urgency=medium
 
