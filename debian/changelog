@@ -1,3 +1,9 @@
+ktp-common-internals (16.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 14 Dec 2016 16:30:50 +0000
+
 ktp-common-internals (16.04.0-1~2.gbpfa1783) UNRELEASED; urgency=medium
 
   ** SNAPSHOT build @fa1783cf44afcafa02cf206766088fd2fbfd72c6 **
