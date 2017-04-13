@@ -1,2 +1,3 @@
 usr/lib/*/libKTpCommonInternals.so.*.*
 usr/lib/*/libKTpCommonInternals.so.9
+usr/share/locale/*/LC_MESSAGES/ktp-common-internals.mo
