@@ -71,8 +71,8 @@ Depends: kaccounts-integration (>= 15.04),
          ${shlibs:Depends}
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version})
-Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
-Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
+Replaces: libktpcommoninternalsprivate6 (<< 0.7.80), ${kde-l10n:all}
+Breaks: libktpcommoninternalsprivate6 (<< 0.7.80), ${kde-l10n:all}
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -165,6 +165,8 @@ Package: kde-telepathy-debugger
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
 Description: Debugging tool for KDE Telepathy
  This package contains a GUI debugging tool which can be used to debug
  issues in Telepathy.
