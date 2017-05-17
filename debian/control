@@ -73,7 +73,7 @@ Depends: kaccounts-integration (>= 15.04),
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version})
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
-Breaks: libktpcommoninternalsprivate6 (<< 0.7.80)
+Breaks: libktpcommoninternalsprivate6 (<< 0.7.80), libktpcommoninternalsprivate7
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
