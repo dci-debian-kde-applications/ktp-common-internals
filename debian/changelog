@@ -1,3 +1,21 @@
+ktp-common-internals (17.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 11 May 2017 18:24:32 +0000
+
+ktp-common-internals (17.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Apr 2017 13:06:11 +0000
+
+ktp-common-internals (16.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Mar 2017 13:50:13 +0000
+
 ktp-common-internals (16.12.2-0neon) xenial; urgency=medium
 
   * New release
