@@ -41,6 +41,8 @@ Package: kde-telepathy-data
 Section: kde
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
 Description: Shared data for all the KDE Telepathy components
  This package contains KDE Telepathy shared data.
  .
