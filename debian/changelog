@@ -1,5 +1,6 @@
-ktp-common-internals (16.08.3-1~2.gbp7aa2bf) UNRELEASED; urgency=medium
+ktp-common-internals (17.08.1-1~) UNRELEASED; urgency=medium
 
+  [ Automatic packaging ]
   ** SNAPSHOT build @7aa2bf3a2749ec08b5224557d611400b386cea8e **
 
   * Update symbols files from buildds logs (16.04.2-1).
@@ -11,8 +12,13 @@ ktp-common-internals (16.08.3-1~2.gbp7aa2bf) UNRELEASED; urgency=medium
   * Update symbols files.
   * UNRELEASED
   * Update symbols files.
+  * Update changelog for 16.08.3-1~2.gbp7aa2bf release
 
- -- Automatic packaging <jenkins@gnuservers.com.ar>  Thu, 10 Nov 2016 20:08:24 +0100
+  [ Maximiliano Curia ]
+  * Set Priority to optional
+  * New upstream release (17.08.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 14:39:16 +0200
 
 ktp-common-internals (16.04.2-1) experimental; urgency=medium
 
