@@ -41,7 +41,17 @@ Package: kde-telepathy-data
 Section: kde
 Architecture: all
 Depends: ${misc:Depends}
-Breaks: ${kde-l10n:all}
+Breaks: kde-config-telepathy-accounts (<< 17.08),
+        kde-telepathy-approver (<< 17.08),
+        kde-telepathy-auth-handler (<< 17.08),
+        kde-telepathy-call-ui (<< 17.08),
+        kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-filetransfer-handler (<< 17.08),
+        kde-telepathy-integration-module (<< 17.08),
+        kde-telepathy-send-file (<< 17.08),
+        kde-telepathy-text-ui (<< 17.08),
+        plasma-runner-telepathy-contact (<< 17.08),
+        ${kde-l10n:all},
 Replaces: ${kde-l10n:all}
 Description: Shared data for all the KDE Telepathy components
  This package contains KDE Telepathy shared data.
@@ -71,11 +81,14 @@ Description: kaccounts plugins for kde-telepathy
  management system.
  .
  This contains plugins to work with kaccounts.
+Breaks: kde-config-telepathy-accounts (<< 17.08)
 
 Package: kde-telepathy-kpeople
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: kde-telepathy-data (<< 0.9.0)
+Breaks: kde-config-telepathy-accounts (<< 17.08),
+        kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-data (<< 0.9.0),
 Replaces: kde-telepathy-data (<< 0.9.0)
 Description: kpeople plugins for kde-telepathy
  This contains plugins to allow kde-telepathy to use kpeople,
@@ -117,8 +130,16 @@ Depends: kaccounts-integration (>= 15.04),
 Recommends: kde-telepathy-kaccounts (= ${binary:Version}),
             kde-telepathy-kpeople (= ${binary:Version}),
 Replaces: libktpcommoninternalsprivate6 (<< 0.7.80)
-Breaks: libktpcommoninternalsprivate6 (<< 0.7.80),
+Breaks: kde-telepathy-auth-handler (<< 17.08),
+        kde-telepathy-call-ui (<< 17.08),
+        kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-filetransfer-handler (<< 17.08),
+        kde-telepathy-integration-module (<< 17.08),
+        kde-telepathy-send-file (<< 17.08),
+        kde-telepathy-text-ui (<< 17.08),
+        libktpcommoninternalsprivate6 (<< 0.7.80),
         libktpcommoninternalsprivate7,
+        plasma-runner-telepathy-contact (<< 17.08),
 Description: KDE Telepathy common internal library
  Internal library which consists of the most reused
  parts across KDE Telepathy.
@@ -127,7 +148,9 @@ Description: KDE Telepathy common internal library
 
 Package: libktplogger9
 Architecture: any
-Breaks: libktploggerprivate7 (<< 0.8.80~)
+Breaks: kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-text-ui (<< 17.08),
+        libktploggerprivate7 (<< 0.8.80~),
 Replaces: libktploggerprivate7 (<< 0.8.80~)
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: KDE Telepathy internal logger library
@@ -144,11 +167,14 @@ Description: KDE Telepathy data models internal library
  parts across KDE Telepathy.
  .
  This includes Qt models.
+Breaks: kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-send-file (<< 17.08),
+        kde-telepathy-text-ui (<< 17.08),
 
 Package: libktpotr9
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libktpotrprivate8 (<< 15.03)
+Breaks: kde-telepathy-text-ui (<< 17.08), libktpotrprivate8 (<< 15.03)
 Replaces: libktpotrprivate8 (<< 15.03)
 Description: KDE Telepathy internal OTR library
  Internal library which consists of the most reused
@@ -164,12 +190,19 @@ Description: KDE Telepathy common internal widgets library
  parts across KDE Telepathy.
  .
  This also includes common widgets like the contact grid.
+Breaks: kde-telepathy-call-ui (<< 17.08),
+        kde-telepathy-contact-list (<< 17.08),
+        kde-telepathy-integration-module (<< 17.08),
+        kde-telepathy-send-file (<< 17.08),
+        kde-telepathy-text-ui (<< 17.08),
 
 Package: qml-module-org-kde-telepathy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Replaces: kde-telepathy-declarative (<< 15.03)
-Breaks: kde-telepathy-declarative (<< 15.03)
+Breaks: kde-telepathy-call-ui (<< 17.08),
+        kde-telepathy-declarative (<< 15.03),
+        kde-telepathy-desktop-applets (<< 17.08),
 Description: kde-telepathy QtDeclarative QML support
  Contains a plugin for QtDeclarative that provides
  support for using KDE-Telepathy to components written
