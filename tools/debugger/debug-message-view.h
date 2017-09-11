@@ -18,46 +18,31 @@
 #ifndef DEBUG_MESSAGES_MODEL_H
 #define DEBUG_MESSAGES_MODEL_H
 
-#include <QTextEdit>
+#include <QWidget>
 #include <TelepathyQt/Types>
-#include <TelepathyQt/PendingOperation>
-#include <kparts/part.h>
 #include <KTextEditor/Document>
 
+class TelepathyProcess;
 
 class DebugMessageView : public QWidget
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     explicit DebugMessageView(QWidget *parent = 0);
-    void setService(const QString & service);
-    virtual ~DebugMessageView();
-    virtual void showEvent(QShowEvent* );
+    ~DebugMessageView();
+
+    void showEvent(QShowEvent *event);
+    void setTelepathyProcess(TelepathyProcess *process);
     void saveLogFile();
 
 private Q_SLOTS:
-    void onServiceRegistered(const QString & service);
-    void onDebugReceiverInvalidated(Tp::DBusProxy *proxy,
-            const QString &errorName, const QString &errorMessage);
-    void onDebugReceiverReady(Tp::PendingOperation *op);
-    void onDebugReceiverMonitoringEnabled(Tp::PendingOperation *op);
-    void onFetchMessagesFinished(Tp::PendingOperation *op);
-    void onNewDebugMessage(const Tp::DebugMessage &msg);
+    void appendMessage(const Tp::DebugMessage &msg);
     void addDelayedMessages();
     void clear();
 
-Q_SIGNALS:
-    void statusMessage(const QString& msg);
-
 private:
-    void appendMessage(const Tp::DebugMessage &msg);
-
-    QString m_serviceName;
-    Tp::DebugReceiverPtr m_debugReceiver;
     Tp::DebugMessageList m_tmpCache;
-    QDBusServiceWatcher *m_serviceWatcher;
-    bool m_ready;
-    KTextEditor::Document* m_editor;
+    KTextEditor::Document *m_editor;
 };
 
 #endif // DEBUG_MESSAGES_MODEL_H

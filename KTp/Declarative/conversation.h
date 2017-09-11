@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2011  Lasath Fernando <kde@lasath.org>
+    Copyright (C) 2016  Martin Klapetek <mklapetek@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -39,6 +40,7 @@ class Conversation : public QObject
     Q_PROPERTY(QIcon avatar READ avatar NOTIFY avatarChanged)
     Q_PROPERTY(Tp::AccountPtr account READ account CONSTANT)
     Q_PROPERTY(KTp::ContactPtr targetContact READ targetContact CONSTANT)
+    Q_PROPERTY(bool hasUnreadMessages READ hasUnreadMessages NOTIFY unreadMessagesChanged)
 
 public:
     Conversation(const Tp::TextChannelPtr &channel, const Tp::AccountPtr &account, QObject *parent = 0);
@@ -59,7 +61,9 @@ public:
     KTp::ContactPtr targetContact() const;
     Tp::AccountPtr account() const;
 
-    bool isValid();
+    bool isValid() const;
+
+    bool hasUnreadMessages() const;
 
 Q_SIGNALS:
     void validityChanged(bool isValid);
@@ -67,6 +71,7 @@ Q_SIGNALS:
     void titleChanged();
     void presenceIconChanged();
     void conversationCloseRequested();
+    void unreadMessagesChanged();
 
 public Q_SLOTS:
     void delegateToProperClient();

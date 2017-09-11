@@ -87,6 +87,8 @@ public:
                 return s_presenceStrings.value(m_contact->presence().type());
             else if (key == AbstractContact::PictureProperty)
                 return m_contact->avatarPixmap();
+            else if (key == S_KPEOPLE_PROPERTY_ACCOUNT_DISPLAY_NAME)
+                return m_account->displayName();
         }
         return m_properties[key];
     }
@@ -117,6 +119,12 @@ KTpAllContacts::KTpAllContacts()
     Tp::registerTypes();
 
     loadCache();
+
+    //now start fetching the up-to-date information
+    connect(KTp::accountManager()->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)),
+        this, SLOT(onAccountManagerReady(Tp::PendingOperation*)));
+
+    emitInitialFetchComplete(true);
 }
 
 KTpAllContacts::~KTpAllContacts()
@@ -230,12 +238,6 @@ void KTpAllContacts::loadCache(const QString &accountId)
 
         m_contactVCards[uri] = addressee;
     }
-
-    //now start fetching the up-to-date information
-    connect(KTp::accountManager()->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)),
-        this, SLOT(onAccountManagerReady(Tp::PendingOperation*)), Qt::UniqueConnection);
-
-    emitInitialFetchComplete(true);
 }
 
 void KTpAllContacts::onAccountManagerReady(Tp::PendingOperation *op)
