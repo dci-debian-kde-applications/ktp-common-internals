@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.12.0 amd64
+# SymbolsHelper-Confirmed: 17.08.1 amd64
 libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZN3KTp10TextParser10s_instanceE@Base 15.04.2
  _ZN3KTp10TextParser14extractUrlDataERK7QStringb@Base 15.04.2
@@ -356,6 +356,7 @@ libKTpCommonInternals.so.9 libktpcommoninternals9 #MINVER#
  _ZNK3KTp8Presence4iconE11QStringListb@Base 15.04.2
  _ZNK3KTp8Presence4iconEb@Base 15.04.2
  _ZNK3KTp8Presence8iconNameEb@Base 15.04.2
+ _ZNK3KTp8PresencegtERKS0_@Base 17.08.1
  _ZNK3KTp8PresenceltERKS0_@Base 15.04.2
  _ZTIN2Tp10RefCountedE@Base 15.04.2
  _ZTIN3KTp10TextParserE@Base 15.04.2

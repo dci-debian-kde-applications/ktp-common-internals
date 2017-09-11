@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 15.12.0 amd64
+# SymbolsHelper-Confirmed: 17.08.1 amd64
 libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN23KPeopleTranslationProxy11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
  _ZN23KPeopleTranslationProxy11qt_metacastEPKc@Base 15.04.2
@@ -31,15 +31,17 @@ libKTpModels.so.9 libktpmodels9 #MINVER#
  _ZN3KTp13ContactsModelD1Ev@Base 15.04.2
  _ZN3KTp13ContactsModelD2Ev@Base 15.04.2
  _ZN3KTp13PresenceModel11addPresenceERKNS_8PresenceE@Base 15.04.2
+ _ZN3KTp13PresenceModel11modifyModelERKNS_8PresenceE@Base 17.08.1
  _ZN3KTp13PresenceModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 15.04.2
  _ZN3KTp13PresenceModel11qt_metacastEPKc@Base 15.04.2
  _ZN3KTp13PresenceModel12countChangedEv@Base 15.04.2
  _ZN3KTp13PresenceModel13loadPresencesEv@Base 15.04.2
  _ZN3KTp13PresenceModel14removePresenceERKNS_8PresenceE@Base 15.04.2
+ _ZN3KTp13PresenceModel15propagateChangeERKNS_8PresenceE@Base 17.08.1
  _ZN3KTp13PresenceModel16staticMetaObjectE@Base 15.04.2
+ _ZN3KTp13PresenceModel17propagationChangeE5QListI8QVariantE@Base 17.08.1
  _ZN3KTp13PresenceModel19loadCustomPresencesEv@Base 15.04.2
  _ZN3KTp13PresenceModel20loadDefaultPresencesEv@Base 15.04.2
- _ZN3KTp13PresenceModel20updatePresenceAppletEv@Base 15.04.2
  _ZN3KTp13PresenceModel25syncCustomPresencesToDiskEv@Base 15.04.2
  _ZN3KTp13PresenceModelC1EP7QObject@Base 15.04.2
  _ZN3KTp13PresenceModelC2EP7QObject@Base 15.04.2
