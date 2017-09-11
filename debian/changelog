@@ -1,20 +1,5 @@
 ktp-common-internals (17.08.1-1~) UNRELEASED; urgency=medium
 
-  [ Automatic packaging ]
-  ** SNAPSHOT build @7aa2bf3a2749ec08b5224557d611400b386cea8e **
-
-  * Update symbols files from buildds logs (16.04.2-1).
-  * Update symbols files.
-  * Update symbols files.
-  * Update symbols files.
-  * Update symbols files.
-  * Update build-deps and deps with the info from cmake
-  * Update symbols files.
-  * UNRELEASED
-  * Update symbols files.
-  * Update changelog for 16.08.3-1~2.gbp7aa2bf release
-
-  [ Maximiliano Curia ]
   * Set Priority to optional
   * New upstream release (17.08.1).
 
