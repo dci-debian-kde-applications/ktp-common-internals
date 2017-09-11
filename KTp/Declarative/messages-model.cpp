@@ -195,29 +195,40 @@ void MessagesModel::onMessageReceived(const Tp::ReceivedMessage &message)
         MessagePrivate &originalMessage = d->messages[originalMessageIndex.row()];
         originalMessage.deliveryReportReceiveTime = message.received();
         switch(deliveryDetails.status()) {
-        case Tp::DeliveryStatusPermanentlyFailed:
-        case Tp::DeliveryStatusTemporarilyFailed:
-            originalMessage.deliveryStatus = DeliveryStatusFailed;
-            if (deliveryDetails.hasDebugMessage()) {
-                qCDebug(KTP_DECLARATIVE) << "Delivery failure debug message:" << deliveryDetails.debugMessage();
-            }
-            break;
-        case Tp::DeliveryStatusDelivered:
-            originalMessage.deliveryStatus = DeliveryStatusDelivered;
-            break;
-        case Tp::DeliveryStatusRead:
-            originalMessage.deliveryStatus = DeliveryStatusRead;
-            break;
-        default:
-            originalMessage.deliveryStatus = DeliveryStatusUnknown;
-            break;
+            case Tp::DeliveryStatusPermanentlyFailed:
+            case Tp::DeliveryStatusTemporarilyFailed:
+                originalMessage.deliveryStatus = DeliveryStatusFailed;
+                if (deliveryDetails.hasDebugMessage()) {
+                    qCDebug(KTP_DECLARATIVE) << "Delivery failure debug message:" << deliveryDetails.debugMessage();
+                }
+                break;
+            case Tp::DeliveryStatusDelivered:
+                originalMessage.deliveryStatus = DeliveryStatusDelivered;
+                break;
+            case Tp::DeliveryStatusRead:
+                originalMessage.deliveryStatus = DeliveryStatusRead;
+                break;
+            default:
+                originalMessage.deliveryStatus = DeliveryStatusUnknown;
+                break;
         }
         Q_EMIT dataChanged(originalMessageIndex, originalMessageIndex);
     } else {
-        int length = rowCount();
-        beginInsertRows(QModelIndex(), length, length);
+        int newMessageIndex = 0;
+        const QDateTime sentTimestamp = message.sent();
+        if (sentTimestamp.isValid()) {
+            for (int i = d->messages.count() - 1; i >= 0; --i) {
+                if (sentTimestamp > d->messages.at(i).message.time()) {
+                    newMessageIndex = i;
+                    break;
+                }
+            }
+        } else {
+            newMessageIndex = rowCount();
+        }
+        beginInsertRows(QModelIndex(), newMessageIndex, newMessageIndex);
 
-        d->messages.append(KTp::MessageProcessor::instance()->processIncomingMessage(
+        d->messages.insert(newMessageIndex, KTp::MessageProcessor::instance()->processIncomingMessage(
                                message, d->account, d->textChannel));
 
         endInsertRows();
@@ -243,7 +254,7 @@ void MessagesModel::onMessageSent(const Tp::Message &message, Tp::MessageSending
 
     if (!messageToken.isEmpty()) {
         // Insert the message into the lookup table for delivery reports.
-        const QPersistentModelIndex &modelIndex(createIndex(length, 0));
+        const QPersistentModelIndex modelIndex = createIndex(length, 0);
         d->messagesByMessageToken.insert(messageToken, modelIndex);
     }
 
@@ -259,7 +270,7 @@ QVariant MessagesModel::data(const QModelIndex &index, int role) const
 {
     QVariant result;
 
-    if (index.isValid()) {
+    if (index.isValid() && index.row() < rowCount(index.parent())) {
         const MessagePrivate m = d->messages[index.row()];
 
         switch (role) {
@@ -314,7 +325,7 @@ int MessagesModel::rowCount(const QModelIndex &parent) const
 void MessagesModel::sendNewMessage(const QString &message)
 {
     if (message.isEmpty()) {
-        qCWarning(KTP_DECLARATIVE) << "Attempting to send empty string";
+        qCWarning(KTP_DECLARATIVE) << "Attempting to send empty string, this is not supported";
     } else {
         Tp::PendingOperation *op;
         QString modifiedMessage = message;
@@ -348,11 +359,19 @@ void MessagesModel::removeChannelSignals(const Tp::TextChannelPtr &channel)
 
 int MessagesModel::unreadCount() const
 {
-    return d->textChannel->messageQueue().size();
+    if (d->textChannel) {
+        return d->textChannel->messageQueue().size();
+    }
+
+    return 0;
 }
 
 void MessagesModel::acknowledgeAllMessages()
 {
+    if (d->textChannel.isNull()) {
+        return;
+    }
+
     QList<Tp::ReceivedMessage> queue = d->textChannel->messageQueue();
 
     d->textChannel->acknowledge(queue);

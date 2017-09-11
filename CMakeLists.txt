@@ -10,9 +10,9 @@ set (CMAKE_MODULE_PATH
 cmake_policy(SET CMP0002 OLD)
 
 # KDE Application Version, managed by release script
-set (KDE_APPLICATIONS_VERSION_MAJOR "16")
+set (KDE_APPLICATIONS_VERSION_MAJOR "17")
 set (KDE_APPLICATIONS_VERSION_MINOR "08")
-set (KDE_APPLICATIONS_VERSION_MICRO "3")
+set (KDE_APPLICATIONS_VERSION_MICRO "1")
 
 # Bump for every 0.x release, or whenever BC changes
 set (KTP_SONUMBER 9) # SO 9 is for 15.08 release
@@ -141,3 +141,4 @@ install(EXPORT KTpTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         FILE KTpTargets.cmake NAMESPACE KTp:: COMPONENT Devel)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ki18n_install(po)

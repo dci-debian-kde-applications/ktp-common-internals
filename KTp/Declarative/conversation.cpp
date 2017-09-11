@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2011  Lasath Fernando <kde@lasath.org>
+    Copyright (C) 2016  Martin Klapetek <mklapetek@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -32,6 +33,14 @@
 class Conversation::ConversationPrivate
 {
   public:
+      ConversationPrivate()
+      {
+          messages = 0;
+          delegated = false;
+          valid = false;
+          isGroupChat = false;
+      }
+
     MessagesModel *messages;
     //stores if the conversation has been delegated to another client and we are only observing the channel
     //and not handling it.
@@ -56,6 +65,7 @@ Conversation::Conversation(const Tp::TextChannelPtr &channel,
     connect(d->account.data(), SIGNAL(connectionChanged(Tp::ConnectionPtr)), SLOT(onAccountConnectionChanged(Tp::ConnectionPtr)));
 
     d->messages = new MessagesModel(account, this);
+    connect(d->messages, &MessagesModel::unreadCountChanged, this, &Conversation::unreadMessagesChanged);
     setTextChannel(channel);
 
     d->delegated = false;
@@ -63,31 +73,40 @@ Conversation::Conversation(const Tp::TextChannelPtr &channel,
     d->pausedStateTimer = new QTimer(this);
     d->pausedStateTimer->setSingleShot(true);
     connect(d->pausedStateTimer, SIGNAL(timeout()), this, SLOT(onChatPausedTimerExpired()));
+}
 
-    if (channel->targetContact().isNull()) {
-        d->isGroupChat = true;
-    } else {
-        d->isGroupChat = false;
-        d->targetContact = KTp::ContactPtr::qObjectCast(channel->targetContact());
+Conversation::Conversation(QObject *parent)
+    : QObject(parent),
+      d(new ConversationPrivate)
+{
+}
 
-        connect(d->targetContact.constData(), SIGNAL(aliasChanged(QString)), SIGNAL(titleChanged()));
-        connect(d->targetContact.constData(), SIGNAL(presenceChanged(Tp::Presence)), SIGNAL(presenceIconChanged()));
-        connect(d->targetContact.constData(), SIGNAL(avatarDataChanged(Tp::AvatarData)), SIGNAL(avatarChanged()));
+void Conversation::setTextChannel(const Tp::TextChannelPtr &channel)
+{
+    if (!d->messages) {
+        d->messages = new MessagesModel(d->account, this);
+        connect(d->messages, &MessagesModel::unreadCountChanged, this, &Conversation::unreadMessagesChanged);
     }
-}
-
-Conversation::Conversation(QObject *parent) : QObject(parent)
-{
-    qCCritical(KTP_DECLARATIVE) << "Conversation should not be created directly. Use ConversationWatcher instead.";
-}
-
-void Conversation::setTextChannel(const Tp::TextChannelPtr& channel)
-{
     if (d->messages->textChannel() != channel) {
         d->messages->setTextChannel(channel);
         d->valid = channel->isValid();
         connect(channel.data(), SIGNAL(invalidated(Tp::DBusProxy*,QString,QString)),
                 SLOT(onChannelInvalidated(Tp::DBusProxy*,QString,QString)));
+
+        if (channel->targetContact().isNull()) {
+            d->isGroupChat = true;
+        } else {
+            d->isGroupChat = false;
+            d->targetContact = KTp::ContactPtr::qObjectCast(channel->targetContact());
+
+            connect(d->targetContact.constData(), SIGNAL(aliasChanged(QString)), SIGNAL(titleChanged()));
+            connect(d->targetContact.constData(), SIGNAL(presenceChanged(Tp::Presence)), SIGNAL(presenceIconChanged()));
+            connect(d->targetContact.constData(), SIGNAL(avatarDataChanged(Tp::AvatarData)), SIGNAL(avatarChanged()));
+        }
+
+        Q_EMIT avatarChanged();
+        Q_EMIT titleChanged();
+        Q_EMIT presenceIconChanged();
         Q_EMIT validityChanged(d->valid);
     }
 }
@@ -107,18 +126,22 @@ QString Conversation::title() const
     if (d->isGroupChat) {
         QString roomName = textChannel()->targetId();
         return roomName.left(roomName.indexOf(QLatin1Char('@')));
-    } else {
+    } else if (!d->targetContact.isNull()) {
         return d->targetContact->alias();
     }
+
+    return QString();
 }
 
 QIcon Conversation::presenceIcon() const
 {
     if (d->isGroupChat) {
         return KTp::Presence(Tp::Presence::available()).icon();
-    } else {
+    } else if (!d->targetContact.isNull()) {
         return KTp::Presence(d->targetContact->presence()).icon();
     }
+
+    return QIcon();
 }
 
 QIcon Conversation::avatar() const
@@ -138,7 +161,8 @@ QIcon Conversation::avatar() const
     }
 }
 
-KTp::ContactPtr Conversation::targetContact() const {
+KTp::ContactPtr Conversation::targetContact() const
+{
     if (d->isGroupChat) {
         return KTp::ContactPtr();
     } else {
@@ -146,11 +170,12 @@ KTp::ContactPtr Conversation::targetContact() const {
     }
 }
 
-Tp::AccountPtr Conversation::account() const {
+Tp::AccountPtr Conversation::account() const
+{
     return d->account;
 }
 
-bool Conversation::isValid()
+bool Conversation::isValid() const
 {
     return d->valid;
 }
@@ -237,4 +262,13 @@ Conversation::~Conversation()
         d->messages->textChannel()->requestClose();
     }
     delete d;
+}
+
+bool Conversation::hasUnreadMessages() const
+{
+    if (d->messages) {
+        return d->messages->unreadCount() > 0;
+    }
+
+    return false;
 }
