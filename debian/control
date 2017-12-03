@@ -104,7 +104,7 @@ Depends: libkf5wallet-dev (>= 5.11~),
          libktpmodels9 (= ${binary:Version}),
          libktpotr9 (= ${binary:Version}),
          libktpwidgets9 (= ${binary:Version}),
-         libtelepathy-logger-qt-dev (>= 15.04),
+         libtelepathy-logger-qt-dev (>= 17.08~),
          ${misc:Depends},
 Breaks: libktpcommoninternalsprivate-dev (<< 15.03.80)
 Replaces: libktpcommoninternalsprivate-dev (<< 15.03.80)
