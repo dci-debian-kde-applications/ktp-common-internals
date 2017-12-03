@@ -4,6 +4,7 @@ ktp-common-internals (17.08.3-0r1) UNRELEASED; urgency=medium
   * New upstream release.
   * Bump Standards-Version to 4.1.1, no changes required.
   * Simplify watch file, and switch it to https.
+  * Remove trailing whitespaces in changelog.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 11:46:46 +0100
 
@@ -180,7 +181,7 @@ ktp-common-internals (0.9.0-1) unstable; urgency=medium
   * Remove shared-desktop-ontolgies build-dep
   * Bump libkpeople build-dep to 0.3.0
   * Add libotr5-dev and libgcrypt11-dev build-dep to enable OTR support.
-  * Add kpeople_chat_plugin.so and associated desktop file to 
+  * Add kpeople_chat_plugin.so and associated desktop file to
     kde-telepathy-kpeople package.
   * Update copyright file.
   * Update description to use better English (Closes: #769362)
