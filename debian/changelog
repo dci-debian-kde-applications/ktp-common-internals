@@ -8,6 +8,7 @@ ktp-common-internals (17.08.3-0r1) UNRELEASED; urgency=medium
   * Update few build dependencies:
     - bump libtelepathy-logger-qt-dev to >= 17.08~
     - bump libtelepathy-qt5-dev to >= 0.9.7~
+  * Update symbols files.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 11:46:46 +0100
 
