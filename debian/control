@@ -61,7 +61,6 @@ Description: Shared data for all the KDE Telepathy components
  translations.
 
 Package: kde-telepathy-debugger
-Priority: optional
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Debugging tool for KDE Telepathy
